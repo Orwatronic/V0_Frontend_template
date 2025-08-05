@@ -1,0 +1,31 @@
+{
+  "landing": {
+    "hero": {
+      "badge": "Bedriftsklar ERP-løsning",
+      "title": "Transformer din bedrift med Feebee Technologies ERP",
+      "subtitle": "Omfattende ressursplanleggingssystem for bedrifter designet for å administrere kjerneprosesser på tvers av alle avdelinger med integrerte moduler for fullstendig operasjonell kontroll.",
+      "cta": {
+        "primary": "Start gratis prøveperiode",
+        "secondary": "Se demo"
+      },
+      "badge": {
+        "realtime": "Sanntidsdata",
+        "analytics": "Avansert analyse"
+      },
+      "image": {
+        "alt": "EnterpriseERP Dashbord"
+      },
+      "stats": {
+        "uptime": "Oppetidsgaranti",
+        "clients": "Bedriftskunder",
+        "support": "Ekspertstøtte"
+      }
+    }
+  },
+  "common": {
+    "secure": "SOC 2-sertifisert",
+    "compliant": "GDPR-kompatibel",
+    "learnMore": "Lær mer",
+    "getStarted": "Kom i gang"
+  }
+}

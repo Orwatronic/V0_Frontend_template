@@ -1,0 +1,31 @@
+{
+  "landing": {
+    "hero": {
+      "badge": "Enterprise-Ready ERP Solution",
+      "title": "Transform Your Enterprise with Feebee Technologies ERP",
+      "subtitle": "Comprehensive enterprise resource planning system designed to manage core business processes across all departments with integrated modules for complete operational control.",
+      "cta": {
+        "primary": "Start Free Trial",
+        "secondary": "Watch Demo"
+      },
+      "badge": {
+        "realtime": "Real-time Data",
+        "analytics": "Advanced Analytics"
+      },
+      "image": {
+        "alt": "EnterpriseERP Dashboard"
+      },
+      "stats": {
+        "uptime": "Uptime SLA",
+        "clients": "Enterprise Clients",
+        "support": "Expert Support"
+      }
+    }
+  },
+  "common": {
+    "secure": "SOC 2 Certified",
+    "compliant": "GDPR Compliant",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started"
+  }
+}
