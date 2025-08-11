@@ -673,5 +673,47 @@
       "posted": "Bokført",
       "reversed": "Reversert"
     }
+  },
+  "errors": {
+    "notFound": {
+      "title": "Siden ikke funnet",
+      "description": "Siden du leter etter eksisterer ikke eller har blitt flyttet.",
+      "subtitle": "Denne siden kunne ikke finnes",
+      "help": "Trenger hjelp? Kontakt vårt supportteam.",
+      "actions": {
+        "goHome": "Gå til dashbord",
+        "goBack": "Gå tilbake",
+        "search": "Søk"
+      }
+    },
+    "general": {
+      "title": "Noe gikk galt",
+      "description": "En uventet feil oppstod. Vennligst prøv igjen.",
+      "debugInfo": "Feilsøkingsinformasjon:",
+      "errorId": "Feil-ID",
+      "persistentIssue": "Hvis dette problemet vedvarer, vennligst rapporter det.",
+      "actions": {
+        "tryAgain": "Prøv igjen",
+        "goHome": "Gå til dashbord",
+        "reload": "Last inn siden på nytt",
+        "reportIssue": "Rapporter problem"
+      }
+    },
+    "network": {
+      "title": "Tilkoblingsfeil",
+      "description": "Kan ikke koble til serveren. Vennligst sjekk internettforbindelsen.",
+      "actions": {
+        "retry": "Prøv igjen",
+        "offline": "Arbeid offline"
+      }
+    },
+    "unauthorized": {
+      "title": "Tilgang nektet",
+      "description": "Du har ikke tillatelse til å få tilgang til denne ressursen.",
+      "actions": {
+        "login": "Logg inn",
+        "contact": "Kontakt administrator"
+      }
+    }
   }
 }

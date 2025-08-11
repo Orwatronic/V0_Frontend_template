@@ -3,6 +3,7 @@ import { LanguageSwitcherTest } from "@/components/test/language-switcher-test"
 import { PhaseBFeaturesTest } from "@/components/test/phase-b-features-test"
 import { GovernanceToolsTest } from "@/components/test/governance-tools-test"
 import { RTLValidationTest } from "@/components/test/rtl-validation-test"
+import CrossModuleI18nTest from "@/components/test/cross-module-i18n-test"
 
 export default function TestI18nPage() {
   return (
@@ -12,8 +13,8 @@ export default function TestI18nPage() {
       <LanguageSwitcherTest />
       <PhaseBFeaturesTest />
       <GovernanceToolsTest />
-      {/* Added RTL validation test component */}
       <RTLValidationTest />
+      <CrossModuleI18nTest />
     </div>
   )
 }

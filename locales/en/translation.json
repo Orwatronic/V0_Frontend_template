@@ -822,5 +822,47 @@
       "submitRequisition": "Submit Requisition",
       "totalCost": "Total Cost"
     }
+  },
+  "errors": {
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "The page you're looking for doesn't exist or has been moved.",
+      "subtitle": "This page could not be found",
+      "help": "Need help? Contact our support team.",
+      "actions": {
+        "goHome": "Go to Dashboard",
+        "goBack": "Go Back",
+        "search": "Search"
+      }
+    },
+    "general": {
+      "title": "Something Went Wrong",
+      "description": "An unexpected error occurred. Please try again.",
+      "debugInfo": "Debug Information:",
+      "errorId": "Error ID",
+      "persistentIssue": "If this problem persists, please report it.",
+      "actions": {
+        "tryAgain": "Try Again",
+        "goHome": "Go to Dashboard",
+        "reload": "Reload Page",
+        "reportIssue": "Report Issue"
+      }
+    },
+    "network": {
+      "title": "Connection Error",
+      "description": "Unable to connect to the server. Please check your internet connection.",
+      "actions": {
+        "retry": "Retry",
+        "offline": "Work Offline"
+      }
+    },
+    "unauthorized": {
+      "title": "Access Denied",
+      "description": "You don't have permission to access this resource.",
+      "actions": {
+        "login": "Sign In",
+        "contact": "Contact Administrator"
+      }
+    }
   }
 }
