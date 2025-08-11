@@ -312,7 +312,18 @@
     "learnMore": "Lær mer",
     "getStarted": "Kom i gang",
     "new": "Ny",
-    "comingSoon": "Kommer snart"
+    "comingSoon": "Kommer snart",
+    "export": "Eksporter",
+    "status": "Status",
+    "filter": "Filter",
+    "search": "Søk",
+    "add": "Legg til",
+    "edit": "Rediger",
+    "delete": "Slett",
+    "save": "Lagre",
+    "cancel": "Avbryt",
+    "loading": "Laster...",
+    "actions": "Handlinger"
   },
   "auth": {
     "login": {

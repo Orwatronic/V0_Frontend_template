@@ -325,7 +325,18 @@
     "learnMore": "Learn More",
     "getStarted": "Get Started",
     "new": "New",
-    "comingSoon": "Coming Soon"
+    "comingSoon": "Coming Soon",
+    "export": "Export",
+    "status": "Status",
+    "filter": "Filter",
+    "search": "Search",
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "actions": "Actions"
   },
   "auth": {
     "login": {

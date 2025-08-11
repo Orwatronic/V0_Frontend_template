@@ -322,7 +322,18 @@
     "learnMore": "اعرف المزيد",
     "getStarted": "ابدأ الآن",
     "new": "جديد",
-    "comingSoon": "قريباً"
+    "comingSoon": "قريباً",
+    "export": "تصدير",
+    "status": "الحالة",
+    "filter": "تصفية",
+    "search": "بحث",
+    "add": "إضافة",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "loading": "جاري التحميل...",
+    "actions": "الإجراءات"
   },
   "auth": {
     "login": {
