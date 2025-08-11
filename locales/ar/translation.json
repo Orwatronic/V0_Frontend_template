@@ -544,5 +544,133 @@
       },
       "loading": "جارٍ التحميل..."
     }
+  },
+  "financial": {
+    "chartOfAccounts": {
+      "title": "دليل الحسابات",
+      "description": "إدارة الحسابات المالية للشركة",
+      "searchPlaceholder": "البحث في الحسابات...",
+      "addAccount": "إضافة حساب",
+      "columns": {
+        "accountName": "اسم الحساب",
+        "accountNumber": "رقم الحساب",
+        "type": "النوع",
+        "balance": "الرصيد"
+      },
+      "accountTypes": {
+        "Header": "رأس",
+        "Asset": "أصل",
+        "Liability": "التزام",
+        "Equity": "حقوق الملكية",
+        "Revenue": "إيراد",
+        "Expense": "مصروف"
+      },
+      "aria": {
+        "searchLabel": "البحث في الحسابات بالاسم أو الرقم",
+        "expandButton": "توسيع الحساب {{name}}",
+        "collapseButton": "طي الحساب {{name}}",
+        "accountTree": "هيكل شجرة دليل الحسابات"
+      }
+    },
+    "accountsPayable": {
+      "title": "الحسابات الدائنة",
+      "description": "إدارة وتتبع فواتير الموردين والمدفوعات",
+      "searchPlaceholder": "البحث في الفواتير...",
+      "addInvoice": "فاتورة جديدة",
+      "createPaymentRun": "إنشاء دفعة مدفوعات",
+      "invoicesLabel": "الفواتير",
+      "metrics": {
+        "total": "إجمالي الحسابات الدائنة",
+        "overdue": "الفواتير المتأخرة",
+        "upcoming": "المدفوعات القادمة (30 يوم)"
+      },
+      "columns": {
+        "invoiceNumber": "رقم الفاتورة",
+        "vendor": "المورد",
+        "issueDate": "تاريخ الإصدار",
+        "dueDate": "تاريخ الاستحقاق",
+        "amount": "المبلغ"
+      }
+    },
+    "accountsReceivable": {
+      "title": "الحسابات المدينة",
+      "description": "إدارة فواتير العملاء وتتبع المدفوعات الواردة",
+      "searchPlaceholder": "البحث في الفواتير...",
+      "addInvoice": "فاتورة جديدة",
+      "daysLabel": "أيام",
+      "metrics": {
+        "outstanding": "الحسابات المدينة المستحقة",
+        "overdue": "الحسابات المدينة المتأخرة",
+        "avgCollection": "متوسط فترة التحصيل"
+      },
+      "columns": {
+        "invoiceNumber": "رقم الفاتورة",
+        "customer": "العميل",
+        "issueDate": "تاريخ الإصدار",
+        "dueDate": "تاريخ الاستحقاق",
+        "amount": "المبلغ"
+      }
+    },
+    "journalEntries": {
+      "title": "قيود اليومية",
+      "description": "تسجيل ومراجعة جميع المعاملات المالية",
+      "searchPlaceholder": "البحث في القيود...",
+      "addEntry": "قيد جديد",
+      "columns": {
+        "entryNumber": "رقم القيد",
+        "date": "التاريخ",
+        "description": "الوصف",
+        "debit": "مدين",
+        "credit": "دائن"
+      }
+    },
+    "reporting": {
+      "title": "التقارير المالية",
+      "description": "إنتاج وتحليل البيانات المالية الرئيسية",
+      "dateRange": "نطاق التاريخ",
+      "export": "تصدير إلى PDF",
+      "accountColumn": "الحساب",
+      "amountColumn": "المبلغ",
+      "tabs": {
+        "pnl": "الأرباح والخسائر",
+        "balanceSheet": "الميزانية العمومية"
+      },
+      "pnl": {
+        "revenue": "إجمالي الإيرادات",
+        "cogs": "تكلفة البضائع المباعة",
+        "grossProfit": "الربح الإجمالي",
+        "operatingExpenses": "المصاريف التشغيلية",
+        "marketing": "التسويق",
+        "sales": "المبيعات",
+        "admin": "الإدارة العامة",
+        "netIncome": "صافي الدخل"
+      },
+      "balanceSheet": {
+        "assets": "الأصول",
+        "currentAssets": "الأصول المتداولة",
+        "cash": "النقد وما في حكمه",
+        "accountsReceivable": "الحسابات المدينة",
+        "inventory": "المخزون",
+        "fixedAssets": "الأصول الثابتة",
+        "ppe": "الممتلكات والمصانع والمعدات",
+        "liabilities": "الالتزامات",
+        "currentLiabilities": "الالتزامات المتداولة",
+        "accountsPayable": "الحسابات الدائنة",
+        "longTermLiabilities": "الالتزامات طويلة الأجل",
+        "longTermDebt": "الديون طويلة الأجل",
+        "equity": "حقوق الملكية",
+        "totalAssets": "إجمالي الأصول",
+        "totalLiabilitiesEquity": "إجمالي الالتزامات وحقوق الملكية"
+      }
+    },
+    "status": {
+      "paid": "مدفوع",
+      "open": "مفتوح",
+      "overdue": "متأخر",
+      "sent": "مرسل",
+      "draft": "مسودة",
+      "posted": "مرحل",
+      "reversed": "معكوس"
+    }
   }
 }

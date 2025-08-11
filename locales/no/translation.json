@@ -534,5 +534,133 @@
       "placeholder": "Dokumenter og filer vises her."
     },
     "loading": "Laster..."
+  },
+  "financial": {
+    "chartOfAccounts": {
+      "title": "Kontoplan",
+      "description": "Administrer selskapets finansielle kontoer",
+      "searchPlaceholder": "Søk i kontoer...",
+      "addAccount": "Legg til konto",
+      "columns": {
+        "accountName": "Kontonavn",
+        "accountNumber": "Kontonummer",
+        "type": "Type",
+        "balance": "Saldo"
+      },
+      "accountTypes": {
+        "Header": "Overskrift",
+        "Asset": "Eiendel",
+        "Liability": "Gjeld",
+        "Equity": "Egenkapital",
+        "Revenue": "Inntekt",
+        "Expense": "Kostnad"
+      },
+      "aria": {
+        "searchLabel": "Søk i kontoer etter navn eller nummer",
+        "expandButton": "Utvid konto {{name}}",
+        "collapseButton": "Skjul konto {{name}}",
+        "accountTree": "Kontoplan trestruktur"
+      }
+    },
+    "accountsPayable": {
+      "title": "Leverandørgjeld",
+      "description": "Administrer og spor leverandørfakturaer og betalinger",
+      "searchPlaceholder": "Søk i fakturaer...",
+      "addInvoice": "Ny faktura",
+      "createPaymentRun": "Opprett betalingskjøring",
+      "invoicesLabel": "Fakturaer",
+      "metrics": {
+        "total": "Total leverandørgjeld",
+        "overdue": "Forfalte fakturaer",
+        "upcoming": "Kommende betalinger (30d)"
+      },
+      "columns": {
+        "invoiceNumber": "Fakturanr.",
+        "vendor": "Leverandør",
+        "issueDate": "Utstedelsesdato",
+        "dueDate": "Forfallsdato",
+        "amount": "Beløp"
+      }
+    },
+    "accountsReceivable": {
+      "title": "Kundefordringer",
+      "description": "Administrer kundefakturaer og spor innkommende betalinger",
+      "searchPlaceholder": "Søk i fakturaer...",
+      "addInvoice": "Ny faktura",
+      "daysLabel": "Dager",
+      "metrics": {
+        "outstanding": "Utestående kundefordringer",
+        "overdue": "Forfalte kundefordringer",
+        "avgCollection": "Gjennomsnittlig innkrevingsperiode"
+      },
+      "columns": {
+        "invoiceNumber": "Fakturanr.",
+        "customer": "Kunde",
+        "issueDate": "Utstedelsesdato",
+        "dueDate": "Forfallsdato",
+        "amount": "Beløp"
+      }
+    },
+    "journalEntries": {
+      "title": "Bilagsføring",
+      "description": "Registrer og gjennomgå alle finansielle transaksjoner",
+      "searchPlaceholder": "Søk i bilag...",
+      "addEntry": "Nytt bilag",
+      "columns": {
+        "entryNumber": "Bilagsnr.",
+        "date": "Dato",
+        "description": "Beskrivelse",
+        "debit": "Debet",
+        "credit": "Kredit"
+      }
+    },
+    "reporting": {
+      "title": "Finansrapportering",
+      "description": "Generer og analyser viktige finansielle rapporter",
+      "dateRange": "Datoperiode",
+      "export": "Eksporter til PDF",
+      "accountColumn": "Konto",
+      "amountColumn": "Beløp",
+      "tabs": {
+        "pnl": "Resultatregnskap",
+        "balanceSheet": "Balanse"
+      },
+      "pnl": {
+        "revenue": "Totale inntekter",
+        "cogs": "Varekostnad",
+        "grossProfit": "Bruttofortjeneste",
+        "operatingExpenses": "Driftskostnader",
+        "marketing": "Markedsføring",
+        "sales": "Salg",
+        "admin": "Administrasjon",
+        "netIncome": "Nettoresultat"
+      },
+      "balanceSheet": {
+        "assets": "Eiendeler",
+        "currentAssets": "Omløpsmidler",
+        "cash": "Kontanter og kontantekvivalenter",
+        "accountsReceivable": "Kundefordringer",
+        "inventory": "Varelager",
+        "fixedAssets": "Anleggsmidler",
+        "ppe": "Varige driftsmidler",
+        "liabilities": "Gjeld",
+        "currentLiabilities": "Kortsiktig gjeld",
+        "accountsPayable": "Leverandørgjeld",
+        "longTermLiabilities": "Langsiktig gjeld",
+        "longTermDebt": "Langsiktig gjeld",
+        "equity": "Egenkapital",
+        "totalAssets": "Sum eiendeler",
+        "totalLiabilitiesEquity": "Sum gjeld og egenkapital"
+      }
+    },
+    "status": {
+      "paid": "Betalt",
+      "open": "Åpen",
+      "overdue": "Forfalt",
+      "sent": "Sendt",
+      "draft": "Utkast",
+      "posted": "Bokført",
+      "reversed": "Reversert"
+    }
   }
 }

@@ -465,6 +465,106 @@
         "collapseButton": "Collapse account {{name}}",
         "accountTree": "Chart of accounts tree structure"
       }
+    },
+    "accountsPayable": {
+      "title": "Accounts Payable",
+      "description": "Manage and track vendor invoices and payments",
+      "searchPlaceholder": "Search invoices...",
+      "addInvoice": "New Invoice",
+      "createPaymentRun": "Create Payment Run",
+      "invoicesLabel": "Invoices",
+      "metrics": {
+        "total": "Total AP",
+        "overdue": "Overdue Invoices",
+        "upcoming": "Upcoming Payments (30d)"
+      },
+      "columns": {
+        "invoiceNumber": "Invoice #",
+        "vendor": "Vendor",
+        "issueDate": "Issue Date",
+        "dueDate": "Due Date",
+        "amount": "Amount"
+      }
+    },
+    "accountsReceivable": {
+      "title": "Accounts Receivable",
+      "description": "Manage customer invoices and track incoming payments",
+      "searchPlaceholder": "Search invoices...",
+      "addInvoice": "New Invoice",
+      "daysLabel": "Days",
+      "metrics": {
+        "outstanding": "Outstanding AR",
+        "overdue": "Overdue AR",
+        "avgCollection": "Avg. Collection Period"
+      },
+      "columns": {
+        "invoiceNumber": "Invoice #",
+        "customer": "Customer",
+        "issueDate": "Issue Date",
+        "dueDate": "Due Date",
+        "amount": "Amount"
+      }
+    },
+    "journalEntries": {
+      "title": "Journal Entries",
+      "description": "Record and review all financial transactions",
+      "searchPlaceholder": "Search entries...",
+      "addEntry": "New Entry",
+      "columns": {
+        "entryNumber": "Entry #",
+        "date": "Date",
+        "description": "Description",
+        "debit": "Debit",
+        "credit": "Credit"
+      }
+    },
+    "reporting": {
+      "title": "Financial Reporting",
+      "description": "Generate and analyze key financial statements",
+      "dateRange": "Date Range",
+      "export": "Export to PDF",
+      "accountColumn": "Account",
+      "amountColumn": "Amount",
+      "tabs": {
+        "pnl": "Profit & Loss",
+        "balanceSheet": "Balance Sheet"
+      },
+      "pnl": {
+        "revenue": "Total Revenue",
+        "cogs": "Cost of Goods Sold",
+        "grossProfit": "Gross Profit",
+        "operatingExpenses": "Operating Expenses",
+        "marketing": "Marketing",
+        "sales": "Sales",
+        "admin": "General & Administrative",
+        "netIncome": "Net Income"
+      },
+      "balanceSheet": {
+        "assets": "Assets",
+        "currentAssets": "Current Assets",
+        "cash": "Cash & Equivalents",
+        "accountsReceivable": "Accounts Receivable",
+        "inventory": "Inventory",
+        "fixedAssets": "Fixed Assets",
+        "ppe": "Property, Plant & Equipment",
+        "liabilities": "Liabilities",
+        "currentLiabilities": "Current Liabilities",
+        "accountsPayable": "Accounts Payable",
+        "longTermLiabilities": "Long-Term Liabilities",
+        "longTermDebt": "Long-Term Debt",
+        "equity": "Equity",
+        "totalAssets": "Total Assets",
+        "totalLiabilitiesEquity": "Total Liabilities & Equity"
+      }
+    },
+    "status": {
+      "paid": "Paid",
+      "open": "Open",
+      "overdue": "Overdue",
+      "sent": "Sent",
+      "draft": "Draft",
+      "posted": "Posted",
+      "reversed": "Reversed"
     }
   },
   "crm": {
