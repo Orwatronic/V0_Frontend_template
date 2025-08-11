@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -11,11 +11,39 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Checkbox } from "@/components/ui/checkbox"
-import { 
-  BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, 
-  Tooltip, Legend, ResponsiveContainer 
-} from 'recharts'
-import { Plus, Trash2, Save, Download, Eye, Settings, Database, Filter, BarChart3, LineChartIcon, PieChartIcon, TableIcon, Calendar, Users, DollarSign, Package, FileText } from 'lucide-react'
+import {
+  BarChart,
+  Bar,
+  LineChart,
+  Line,
+  PieChart,
+  Pie,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts"
+import {
+  Plus,
+  Trash2,
+  Save,
+  Download,
+  Eye,
+  Settings,
+  Database,
+  Filter,
+  BarChart3,
+  LineChartIcon,
+  PieChartIcon,
+  TableIcon,
+  Users,
+  DollarSign,
+  Package,
+  FileText,
+} from "lucide-react"
 
 // Mock data sources from all ERP modules
 const dataSources = {
@@ -31,8 +59,8 @@ const dataSources = {
           { name: "order_date", type: "date", label: "Order Date" },
           { name: "total_amount", type: "number", label: "Total Amount" },
           { name: "status", type: "string", label: "Status" },
-          { name: "sales_rep", type: "string", label: "Sales Rep" }
-        ]
+          { name: "sales_rep", type: "string", label: "Sales Rep" },
+        ],
       },
       customers: {
         name: "Customers",
@@ -41,10 +69,10 @@ const dataSources = {
           { name: "company_name", type: "string", label: "Company Name" },
           { name: "industry", type: "string", label: "Industry" },
           { name: "credit_limit", type: "number", label: "Credit Limit" },
-          { name: "region", type: "string", label: "Region" }
-        ]
-      }
-    }
+          { name: "region", type: "string", label: "Region" },
+        ],
+      },
+    },
   },
   financial: {
     name: "Financial",
@@ -56,8 +84,8 @@ const dataSources = {
           { name: "account_code", type: "string", label: "Account Code" },
           { name: "account_name", type: "string", label: "Account Name" },
           { name: "account_type", type: "string", label: "Account Type" },
-          { name: "balance", type: "number", label: "Balance" }
-        ]
+          { name: "balance", type: "number", label: "Balance" },
+        ],
       },
       invoices: {
         name: "Invoices",
@@ -66,10 +94,10 @@ const dataSources = {
           { name: "customer_name", type: "string", label: "Customer" },
           { name: "invoice_date", type: "date", label: "Invoice Date" },
           { name: "amount", type: "number", label: "Amount" },
-          { name: "status", type: "string", label: "Status" }
-        ]
-      }
-    }
+          { name: "status", type: "string", label: "Status" },
+        ],
+      },
+    },
   },
   inventory: {
     name: "Inventory",
@@ -82,10 +110,10 @@ const dataSources = {
           { name: "material_name", type: "string", label: "Material Name" },
           { name: "category", type: "string", label: "Category" },
           { name: "stock_quantity", type: "number", label: "Stock Quantity" },
-          { name: "unit_price", type: "number", label: "Unit Price" }
-        ]
-      }
-    }
+          { name: "unit_price", type: "number", label: "Unit Price" },
+        ],
+      },
+    },
   },
   hr: {
     name: "Human Resources",
@@ -99,48 +127,48 @@ const dataSources = {
           { name: "department", type: "string", label: "Department" },
           { name: "position", type: "string", label: "Position" },
           { name: "salary", type: "number", label: "Salary" },
-          { name: "hire_date", type: "date", label: "Hire Date" }
-        ]
-      }
-    }
-  }
+          { name: "hire_date", type: "date", label: "Hire Date" },
+        ],
+      },
+    },
+  },
 }
 
 // Mock data for charts
 const mockChartData = [
-  { name: 'Jan', value: 4000, sales: 2400, orders: 24 },
-  { name: 'Feb', value: 3000, sales: 1398, orders: 18 },
-  { name: 'Mar', value: 2000, sales: 9800, orders: 32 },
-  { name: 'Apr', value: 2780, sales: 3908, orders: 28 },
-  { name: 'May', value: 1890, sales: 4800, orders: 35 },
-  { name: 'Jun', value: 2390, sales: 3800, orders: 29 }
+  { name: "Jan", value: 4000, sales: 2400, orders: 24 },
+  { name: "Feb", value: 3000, sales: 1398, orders: 18 },
+  { name: "Mar", value: 2000, sales: 9800, orders: 32 },
+  { name: "Apr", value: 2780, sales: 3908, orders: 28 },
+  { name: "May", value: 1890, sales: 4800, orders: 35 },
+  { name: "Jun", value: 2390, sales: 3800, orders: 29 },
 ]
 
 const chartTypes = [
-  { value: 'bar', label: 'Bar Chart', icon: BarChart3 },
-  { value: 'line', label: 'Line Chart', icon: LineChartIcon },
-  { value: 'pie', label: 'Pie Chart', icon: PieChartIcon },
-  { value: 'table', label: 'Data Table', icon: TableIcon }
+  { value: "bar", label: "Bar Chart", icon: BarChart3 },
+  { value: "line", label: "Line Chart", icon: LineChartIcon },
+  { value: "pie", label: "Pie Chart", icon: PieChartIcon },
+  { value: "table", label: "Data Table", icon: TableIcon },
 ]
 
 const aggregationTypes = [
-  { value: 'sum', label: 'Sum' },
-  { value: 'avg', label: 'Average' },
-  { value: 'count', label: 'Count' },
-  { value: 'min', label: 'Minimum' },
-  { value: 'max', label: 'Maximum' }
+  { value: "sum", label: "Sum" },
+  { value: "avg", label: "Average" },
+  { value: "count", label: "Count" },
+  { value: "min", label: "Minimum" },
+  { value: "max", label: "Maximum" },
 ]
 
 const filterOperators = [
-  { value: 'equals', label: 'Equals' },
-  { value: 'not_equals', label: 'Not Equals' },
-  { value: 'contains', label: 'Contains' },
-  { value: 'greater_than', label: 'Greater Than' },
-  { value: 'less_than', label: 'Less Than' },
-  { value: 'between', label: 'Between' }
+  { value: "equals", label: "Equals" },
+  { value: "not_equals", label: "Not Equals" },
+  { value: "contains", label: "Contains" },
+  { value: "greater_than", label: "Greater Than" },
+  { value: "less_than", label: "Less Than" },
+  { value: "between", label: "Between" },
 ]
 
-export function CustomReportBuilder() {
+function CustomReportBuilder() {
   const [reportConfig, setReportConfig] = useState({
     name: "",
     description: "",
@@ -151,13 +179,13 @@ export function CustomReportBuilder() {
     filters: [],
     groupBy: "",
     sortBy: "",
-    aggregation: "sum"
+    aggregation: "sum",
   })
 
   const [savedReports, setSavedReports] = useState([
     { id: 1, name: "Monthly Sales Report", description: "Sales performance by month", lastModified: "2024-01-15" },
     { id: 2, name: "Inventory Status", description: "Current stock levels", lastModified: "2024-01-14" },
-    { id: 3, name: "Employee Performance", description: "HR metrics dashboard", lastModified: "2024-01-13" }
+    { id: 3, name: "Employee Performance", description: "HR metrics dashboard", lastModified: "2024-01-13" },
   ])
 
   const [previewData, setPreviewData] = useState(mockChartData)
@@ -165,38 +193,36 @@ export function CustomReportBuilder() {
 
   const handleFieldSelection = (field, checked) => {
     if (checked) {
-      setReportConfig(prev => ({
+      setReportConfig((prev) => ({
         ...prev,
-        fields: [...prev.fields, field]
+        fields: [...prev.fields, field],
       }))
     } else {
-      setReportConfig(prev => ({
+      setReportConfig((prev) => ({
         ...prev,
-        fields: prev.fields.filter(f => f.name !== field.name)
+        fields: prev.fields.filter((f) => f.name !== field.name),
       }))
     }
   }
 
   const addFilter = () => {
-    setReportConfig(prev => ({
+    setReportConfig((prev) => ({
       ...prev,
-      filters: [...prev.filters, { field: "", operator: "equals", value: "" }]
+      filters: [...prev.filters, { field: "", operator: "equals", value: "" }],
     }))
   }
 
   const updateFilter = (index, key, value) => {
-    setReportConfig(prev => ({
+    setReportConfig((prev) => ({
       ...prev,
-      filters: prev.filters.map((filter, i) => 
-        i === index ? { ...filter, [key]: value } : filter
-      )
+      filters: prev.filters.map((filter, i) => (i === index ? { ...filter, [key]: value } : filter)),
     }))
   }
 
   const removeFilter = (index) => {
-    setReportConfig(prev => ({
+    setReportConfig((prev) => ({
       ...prev,
-      filters: prev.filters.filter((_, i) => i !== index)
+      filters: prev.filters.filter((_, i) => i !== index),
     }))
   }
 
@@ -206,10 +232,10 @@ export function CustomReportBuilder() {
       id: savedReports.length + 1,
       name: reportConfig.name,
       description: reportConfig.description,
-      lastModified: new Date().toISOString().split('T')[0],
-      config: reportConfig
+      lastModified: new Date().toISOString().split("T")[0],
+      config: reportConfig,
     }
-    setSavedReports(prev => [...prev, newReport])
+    setSavedReports((prev) => [...prev, newReport])
     alert("Report saved successfully!")
   }
 
@@ -227,7 +253,7 @@ export function CustomReportBuilder() {
 
   const renderChart = () => {
     switch (reportConfig.chartType) {
-      case 'bar':
+      case "bar":
         return (
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={previewData}>
@@ -240,7 +266,7 @@ export function CustomReportBuilder() {
             </BarChart>
           </ResponsiveContainer>
         )
-      case 'line':
+      case "line":
         return (
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={previewData}>
@@ -253,7 +279,7 @@ export function CustomReportBuilder() {
             </LineChart>
           </ResponsiveContainer>
         )
-      case 'pie':
+      case "pie":
         return (
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
@@ -275,7 +301,7 @@ export function CustomReportBuilder() {
             </PieChart>
           </ResponsiveContainer>
         )
-      case 'table':
+      case "table":
         return (
           <Table>
             <TableHeader>
@@ -314,11 +340,11 @@ export function CustomReportBuilder() {
           <p className="text-muted-foreground">Create interactive reports from your ERP data</p>
         </div>
         <div className="flex gap-2">
-          <Button variant="outline" onClick={() => exportReport('pdf')}>
+          <Button variant="outline" onClick={() => exportReport("pdf")}>
             <Download className="h-4 w-4 mr-2" />
             Export PDF
           </Button>
-          <Button variant="outline" onClick={() => exportReport('excel')}>
+          <Button variant="outline" onClick={() => exportReport("excel")}>
             <Download className="h-4 w-4 mr-2" />
             Export Excel
           </Button>
@@ -353,26 +379,28 @@ export function CustomReportBuilder() {
                     <Input
                       id="reportName"
                       value={reportConfig.name}
-                      onChange={(e) => setReportConfig(prev => ({ ...prev, name: e.target.value }))}
+                      onChange={(e) => setReportConfig((prev) => ({ ...prev, name: e.target.value }))}
                       placeholder="Enter report name"
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="description">Description</Label>
                     <Textarea
                       id="description"
                       value={reportConfig.description}
-                      onChange={(e) => setReportConfig(prev => ({ ...prev, description: e.target.value }))}
+                      onChange={(e) => setReportConfig((prev) => ({ ...prev, description: e.target.value }))}
                       placeholder="Describe your report"
                     />
                   </div>
 
                   <div className="space-y-2">
                     <Label>Data Source</Label>
-                    <Select 
-                      value={reportConfig.dataSource} 
-                      onValueChange={(value) => setReportConfig(prev => ({ ...prev, dataSource: value, table: "", fields: [] }))}
+                    <Select
+                      value={reportConfig.dataSource}
+                      onValueChange={(value) =>
+                        setReportConfig((prev) => ({ ...prev, dataSource: value, table: "", fields: [] }))
+                      }
                     >
                       <SelectTrigger>
                         <SelectValue placeholder="Select data source" />
@@ -393,9 +421,9 @@ export function CustomReportBuilder() {
                   {currentDataSource && (
                     <div className="space-y-2">
                       <Label>Table</Label>
-                      <Select 
-                        value={reportConfig.table} 
-                        onValueChange={(value) => setReportConfig(prev => ({ ...prev, table: value, fields: [] }))}
+                      <Select
+                        value={reportConfig.table}
+                        onValueChange={(value) => setReportConfig((prev) => ({ ...prev, table: value, fields: [] }))}
                       >
                         <SelectTrigger>
                           <SelectValue placeholder="Select table" />
@@ -413,9 +441,9 @@ export function CustomReportBuilder() {
 
                   <div className="space-y-2">
                     <Label>Chart Type</Label>
-                    <Select 
-                      value={reportConfig.chartType} 
-                      onValueChange={(value) => setReportConfig(prev => ({ ...prev, chartType: value }))}
+                    <Select
+                      value={reportConfig.chartType}
+                      onValueChange={(value) => setReportConfig((prev) => ({ ...prev, chartType: value }))}
                     >
                       <SelectTrigger>
                         <SelectValue />
@@ -450,7 +478,7 @@ export function CustomReportBuilder() {
                         <div key={field.name} className="flex items-center space-x-2">
                           <Checkbox
                             id={field.name}
-                            checked={reportConfig.fields.some(f => f.name === field.name)}
+                            checked={reportConfig.fields.some((f) => f.name === field.name)}
                             onCheckedChange={(checked) => handleFieldSelection(field, checked)}
                           />
                           <Label htmlFor={field.name} className="flex-1">
@@ -486,10 +514,7 @@ export function CustomReportBuilder() {
                     <div className="space-y-3">
                       {reportConfig.filters.map((filter, index) => (
                         <div key={index} className="flex items-center gap-2">
-                          <Select 
-                            value={filter.field} 
-                            onValueChange={(value) => updateFilter(index, 'field', value)}
-                          >
+                          <Select value={filter.field} onValueChange={(value) => updateFilter(index, "field", value)}>
                             <SelectTrigger className="w-[200px]">
                               <SelectValue placeholder="Select field" />
                             </SelectTrigger>
@@ -501,10 +526,10 @@ export function CustomReportBuilder() {
                               ))}
                             </SelectContent>
                           </Select>
-                          
-                          <Select 
-                            value={filter.operator} 
-                            onValueChange={(value) => updateFilter(index, 'operator', value)}
+
+                          <Select
+                            value={filter.operator}
+                            onValueChange={(value) => updateFilter(index, "operator", value)}
                           >
                             <SelectTrigger className="w-[150px]">
                               <SelectValue />
@@ -517,19 +542,15 @@ export function CustomReportBuilder() {
                               ))}
                             </SelectContent>
                           </Select>
-                          
+
                           <Input
                             value={filter.value}
-                            onChange={(e) => updateFilter(index, 'value', e.target.value)}
+                            onChange={(e) => updateFilter(index, "value", e.target.value)}
                             placeholder="Filter value"
                             className="flex-1"
                           />
-                          
-                          <Button 
-                            size="sm" 
-                            variant="ghost" 
-                            onClick={() => removeFilter(index)}
-                          >
+
+                          <Button size="sm" variant="ghost" onClick={() => removeFilter(index)}>
                             <Trash2 className="h-4 w-4 text-red-500" />
                           </Button>
                         </div>
@@ -547,9 +568,9 @@ export function CustomReportBuilder() {
                   <CardContent className="space-y-4">
                     <div className="space-y-2">
                       <Label>Group By</Label>
-                      <Select 
-                        value={reportConfig.groupBy} 
-                        onValueChange={(value) => setReportConfig(prev => ({ ...prev, groupBy: value }))}
+                      <Select
+                        value={reportConfig.groupBy}
+                        onValueChange={(value) => setReportConfig((prev) => ({ ...prev, groupBy: value }))}
                       >
                         <SelectTrigger>
                           <SelectValue placeholder="Select field to group by" />
@@ -563,12 +584,12 @@ export function CustomReportBuilder() {
                         </SelectContent>
                       </Select>
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label>Sort By</Label>
-                      <Select 
-                        value={reportConfig.sortBy} 
-                        onValueChange={(value) => setReportConfig(prev => ({ ...prev, sortBy: value }))}
+                      <Select
+                        value={reportConfig.sortBy}
+                        onValueChange={(value) => setReportConfig((prev) => ({ ...prev, sortBy: value }))}
                       >
                         <SelectTrigger>
                           <SelectValue placeholder="Select field to sort by" />
@@ -592,9 +613,9 @@ export function CustomReportBuilder() {
                   <CardContent>
                     <div className="space-y-2">
                       <Label>Aggregation Type</Label>
-                      <Select 
-                        value={reportConfig.aggregation} 
-                        onValueChange={(value) => setReportConfig(prev => ({ ...prev, aggregation: value }))}
+                      <Select
+                        value={reportConfig.aggregation}
+                        onValueChange={(value) => setReportConfig((prev) => ({ ...prev, aggregation: value }))}
                       >
                         <SelectTrigger>
                           <SelectValue />
@@ -621,9 +642,7 @@ export function CustomReportBuilder() {
               <CardTitle className="flex items-center gap-2">
                 <Eye className="h-5 w-5" />
                 Report Preview
-                {reportConfig.name && (
-                  <Badge variant="outline">{reportConfig.name}</Badge>
-                )}
+                {reportConfig.name && <Badge variant="outline">{reportConfig.name}</Badge>}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -681,7 +700,7 @@ export function CustomReportBuilder() {
                           <Button size="sm" variant="outline" onClick={() => loadReport(report)}>
                             Load
                           </Button>
-                          <Button size="sm" variant="outline" onClick={() => exportReport('pdf')}>
+                          <Button size="sm" variant="outline" onClick={() => exportReport("pdf")}>
                             <Download className="h-4 w-4" />
                           </Button>
                         </div>
@@ -697,3 +716,5 @@ export function CustomReportBuilder() {
     </div>
   )
 }
+
+export default CustomReportBuilder

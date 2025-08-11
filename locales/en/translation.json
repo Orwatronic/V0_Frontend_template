@@ -29,7 +29,12 @@
       "materials": {
         "title": "Materials Management",
         "description": "Material master data, inventory control, warehouse management, and procurement processes",
-        "features": { "f1": "Material Master", "f2": "Inventory Control", "f3": "Warehouse Management", "f4": "Procurement" }
+        "features": {
+          "f1": "Material Master",
+          "f2": "Inventory Control",
+          "f3": "Warehouse Management",
+          "f4": "Procurement"
+        }
       },
       "sales": {
         "title": "Sales & Distribution",
@@ -49,12 +54,22 @@
       "production": {
         "title": "Production Planning",
         "description": "Manufacturing execution, BOM management, and production scheduling with work orders",
-        "features": { "f1": "Manufacturing", "f2": "BOM Management", "f3": "Production Scheduling", "f4": "Work Orders" }
+        "features": {
+          "f1": "Manufacturing",
+          "f2": "BOM Management",
+          "f3": "Production Scheduling",
+          "f4": "Work Orders"
+        }
       },
       "project": {
         "title": "Project System",
         "description": "Project lifecycle management, resource planning, milestone tracking, and budgeting",
-        "features": { "f1": "Project Planning", "f2": "Resource Management", "f3": "Milestone Tracking", "f4": "Budgeting" }
+        "features": {
+          "f1": "Project Planning",
+          "f2": "Resource Management",
+          "f3": "Milestone Tracking",
+          "f4": "Budgeting"
+        }
       },
       "quality": {
         "title": "Quality Management",
@@ -74,27 +89,52 @@
       "productionAI": {
         "title": "Production Planning & AI",
         "description": "AI-driven manufacturing execution with predictive analytics, smart scheduling, and RAG-powered insights",
-        "features": { "f1": "AI Manufacturing", "f2": "Predictive Analytics", "f3": "Smart Scheduling", "f4": "RAG Insights" }
+        "features": {
+          "f1": "AI Manufacturing",
+          "f2": "Predictive Analytics",
+          "f3": "Smart Scheduling",
+          "f4": "RAG Insights"
+        }
       },
       "projectAI": {
         "title": "Project Intelligence System",
         "description": "Cognitive project management with AI-powered resource optimization and intelligent milestone prediction",
-        "features": { "f1": "AI Resource Planning", "f2": "Predictive Milestones", "f3": "Risk Analysis", "f4": "Smart Allocation" }
+        "features": {
+          "f1": "AI Resource Planning",
+          "f2": "Predictive Milestones",
+          "f3": "Risk Analysis",
+          "f4": "Smart Allocation"
+        }
       },
       "qualityAI": {
         "title": "Quality Assurance AI",
         "description": "Machine learning-driven quality control with predictive defect detection and automated compliance",
-        "features": { "f1": "ML Quality Control", "f2": "Defect Prediction", "f3": "Auto Compliance", "f4": "Pattern Recognition" }
+        "features": {
+          "f1": "ML Quality Control",
+          "f2": "Defect Prediction",
+          "f3": "Auto Compliance",
+          "f4": "Pattern Recognition"
+        }
       },
       "maintenanceAI": {
         "title": "Predictive Maintenance AI",
         "description": "IoT-integrated predictive maintenance with AI anomaly detection and intelligent work order generation",
-        "features": { "f1": "IoT Integration", "f2": "Predictive Alerts", "f3": "Smart Work Orders", "f4": "Failure Prediction" }
+        "features": {
+          "f1": "IoT Integration",
+          "f2": "Predictive Alerts",
+          "f3": "Smart Work Orders",
+          "f4": "Failure Prediction"
+        }
       },
       "crmAI": {
         "title": "Customer Intelligence Platform",
         "description": "AI-enhanced CRM with sentiment analysis, predictive lead scoring, and RAG-powered customer insights",
-        "features": { "f1": "Sentiment Analysis", "f2": "Lead Scoring", "f3": "Customer Insights", "f4": "Behavior Prediction" }
+        "features": {
+          "f1": "Sentiment Analysis",
+          "f2": "Lead Scoring",
+          "f3": "Customer Insights",
+          "f4": "Behavior Prediction"
+        }
       }
     },
     "features": {
@@ -232,7 +272,11 @@
     "company": "Company",
     "login": "Login",
     "getStarted": "Get Started",
-    "solutionsSection": { "implemented": "Fully Implemented", "recent": "Recently Completed", "ai": "AI-Powered Solutions" },
+    "solutionsSection": {
+      "implemented": "Fully Implemented",
+      "recent": "Recently Completed",
+      "ai": "AI-Powered Solutions"
+    },
     "solutionsItems": {
       "financial": "Financial Management",
       "hcm": "Human Capital Management",
@@ -263,7 +307,13 @@
       "support": "Support Center",
       "webinars": "Webinars"
     },
-    "companyItems": { "about": "About Us", "careers": "Careers", "partners": "Partners", "news": "News", "contact": "Contact" }
+    "companyItems": {
+      "about": "About Us",
+      "careers": "Careers",
+      "partners": "Partners",
+      "news": "News",
+      "contact": "Contact"
+    }
   },
   "common": {
     "secure": "SOC 2 Certified",
@@ -317,7 +367,7 @@
       },
       "deviceTrust": {
         "title": "Trust this device?",
-        "description": "If enabled, we’ll reduce prompts on this device for a limited time."
+        "description": "If enabled, we'll reduce prompts on this device for a limited time."
       },
       "trustCheckboxLabel": "Trust this device",
       "trustSubmit": "Continue",
@@ -383,6 +433,34 @@
       "iso27001": "ISO 27001",
       "gdpr": "GDPR Compliant",
       "uptime": "99.9% Uptime SLA"
+    }
+  },
+  "financial": {
+    "chartOfAccounts": {
+      "title": "Chart of Accounts",
+      "description": "Manage your company's financial accounts",
+      "searchPlaceholder": "Search accounts...",
+      "addAccount": "Add Account",
+      "columns": {
+        "accountName": "Account Name",
+        "accountNumber": "Account Number",
+        "type": "Type",
+        "balance": "Balance"
+      },
+      "accountTypes": {
+        "Header": "Header",
+        "Asset": "Asset",
+        "Liability": "Liability",
+        "Equity": "Equity",
+        "Revenue": "Revenue",
+        "Expense": "Expense"
+      },
+      "aria": {
+        "searchLabel": "Search accounts by name or number",
+        "expandButton": "Expand account {{name}}",
+        "collapseButton": "Collapse account {{name}}",
+        "accountTree": "Chart of accounts tree structure"
+      }
     }
   },
   "crm": {
