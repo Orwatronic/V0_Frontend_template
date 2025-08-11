@@ -19,7 +19,19 @@
       "financial": {
         "title": "Finansstyring",
         "description": "Komplett regnskap med hovedbok, kontoplan, flervaluta og periodehåndtering",
-        "features": { "f1": "Hovedbok", "f2": "Flervaluta", "f3": "Bilagsføring", "f4": "Periodehåndtering" }
+        "features": { "f1": "Hovedbok", "f2": "Flervaluta", "f3": "Bilagsføring", "f4": "Periodehåndtering" },
+        "tabs": {
+          "coa": "Kontoplan",
+          "ap": "Leverandørgjeld",
+          "ar": "Kundefordringer",
+          "collections": "Innkreving",
+          "reconciliation": "Avstemming",
+          "assets": "Anleggsmidler",
+          "reporting": "Rapportering",
+          "aging": "Aldersanalyse",
+          "bankRec": "Bankavstemming",
+          "je": "Bilagsføring"
+        }
       },
       "hcm": {
         "title": "Human Capital Management",
