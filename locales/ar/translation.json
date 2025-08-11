@@ -198,7 +198,37 @@
       "title": "إدارة المواد",
       "subtitle": "المخزون والمستودعات وعمليات الشراء.",
       "features": { "f1": "التحكم بالمخزون", "f2": "إدارة المستودعات", "f3": "الشراء" },
-      "imageAlt": "نظرة عامة على المواد"
+      "imageAlt": "نظرة عامة على المواد",
+      "tabs": {
+        "materialMaster": "سجل المواد الرئيسية",
+        "inventory": "إدارة المخزون",
+        "warehouse": "إدارة المستودعات",
+        "procurement": "المشتريات"
+      },
+      "materialMaster": {
+        "title": "سجل المواد الرئيسية",
+        "description": "إدارة بيانات المواد الأساسية والمواصفات",
+        "searchPlaceholder": "البحث في المواد...",
+        "addMaterial": "إضافة مادة جديدة",
+        "columns": {
+          "materialCode": "رمز المادة",
+          "description": "الوصف",
+          "category": "الفئة",
+          "unit": "الوحدة",
+          "status": "الحالة"
+        },
+        "categories": {
+          "rawMaterials": "المواد الخام",
+          "finishedGoods": "البضائع المصنعة",
+          "components": "المكونات",
+          "consumables": "المواد الاستهلاكية"
+        },
+        "status": {
+          "active": "نشط",
+          "inactive": "غير نشط",
+          "discontinued": "متوقف"
+        }
+      }
     },
     "hcm": {
       "title": "إدارة رأس المال البشري",
@@ -864,5 +894,9 @@
     "trackDelivery": "تتبع التسليم",
     "downloadPdf": "تحميل PDF",
     "approveReturn": "اعتماد المرتجع"
+  },
+  "production": {
+    "title": "تخطيط الإنتاج",
+    "description": "تخطيط ومراقبة أوامر الإنتاج والطاقة الإنتاجية."
   }
 }

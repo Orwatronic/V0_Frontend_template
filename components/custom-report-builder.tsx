@@ -11,6 +11,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Checkbox } from "@/components/ui/checkbox"
+import { useI18n } from "@/contexts/i18n-context"
 import {
   BarChart,
   Bar,
@@ -169,6 +170,7 @@ const filterOperators = [
 ]
 
 function CustomReportBuilder() {
+  const { t } = useI18n()
   const [reportConfig, setReportConfig] = useState({
     name: "",
     description: "",
@@ -236,7 +238,7 @@ function CustomReportBuilder() {
       config: reportConfig,
     }
     setSavedReports((prev) => [...prev, newReport])
-    alert("Report saved successfully!")
+    alert(t("reports.saveSuccess"))
   }
 
   const loadReport = (report) => {
@@ -248,7 +250,7 @@ function CustomReportBuilder() {
 
   const exportReport = (format) => {
     // CURSOR: API call to POST /api/v1/analytics/reports/export
-    alert(`Exporting report as ${format.toUpperCase()}...`)
+    alert(t("reports.exportingAs", { format: format.toUpperCase() }))
   }
 
   const renderChart = () => {
@@ -336,30 +338,30 @@ function CustomReportBuilder() {
     <div className="p-6 space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold">Custom Report Builder</h1>
-          <p className="text-muted-foreground">Create interactive reports from your ERP data</p>
+          <h1 className="text-3xl font-bold">{t("reports.title")}</h1>
+          <p className="text-muted-foreground">{t("reports.description")}</p>
         </div>
         <div className="flex gap-2">
           <Button variant="outline" onClick={() => exportReport("pdf")}>
             <Download className="h-4 w-4 mr-2" />
-            Export PDF
+            {t("reports.exportPdf")}
           </Button>
           <Button variant="outline" onClick={() => exportReport("excel")}>
             <Download className="h-4 w-4 mr-2" />
-            Export Excel
+            {t("reports.exportExcel")}
           </Button>
           <Button onClick={saveReport} disabled={!reportConfig.name}>
             <Save className="h-4 w-4 mr-2" />
-            Save Report
+            {t("reports.saveReport")}
           </Button>
         </div>
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList>
-          <TabsTrigger value="builder">Report Builder</TabsTrigger>
-          <TabsTrigger value="preview">Preview</TabsTrigger>
-          <TabsTrigger value="saved">Saved Reports</TabsTrigger>
+          <TabsTrigger value="builder">{t("reports.tabs.builder")}</TabsTrigger>
+          <TabsTrigger value="preview">{t("reports.tabs.preview")}</TabsTrigger>
+          <TabsTrigger value="saved">{t("reports.tabs.saved")}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="builder" className="space-y-6">
@@ -370,32 +372,32 @@ function CustomReportBuilder() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Settings className="h-5 w-5" />
-                    Report Configuration
+                    {t("reports.configuration.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="reportName">Report Name</Label>
+                    <Label htmlFor="reportName">{t("reports.configuration.reportName")}</Label>
                     <Input
                       id="reportName"
                       value={reportConfig.name}
                       onChange={(e) => setReportConfig((prev) => ({ ...prev, name: e.target.value }))}
-                      placeholder="Enter report name"
+                      placeholder={t("reports.configuration.reportNamePlaceholder")}
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="description">Description</Label>
+                    <Label htmlFor="description">{t("reports.configuration.description")}</Label>
                     <Textarea
                       id="description"
                       value={reportConfig.description}
                       onChange={(e) => setReportConfig((prev) => ({ ...prev, description: e.target.value }))}
-                      placeholder="Describe your report"
+                      placeholder={t("reports.configuration.descriptionPlaceholder")}
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label>Data Source</Label>
+                    <Label>{t("reports.configuration.dataSource")}</Label>
                     <Select
                       value={reportConfig.dataSource}
                       onValueChange={(value) =>
@@ -403,7 +405,7 @@ function CustomReportBuilder() {
                       }
                     >
                       <SelectTrigger>
-                        <SelectValue placeholder="Select data source" />
+                        <SelectValue placeholder={t("reports.configuration.selectDataSource")} />
                       </SelectTrigger>
                       <SelectContent>
                         {Object.entries(dataSources).map(([key, source]) => (
@@ -420,13 +422,13 @@ function CustomReportBuilder() {
 
                   {currentDataSource && (
                     <div className="space-y-2">
-                      <Label>Table</Label>
+                      <Label>{t("reports.configuration.table")}</Label>
                       <Select
                         value={reportConfig.table}
                         onValueChange={(value) => setReportConfig((prev) => ({ ...prev, table: value, fields: [] }))}
                       >
                         <SelectTrigger>
-                          <SelectValue placeholder="Select table" />
+                          <SelectValue placeholder={t("reports.configuration.selectTable")} />
                         </SelectTrigger>
                         <SelectContent>
                           {Object.entries(currentDataSource.tables).map(([key, table]) => (
@@ -440,7 +442,7 @@ function CustomReportBuilder() {
                   )}
 
                   <div className="space-y-2">
-                    <Label>Chart Type</Label>
+                    <Label>{t("reports.configuration.chartType")}</Label>
                     <Select
                       value={reportConfig.chartType}
                       onValueChange={(value) => setReportConfig((prev) => ({ ...prev, chartType: value }))}
@@ -469,7 +471,7 @@ function CustomReportBuilder() {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Database className="h-5 w-5" />
-                      Select Fields
+                      {t("reports.fields.title")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -636,14 +638,10 @@ function CustomReportBuilder() {
           </div>
         </TabsContent>
 
-        <TabsContent value="preview">
+        <TabsContent value="preview" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Eye className="h-5 w-5" />
-                Report Preview
-                {reportConfig.name && <Badge variant="outline">{reportConfig.name}</Badge>}
-              </CardTitle>
+              <CardTitle>{t("reports.preview.title")}</CardTitle>
             </CardHeader>
             <CardContent>
               {reportConfig.chartType ? (
@@ -674,41 +672,31 @@ function CustomReportBuilder() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="saved">
+        <TabsContent value="saved" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Saved Reports</CardTitle>
+              <CardTitle>{t("reports.saved.title")}</CardTitle>
             </CardHeader>
             <CardContent>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Report Name</TableHead>
-                    <TableHead>Description</TableHead>
-                    <TableHead>Last Modified</TableHead>
-                    <TableHead>Actions</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {savedReports.map((report) => (
-                    <TableRow key={report.id}>
-                      <TableCell className="font-medium">{report.name}</TableCell>
-                      <TableCell>{report.description}</TableCell>
-                      <TableCell>{report.lastModified}</TableCell>
-                      <TableCell>
-                        <div className="flex gap-2">
-                          <Button size="sm" variant="outline" onClick={() => loadReport(report)}>
-                            Load
-                          </Button>
-                          <Button size="sm" variant="outline" onClick={() => exportReport("pdf")}>
-                            <Download className="h-4 w-4" />
-                          </Button>
-                        </div>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+              <div className="space-y-4">
+                {savedReports.map((report) => (
+                  <div key={report.id} className="flex items-center justify-between p-4 border rounded-lg">
+                    <div>
+                      <h3 className="font-medium">{report.name}</h3>
+                      <p className="text-sm text-muted-foreground">{report.description}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {t("reports.saved.lastModified")}: {report.lastModified}
+                      </p>
+                    </div>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" onClick={() => loadReport(report)}>
+                        <Eye className="h-4 w-4 mr-2" />
+                        {t("reports.saved.load")}
+                      </Button>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </CardContent>
           </Card>
         </TabsContent>
