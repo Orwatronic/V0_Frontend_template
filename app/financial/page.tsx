@@ -1,5 +1,15 @@
-import FinancialManagement from "../../components/financial-management"
+"use client"
 
-export default function Financial() {
-  return <FinancialManagement />
+import ProtectedRoute from "@/components/protected-route"
+import { AppShell } from "@/components/app-shell"
+import FinancialManagementContainer from "@/components/financial-management-container"
+
+export default function FinancialPage() {
+  return (
+    <ProtectedRoute>
+      <AppShell>
+        <FinancialManagementContainer />
+      </AppShell>
+    </ProtectedRoute>
+  )
 }

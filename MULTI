@@ -1,0 +1,154 @@
+// locales/en/translation.json
+{
+  "auth": {
+    "login": {
+      "mfa": {
+        "title": "Multi-factor authentication",
+        "subtitle": "Enter the 6-digit code from your authenticator app",
+        "codeLabel": "Verification code",
+        "placeholder": "123456",
+        "help": "Your one-time code expires in 30 seconds.",
+        "verify": "Verify",
+        "back": "Back"
+      },
+      "deviceTrust": {
+        "title": "Trust this device?",
+        "description": "We’ll remember this device for 30 days to reduce MFA prompts on sign-in."
+      },
+      "trustCheckboxLabel": "Trust this device for 30 days",
+      "trustSubmit": "Continue",
+      "orgsLoading": "Loading companies...",
+      "orgsError": "Could not load companies. Please try again.",
+      "errors": {
+        "generic": "Unable to sign in. Please check your credentials and try again.",
+        "emailInvalid": "Please enter a valid email address.",
+        "passwordInvalid": "Incorrect password. Please try again."
+      },
+      "lockout": {
+        "title": "Too many attempts",
+        "subtitle": "Your account is temporarily locked due to multiple failed attempts.",
+        "retryIn": "Try again in {{seconds}}s"
+      },
+      "stepAnnounce": "Step {{current}} of {{total}}: {{name}}"
+    }
+  }
+}
+
+// locales/ar/translation.json
+{
+  "auth": {
+    "login": {
+      "mfa": {
+        "title": "المصادقة متعددة العوامل",
+        "subtitle": "أدخل الرمز المكوّن من 6 أرقام من تطبيق المصادقة",
+        "codeLabel": "رمز التحقق",
+        "placeholder": "123456",
+        "help": "تنتهي صلاحية الرمز لمرة واحدة خلال 30 ثانية.",
+        "verify": "تحقق",
+        "back": "رجوع"
+      },
+      "deviceTrust": {
+        "title": "هل تثق بهذا الجهاز؟",
+        "description": "سنتذكر هذا الجهاز لمدة 30 يوماً لتقليل طلبات المصادقة عند تسجيل الدخول."
+      },
+      "trustCheckboxLabel": "الثقة بهذا الجهاز لمدة 30 يوماً",
+      "trustSubmit": "متابعة",
+      "orgsLoading": "جارٍ تحميل الشركات...",
+      "orgsError": "تعذر تحميل الشركات. يرجى المحاولة مرة أخرى.",
+      "errors": {
+        "generic": "تعذر تسجيل الدخول. يرجى التحقق من البيانات والمحاولة مرة أخرى.",
+        "emailInvalid": "يرجى إدخال بريد إلكتروني صالح.",
+        "passwordInvalid": "كلمة المرور غير صحيحة. حاول مرة أخرى."
+      },
+      "lockout": {
+        "title": "محاولات كثيرة جداً",
+        "subtitle": "تم قفل حسابك مؤقتاً بسبب عدة محاولات فاشلة.",
+        "retryIn": "حاول مرة أخرى خلال {{seconds}} ث"
+      },
+      "stepAnnounce": "الخطوة {{current}} من {{total}}: {{name}}"
+    }
+  }
+}
+
+// locales/no/translation.json
+{
+  "auth": {
+    "login": {
+      "mfa": {
+        "title": "Flerfaktorautentisering",
+        "subtitle": "Skriv inn 6-sifret kode fra autentiseringsappen",
+        "codeLabel": "Verifiseringskode",
+        "placeholder": "123456",
+        "help": "Engangskoden utløper om 30 sekunder.",
+        "verify": "Verifiser",
+        "back": "Tilbake"
+      },
+      "deviceTrust": {
+        "title": "Stol på denne enheten?",
+        "description": "Vi husker denne enheten i 30 dager for færre MFA-forespørsler ved innlogging."
+      },
+      "trustCheckboxLabel": "Stol på denne enheten i 30 dager",
+      "trustSubmit": "Fortsett",
+      "orgsLoading": "Laster selskaper...",
+      "orgsError": "Kunne ikke laste selskaper. Prøv igjen.",
+      "errors": {
+        "generic": "Kunne ikke logge inn. Kontroller legitimasjonen og prøv igjen.",
+        "emailInvalid": "Vennligst oppgi en gyldig e-postadresse.",
+        "passwordInvalid": "Feil passord. Prøv igjen."
+      },
+      "lockout": {
+        "title": "For mange forsøk",
+        "subtitle": "Kontoen er midlertidig låst på grunn av flere mislykkede forsøk.",
+        "retryIn": "Prøv igjen om {{seconds}} s"
+      },
+      "stepAnnounce": "Trinn {{current}} av {{total}}: {{name}}"
+    }
+  }
+}
+
+// Planning and progress tracking/authentication-todo.md
+# Authentication Module — Plan, Scope, and Status
+
+Context
+- Harden the login experience with MFA scaffolding, device trust, accessible error/lockout UX, and dynamic organization loading. Aligns with enterprise standards and the i18n/a11y requirements. [^5][^4]
+
+Goals
+- Multi-step login: credentials → MFA → device trust.
+- Fully localized (en/ar/no), with RTL support for Arabic and correct html lang/dir via I18nProvider. [^5]
+- Accessible: labels, focus management, aria-live for status/errors, keyboard-only support. [^5]
+- Backend call sites annotated with CURSOR protocol. [^3]
+
+Scope (A-hardening)
+- MFA UI scaffolding and flow state.
+- Device trust checkbox and confirmation step.
+- Error/lockout UX with attempt counters and a visible retry timer.
+- Organizations loaded via API route backed by a server action.
+- No real auth backend yet—AuthProvider mock remains; wire-in when APIs are available.
+
+Definition of Done
+- Credentials step validates inputs, surfaces localized errors.
+- MFA step accepts a 6-digit code and handles failures with a11y alerts.
+- Device trust step persists choice (frontend only for now).
+- Lockout UI appears after 5 failed attempts for 60 seconds with a countdown.
+- Company select is populated dynamically and falls back gracefully.
+- All visible copy uses i18n keys; alt text/aria strings are localized.
+- CURSOR comments present at each call site and endpoints are listed below.
+
+Rollout Notes
+- Keep server action mocked and swap to real endpoints when ready.
+- Ensure RTL layouts mirror correctly and remain keyboard navigable.
+
+Risks
+- Inconsistent step focus → mitigated via explicit focus management.
+- Unavailable organizations endpoint → mocked data and clear error state.
+
+### // API Endpoints for CURSOR
+- GET /api/v1/organizations       // Fetch organizations for company selector
+- POST /api/v1/auth/login         // Credentials verification and MFA challenge
+- POST /api/v1/auth/mfa/verify    // Verify MFA code
+- POST /api/v1/auth/device-trust  // Mark device as trusted for 30 days
+
+References
+- Accessibility & Internationalization requirements (ERP Prompt Collection). [^5]
+- Comprehensive Frontend Development Prompt (enterprise quality gates). [^4]
+- CURSOR Backend Integration Protocol. [^3]

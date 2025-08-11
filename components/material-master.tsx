@@ -1,0 +1,128 @@
+"use client"
+
+import React, { useState, useMemo } from 'react'
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Tree, TreeNode } from "@/components/ui/tree" // Assuming a Tree component exists
+import { Search, MoreHorizontal, FileDown, FileUp, PlusCircle, Package, Layers, Barcode, Weight, Ruler, Palette, Tag } from 'lucide-react'
+
+// Mock Data - Replace with API calls
+// CURSOR: API call to GET /api/v1/mdm/materials/categories
+const mockCategories = [
+  { id: 'raw', name: 'Raw Materials', children: [{ id: 'metals', name: 'Metals' }, { id: 'plastics', name: 'Plastics' }] },
+  { id: 'finished', name: 'Finished Goods', children: [{ id: 'electronics', name: 'Electronics' }, { id: 'apparel', name: 'Apparel' }] },
+];
+
+// CURSOR: API call to GET /api/v1/mdm/materials?category={categoryId}
+const mockMaterials = [
+  { id: 'M001', name: 'Steel Plate', category: 'metals', type: 'Raw', uom: 'KG', status: 'active', onHand: 1500 },
+  { id: 'M002', name: 'ABS Pellets', category: 'plastics', type: 'Raw', uom: 'KG', status: 'active', onHand: 3000 },
+  { id: 'M003', name: 'Microcontroller', category: 'electronics', type: 'Component', uom: 'EA', status: 'active', onHand: 10000 },
+  { id: 'M004', name: 'Cotton T-Shirt', category: 'apparel', type: 'Finished', uom: 'EA', status: 'inactive', onHand: 500 },
+];
+
+// A simple placeholder for the Tree component
+const SimpleTree = ({ data, onSelect }: { data: any[], onSelect: (id: string) => void }) => (
+  <div className="space-y-2">
+    {data.map(node => (
+      <div key={node.id}>
+        <Button variant="link" className="p-0 h-auto" onClick={() => onSelect(node.id)}>{node.name}</Button>
+        {node.children && (
+          <div className="pl-4 space-y-1 mt-1">
+            {node.children.map((child: any) => (
+              <Button key={child.id} variant="link" className="p-0 h-auto text-muted-foreground" onClick={() => onSelect(child.id)}>{child.name}</Button>
+            ))}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+);
+
+export const MaterialMaster = () => {
+  const [materials, setMaterials] = useState(mockMaterials);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredMaterials = useMemo(() => {
+    return materials.filter(material => {
+      const matchesSearch = material.name.toLowerCase().includes(searchTerm.toLowerCase()) || material.id.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || material.category === selectedCategory;
+      return matchesSearch && matchesCategory;
+    });
+  }, [materials, searchTerm, selectedCategory]);
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center">
+          <Package className="mr-2" /> Material Master Data
+        </CardTitle>
+        <CardDescription>Manage and maintain all material and product records.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="grid md:grid-cols-12 gap-6">
+          {/* Category Browser */}
+          <div className="md:col-span-3">
+            <h4 className="font-semibold mb-2">Material Categories</h4>
+            <SimpleTree data={mockCategories} onSelect={setSelectedCategory} />
+          </div>
+
+          {/* Main Content */}
+          <div className="md:col-span-9 space-y-4">
+            {/* Toolbar */}
+            <div className="flex flex-col md:flex-row justify-between items-center gap-2">
+              <div className="relative">
+                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                <Input placeholder="Search materials..." className="pl-8 w-full md:w-64" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+              </div>
+              <div className="flex items-center gap-2">
+                <Button variant="outline" size="sm"><FileUp className="mr-2 h-4 w-4" /> Import</Button>
+                <Button variant="outline" size="sm"><FileDown className="mr-2 h-4 w-4" /> Export</Button>
+                <Button size="sm"><PlusCircle className="mr-2 h-4 w-4" /> Add Material</Button>
+              </div>
+            </div>
+
+            {/* Data Table */}
+            <div className="rounded-md border">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Material ID</TableHead>
+                    <TableHead>Name</TableHead>
+                    <TableHead>Type</TableHead>
+                    <TableHead>Base UoM</TableHead>
+                    <TableHead>Status</TableHead>
+                    <TableHead>On Hand</TableHead>
+                    <TableHead className="text-right">Actions</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {filteredMaterials.map(material => (
+                    <TableRow key={material.id}>
+                      <TableCell className="font-mono">{material.id}</TableCell>
+                      <TableCell className="font-medium">{material.name}</TableCell>
+                      <TableCell><Badge variant="secondary">{material.type}</Badge></TableCell>
+                      <TableCell>{material.uom}</TableCell>
+                      <TableCell><Badge variant={material.status === 'active' ? 'default' : 'outline'}>{material.status}</Badge></TableCell>
+                      <TableCell>{material.onHand.toLocaleString()}</TableCell>
+                      <TableCell className="text-right">
+                        <Button variant="ghost" size="icon">
+                          <MoreHorizontal className="h-4 w-4" />
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}

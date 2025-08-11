@@ -3,44 +3,19 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Play, Check, Users, Globe, Shield } from "lucide-react"
+import { ArrowRight, Play, Check, Users, Globe, Shield } from 'lucide-react'
 import { useRouter } from "next/navigation"
 import Image from "next/image"
-
-// Mock translation function since we don't have react-i18next in the preview
-const useTranslation = () => {
-  return {
-    t: (key: string) => {
-      const translations: Record<string, string> = {
-        "landing.hero.badge": "Enterprise-Ready ERP Solution",
-        "landing.hero.title": "Transform Your Enterprise with Feebee Technologies ERP",
-        "landing.hero.subtitle":
-          "Comprehensive enterprise resource planning system designed to manage core business processes across all departments with integrated modules for complete operational control.",
-        "landing.hero.cta.primary": "Start Free Trial",
-        "landing.hero.cta.secondary": "Watch Demo",
-        "landing.hero.badge.realtime": "Real-time Data",
-        "landing.hero.badge.analytics": "Advanced Analytics",
-        "landing.hero.image.alt": "EnterpriseERP Dashboard",
-        "landing.hero.stats.uptime": "Uptime SLA",
-        "landing.hero.stats.clients": "Enterprise Clients",
-        "landing.hero.stats.support": "Expert Support",
-        "common.secure": "SOC 2 Certified",
-        "common.compliant": "GDPR Compliant",
-      }
-      return translations[key] || key
-    },
-  }
-}
+import { useI18n } from "@/contexts/i18n-context"
 
 const HeroSection = () => {
   const router = useRouter()
-  const { t } = useTranslation()
+  const { t } = useI18n()
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-24 overflow-hidden bg-hero-gradient">
-      {/* SVG Pattern Overlay */}
       <div className="absolute inset-0 z-0 opacity-10">
-        <svg className="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
             <circle cx="2" cy="2" r="1" fill="currentColor" />
           </pattern>
@@ -102,10 +77,8 @@ const HeroSection = () => {
 
           {/* Right Column - Dashboard Image */}
           <div className="relative animate-slide-up">
-            {/* Glow Effect */}
             <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-3xl scale-105"></div>
 
-            {/* Dashboard Image */}
             <Card className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-xl overflow-hidden">
               <CardContent className="p-4">
                 <Image
@@ -118,11 +91,10 @@ const HeroSection = () => {
                 />
               </CardContent>
 
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+              <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg">
                 {t("landing.hero.badge.realtime")}
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+              <div className="absolute bottom-4 left-4 bg-blue-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg">
                 {t("landing.hero.badge.analytics")}
               </div>
             </Card>

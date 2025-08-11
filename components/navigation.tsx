@@ -1,155 +1,349 @@
 "use client"
 
+import { useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, ChevronDown } from "lucide-react"
-import { useRouter } from "next/navigation"
-import { useState } from "react"
-
-// Mock translation function
-const useTranslation = () => {
-  return {
-    t: (key: string) => {
-      const translations: Record<string, string> = {
-        "navigation.solutions": "Solutions",
-        "navigation.features": "Features",
-        "navigation.pricing": "Pricing",
-        "navigation.resources": "Resources",
-        "navigation.company": "Company",
-        "navigation.cta": "Log In",
-        "navigation.logo": "EnterpriseERP",
-        "navigation.tagline": "by Feebee Technologies",
-      }
-      return translations[key] || key
-    },
-  }
-}
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Badge } from "@/components/ui/badge"
+import { Menu, ChevronDown, DollarSign, Users, Package, ShoppingCart, Database, Building, Factory, Briefcase, Shield, Wrench, UserCheck, Zap, BarChart3, Globe, Workflow, Brain, Sparkles, CheckCircle, Clock, ArrowRight, FileText, BookOpen, Newspaper, Video, Headphones, Handshake, Mail } from 'lucide-react'
+import { useAuth } from "@/contexts/auth-context"
+import { resolveDestination } from "@/lib/modules"
+import { useI18n } from "@/contexts/i18n-context"
+import { LanguageSwitcher } from "@/components/language-switcher"
 
 const Navigation = () => {
-  const router = useRouter()
-  const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
+  const { t } = useI18n()
+  const router = useRouter()
+  const { token } = useAuth()
+  const getHref = (appPath: string) => resolveDestination(appPath, Boolean(token))
 
-  const navigationItems = [
-    {
-      label: t("navigation.solutions"),
-      href: "/solutions",
-      hasDropdown: true,
-    },
-    {
-      label: t("navigation.features"),
-      href: "/features",
-    },
-    {
-      label: t("navigation.pricing"),
-      href: "/pricing",
-    },
-    {
-      label: t("navigation.resources"),
-      href: "/resources",
-      hasDropdown: true,
-    },
-    {
-      label: t("navigation.company"),
-      href: "/company",
-      hasDropdown: true,
-    },
+  const implementedSolutions = [
+    { icon: DollarSign, title: t("nav.solutionsItems.financial"), href: "/financial" },
+    { icon: Users, title: t("nav.solutionsItems.hcm"), href: "/employees" },
+    { icon: Package, title: t("nav.solutionsItems.materials"), href: "/materials" },
+    { icon: ShoppingCart, title: t("nav.solutionsItems.sales"), href: "/sales" },
+    { icon: Database, title: t("nav.solutionsItems.mdm"), href: "/mdm" },
+    { icon: Building, title: t("nav.solutionsItems.organizational"), href: "/organizational" },
+  ]
+
+  const recentSolutions = [
+    { icon: Factory, title: t("nav.solutionsItems.production"), href: "/production", isNew: true },
+    { icon: Briefcase, title: t("nav.solutionsItems.project"), href: "/project", isNew: true },
+    { icon: Shield, title: t("nav.solutionsItems.quality"), href: "/quality", isNew: true },
+    { icon: Wrench, title: t("nav.solutionsItems.maintenance"), href: "/maintenance", isNew: true },
+    { icon: UserCheck, title: t("nav.solutionsItems.crm"), href: "/crm", isNew: true },
+  ]
+
+  const features = [
+    { icon: Zap, title: t("nav.featureItems.realtime"), description: "Process transactions in real-time" },
+    { icon: Globe, title: t("nav.featureItems.multicurrency"), description: "150+ currencies with live rates" },
+    { icon: Workflow, title: t("nav.featureItems.workflow"), description: "Configurable approval workflows" },
+    { icon: BarChart3, title: t("nav.featureItems.analytics"), description: "Advanced reporting & KPIs" },
+    { icon: Database, title: t("nav.featureItems.integration"), description: "REST APIs and webhooks" },
+    { icon: Shield, title: t("nav.featureItems.security"), description: "Enterprise security & compliance" },
+  ]
+
+  const resources = [
+    { title: t("nav.resourceItems.documentation"), href: "/docs", icon: FileText, description: "Guides and references" },
+    { title: t("nav.resourceItems.apiDocs"), href: "/api-docs", icon: Database, description: "API docs & examples" },
+    { title: t("nav.resourceItems.tutorials"), href: "/tutorials", icon: BookOpen, description: "Step-by-step tutorials" },
+    { title: t("nav.resourceItems.blog"), href: "/blog", icon: Newspaper, description: "Insights & best practices" },
+    { title: t("nav.resourceItems.webinars"), href: "/webinars", icon: Video, description: "Live demos & talks" },
+    { title: t("nav.resourceItems.support"), href: "/support", icon: Headphones, description: "24/7 technical support" },
+  ]
+
+  const company = [
+    { title: t("nav.companyItems.about"), href: "/about", icon: Building, description: "About the company" },
+    { title: t("nav.companyItems.careers"), href: "/careers", icon: Users, description: "Join our team" },
+    { title: t("nav.companyItems.partners"), href: "/partners", icon: Handshake, description: "Our partners" },
+    { title: t("nav.companyItems.news"), href: "/news", icon: Newspaper, description: "Company news" },
+    { title: t("nav.companyItems.contact"), href: "/contact", icon: Mail, description: "Contact us" },
   ]
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
+    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-lg">E</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-white font-bold text-xl leading-tight">{t("navigation.logo")}</span>
-              <span className="text-blue-200 text-xs leading-tight">{t("navigation.tagline")}</span>
-            </div>
-          </div>
+          <Link href="/" className="flex items-center space-x-3">
+            <Image src="/enterprise-systems-logo.png" alt="Feebee ERP Logo" width={32} height={32} />
+            <span className="text-xl font-bold text-foreground">Feebee ERP</span>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.label} className="relative group">
-                <button
-                  onClick={() => router.push(item.href)}
-                  className="flex items-center space-x-1 text-white/90 hover:text-white transition-colors duration-200 font-medium"
-                >
-                  <span>{item.label}</span>
-                  {item.hasDropdown && <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />}
-                </button>
-
-                {/* Dropdown indicator */}
-                {item.hasDropdown && (
-                  <div className="absolute top-full left-0 w-2 h-2 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 mt-2" />
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Desktop CTA Button */}
-          <div className="hidden lg:block">
-            <Button
-              variant="default"
-              onClick={() => router.push("/login")}
-              className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-6 py-2 shadow-lg"
-            >
-              Log In
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
-                  <Menu className="h-6 w-6" />
+            {/* Solutions Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="flex items-center space-x-1">
+                  <span>{t("nav.solutions")}</span>
+                  <ChevronDown className="h-4 w-4" />
                 </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-80 bg-white">
-                <div className="flex flex-col space-y-6 mt-8">
-                  {/* Mobile Logo */}
-                  <div className="flex items-center space-x-3 pb-6 border-b">
-                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center shadow-lg">
-                      <span className="text-white font-bold text-lg">E</span>
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-gray-900 font-bold text-xl leading-tight">{t("navigation.logo")}</span>
-                      <span className="text-blue-600 text-xs leading-tight">{t("navigation.tagline")}</span>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-[800px] p-6">
+                <div className="grid grid-cols-3 gap-6">
+                  {/* Implemented Solutions */}
+                  <div>
+                    <DropdownMenuLabel className="flex items-center text-sm font-semibold text-green-700 mb-3">
+                      <CheckCircle className="h-4 w-4 mr-2" />
+                      {t("nav.solutionsSection.implemented")}
+                    </DropdownMenuLabel>
+                    <div className="space-y-2">
+                      {implementedSolutions.map((solution, index) => {
+                        const IconComponent = solution.icon
+                        return (
+                          <DropdownMenuItem key={index} asChild>
+                            <Link
+                              href={getHref(solution.href)}
+                              className="flex items-center space-x-3 p-2 rounded-md hover:bg-muted cursor-pointer"
+                            >
+                              <IconComponent className="h-4 w-4 text-primary" />
+                              <span className="text-sm">{solution.title}</span>
+                            </Link>
+                          </DropdownMenuItem>
+                        )
+                      })}
                     </div>
                   </div>
 
-                  {/* Mobile Navigation Items */}
-                  {navigationItems.map((item) => (
-                    <button
-                      key={item.label}
-                      onClick={() => {
-                        router.push(item.href)
-                        setIsOpen(false)
-                      }}
-                      className="flex items-center justify-between text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium text-lg py-2"
-                    >
-                      <span>{item.label}</span>
-                      {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                    </button>
-                  ))}
+                  {/* Recently Completed */}
+                  <div>
+                    <DropdownMenuLabel className="flex items-center text-sm font-semibold text-blue-700 mb-3">
+                      <CheckCircle className="h-4 w-4 mr-2" />
+                      {t("nav.solutionsSection.recent")}
+                    </DropdownMenuLabel>
+                    <div className="space-y-2">
+                      {recentSolutions.map((solution, index) => {
+                        const IconComponent = solution.icon
+                        return (
+                          <DropdownMenuItem key={index} asChild>
+                            <Link
+                              href={getHref(solution.href)}
+                              className="flex items-center justify-between p-2 rounded-md hover:bg-muted cursor-pointer"
+                            >
+                              <div className="flex items-center space-x-3">
+                                <IconComponent className="h-4 w-4 text-blue-600" />
+                                <span className="text-sm">{solution.title}</span>
+                              </div>
+                              {solution.isNew && (
+                                <Badge variant="secondary" className="text-xs bg-blue-100 text-blue-700">
+                                  {t("common.new")}
+                                </Badge>
+                              )}
+                            </Link>
+                          </DropdownMenuItem>
+                        )
+                      })}
+                    </div>
+                  </div>
 
-                  {/* Mobile CTA Button */}
-                  <div className="pt-6 border-t">
-                    <Button
-                      variant="default"
-                      onClick={() => {
-                        router.push("/login")
-                        setIsOpen(false)
-                      }}
-                      className="w-full bg-blue-600 hover:bg-blue-700 font-semibold py-3"
+                  {/* AI Solutions Teaser */}
+                  <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-4 rounded-lg border border-purple-100">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <Brain className="h-5 w-5 text-purple-600" />
+                      <span className="text-sm font-semibold text-purple-700">{t("nav.solutionsSection.ai")}</span>
+                      <Sparkles className="h-4 w-4 text-purple-500" />
+                    </div>
+                    <p className="text-xs text-purple-600 mb-3">{t("nav.solutionsItems.aiTeaser")}</p>
+                    <div className="flex items-center space-x-2 text-xs text-purple-500">
+                      <Clock className="h-3 w-3" />
+                      <span>{t("common.comingSoon")}</span>
+                    </div>
+                  </div>
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Features Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="flex items-center space-x-1">
+                  <span>{t("nav.features")}</span>
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-[600px] p-6">
+                <div className="grid grid-cols-2 gap-4">
+                  {features.map((feature, index) => {
+                    const IconComponent = feature.icon
+                    return (
+                      <div key={index} className="flex items-start space-x-3 p-3 rounded-md hover:bg-muted">
+                        <IconComponent className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <h4 className="text-sm font-medium text-foreground">{feature.title}</h4>
+                          <p className="text-xs text-muted-foreground mt-1">{feature.description}</p>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Pricing */}
+            <Link href="/pricing">
+              <Button variant="ghost">{t("nav.pricing")}</Button>
+            </Link>
+
+            {/* Resources Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="flex items-center space-x-1">
+                  <span>{t("nav.resources")}</span>
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-[600px] p-6">
+                <div className="grid grid-cols-2 gap-4">
+                  {resources.map((resource, index) => {
+                    const IconComponent = resource.icon
+                    return (
+                      <DropdownMenuItem key={index} asChild>
+                        <Link
+                          href={resource.href}
+                          className="flex items-start space-x-3 p-3 rounded-md hover:bg-muted cursor-pointer transition-colors"
+                        >
+                          <IconComponent className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                          <div>
+                            <h4 className="text-sm font-medium text-foreground">{resource.title}</h4>
+                            <p className="text-xs text-muted-foreground mt-1">{resource.description}</p>
+                          </div>
+                        </Link>
+                      </DropdownMenuItem>
+                    )
+                  })}
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+
+          {/* Right-side controls */}
+          <div className="hidden lg:flex items-center space-x-2">
+            <LanguageSwitcher />
+            <Link href="/login">
+              <Button variant="ghost">{t("nav.login")}</Button>
+            </Link>
+            <Link href="/dashboard">
+              <Button className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90">
+                {t("nav.getStarted")}
+                <ArrowRight className="h-4 w-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+
+          {/* Mobile Menu */}
+          <div className="lg:hidden">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="sm">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <div className="flex items-center justify-between mb-4">
+                  <div />
+                  <LanguageSwitcher />
+                </div>
+                <div className="flex flex-col space-y-6 mt-6">
+                  {/* Mobile Solutions */}
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-3">{t("nav.solutions")}</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="text-sm font-medium text-green-700 mb-2 flex items-center">
+                          <CheckCircle className="h-3 w-3 mr-1" />
+                          {t("nav.solutionsSection.implemented")}
+                        </h4>
+                        <div className="space-y-2 ml-4">
+                          {implementedSolutions.map((solution, index) => (
+                            <Link
+                              key={index}
+                              href={getHref(solution.href)}
+                              className="block text-sm text-muted-foreground hover:text-primary"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {solution.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-medium text-blue-700 mb-2 flex items-center">
+                          <CheckCircle className="h-3 w-3 mr-1" />
+                          {t("nav.solutionsSection.recent")}
+                        </h4>
+                        <div className="space-y-2 ml-4">
+                          {recentSolutions.map((solution, index) => (
+                            <div key={index} className="flex items-center justify-between">
+                              <Link
+                                href={getHref(solution.href)}
+                                className="text-sm text-muted-foreground hover:text-primary"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {solution.title}
+                              </Link>
+                              {solution.isNew && (
+                                <Badge variant="secondary" className="text-xs bg-blue-100 text-blue-700">
+                                  {t("common.new")}
+                                </Badge>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Mobile other links */}
+                  <div className="space-y-4">
+                    <Link
+                      href="/pricing"
+                      className="block text-sm font-medium text-foreground"
+                      onClick={() => setIsOpen(false)}
                     >
-                      Log In
-                    </Button>
+                      {t("nav.pricing")}
+                    </Link>
+
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">{t("nav.resources")}</h3>
+                      <div className="space-y-2 ml-4">
+                        {resources.map((resource, index) => (
+                          <Link
+                            key={index}
+                            href={resource.href}
+                            className="block text-sm text-muted-foreground hover:text-primary"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {resource.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Mobile CTA Buttons */}
+                  <div className="space-y-3 pt-6 border-t">
+                    <Link href="/login" onClick={() => setIsOpen(false)}>
+                      <Button variant="outline" className="w-full bg-transparent">
+                        {t("nav.login")}
+                      </Button>
+                    </Link>
+                    <Link href="/dashboard" onClick={() => setIsOpen(false)}>
+                      <Button className="w-full bg-gradient-to-r from-primary to-accent">
+                        {t("nav.getStarted")}
+                        <ArrowRight className="h-4 w-4 ml-2" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </SheetContent>

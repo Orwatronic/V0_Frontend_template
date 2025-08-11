@@ -3,23 +3,10 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import {
-  Users,
-  DollarSign,
-  Package,
-  ShoppingCart,
-  Building,
-  Activity,
-  Bell,
-  Settings,
-  ChevronRight,
-  ArrowUpRight,
-  ArrowDownRight,
-  LogOut,
-  Database,
-} from "lucide-react"
+import { Users, DollarSign, Package, ShoppingCart, Building, Activity, ChevronRight, ArrowUpRight, ArrowDownRight, Database } from 'lucide-react'
 import { useRouter } from "next/navigation"
 import { useState, useEffect } from "react"
+import { useAuth } from "@/contexts/auth-context"
 
 // Mock translation function
 const useTranslation = () => {
@@ -57,6 +44,7 @@ const useTranslation = () => {
 const DashboardOverview = () => {
   const router = useRouter()
   const { t } = useTranslation()
+  const { user } = useAuth()
   const [metrics, setMetrics] = useState({
     revenue: { value: "$2,847,392", change: "+12.5%", trend: "up" },
     employees: { value: "1,247", change: "+8.2%", trend: "up" },
@@ -99,9 +87,8 @@ const DashboardOverview = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Simulate fetching dashboard data from real backend
+    // CURSOR: API call to GET /api/v1/dashboard/overview
     const fetchDashboardData = async () => {
-      // Simulate API delay
       setTimeout(() => {
         setIsLoading(false)
       }, 1000)
@@ -134,7 +121,7 @@ const DashboardOverview = () => {
       change: metrics.inventory.change,
       trend: metrics.inventory.trend,
       icon: Package,
-      route: "/inventory",
+      route: "/materials",
       color: "text-purple-600",
     },
     {
@@ -204,9 +191,9 @@ const DashboardOverview = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="flex items-center justify-center h-full">
         <div className="text-center">
-          <div className="w-8 h-8 bg-hero-gradient rounded-lg animate-pulse mx-auto mb-4"></div>
+          <div className="w-8 h-8 bg-blue-200 rounded-lg animate-pulse mx-auto mb-4"></div>
           <p className="text-muted-foreground">Loading dashboard...</p>
         </div>
       </div>
@@ -214,205 +201,160 @@ const DashboardOverview = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-card">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo & Company */}
-            <div className="flex items-center space-x-4">
-              <div className="w-8 h-8 bg-hero-gradient rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">F</span>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-foreground">Feebee ERP</h1>
-                <p className="text-sm text-muted-foreground">Feebee Technologies</p>
-              </div>
-            </div>
+    <div className="space-y-8">
+      {/* Welcome Section */}
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold text-foreground mb-2">
+          {t("dashboard.welcome")}, {user?.name || "User"}!
+        </h2>
+        <p className="text-muted-foreground">Here's what's happening with your business today.</p>
+      </div>
 
-            {/* User & Actions */}
-            <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="sm">
-                <Bell className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="sm">
-                <Settings className="h-4 w-4" />
-              </Button>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-xs font-semibold text-primary-foreground">JD</span>
+      {/* Key Metrics Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        {metricCards.map((metric, index) => {
+          const IconComponent = metric.icon
+          const TrendIcon = metric.trend === "up" ? ArrowUpRight : ArrowDownRight
+          const trendColor = metric.trend === "up" ? "text-green-600" : "text-red-600"
+
+          return (
+            <Card
+              key={index}
+              className="hover:shadow-lg transition-all duration-300 cursor-pointer"
+              onClick={() => router.push(metric.route)}
+            >
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium">{metric.title}</CardTitle>
+                <IconComponent className="h-4 w-4 text-muted-foreground" />
+              </CardHeader>
+              <CardContent>
+                <div className="text-2xl font-bold">{metric.value}</div>
+                <div className={`flex items-center text-xs ${trendColor}`}>
+                  <TrendIcon className="h-3 w-3 mr-1" />
+                  <span>{metric.change} from last month</span>
                 </div>
-                <span className="text-sm font-medium">John Doe</span>
-              </div>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => router.push("/login")}
-                className="text-red-600 hover:text-red-700"
+              </CardContent>
+            </Card>
+          )
+        })}
+      </div>
+
+      {/* Module Cards Grid */}
+      <div>
+        <h3 className="text-xl font-semibold mb-6">ERP Modules</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {moduleCards.map((module, index) => {
+            const IconComponent = module.icon
+            return (
+              <Card
+                key={index}
+                className="group hover:shadow-lg transition-all duration-300 cursor-pointer"
+                onClick={() => router.push(module.route)}
               >
-                <LogOut className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Dashboard */}
-      <main className="container mx-auto px-6 py-8">
-        <div className="space-y-8">
-          {/* Welcome Section */}
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-foreground mb-2">{t("dashboard.welcome")}, John!</h2>
-            <p className="text-muted-foreground">Here's what's happening with your business today.</p>
-          </div>
-
-          {/* Key Metrics Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {metricCards.map((metric, index) => {
-              const IconComponent = metric.icon
-              const TrendIcon = metric.trend === "up" ? ArrowUpRight : ArrowDownRight
-              const trendColor = metric.trend === "up" ? "text-green-600" : "text-red-600"
-
-              return (
-                <Card
-                  key={index}
-                  className="hover:shadow-hover transition-all duration-300 cursor-pointer"
-                  onClick={() => router.push(metric.route)}
-                >
-                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">{metric.title}</CardTitle>
-                    <IconComponent className="h-4 w-4 text-muted-foreground" />
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-2xl font-bold">{metric.value}</div>
-                    <div className={`flex items-center text-xs ${trendColor}`}>
-                      <TrendIcon className="h-3 w-3 mr-1" />
-                      <span>{metric.change} from last month</span>
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-
-          {/* Module Cards Grid */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6">ERP Modules</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {moduleCards.map((module, index) => {
-                const IconComponent = module.icon
-                return (
-                  <Card
-                    key={index}
-                    className="group hover:shadow-hover transition-all duration-300 cursor-pointer"
-                    onClick={() => router.push(module.route)}
-                  >
-                    <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                            <IconComponent className="h-5 w-5 text-primary" />
-                          </div>
-                          <div>
-                            <CardTitle className="text-base">{module.title}</CardTitle>
-                            <p className="text-sm text-muted-foreground">{module.description}</p>
-                          </div>
-                        </div>
-                        <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                        <IconComponent className="h-5 w-5 text-primary" />
                       </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex items-center justify-between">
-                        <Badge variant="secondary">{t("dashboard.status.active")}</Badge>
-                        <div className="text-sm text-muted-foreground">
-                          {t("dashboard.lastAccessed")}: {module.lastAccessed}
-                        </div>
+                      <div>
+                        <CardTitle className="text-base">{module.title}</CardTitle>
+                        <p className="text-sm text-muted-foreground">{module.description}</p>
                       </div>
-                    </CardContent>
-                  </Card>
-                )
-              })}
-            </div>
-          </div>
-
-          {/* Recent Activity & Quick Actions */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Recent Activity */}
-            <Card className="lg:col-span-2">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Activity className="h-5 w-5 mr-2" />
-                  {t("dashboard.recentActivity")}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {recentActivity.map((activity, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer"
-                  >
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium">{activity.title}</p>
-                      <p className="text-xs text-muted-foreground">{activity.description}</p>
                     </div>
-                    <span className="text-xs text-muted-foreground">{activity.time}</span>
+                    <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
                   </div>
-                ))}
-              </CardContent>
-            </Card>
-
-            {/* Quick Actions */}
-            <Card>
-              <CardHeader>
-                <CardTitle>{t("dashboard.quickActions")}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <Button
-                  variant="outline"
-                  className="w-full justify-start bg-transparent"
-                  onClick={() => router.push("/financial")}
-                >
-                  <DollarSign className="h-4 w-4 mr-2" />
-                  Create Invoice
-                </Button>
-                <Button
-                  variant="outline"
-                  className="w-full justify-start bg-transparent"
-                  onClick={() => router.push("/employees")}
-                >
-                  <Users className="h-4 w-4 mr-2" />
-                  Add Employee
-                </Button>
-                <Button
-                  variant="outline"
-                  className="w-full justify-start bg-transparent"
-                  onClick={() => router.push("/materials")}
-                >
-                  <Package className="h-4 w-4 mr-2" />
-                  Update Inventory
-                </Button>
-                <Button
-                  variant="outline"
-                  className="w-full justify-start bg-transparent"
-                  onClick={() => router.push("/sales")}
-                >
-                  <ShoppingCart className="h-4 w-4 mr-2" />
-                  New Sales Order
-                </Button>
-                <Button
-                  variant="outline"
-                  className="w-full justify-start bg-transparent"
-                  onClick={() => router.push("/mdm")}
-                >
-                  <Database className="h-4 w-4 mr-2" />
-                  Manage Master Data
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center justify-between">
+                    <Badge variant="secondary">{t("dashboard.status.active")}</Badge>
+                    <div className="text-sm text-muted-foreground">
+                      {t("dashboard.lastAccessed")}: {module.lastAccessed}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )
+          })}
         </div>
-      </main>
+      </div>
+
+      {/* Recent Activity & Quick Actions */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Recent Activity */}
+        <Card className="lg:col-span-2">
+          <CardHeader>
+            <CardTitle className="flex items-center">
+              <Activity className="h-5 w-5 mr-2" />
+              {t("dashboard.recentActivity")}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {recentActivity.map((activity, index) => (
+              <div
+                key={index}
+                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer"
+              >
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="flex-1">
+                  <p className="text-sm font-medium">{activity.title}</p>
+                  <p className="text-xs text-muted-foreground">{activity.description}</p>
+                </div>
+                <span className="text-xs text-muted-foreground">{activity.time}</span>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+
+        {/* Quick Actions */}
+        <Card>
+          <CardHeader>
+            <CardTitle>{t("dashboard.quickActions")}</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <Button
+              variant="outline"
+              className="w-full justify-start bg-transparent"
+              onClick={() => router.push("/financial")}
+            >
+              <DollarSign className="h-4 w-4 mr-2" />
+              Create Invoice
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full justify-start bg-transparent"
+              onClick={() => router.push("/employees")}
+            >
+              <Users className="h-4 w-4 mr-2" />
+              Add Employee
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full justify-start bg-transparent"
+              onClick={() => router.push("/materials")}
+            >
+              <Package className="h-4 w-4 mr-2" />
+              Update Inventory
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full justify-start bg-transparent"
+              onClick={() => router.push("/sales")}
+            >
+              <ShoppingCart className="h-4 w-4 mr-2" />
+              New Sales Order
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full justify-start bg-transparent"
+              onClick={() => router.push("/mdm")}
+            >
+              <Database className="h-4 w-4 mr-2" />
+              Manage Master Data
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   )
 }
