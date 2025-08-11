@@ -187,3 +187,51 @@ export function useFormatters(locale: Locale) {
     formatPercent: (value: number, options?: Intl.NumberFormatOptions) => formatters.percent(value, locale, options),
   }
 }
+
+export function formatNumber(value: number, locale: Locale, options?: Intl.NumberFormatOptions): string {
+  return formatters.number(value, locale, options)
+}
+
+export function formatCurrency(
+  value: number,
+  locale: Locale,
+  currency = "USD",
+  options?: Intl.NumberFormatOptions,
+): string {
+  return formatters.currency(value, locale, currency, options)
+}
+
+export function formatDate(
+  value: Date | string | number,
+  locale: Locale,
+  options?: Intl.DateTimeFormatOptions,
+): string {
+  return formatters.date(value, locale, options)
+}
+
+export function formatRelativeTime(
+  value: Date | string | number,
+  locale: Locale,
+  options?: Intl.RelativeTimeFormatOptions,
+): string {
+  const date = typeof value === "string" || typeof value === "number" ? new Date(value) : value
+  const now = new Date()
+  const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000)
+
+  // Determine the appropriate unit and value
+  const absDiff = Math.abs(diffInSeconds)
+
+  if (absDiff < 60) {
+    return formatters.relativeTime(diffInSeconds, "second", locale, options)
+  } else if (absDiff < 3600) {
+    return formatters.relativeTime(Math.floor(diffInSeconds / 60), "minute", locale, options)
+  } else if (absDiff < 86400) {
+    return formatters.relativeTime(Math.floor(diffInSeconds / 3600), "hour", locale, options)
+  } else if (absDiff < 2592000) {
+    return formatters.relativeTime(Math.floor(diffInSeconds / 86400), "day", locale, options)
+  } else if (absDiff < 31536000) {
+    return formatters.relativeTime(Math.floor(diffInSeconds / 2592000), "month", locale, options)
+  } else {
+    return formatters.relativeTime(Math.floor(diffInSeconds / 31536000), "year", locale, options)
+  }
+}
