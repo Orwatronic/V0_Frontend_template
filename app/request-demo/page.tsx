@@ -7,11 +7,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useSearchParams } from "next/navigation"
-import { CheckCircle2 } from "lucide-react"
-import { useI18n } from "@/contexts/i18n-context"
+import { CheckCircle2 } from 'lucide-react'
 
 export default function RequestDemoPage() {
-  const { t } = useI18n()
   const searchParams = useSearchParams()
   const intent = searchParams.get("intent") || ""
   const [state, formAction, pending] = useActionState(async (_prev: any, formData: FormData) => {
@@ -29,32 +27,34 @@ export default function RequestDemoPage() {
         <div className="max-w-xl mx-auto">
           <Card className="border">
             <CardContent className="p-6">
-              <h1 className="text-2xl font-bold mb-2">{t("requestDemo.title")}</h1>
-              <p className="text-muted-foreground mb-6">{t("requestDemo.description")}</p>
+              <h1 className="text-2xl font-bold mb-2">Request a Demo</h1>
+              <p className="text-muted-foreground mb-6">
+                Tell us a bit about your company and which solution you’re interested in. We’ll reach out shortly.
+              </p>
 
               <form action={formAction} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">{t("requestDemo.form.name")}</Label>
+                  <Label htmlFor="name">Full Name</Label>
                   <Input id="name" name="name" required />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">{t("requestDemo.form.email")}</Label>
+                  <Label htmlFor="email">Work Email</Label>
                   <Input id="email" type="email" name="email" required />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="company">{t("requestDemo.form.company")}</Label>
+                  <Label htmlFor="company">Company</Label>
                   <Input id="company" name="company" required />
                 </div>
                 <input type="hidden" name="intent" value={intent} />
                 <Button type="submit" disabled={pending}>
-                  {pending ? t("requestDemo.form.submitting") : t("requestDemo.form.submit")}
+                  {pending ? "Submitting..." : "Submit request"}
                 </Button>
               </form>
 
               {state?.ok && (
                 <div className="mt-6 flex items-center gap-2 text-green-600">
                   <CheckCircle2 className="h-4 w-4" />
-                  <span>{t("requestDemo.success")}</span>
+                  <span>Your request was submitted. We’ll get back to you.</span>
                 </div>
               )}
             </CardContent>

@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Tree } from "@/components/ui/tree"
 import { Search, MoreHorizontal, FileDown, FileUp, PlusCircle, Package } from "lucide-react"
+import { useI18n } from "@/contexts/i18n-context"
 
 // Mock Data - Replace with API calls
 // CURSOR: GET /api/v1/mdm/materials/categories
@@ -55,6 +56,7 @@ const mockMaterials = [
 ]
 
 export const MaterialMaster = () => {
+  const { t } = useI18n()
   const [materials, setMaterials] = useState(mockMaterials)
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [searchTerm, setSearchTerm] = useState("")
@@ -73,15 +75,15 @@ export const MaterialMaster = () => {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center">
-          <Package className="mr-2" /> Material Master Data
+          <Package className="mr-2" /> {t("materials.masterData.title")}
         </CardTitle>
-        <CardDescription>Manage and maintain all material and product records.</CardDescription>
+        <CardDescription>{t("materials.masterData.description")}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid md:grid-cols-12 gap-6">
           {/* Category Browser */}
           <div className="md:col-span-3">
-            <h4 className="font-semibold mb-2">Material Categories</h4>
+            <h4 className="font-semibold mb-2">{t("materials.masterData.categories")}</h4>
             <Tree data={mockCategories} onSelect={setSelectedCategory} selectedId={selectedCategory} />
           </div>
 
@@ -92,7 +94,7 @@ export const MaterialMaster = () => {
               <div className="relative">
                 <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                 <Input
-                  placeholder="Search materials..."
+                  placeholder={t("materials.masterData.searchPlaceholder")}
                   className="pl-8 w-full md:w-64"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -100,13 +102,13 @@ export const MaterialMaster = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Button variant="outline" size="sm">
-                  <FileUp className="mr-2 h-4 w-4" /> Import
+                  <FileUp className="mr-2 h-4 w-4" /> {t("materials.masterData.import")}
                 </Button>
                 <Button variant="outline" size="sm">
-                  <FileDown className="mr-2 h-4 w-4" /> Export
+                  <FileDown className="mr-2 h-4 w-4" /> {t("common.export")}
                 </Button>
                 <Button size="sm">
-                  <PlusCircle className="mr-2 h-4 w-4" /> Add Material
+                  <PlusCircle className="mr-2 h-4 w-4" /> {t("materials.masterData.addMaterial")}
                 </Button>
               </div>
             </div>
@@ -116,13 +118,13 @@ export const MaterialMaster = () => {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Material ID</TableHead>
-                    <TableHead>Name</TableHead>
-                    <TableHead>Type</TableHead>
-                    <TableHead>Base UoM</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead>On Hand</TableHead>
-                    <TableHead className="text-right">Actions</TableHead>
+                    <TableHead>{t("materials.columns.materialId")}</TableHead>
+                    <TableHead>{t("materials.columns.name")}</TableHead>
+                    <TableHead>{t("materials.columns.type")}</TableHead>
+                    <TableHead>{t("materials.columns.baseUom")}</TableHead>
+                    <TableHead>{t("materials.columns.status")}</TableHead>
+                    <TableHead>{t("materials.columns.onHand")}</TableHead>
+                    <TableHead className="text-right">{t("common.actions")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -131,11 +133,13 @@ export const MaterialMaster = () => {
                       <TableCell className="font-mono">{material.id}</TableCell>
                       <TableCell className="font-medium">{material.name}</TableCell>
                       <TableCell>
-                        <Badge variant="secondary">{material.type}</Badge>
+                        <Badge variant="secondary">{t(`materials.types.${material.type.toLowerCase()}`)}</Badge>
                       </TableCell>
                       <TableCell>{material.uom}</TableCell>
                       <TableCell>
-                        <Badge variant={material.status === "active" ? "default" : "outline"}>{material.status}</Badge>
+                        <Badge variant={material.status === "active" ? "default" : "outline"}>
+                          {t(`materials.status.${material.status}`)}
+                        </Badge>
                       </TableCell>
                       <TableCell>{material.onHand.toLocaleString()}</TableCell>
                       <TableCell className="text-right">

@@ -683,5 +683,186 @@
       "posted": "مرحل",
       "reversed": "معكوس"
     }
+  },
+  "dashboard": {
+    "welcome": "مرحباً بعودتك",
+    "defaultUser": "المستخدم",
+    "welcomeDescription": "إليك ما يحدث في عملك اليوم.",
+    "loading": "جاري تحميل لوحة التحكم...",
+    "erpModules": "وحدات نظام تخطيط موارد المؤسسة",
+    "recentActivity": "النشاط الأخير",
+    "quickActions": "الإجراءات السريعة",
+    "lastAccessed": "آخر وصول",
+    "timeAgo": "منذ {{time}}",
+    "status": {
+      "active": "نشط"
+    },
+    "metrics": {
+      "revenue": "إجمالي الإيرادات",
+      "employees": "الموظفون النشطون",
+      "inventory": "قيمة المخزون",
+      "orders": "طلبات المبيعات",
+      "activity": "نشاط النظام",
+      "fromLastMonth": "من الشهر الماضي"
+    },
+    "activity": {
+      "invoiceCreated": "تم إنشاء فاتورة جديدة",
+      "invoiceDescription": "فاتورة #INV-2024-001 بقيمة $15,230",
+      "employeeOnboarded": "تم تعيين موظف جديد",
+      "employeeDescription": "انضمت سارة جونسون إلى فريق التسويق",
+      "purchaseOrderApproved": "تم اعتماد أمر الشراء",
+      "purchaseOrderDescription": "أمر شراء #PO-2024-045 للمواد الخام",
+      "salesOrderCompleted": "تم إكمال طلب المبيعات",
+      "salesOrderDescription": "تم شحن الطلب #SO-2024-089 للعميل",
+      "materialMasterUpdated": "تم تحديث البيانات الأساسية للمواد",
+      "materialMasterDescription": "تم تعديل مواصفات المادة ABC-123",
+      "timeAgo": "منذ {{time}}"
+    },
+    "actions": {
+      "createInvoice": "إنشاء فاتورة",
+      "addEmployee": "إضافة موظف",
+      "updateInventory": "تحديث المخزون",
+      "newSalesOrder": "طلب مبيعات جديد",
+      "manageMasterData": "إدارة البيانات الأساسية"
+    }
+  },
+  "sales": {
+    "title": "المبيعات والتوزيع",
+    "description": "إدارة دورة المبيعات الكاملة من الاستفسار إلى التسليم والمرتجعات",
+    "newOrder": "طلب جديد",
+    "tabs": {
+      "dashboard": "لوحة التحكم",
+      "pipeline": "خط الأنابيب",
+      "inquiries": "الاستفسارات",
+      "quotations": "عروض الأسعار",
+      "orders": "الطلبات",
+      "deliveries": "التسليمات",
+      "invoices": "الفواتير",
+      "returns": "المرتجعات"
+    },
+    "metrics": {
+      "totalRevenue": "إجمالي الإيرادات",
+      "activeOrders": "الطلبات النشطة",
+      "pendingQuotations": "عروض الأسعار المعلقة",
+      "deliveriesInTransit": "التسليمات في الطريق",
+      "overdueInvoices": "الفواتير المتأخرة",
+      "fromLastMonth": "من الشهر الماضي",
+      "ordersInProgress": "طلبات قيد التنفيذ",
+      "awaitingResponse": "في انتظار الرد",
+      "currentlyShipping": "قيد الشحن حالياً",
+      "requireAttention": "تتطلب اهتماماً فورياً"
+    },
+    "filterByStatus": "تصفية حسب الحالة",
+    "filters": {
+      "allStatus": "جميع الحالات"
+    },
+    "status": {
+      "open": "مفتوح",
+      "quoted": "تم تقديم عرض سعر",
+      "lost": "مفقود",
+      "converted": "تم التحويل",
+      "draft": "مسودة",
+      "sent": "تم الإرسال",
+      "accepted": "مقبول",
+      "rejected": "مرفوض",
+      "expired": "منتهي الصلاحية",
+      "confirmed": "مؤكد",
+      "inProgress": "قيد التنفيذ",
+      "delivered": "تم التسليم",
+      "invoiced": "تم إصدار فاتورة",
+      "completed": "مكتمل",
+      "planned": "مخطط",
+      "picked": "تم الانتقاء",
+      "packed": "تم التعبئة",
+      "shipped": "تم الشحن",
+      "paid": "مدفوع",
+      "overdue": "متأخر",
+      "cancelled": "ملغي",
+      "requested": "مطلوب",
+      "authorized": "مصرح",
+      "received": "تم الاستلام",
+      "processed": "تم المعالجة",
+      "refunded": "تم الاسترداد",
+      "unknown": "غير معروف"
+    },
+    "priority": {
+      "high": "عالي",
+      "medium": "متوسط",
+      "low": "منخفض"
+    },
+    "columns": {
+      "inquiryId": "رقم الاستفسار",
+      "customer": "العميل",
+      "date": "التاريخ",
+      "validUntil": "صالح حتى",
+      "value": "القيمة",
+      "items": "العناصر",
+      "priority": "الأولوية",
+      "salesRep": "مندوب المبيعات",
+      "quoteId": "رقم عرض السعر",
+      "probability": "الاحتمالية",
+      "orderId": "رقم الطلب",
+      "orderDate": "تاريخ الطلب",
+      "deliveryDate": "تاريخ التسليم",
+      "paymentStatus": "حالة الدفع",
+      "availability": "التوفر",
+      "deliveryId": "رقم التسليم",
+      "plannedDate": "التاريخ المخطط",
+      "actualDate": "التاريخ الفعلي",
+      "carrier": "شركة الشحن",
+      "trackingNumber": "رقم التتبع",
+      "invoiceId": "رقم الفاتورة",
+      "invoiceDate": "تاريخ الفاتورة",
+      "dueDate": "تاريخ الاستحقاق",
+      "amount": "المبلغ",
+      "paidAmount": "المبلغ المدفوع",
+      "returnId": "رقم المرتجع",
+      "requestDate": "تاريخ الطلب",
+      "reason": "السبب",
+      "returnValue": "قيمة المرتجع",
+      "refundAmount": "مبلغ الاسترداد"
+    },
+    "inquiries": {
+      "title": "استفسارات المبيعات",
+      "description": "إدارة استفسارات العملاء وتحويلها إلى عروض أسعار",
+      "newInquiry": "استفسار جديد",
+      "searchPlaceholder": "البحث في الاستفسارات..."
+    },
+    "quotations": {
+      "title": "عروض الأسعار",
+      "description": "إنشاء وإدارة عروض الأسعار للعملاء",
+      "newQuotation": "عرض سعر جديد",
+      "searchPlaceholder": "البحث في عروض الأسعار..."
+    },
+    "orders": {
+      "title": "طلبات المبيعات",
+      "description": "إدارة طلبات المبيعات من الإنشاء إلى التسليم",
+      "newOrder": "طلب جديد",
+      "searchPlaceholder": "البحث في الطلبات..."
+    },
+    "deliveries": {
+      "title": "إدارة التسليمات",
+      "description": "تتبع وإدارة تسليمات الطلبات",
+      "newDelivery": "تسليم جديد",
+      "searchPlaceholder": "البحث في التسليمات..."
+    },
+    "invoices": {
+      "title": "إدارة الفواتير",
+      "description": "إنشاء وتتبع فواتير المبيعات",
+      "newInvoice": "فاتورة جديدة",
+      "searchPlaceholder": "البحث في الفواتير..."
+    },
+    "returns": {
+      "title": "إدارة المرتجعات",
+      "description": "معالجة مرتجعات العملاء والاستردادات",
+      "processReturn": "معالجة مرتجع",
+      "searchPlaceholder": "البحث في المرتجعات..."
+    },
+    "createQuotation": "إنشاء عرض سعر",
+    "convertToOrder": "تحويل إلى طلب",
+    "createDelivery": "إنشاء تسليم",
+    "trackDelivery": "تتبع التسليم",
+    "downloadPdf": "تحميل PDF",
+    "approveReturn": "اعتماد المرتجع"
   }
 }

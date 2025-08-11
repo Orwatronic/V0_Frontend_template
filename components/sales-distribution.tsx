@@ -13,7 +13,6 @@ import {
   DollarSign,
   ShoppingCart,
   TrendingUp,
-  Package,
   Truck,
   FileText,
   Search,
@@ -24,9 +23,6 @@ import {
   MoreHorizontal,
   CheckCircle,
   AlertCircle,
-  CreditCard,
-  MapPin,
-  Mail,
 } from "lucide-react"
 import SalesPipeline from "./sales-pipeline"
 import { Dialog, DialogTrigger } from "@/components/ui/dialog"
@@ -362,53 +358,56 @@ const SalesDistribution = () => {
   ]
 
   const getStatusBadge = (status: string, type: string) => {
-    const statusConfig: Record<string, Record<string, { color: string; label: string }>> = {
+    const statusConfig: Record<string, Record<string, { color: string; labelKey: string }>> = {
       inquiry: {
-        open: { color: "bg-blue-100 text-blue-700", label: t("sales.status.open") },
-        quoted: { color: "bg-yellow-100 text-yellow-700", label: t("sales.status.quoted") },
-        lost: { color: "bg-red-100 text-red-700", label: t("sales.status.lost") },
-        converted: { color: "bg-green-100 text-green-700", label: t("sales.status.converted") },
+        open: { color: "bg-blue-100 text-blue-700", labelKey: "sales.status.open" },
+        quoted: { color: "bg-yellow-100 text-yellow-700", labelKey: "sales.status.quoted" },
+        lost: { color: "bg-red-100 text-red-700", labelKey: "sales.status.lost" },
+        converted: { color: "bg-green-100 text-green-700", labelKey: "sales.status.converted" },
       },
       quotation: {
-        draft: { color: "bg-gray-100 text-gray-700", label: t("sales.status.draft") },
-        sent: { color: "bg-blue-100 text-blue-700", label: t("sales.status.sent") },
-        accepted: { color: "bg-green-100 text-green-700", label: t("sales.status.accepted") },
-        rejected: { color: "bg-red-100 text-red-700", label: t("sales.status.rejected") },
-        expired: { color: "bg-orange-100 text-orange-700", label: t("sales.status.expired") },
+        draft: { color: "bg-gray-100 text-gray-700", labelKey: "sales.status.draft" },
+        sent: { color: "bg-blue-100 text-blue-700", labelKey: "sales.status.sent" },
+        accepted: { color: "bg-green-100 text-green-700", labelKey: "sales.status.accepted" },
+        rejected: { color: "bg-red-100 text-red-700", labelKey: "sales.status.rejected" },
+        expired: { color: "bg-orange-100 text-orange-700", labelKey: "sales.status.expired" },
       },
       order: {
-        draft: { color: "bg-gray-100 text-gray-700", label: t("sales.status.draft") },
-        confirmed: { color: "bg-blue-100 text-blue-700", label: t("sales.status.confirmed") },
-        in_progress: { color: "bg-yellow-100 text-yellow-700", label: t("sales.status.inProgress") },
-        delivered: { color: "bg-green-100 text-green-700", label: t("sales.status.delivered") },
-        invoiced: { color: "bg-purple-100 text-purple-700", label: t("sales.status.invoiced") },
-        completed: { color: "bg-green-100 text-green-700", label: t("sales.status.completed") },
+        draft: { color: "bg-gray-100 text-gray-700", labelKey: "sales.status.draft" },
+        confirmed: { color: "bg-blue-100 text-blue-700", labelKey: "sales.status.confirmed" },
+        in_progress: { color: "bg-yellow-100 text-yellow-700", labelKey: "sales.status.inProgress" },
+        delivered: { color: "bg-green-100 text-green-700", labelKey: "sales.status.delivered" },
+        invoiced: { color: "bg-purple-100 text-purple-700", labelKey: "sales.status.invoiced" },
+        completed: { color: "bg-green-100 text-green-700", labelKey: "sales.status.completed" },
       },
       delivery: {
-        planned: { color: "bg-gray-100 text-gray-700", label: t("sales.status.planned") },
-        picked: { color: "bg-blue-100 text-blue-700", label: t("sales.status.picked") },
-        packed: { color: "bg-yellow-100 text-yellow-700", label: t("sales.status.packed") },
-        shipped: { color: "bg-purple-100 text-purple-700", label: t("sales.status.shipped") },
-        delivered: { color: "bg-green-100 text-green-700", label: t("sales.status.delivered") },
+        planned: { color: "bg-gray-100 text-gray-700", labelKey: "sales.status.planned" },
+        picked: { color: "bg-blue-100 text-blue-700", labelKey: "sales.status.picked" },
+        packed: { color: "bg-yellow-100 text-yellow-700", labelKey: "sales.status.packed" },
+        shipped: { color: "bg-purple-100 text-purple-700", labelKey: "sales.status.shipped" },
+        delivered: { color: "bg-green-100 text-green-700", labelKey: "sales.status.delivered" },
       },
       invoice: {
-        draft: { color: "bg-gray-100 text-gray-700", label: t("sales.status.draft") },
-        sent: { color: "bg-blue-100 text-blue-700", label: t("sales.status.sent") },
-        paid: { color: "bg-green-100 text-green-700", label: t("sales.status.paid") },
-        overdue: { color: "bg-red-100 text-red-700", label: t("sales.status.overdue") },
-        cancelled: { color: "bg-gray-100 text-gray-700", label: t("sales.status.cancelled") },
+        draft: { color: "bg-gray-100 text-gray-700", labelKey: "sales.status.draft" },
+        sent: { color: "bg-blue-100 text-blue-700", labelKey: "sales.status.sent" },
+        paid: { color: "bg-green-100 text-green-700", labelKey: "sales.status.paid" },
+        overdue: { color: "bg-red-100 text-red-700", labelKey: "sales.status.overdue" },
+        cancelled: { color: "bg-gray-100 text-gray-700", labelKey: "sales.status.cancelled" },
       },
       return: {
-        requested: { color: "bg-yellow-100 text-yellow-700", label: t("sales.status.requested") },
-        authorized: { color: "bg-blue-100 text-blue-700", label: t("sales.status.authorized") },
-        received: { color: "bg-purple-100 text-purple-700", label: t("sales.status.received") },
-        processed: { color: "bg-green-100 text-green-700", label: t("sales.status.processed") },
-        refunded: { color: "bg-green-100 text-green-700", label: t("sales.status.refunded") },
+        requested: { color: "bg-yellow-100 text-yellow-700", labelKey: "sales.status.requested" },
+        authorized: { color: "bg-blue-100 text-blue-700", labelKey: "sales.status.authorized" },
+        received: { color: "bg-purple-100 text-purple-700", labelKey: "sales.status.received" },
+        processed: { color: "bg-green-100 text-green-700", labelKey: "sales.status.processed" },
+        refunded: { color: "bg-green-100 text-green-700", labelKey: "sales.status.refunded" },
       },
     }
 
-    const config = statusConfig[type]?.[status] || { color: "bg-gray-100 text-gray-700", label: status }
-    return <Badge className={`${config.color} border-0`}>{config.label}</Badge>
+    const config = statusConfig[type]?.[status] || {
+      color: "bg-gray-100 text-gray-700",
+      labelKey: "sales.status.unknown",
+    }
+    return <Badge className={`${config.color} border-0`}>{t(config.labelKey)}</Badge>
   }
 
   const getPriorityBadge = (priority: string) => {
@@ -486,7 +485,8 @@ const SalesDistribution = () => {
               <CardContent>
                 <div className="text-2xl font-bold">{formatCurrency(dashboardMetrics.totalRevenue)}</div>
                 <p className="text-xs text-muted-foreground">
-                  <span className="text-green-600">+{dashboardMetrics.monthlyGrowth}%</span> {t("sales.fromLastMonth")}
+                  <span className="text-green-600">+{dashboardMetrics.monthlyGrowth}%</span>{" "}
+                  {t("sales.metrics.fromLastMonth")}
                 </p>
               </CardContent>
             </Card>
@@ -498,7 +498,7 @@ const SalesDistribution = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{dashboardMetrics.activeOrders}</div>
-                <p className="text-xs text-muted-foreground">{t("sales.ordersInProgress")}</p>
+                <p className="text-xs text-muted-foreground">{t("sales.metrics.ordersInProgress")}</p>
               </CardContent>
             </Card>
 
@@ -509,7 +509,7 @@ const SalesDistribution = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{dashboardMetrics.pendingQuotations}</div>
-                <p className="text-xs text-muted-foreground">{t("sales.awaitingCustomerResponse")}</p>
+                <p className="text-xs text-muted-foreground">{t("sales.metrics.awaitingResponse")}</p>
               </CardContent>
             </Card>
 
@@ -520,7 +520,7 @@ const SalesDistribution = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{dashboardMetrics.deliveriesInTransit}</div>
-                <p className="text-xs text-muted-foreground">{t("sales.currentlyShipping")}</p>
+                <p className="text-xs text-muted-foreground">{t("sales.metrics.currentlyShipping")}</p>
               </CardContent>
             </Card>
 
@@ -531,7 +531,7 @@ const SalesDistribution = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold text-red-600">{dashboardMetrics.overdueInvoices}</div>
-                <p className="text-xs text-muted-foreground">{t("sales.requireImmediateAttention")}</p>
+                <p className="text-xs text-muted-foreground">{t("sales.metrics.requireAttention")}</p>
               </CardContent>
             </Card>
 
@@ -621,7 +621,7 @@ const SalesDistribution = () => {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input
-                placeholder={t("sales.searchInquiries")}
+                placeholder={t("sales.inquiries.searchPlaceholder")}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -632,7 +632,7 @@ const SalesDistribution = () => {
                 <SelectValue placeholder={t("sales.filterByStatus")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">{t("sales.allStatus")}</SelectItem>
+                <SelectItem value="all">{t("sales.filters.allStatus")}</SelectItem>
                 <SelectItem value="open">{t("sales.status.open")}</SelectItem>
                 <SelectItem value="quoted">{t("sales.status.quoted")}</SelectItem>
                 <SelectItem value="lost">{t("sales.status.lost")}</SelectItem>
@@ -647,16 +647,16 @@ const SalesDistribution = () => {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Inquiry ID</TableHead>
-                    <TableHead>Customer</TableHead>
-                    <TableHead>Date</TableHead>
-                    <TableHead>Valid Until</TableHead>
-                    <TableHead>Value</TableHead>
-                    <TableHead>Items</TableHead>
-                    <TableHead>Priority</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead>Sales Rep</TableHead>
-                    <TableHead>Actions</TableHead>
+                    <TableHead>{t("sales.columns.inquiryId")}</TableHead>
+                    <TableHead>{t("sales.columns.customer")}</TableHead>
+                    <TableHead>{t("sales.columns.date")}</TableHead>
+                    <TableHead>{t("sales.columns.validUntil")}</TableHead>
+                    <TableHead>{t("sales.columns.value")}</TableHead>
+                    <TableHead>{t("sales.columns.items")}</TableHead>
+                    <TableHead>{t("sales.columns.priority")}</TableHead>
+                    <TableHead>{t("sales.columns.status")}</TableHead>
+                    <TableHead>{t("sales.columns.salesRep")}</TableHead>
+                    <TableHead>{t("common.actions")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -681,15 +681,15 @@ const SalesDistribution = () => {
                           <DropdownMenuContent align="end">
                             <DropdownMenuItem>
                               <Eye className="mr-2 h-4 w-4" />
-                              View Details
+                              {t("common.view")}
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                               <Edit className="mr-2 h-4 w-4" />
-                              Edit Inquiry
+                              {t("common.edit")}
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                               <FileText className="mr-2 h-4 w-4" />
-                              Create Quotation
+                              {t("sales.createQuotation")}
                             </DropdownMenuItem>
                           </DropdownMenuContent>
                         </DropdownMenu>
@@ -706,12 +706,12 @@ const SalesDistribution = () => {
         <TabsContent value="quotations" className="space-y-6">
           <div className="flex justify-between items-center">
             <div>
-              <h2 className="text-2xl font-bold">Sales Quotations</h2>
-              <p className="text-muted-foreground">Manage quotations and convert to sales orders</p>
+              <h2 className="text-2xl font-bold">{t("sales.quotations.title")}</h2>
+              <p className="text-muted-foreground">{t("sales.quotations.description")}</p>
             </div>
             <Button>
               <Plus className="w-4 h-4 mr-2" />
-              New Quotation
+              {t("sales.quotations.newQuotation")}
             </Button>
           </div>
 
@@ -720,7 +720,7 @@ const SalesDistribution = () => {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input
-                placeholder="Search quotations..."
+                placeholder={t("sales.quotations.searchPlaceholder")}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -728,15 +728,15 @@ const SalesDistribution = () => {
             </div>
             <Select value={selectedFilter} onValueChange={setSelectedFilter}>
               <SelectTrigger className="w-48">
-                <SelectValue placeholder="Filter by status" />
+                <SelectValue placeholder={t("sales.filterByStatus")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Status</SelectItem>
-                <SelectItem value="draft">Draft</SelectItem>
-                <SelectItem value="sent">Sent</SelectItem>
-                <SelectItem value="accepted">Accepted</SelectItem>
-                <SelectItem value="rejected">Rejected</SelectItem>
-                <SelectItem value="expired">Expired</SelectItem>
+                <SelectItem value="all">{t("sales.filters.allStatus")}</SelectItem>
+                <SelectItem value="draft">{t("sales.status.draft")}</SelectItem>
+                <SelectItem value="sent">{t("sales.status.sent")}</SelectItem>
+                <SelectItem value="accepted">{t("sales.status.accepted")}</SelectItem>
+                <SelectItem value="rejected">{t("sales.status.rejected")}</SelectItem>
+                <SelectItem value="expired">{t("sales.status.expired")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -747,16 +747,16 @@ const SalesDistribution = () => {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Quote ID</TableHead>
-                    <TableHead>Customer</TableHead>
-                    <TableHead>Date</TableHead>
-                    <TableHead>Valid Until</TableHead>
-                    <TableHead>Value</TableHead>
-                    <TableHead>Items</TableHead>
-                    <TableHead>Probability</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead>Sales Rep</TableHead>
-                    <TableHead>Actions</TableHead>
+                    <TableHead>{t("sales.columns.quoteId")}</TableHead>
+                    <TableHead>{t("sales.columns.customer")}</TableHead>
+                    <TableHead>{t("sales.columns.date")}</TableHead>
+                    <TableHead>{t("sales.columns.validUntil")}</TableHead>
+                    <TableHead>{t("sales.columns.value")}</TableHead>
+                    <TableHead>{t("sales.columns.items")}</TableHead>
+                    <TableHead>{t("sales.columns.salesRep")}</TableHead>
+                    <TableHead>{t("sales.columns.probability")}</TableHead>
+                    <TableHead>{t("sales.columns.status")}</TableHead>
+                    <TableHead>{t("common.actions")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -791,15 +791,15 @@ const SalesDistribution = () => {
                           <DropdownMenuContent align="end">
                             <DropdownMenuItem>
                               <Eye className="mr-2 h-4 w-4" />
-                              View Details
+                              {t("common.view")}
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                               <Edit className="mr-2 h-4 w-4" />
-                              Edit Quotation
+                              {t("common.edit")}
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                               <ShoppingCart className="mr-2 h-4 w-4" />
-                              Convert to Order
+                              {t("sales.convertToOrder")}
                             </DropdownMenuItem>
                           </DropdownMenuContent>
                         </DropdownMenu>
@@ -816,14 +816,14 @@ const SalesDistribution = () => {
         <TabsContent value="orders" className="space-y-6">
           <div className="flex justify-between items-center">
             <div>
-              <h2 className="text-2xl font-bold">Sales Orders</h2>
-              <p className="text-muted-foreground">Manage sales orders with availability and credit checks</p>
+              <h2 className="text-2xl font-bold">{t("sales.orders.title")}</h2>
+              <p className="text-muted-foreground">{t("sales.orders.description")}</p>
             </div>
             <Dialog>
               <DialogTrigger asChild>
                 <Button>
                   <Plus className="w-4 h-4 mr-2" />
-                  New Order
+                  {t("sales.orders.newOrder")}
                 </Button>
               </DialogTrigger>
               <SalesOrderEntryForm />
@@ -835,7 +835,7 @@ const SalesDistribution = () => {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input
-                placeholder="Search orders..."
+                placeholder={t("sales.orders.searchPlaceholder")}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -843,15 +843,16 @@ const SalesDistribution = () => {
             </div>
             <Select value={selectedFilter} onValueChange={setSelectedFilter}>
               <SelectTrigger className="w-48">
-                <SelectValue placeholder="Filter by status" />
+                <SelectValue placeholder={t("sales.filterByStatus")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Status</SelectItem>
-                <SelectItem value="draft">Draft</SelectItem>
-                <SelectItem value="confirmed">Confirmed</SelectItem>
-                <SelectItem value="in_progress">In Progress</SelectItem>
-                <SelectItem value="delivered">Delivered</SelectItem>
-                <SelectItem value="completed">Completed</SelectItem>
+                <SelectItem value="all">{t("sales.filters.allStatus")}</SelectItem>
+                <SelectItem value="draft">{t("sales.status.draft")}</SelectItem>
+                <SelectItem value="confirmed">{t("sales.status.confirmed")}</SelectItem>
+                <SelectItem value="in_progress">{t("sales.status.inProgress")}</SelectItem>
+                <SelectItem value="delivered">{t("sales.status.delivered")}</SelectItem>
+                <SelectItem value="invoiced">{t("sales.status.invoiced")}</SelectItem>
+                <SelectItem value="completed">{t("sales.status.completed")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -862,17 +863,17 @@ const SalesDistribution = () => {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Order ID</TableHead>
-                    <TableHead>Customer</TableHead>
-                    <TableHead>Order Date</TableHead>
-                    <TableHead>Delivery Date</TableHead>
-                    <TableHead>Value</TableHead>
-                    <TableHead>Items</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead>Payment</TableHead>
-                    <TableHead>Availability</TableHead>
-                    <TableHead>Credit</TableHead>
-                    <TableHead>Actions</TableHead>
+                    <TableHead>{t("sales.columns.orderId")}</TableHead>
+                    <TableHead>{t("sales.columns.customer")}</TableHead>
+                    <TableHead>{t("sales.columns.orderDate")}</TableHead>
+                    <TableHead>{t("sales.columns.deliveryDate")}</TableHead>
+                    <TableHead>{t("sales.columns.value")}</TableHead>
+                    <TableHead>{t("sales.columns.items")}</TableHead>
+                    <TableHead>{t("sales.columns.salesRep")}</TableHead>
+                    <TableHead>{t("sales.columns.paymentStatus")}</TableHead>
+                    <TableHead>{t("sales.columns.availability")}</TableHead>
+                    <TableHead>{t("sales.columns.status")}</TableHead>
+                    <TableHead>{t("common.actions")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -884,7 +885,7 @@ const SalesDistribution = () => {
                       <TableCell>{formatDate(order.deliveryDate)}</TableCell>
                       <TableCell>{formatCurrency(order.totalValue)}</TableCell>
                       <TableCell>{order.items}</TableCell>
-                      <TableCell>{getStatusBadge(order.status, "order")}</TableCell>
+                      <TableCell>{order.salesRep}</TableCell>
                       <TableCell>
                         <Badge
                           className={
@@ -911,19 +912,7 @@ const SalesDistribution = () => {
                           {order.availabilityStatus}
                         </Badge>
                       </TableCell>
-                      <TableCell>
-                        <Badge
-                          className={
-                            order.creditStatus === "approved"
-                              ? "bg-green-100 text-green-700"
-                              : order.creditStatus === "pending"
-                                ? "bg-yellow-100 text-yellow-700"
-                                : "bg-red-100 text-red-700"
-                          }
-                        >
-                          {order.creditStatus}
-                        </Badge>
-                      </TableCell>
+                      <TableCell>{getStatusBadge(order.status, "order")}</TableCell>
                       <TableCell>
                         <DropdownMenu>
                           <DropdownMenuTrigger asChild>
@@ -934,15 +923,15 @@ const SalesDistribution = () => {
                           <DropdownMenuContent align="end">
                             <DropdownMenuItem>
                               <Eye className="mr-2 h-4 w-4" />
-                              View Details
+                              {t("common.view")}
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                               <Edit className="mr-2 h-4 w-4" />
-                              Edit Order
+                              {t("common.edit")}
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                               <Truck className="mr-2 h-4 w-4" />
-                              Create Delivery
+                              {t("sales.createDelivery")}
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                               <FileText className="mr-2 h-4 w-4" />
@@ -963,12 +952,12 @@ const SalesDistribution = () => {
         <TabsContent value="deliveries" className="space-y-6">
           <div className="flex justify-between items-center">
             <div>
-              <h2 className="text-2xl font-bold">Deliveries & Shipping</h2>
-              <p className="text-muted-foreground">Track deliveries from picking to customer receipt</p>
+              <h2 className="text-2xl font-bold">{t("sales.deliveries.title")}</h2>
+              <p className="text-muted-foreground">{t("sales.deliveries.description")}</p>
             </div>
             <Button>
               <Plus className="w-4 h-4 mr-2" />
-              Schedule Delivery
+              {t("sales.deliveries.newDelivery")}
             </Button>
           </div>
 
@@ -977,7 +966,7 @@ const SalesDistribution = () => {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input
-                placeholder="Search deliveries..."
+                placeholder={t("sales.deliveries.searchPlaceholder")}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -985,15 +974,15 @@ const SalesDistribution = () => {
             </div>
             <Select value={selectedFilter} onValueChange={setSelectedFilter}>
               <SelectTrigger className="w-48">
-                <SelectValue placeholder="Filter by status" />
+                <SelectValue placeholder={t("sales.filterByStatus")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Status</SelectItem>
-                <SelectItem value="planned">Planned</SelectItem>
-                <SelectItem value="picked">Picked</SelectItem>
-                <SelectItem value="packed">Packed</SelectItem>
-                <SelectItem value="shipped">Shipped</SelectItem>
-                <SelectItem value="delivered">Delivered</SelectItem>
+                <SelectItem value="all">{t("sales.filters.allStatus")}</SelectItem>
+                <SelectItem value="planned">{t("sales.status.planned")}</SelectItem>
+                <SelectItem value="picked">{t("sales.status.picked")}</SelectItem>
+                <SelectItem value="packed">{t("sales.status.packed")}</SelectItem>
+                <SelectItem value="shipped">{t("sales.status.shipped")}</SelectItem>
+                <SelectItem value="delivered">{t("sales.status.delivered")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -1004,17 +993,15 @@ const SalesDistribution = () => {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Delivery ID</TableHead>
-                    <TableHead>Order ID</TableHead>
-                    <TableHead>Customer</TableHead>
-                    <TableHead>Delivery Date</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead>Tracking</TableHead>
-                    <TableHead>Carrier</TableHead>
-                    <TableHead>Items</TableHead>
-                    <TableHead>Weight</TableHead>
-                    <TableHead>Value</TableHead>
-                    <TableHead>Actions</TableHead>
+                    <TableHead>{t("sales.columns.deliveryId")}</TableHead>
+                    <TableHead>{t("sales.columns.orderId")}</TableHead>
+                    <TableHead>{t("sales.columns.customer")}</TableHead>
+                    <TableHead>{t("sales.columns.plannedDate")}</TableHead>
+                    <TableHead>{t("sales.columns.actualDate")}</TableHead>
+                    <TableHead>{t("sales.columns.carrier")}</TableHead>
+                    <TableHead>{t("sales.columns.trackingNumber")}</TableHead>
+                    <TableHead>{t("sales.columns.status")}</TableHead>
+                    <TableHead>{t("common.actions")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -1024,17 +1011,10 @@ const SalesDistribution = () => {
                       <TableCell>{delivery.orderId}</TableCell>
                       <TableCell>{delivery.customerName}</TableCell>
                       <TableCell>{formatDate(delivery.deliveryDate)}</TableCell>
-                      <TableCell>{getStatusBadge(delivery.status, "delivery")}</TableCell>
-                      <TableCell>
-                        <div className="flex items-center">
-                          <Package className="w-4 h-4 mr-2" />
-                          {delivery.trackingNumber}
-                        </div>
-                      </TableCell>
+                      <TableCell>{delivery.deliveryDate ? formatDate(delivery.deliveryDate) : "-"}</TableCell>
                       <TableCell>{delivery.carrier}</TableCell>
-                      <TableCell>{delivery.items}</TableCell>
-                      <TableCell>{delivery.weight} kg</TableCell>
-                      <TableCell>{formatCurrency(delivery.value)}</TableCell>
+                      <TableCell>{delivery.trackingNumber}</TableCell>
+                      <TableCell>{getStatusBadge(delivery.status, "delivery")}</TableCell>
                       <TableCell>
                         <DropdownMenu>
                           <DropdownMenuTrigger asChild>
@@ -1045,15 +1025,15 @@ const SalesDistribution = () => {
                           <DropdownMenuContent align="end">
                             <DropdownMenuItem>
                               <Eye className="mr-2 h-4 w-4" />
-                              Track Shipment
+                              {t("common.view")}
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                               <Edit className="mr-2 h-4 w-4" />
-                              Update Status
+                              {t("common.edit")}
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                              <MapPin className="mr-2 h-4 w-4" />
-                              View Route
+                              <Truck className="mr-2 h-4 w-4" />
+                              {t("sales.trackDelivery")}
                             </DropdownMenuItem>
                           </DropdownMenuContent>
                         </DropdownMenu>
@@ -1070,12 +1050,12 @@ const SalesDistribution = () => {
         <TabsContent value="invoices" className="space-y-6">
           <div className="flex justify-between items-center">
             <div>
-              <h2 className="text-2xl font-bold">Billing & Invoices</h2>
-              <p className="text-muted-foreground">Manage invoicing and payment tracking</p>
+              <h2 className="text-2xl font-bold">{t("sales.invoices.title")}</h2>
+              <p className="text-muted-foreground">{t("sales.invoices.description")}</p>
             </div>
             <Button>
               <Plus className="w-4 h-4 mr-2" />
-              Create Invoice
+              {t("sales.invoices.newInvoice")}
             </Button>
           </div>
 
@@ -1084,7 +1064,7 @@ const SalesDistribution = () => {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input
-                placeholder="Search invoices..."
+                placeholder={t("sales.invoices.searchPlaceholder")}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -1092,15 +1072,15 @@ const SalesDistribution = () => {
             </div>
             <Select value={selectedFilter} onValueChange={setSelectedFilter}>
               <SelectTrigger className="w-48">
-                <SelectValue placeholder="Filter by status" />
+                <SelectValue placeholder={t("sales.filterByStatus")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Status</SelectItem>
-                <SelectItem value="draft">Draft</SelectItem>
-                <SelectItem value="sent">Sent</SelectItem>
-                <SelectItem value="paid">Paid</SelectItem>
-                <SelectItem value="overdue">Overdue</SelectItem>
-                <SelectItem value="cancelled">Cancelled</SelectItem>
+                <SelectItem value="all">{t("sales.filters.allStatus")}</SelectItem>
+                <SelectItem value="draft">{t("sales.status.draft")}</SelectItem>
+                <SelectItem value="sent">{t("sales.status.sent")}</SelectItem>
+                <SelectItem value="paid">{t("sales.status.paid")}</SelectItem>
+                <SelectItem value="overdue">{t("sales.status.overdue")}</SelectItem>
+                <SelectItem value="cancelled">{t("sales.status.cancelled")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -1111,17 +1091,15 @@ const SalesDistribution = () => {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Invoice ID</TableHead>
-                    <TableHead>Order ID</TableHead>
-                    <TableHead>Customer</TableHead>
-                    <TableHead>Invoice Date</TableHead>
-                    <TableHead>Due Date</TableHead>
-                    <TableHead>Total Amount</TableHead>
-                    <TableHead>Paid Amount</TableHead>
-                    <TableHead>Balance</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead>Payment Method</TableHead>
-                    <TableHead>Actions</TableHead>
+                    <TableHead>{t("sales.columns.invoiceId")}</TableHead>
+                    <TableHead>{t("sales.columns.orderId")}</TableHead>
+                    <TableHead>{t("sales.columns.customer")}</TableHead>
+                    <TableHead>{t("sales.columns.invoiceDate")}</TableHead>
+                    <TableHead>{t("sales.columns.dueDate")}</TableHead>
+                    <TableHead>{t("sales.columns.amount")}</TableHead>
+                    <TableHead>{t("sales.columns.paidAmount")}</TableHead>
+                    <TableHead>{t("sales.columns.status")}</TableHead>
+                    <TableHead>{t("common.actions")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -1134,20 +1112,7 @@ const SalesDistribution = () => {
                       <TableCell>{formatDate(invoice.dueDate)}</TableCell>
                       <TableCell>{formatCurrency(invoice.totalAmount)}</TableCell>
                       <TableCell>{formatCurrency(invoice.paidAmount)}</TableCell>
-                      <TableCell>
-                        <span
-                          className={invoice.totalAmount - invoice.paidAmount === 0 ? "text-green-600" : "text-red-600"}
-                        >
-                          {formatCurrency(invoice.totalAmount - invoice.paidAmount)}
-                        </span>
-                      </TableCell>
                       <TableCell>{getStatusBadge(invoice.status, "invoice")}</TableCell>
-                      <TableCell>
-                        <div className="flex items-center">
-                          <CreditCard className="w-4 h-4 mr-2" />
-                          {invoice.paymentMethod}
-                        </div>
-                      </TableCell>
                       <TableCell>
                         <DropdownMenu>
                           <DropdownMenuTrigger asChild>
@@ -1158,19 +1123,15 @@ const SalesDistribution = () => {
                           <DropdownMenuContent align="end">
                             <DropdownMenuItem>
                               <Eye className="mr-2 h-4 w-4" />
-                              View Invoice
+                              {t("common.view")}
+                            </DropdownMenuItem>
+                            <DropdownMenuItem>
+                              <Edit className="mr-2 h-4 w-4" />
+                              {t("common.edit")}
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                               <Download className="mr-2 h-4 w-4" />
-                              Download PDF
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Mail className="mr-2 h-4 w-4" />
-                              Send to Customer
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <DollarSign className="mr-2 h-4 w-4" />
-                              Record Payment
+                              {t("sales.downloadPdf")}
                             </DropdownMenuItem>
                           </DropdownMenuContent>
                         </DropdownMenu>
@@ -1187,12 +1148,12 @@ const SalesDistribution = () => {
         <TabsContent value="returns" className="space-y-6">
           <div className="flex justify-between items-center">
             <div>
-              <h2 className="text-2xl font-bold">Returns Management</h2>
-              <p className="text-muted-foreground">Process customer returns and refunds</p>
+              <h2 className="text-2xl font-bold">{t("sales.returns.title")}</h2>
+              <p className="text-muted-foreground">{t("sales.returns.description")}</p>
             </div>
             <Button>
               <Plus className="w-4 h-4 mr-2" />
-              Process Return
+              {t("sales.returns.processReturn")}
             </Button>
           </div>
 
@@ -1201,7 +1162,7 @@ const SalesDistribution = () => {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input
-                placeholder="Search returns..."
+                placeholder={t("sales.returns.searchPlaceholder")}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -1209,15 +1170,15 @@ const SalesDistribution = () => {
             </div>
             <Select value={selectedFilter} onValueChange={setSelectedFilter}>
               <SelectTrigger className="w-48">
-                <SelectValue placeholder="Filter by status" />
+                <SelectValue placeholder={t("sales.filterByStatus")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Status</SelectItem>
-                <SelectItem value="requested">Requested</SelectItem>
-                <SelectItem value="authorized">Authorized</SelectItem>
-                <SelectItem value="received">Received</SelectItem>
-                <SelectItem value="processed">Processed</SelectItem>
-                <SelectItem value="refunded">Refunded</SelectItem>
+                <SelectItem value="all">{t("sales.filters.allStatus")}</SelectItem>
+                <SelectItem value="requested">{t("sales.status.requested")}</SelectItem>
+                <SelectItem value="authorized">{t("sales.status.authorized")}</SelectItem>
+                <SelectItem value="received">{t("sales.status.received")}</SelectItem>
+                <SelectItem value="processed">{t("sales.status.processed")}</SelectItem>
+                <SelectItem value="refunded">{t("sales.status.refunded")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -1228,16 +1189,15 @@ const SalesDistribution = () => {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Return ID</TableHead>
-                    <TableHead>Order ID</TableHead>
-                    <TableHead>Customer</TableHead>
-                    <TableHead>Return Date</TableHead>
-                    <TableHead>Reason</TableHead>
-                    <TableHead>Items</TableHead>
-                    <TableHead>Return Value</TableHead>
-                    <TableHead>Refund Amount</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead>Actions</TableHead>
+                    <TableHead>{t("sales.columns.returnId")}</TableHead>
+                    <TableHead>{t("sales.columns.orderId")}</TableHead>
+                    <TableHead>{t("sales.columns.customer")}</TableHead>
+                    <TableHead>{t("sales.columns.requestDate")}</TableHead>
+                    <TableHead>{t("sales.columns.reason")}</TableHead>
+                    <TableHead>{t("sales.columns.returnValue")}</TableHead>
+                    <TableHead>{t("sales.columns.refundAmount")}</TableHead>
+                    <TableHead>{t("sales.columns.status")}</TableHead>
+                    <TableHead>{t("common.actions")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -1248,7 +1208,6 @@ const SalesDistribution = () => {
                       <TableCell>{returnItem.customerName}</TableCell>
                       <TableCell>{formatDate(returnItem.returnDate)}</TableCell>
                       <TableCell>{returnItem.reason}</TableCell>
-                      <TableCell>{returnItem.items}</TableCell>
                       <TableCell>{formatCurrency(returnItem.totalValue)}</TableCell>
                       <TableCell>{formatCurrency(returnItem.refundAmount)}</TableCell>
                       <TableCell>{getStatusBadge(returnItem.status, "return")}</TableCell>
@@ -1262,19 +1221,11 @@ const SalesDistribution = () => {
                           <DropdownMenuContent align="end">
                             <DropdownMenuItem>
                               <Eye className="mr-2 h-4 w-4" />
-                              View Details
+                              {t("common.view")}
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                               <CheckCircle className="mr-2 h-4 w-4" />
-                              Authorize Return
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Package className="mr-2 h-4 w-4" />
-                              Goods Receipt
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <DollarSign className="mr-2 h-4 w-4" />
-                              Process Refund
+                              {t("sales.approveReturn")}
                             </DropdownMenuItem>
                           </DropdownMenuContent>
                         </DropdownMenu>

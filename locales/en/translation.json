@@ -686,5 +686,141 @@
       "placeholder": "Documents and files will appear here."
     },
     "loading": "Loading..."
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "defaultUser": "User",
+    "welcomeDescription": "Here's what's happening with your business today.",
+    "loading": "Loading dashboard...",
+    "erpModules": "ERP Modules",
+    "recentActivity": "Recent Activity",
+    "quickActions": "Quick Actions",
+    "lastAccessed": "Last accessed",
+    "timeAgo": "{{time}} ago",
+    "status": {
+      "active": "Active"
+    },
+    "metrics": {
+      "revenue": "Total Revenue",
+      "employees": "Active Employees",
+      "inventory": "Inventory Value",
+      "orders": "Sales Orders",
+      "activity": "System Activity",
+      "fromLastMonth": "from last month"
+    },
+    "activity": {
+      "invoiceCreated": "New invoice created",
+      "invoiceDescription": "Invoice #INV-2024-001 for $15,230",
+      "employeeOnboarded": "Employee onboarded",
+      "employeeDescription": "Sarah Johnson joined Marketing team",
+      "purchaseOrderApproved": "Purchase order approved",
+      "purchaseOrderDescription": "PO #PO-2024-045 for raw materials",
+      "salesOrderCompleted": "Sales order completed",
+      "salesOrderDescription": "Order #SO-2024-089 shipped to customer",
+      "materialMasterUpdated": "Material master updated",
+      "materialMasterDescription": "Material ABC-123 specifications modified",
+      "timeAgo": "{{time}} ago"
+    },
+    "actions": {
+      "createInvoice": "Create Invoice",
+      "addEmployee": "Add Employee",
+      "updateInventory": "Update Inventory",
+      "newSalesOrder": "New Sales Order",
+      "manageMasterData": "Manage Master Data"
+    }
+  },
+  "materials": {
+    "title": "Materials Management",
+    "description": "Manage inventory, warehouse operations, and procurement processes",
+    "tabs": {
+      "overview": "Overview",
+      "masterData": "Master Data",
+      "warehouse": "Warehouse",
+      "procurement": "Procurement"
+    },
+    "metrics": {
+      "totalMaterials": "Total Materials",
+      "activeMaterials": "Active materials in system",
+      "inventoryValue": "Inventory Value",
+      "totalValue": "Total inventory value",
+      "pendingOrders": "Pending Orders",
+      "awaitingDelivery": "Awaiting delivery",
+      "warehouseUtilization": "Warehouse Utilization",
+      "storageCapacity": "Storage capacity used"
+    },
+    "overview": {
+      "recentActivity": "Recent Activity",
+      "recentActivityDescription": "Latest inventory movements and updates",
+      "lowStockAlerts": "Low Stock Alerts",
+      "lowStockDescription": "Materials requiring attention",
+      "minStock": "Min stock"
+    },
+    "activity": {
+      "materialReceived": "Material received",
+      "stockAdjustment": "Stock adjustment",
+      "newMaterial": "New material added",
+      "timeAgo": "{{time}} ago"
+    },
+    "masterData": {
+      "title": "Material Master Data",
+      "description": "Manage and maintain all material and product records",
+      "categories": "Material Categories",
+      "searchPlaceholder": "Search materials...",
+      "import": "Import",
+      "addMaterial": "Add Material"
+    },
+    "columns": {
+      "materialId": "Material ID",
+      "name": "Name",
+      "type": "Type",
+      "baseUom": "Base UoM",
+      "status": "Status",
+      "onHand": "On Hand"
+    },
+    "types": {
+      "raw": "Raw",
+      "component": "Component",
+      "finished": "Finished"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "warehouse": {
+      "title": "Interactive Warehouse Layout",
+      "description": "Real-time warehouse visualization and bin management",
+      "locationDetails": "Location Details",
+      "utilization": "Utilization",
+      "itemCount": "Item Count",
+      "status": "Status",
+      "contents": "Contents",
+      "viewDetails": "View Inventory Details",
+      "selectBin": "Select a bin to see details",
+      "binStatus": {
+        "full": "Full",
+        "empty": "Empty",
+        "available": "Available"
+      }
+    },
+    "procurement": {
+      "title": "Procurement Workflow",
+      "description": "Multi-step purchase requisition process",
+      "basicInfo": "Basic Information",
+      "addItems": "Add Items",
+      "vendorDelivery": "Vendor & Delivery",
+      "reviewSubmit": "Review & Submit",
+      "requisitionTitle": "Requisition Title",
+      "department": "Department",
+      "requestor": "Requestor",
+      "searchCatalog": "Search item catalog...",
+      "requisitionItems": "Requisition Items",
+      "noItemsAdded": "No items added yet",
+      "vendor": "Vendor",
+      "deliveryDate": "Requested Delivery Date",
+      "notes": "Notes / Justification",
+      "approvalChain": "Approval Chain",
+      "submitRequisition": "Submit Requisition",
+      "totalCost": "Total Cost"
+    }
   }
 }

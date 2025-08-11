@@ -4,10 +4,30 @@ import { Card, CardHeader, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, Quote, Building, MapPin, TrendingUp, Award, CheckCircle } from "lucide-react"
 import Image from "next/image"
-import { useI18n } from "@/contexts/i18n-context"
+
+// Mock translation function
+const useTranslation = () => {
+  return {
+    t: (key: string) => {
+      const translations: Record<string, string> = {
+        "testimonials.title": "Trusted by Industry Leaders",
+        "testimonials.subtitle":
+          "Join thousands of companies worldwide who have transformed their operations with our cloud-native ERP system.",
+        "testimonials.stats.companies": "Companies Served",
+        "testimonials.stats.countries": "Countries",
+        "testimonials.stats.uptime": "Uptime SLA",
+        "testimonials.stats.rating": "Customer Rating",
+        "testimonials.results": "Key Results",
+        "testimonials.trustedBy": "Trusted by leading companies worldwide",
+        "testimonials.verified": "Verified Customer",
+      }
+      return translations[key] || key
+    },
+  }
+}
 
 const TestimonialsSection = () => {
-  const { t } = useI18n()
+  const { t } = useTranslation()
 
   const testimonials = [
     {
@@ -19,12 +39,9 @@ const TestimonialsSection = () => {
       location: "San Francisco, USA",
       avatar: "/professional-woman-cfo.png",
       rating: 5,
-      quote: t("testimonials.quotes.sarah"),
-      results: [
-        t("testimonials.results.sarah.closing"),
-        t("testimonials.results.sarah.errors"),
-        t("testimonials.results.sarah.visibility"),
-      ],
+      quote:
+        "Feebee ERP transformed our financial operations completely. The real-time reporting and multi-currency support helped us expand globally with confidence. Our month-end closing process that used to take 10 days now takes just 6 days.",
+      results: ["40% faster month-end closing", "Reduced manual errors by 85%", "Improved cash flow visibility"],
       verified: true,
     },
     {
@@ -36,11 +53,12 @@ const TestimonialsSection = () => {
       location: "Singapore",
       avatar: "/professional-asian-operations-director.png",
       rating: 5,
-      quote: t("testimonials.quotes.michael"),
+      quote:
+        "The materials management module revolutionized our inventory control. We now have complete visibility across all our warehouses worldwide. The batch tracking and serial number management features are exceptional.",
       results: [
-        t("testimonials.results.michael.inventory"),
-        t("testimonials.results.michael.accuracy"),
-        t("testimonials.results.michael.procurement"),
+        "30% reduction in inventory costs",
+        "Improved stock accuracy to 99.5%",
+        "Streamlined procurement process",
       ],
       verified: true,
     },
@@ -53,11 +71,12 @@ const TestimonialsSection = () => {
       location: "Madrid, Spain",
       avatar: "/hispanic-hr-director.png",
       rating: 5,
-      quote: t("testimonials.quotes.emma"),
+      quote:
+        "Managing 2,000+ employees across multiple countries became effortless with Feebee's HCM module. The payroll automation alone saved us countless hours, and the employee self-service portal improved satisfaction significantly.",
       results: [
-        t("testimonials.results.emma.adminTime"),
-        t("testimonials.results.emma.satisfaction"),
-        t("testimonials.results.emma.compliance"),
+        "50% reduction in HR admin time",
+        "Improved employee satisfaction by 35%",
+        "Automated compliance reporting",
       ],
       verified: true,
     },
@@ -70,12 +89,9 @@ const TestimonialsSection = () => {
       location: "London, UK",
       avatar: "/british-ceo.png",
       rating: 5,
-      quote: t("testimonials.quotes.james"),
-      results: [
-        t("testimonials.results.james.margins"),
-        t("testimonials.results.james.forecasting"),
-        t("testimonials.results.james.cycle"),
-      ],
+      quote:
+        "The sales and distribution module gave us the insights we needed to optimize our pricing strategy. The integration with our financial module provides real-time profitability analysis that drives our decision-making.",
+      results: ["25% increase in profit margins", "Improved sales forecasting accuracy", "Faster quote-to-cash cycle"],
       verified: true,
     },
     {
@@ -87,11 +103,12 @@ const TestimonialsSection = () => {
       location: "Seoul, South Korea",
       avatar: "/korean-supply-chain-manager.png",
       rating: 5,
-      quote: t("testimonials.quotes.lisa"),
+      quote:
+        "The organizational management features helped us restructure our operations efficiently. The cost center tracking and profit center analysis provide the visibility we need to optimize our supply chain operations.",
       results: [
-        t("testimonials.results.lisa.efficiency"),
-        t("testimonials.results.lisa.tracking"),
-        t("testimonials.results.lisa.reporting"),
+        "20% improvement in operational efficiency",
+        "Better cost allocation tracking",
+        "Enhanced reporting capabilities",
       ],
       verified: true,
     },
@@ -104,12 +121,9 @@ const TestimonialsSection = () => {
       location: "Toronto, Canada",
       avatar: "/placeholder-1m414.png",
       rating: 5,
-      quote: t("testimonials.quotes.robert"),
-      results: [
-        t("testimonials.results.robert.integration"),
-        t("testimonials.results.robert.availability"),
-        t("testimonials.results.robert.maintenance"),
-      ],
+      quote:
+        "The API-first architecture and master data management capabilities made integration with our existing systems seamless. The cloud-native design ensures we can scale without infrastructure concerns.",
+      results: ["Seamless system integration", "99.9% system availability", "Reduced IT maintenance costs by 40%"],
       verified: true,
     },
   ]
@@ -142,13 +156,11 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge className="mb-4 px-4 py-1.5 bg-primary/10 text-primary border-primary/20">
-            {t("testimonials.badge")}
-          </Badge>
+          <Badge className="mb-4 px-4 py-1.5 bg-primary/10 text-primary border-primary/20">Customer Success</Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            {t("testimonials.title.part1")}{" "}
+            Trusted by{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              {t("testimonials.title.part2")}
+              Industry Leaders
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{t("testimonials.subtitle")}</p>
@@ -261,15 +273,15 @@ const TestimonialsSection = () => {
           <div className="flex items-center justify-center space-x-8 opacity-60">
             <div className="flex items-center space-x-2">
               <Award className="h-5 w-5 text-yellow-500" />
-              <span className="text-sm font-medium">{t("testimonials.awards.g2")}</span>
+              <span className="text-sm font-medium">G2 Leader 2024</span>
             </div>
             <div className="flex items-center space-x-2">
               <Award className="h-5 w-5 text-yellow-500" />
-              <span className="text-sm font-medium">{t("testimonials.awards.capterra")}</span>
+              <span className="text-sm font-medium">Capterra Best Value</span>
             </div>
             <div className="flex items-center space-x-2">
               <Award className="h-5 w-5 text-yellow-500" />
-              <span className="text-sm font-medium">{t("testimonials.awards.iso")}</span>
+              <span className="text-sm font-medium">ISO 27001 Certified</span>
             </div>
           </div>
         </div>

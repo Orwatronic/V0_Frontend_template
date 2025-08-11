@@ -45,20 +45,20 @@ const DashboardOverview = () => {
       module: "hcm",
     },
     {
-      title: t("dashboard.activity.poApproved"),
-      description: t("dashboard.activity.poDescription"),
+      title: t("dashboard.activity.purchaseOrderApproved"),
+      description: t("dashboard.activity.purchaseOrderDescription"),
       time: t("dashboard.activity.timeAgo", { time: "2 hours" }),
       module: "materials",
     },
     {
-      title: t("dashboard.activity.orderCompleted"),
-      description: t("dashboard.activity.orderDescription"),
+      title: t("dashboard.activity.salesOrderCompleted"),
+      description: t("dashboard.activity.salesOrderDescription"),
       time: t("dashboard.activity.timeAgo", { time: "3 hours" }),
       module: "sales",
     },
     {
-      title: t("dashboard.activity.materialUpdated"),
-      description: t("dashboard.activity.materialDescription"),
+      title: t("dashboard.activity.materialMasterUpdated"),
+      description: t("dashboard.activity.materialMasterDescription"),
       time: t("dashboard.activity.timeAgo", { time: "4 hours" }),
       module: "mdm",
     },
@@ -186,7 +186,7 @@ const DashboardOverview = () => {
         <h2 className="text-3xl font-bold text-foreground mb-2">
           {t("dashboard.welcome")}, {user?.name || t("dashboard.defaultUser")}!
         </h2>
-        <p className="text-muted-foreground">{t("dashboard.subtitle")}</p>
+        <p className="text-muted-foreground">{t("dashboard.welcomeDescription")}</p>
       </div>
 
       {/* Key Metrics Grid */}
@@ -211,7 +211,7 @@ const DashboardOverview = () => {
                 <div className={`flex items-center text-xs ${trendColor}`}>
                   <TrendIcon className="h-3 w-3 mr-1" />
                   <span>
-                    {metric.change} {t("dashboard.fromLastMonth")}
+                    {metric.change} {t("dashboard.metrics.fromLastMonth")}
                   </span>
                 </div>
               </CardContent>
