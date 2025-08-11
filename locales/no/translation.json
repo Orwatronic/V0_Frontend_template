@@ -480,6 +480,24 @@
           "invoice": "Faktura betalt av {{customer}}"
         }
       }
+    },
+    "customer360": {
+      "tabs": {
+        "overview": "Oversikt",
+        "contacts": "Kontakter",
+        "opportunities": "Muligheter",
+        "activities": "Aktiviteter",
+        "invoices": "Fakturaer",
+        "files": "Filer"
+      }
+    },
+    "customerMaster": {
+      "tabs": {
+        "general": "Generelt",
+        "contacts": "Kontakter",
+        "financial": "Finansiell",
+        "history": "Historie"
+      }
     }
   },
   "customer360": {
@@ -714,6 +732,107 @@
         "login": "Logg inn",
         "contact": "Kontakt administrator"
       }
+    }
+  },
+  "sidebar": {
+    "dashboard": "Dashbord",
+    "analytics": "Analyse",
+    "financials": "Finansstyring",
+    "sales": "Salg og distribusjon",
+    "materials": "Materialhåndtering",
+    "hcm": "Human Capital Management",
+    "masterData": "Masterdatastyring",
+    "reports": "Rapporter",
+    "customerPortal": "Kundeportal",
+    "orgMgmt": "Organisasjonsstyring",
+    "crm": "Kundeforhold",
+    "production": "Produksjonsplanlegging",
+    "quality": "Kvalitetsstyring",
+    "plantMaintenance": "Anleggsvedlikehold",
+    "projectSystem": "Prosjektsystem"
+  },
+  "modules": {
+    "financial": {
+      "title": "Finansstyring",
+      "description": "Komplett regnskap med hovedbok, kontoplan, flervaluta og periodehåndtering"
+    },
+    "hcm": {
+      "title": "Human Capital Management",
+      "description": "Ansattlivssyklus, lønn, tidsføring, permisjoner og organisasjonsstruktur"
+    },
+    "materials": {
+      "title": "Materialhåndtering",
+      "description": "Materialmaster, lagerkontroll, lagerstyring og innkjøp"
+    },
+    "sales": {
+      "title": "Salg og distribusjon",
+      "description": "Tilbud, ordre, prising, levering og returer"
+    },
+    "mdm": {
+      "title": "Masterdatastyring",
+      "description": "Sentraliserte referansedata for kunder, leverandører, materialer og organisasjonshierarkier"
+    },
+    "organizational": {
+      "title": "Organisasjonsstyring",
+      "description": "Selskapsstrukturer, kostsentre, resultatsentre og autorisasjonsstyring"
+    }
+  },
+  "sales": {
+    "tabs": {
+      "dashboard": "Dashbord",
+      "pipeline": "Pipeline",
+      "inquiries": "Forespørsler",
+      "quotations": "Tilbud",
+      "orders": "Ordre",
+      "deliveries": "Leveranser",
+      "invoices": "Fakturaer",
+      "returns": "Returer"
+    }
+  },
+  "hcm": {
+    "tabs": {
+      "dashboard": "Dashbord",
+      "employees": "Ansatte",
+      "orgChart": "Organisasjonskart",
+      "recruitment": "Rekruttering",
+      "onboarding": "Onboarding",
+      "performance": "Ytelse",
+      "goals": "Mål",
+      "compensation": "Kompensasjon",
+      "analytics": "Analyse"
+    }
+  },
+  "materials": {
+    "tabs": {
+      "overview": "Oversikt",
+      "masterData": "Masterdata",
+      "warehouse": "Varehus",
+      "procurement": "Innkjøp"
+    }
+  },
+  "compensation": {
+    "tabs": {
+      "dashboard": "Dashbord",
+      "reviews": "Vurderinger",
+      "budget": "Budsjett",
+      "approvals": "Godkjenninger",
+      "analytics": "Analyse",
+      "history": "Historie"
+    }
+  },
+  "goals": {
+    "tabs": {
+      "individual": "Individuell",
+      "team": "Team",
+      "company": "Selskap",
+      "analytics": "Analyse"
+    }
+  },
+  "reports": {
+    "tabs": {
+      "builder": "Rapportbygger",
+      "preview": "Forhåndsvisning",
+      "saved": "Lagret"
     }
   }
 }
