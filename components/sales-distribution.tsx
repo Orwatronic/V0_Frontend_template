@@ -5,41 +5,33 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { DollarSign, ShoppingCart, TrendingUp, Users, Package, Truck, FileText, RotateCcw, Search, Filter, Download, Plus, Edit, Eye, MoreHorizontal, CheckCircle, Clock, AlertCircle, XCircle, Star, Calendar, CreditCard, MapPin, Phone, Mail, Building } from 'lucide-react'
+  DollarSign,
+  ShoppingCart,
+  TrendingUp,
+  Package,
+  Truck,
+  FileText,
+  Search,
+  Download,
+  Plus,
+  Edit,
+  Eye,
+  MoreHorizontal,
+  CheckCircle,
+  AlertCircle,
+  CreditCard,
+  MapPin,
+  Mail,
+} from "lucide-react"
 import SalesPipeline from "./sales-pipeline"
-import {
-  Dialog,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+import { Dialog, DialogTrigger } from "@/components/ui/dialog"
 import { SalesOrderEntryForm } from "./sales-order-entry-form"
+import { useI18n } from "@/contexts/i18n-context"
 
 // Mock data structures matching backend requirements
 interface Customer {
@@ -144,6 +136,7 @@ interface Return {
 }
 
 const SalesDistribution = () => {
+  const { t } = useI18n()
   const [activeTab, setActiveTab] = useState("dashboard")
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedFilter, setSelectedFilter] = useState("all")
@@ -371,55 +364,51 @@ const SalesDistribution = () => {
   const getStatusBadge = (status: string, type: string) => {
     const statusConfig: Record<string, Record<string, { color: string; label: string }>> = {
       inquiry: {
-        open: { color: "bg-blue-100 text-blue-700", label: "Open" },
-        quoted: { color: "bg-yellow-100 text-yellow-700", label: "Quoted" },
-        lost: { color: "bg-red-100 text-red-700", label: "Lost" },
-        converted: { color: "bg-green-100 text-green-700", label: "Converted" },
+        open: { color: "bg-blue-100 text-blue-700", label: t("sales.status.open") },
+        quoted: { color: "bg-yellow-100 text-yellow-700", label: t("sales.status.quoted") },
+        lost: { color: "bg-red-100 text-red-700", label: t("sales.status.lost") },
+        converted: { color: "bg-green-100 text-green-700", label: t("sales.status.converted") },
       },
       quotation: {
-        draft: { color: "bg-gray-100 text-gray-700", label: "Draft" },
-        sent: { color: "bg-blue-100 text-blue-700", label: "Sent" },
-        accepted: { color: "bg-green-100 text-green-700", label: "Accepted" },
-        rejected: { color: "bg-red-100 text-red-700", label: "Rejected" },
-        expired: { color: "bg-orange-100 text-orange-700", label: "Expired" },
+        draft: { color: "bg-gray-100 text-gray-700", label: t("sales.status.draft") },
+        sent: { color: "bg-blue-100 text-blue-700", label: t("sales.status.sent") },
+        accepted: { color: "bg-green-100 text-green-700", label: t("sales.status.accepted") },
+        rejected: { color: "bg-red-100 text-red-700", label: t("sales.status.rejected") },
+        expired: { color: "bg-orange-100 text-orange-700", label: t("sales.status.expired") },
       },
       order: {
-        draft: { color: "bg-gray-100 text-gray-700", label: "Draft" },
-        confirmed: { color: "bg-blue-100 text-blue-700", label: "Confirmed" },
-        in_progress: { color: "bg-yellow-100 text-yellow-700", label: "In Progress" },
-        delivered: { color: "bg-green-100 text-green-700", label: "Delivered" },
-        invoiced: { color: "bg-purple-100 text-purple-700", label: "Invoiced" },
-        completed: { color: "bg-green-100 text-green-700", label: "Completed" },
+        draft: { color: "bg-gray-100 text-gray-700", label: t("sales.status.draft") },
+        confirmed: { color: "bg-blue-100 text-blue-700", label: t("sales.status.confirmed") },
+        in_progress: { color: "bg-yellow-100 text-yellow-700", label: t("sales.status.inProgress") },
+        delivered: { color: "bg-green-100 text-green-700", label: t("sales.status.delivered") },
+        invoiced: { color: "bg-purple-100 text-purple-700", label: t("sales.status.invoiced") },
+        completed: { color: "bg-green-100 text-green-700", label: t("sales.status.completed") },
       },
       delivery: {
-        planned: { color: "bg-gray-100 text-gray-700", label: "Planned" },
-        picked: { color: "bg-blue-100 text-blue-700", label: "Picked" },
-        packed: { color: "bg-yellow-100 text-yellow-700", label: "Packed" },
-        shipped: { color: "bg-purple-100 text-purple-700", label: "Shipped" },
-        delivered: { color: "bg-green-100 text-green-700", label: "Delivered" },
+        planned: { color: "bg-gray-100 text-gray-700", label: t("sales.status.planned") },
+        picked: { color: "bg-blue-100 text-blue-700", label: t("sales.status.picked") },
+        packed: { color: "bg-yellow-100 text-yellow-700", label: t("sales.status.packed") },
+        shipped: { color: "bg-purple-100 text-purple-700", label: t("sales.status.shipped") },
+        delivered: { color: "bg-green-100 text-green-700", label: t("sales.status.delivered") },
       },
       invoice: {
-        draft: { color: "bg-gray-100 text-gray-700", label: "Draft" },
-        sent: { color: "bg-blue-100 text-blue-700", label: "Sent" },
-        paid: { color: "bg-green-100 text-green-700", label: "Paid" },
-        overdue: { color: "bg-red-100 text-red-700", label: "Overdue" },
-        cancelled: { color: "bg-gray-100 text-gray-700", label: "Cancelled" },
+        draft: { color: "bg-gray-100 text-gray-700", label: t("sales.status.draft") },
+        sent: { color: "bg-blue-100 text-blue-700", label: t("sales.status.sent") },
+        paid: { color: "bg-green-100 text-green-700", label: t("sales.status.paid") },
+        overdue: { color: "bg-red-100 text-red-700", label: t("sales.status.overdue") },
+        cancelled: { color: "bg-gray-100 text-gray-700", label: t("sales.status.cancelled") },
       },
       return: {
-        requested: { color: "bg-yellow-100 text-yellow-700", label: "Requested" },
-        authorized: { color: "bg-blue-100 text-blue-700", label: "Authorized" },
-        received: { color: "bg-purple-100 text-purple-700", label: "Received" },
-        processed: { color: "bg-green-100 text-green-700", label: "Processed" },
-        refunded: { color: "bg-green-100 text-green-700", label: "Refunded" },
+        requested: { color: "bg-yellow-100 text-yellow-700", label: t("sales.status.requested") },
+        authorized: { color: "bg-blue-100 text-blue-700", label: t("sales.status.authorized") },
+        received: { color: "bg-purple-100 text-purple-700", label: t("sales.status.received") },
+        processed: { color: "bg-green-100 text-green-700", label: t("sales.status.processed") },
+        refunded: { color: "bg-green-100 text-green-700", label: t("sales.status.refunded") },
       },
     }
 
     const config = statusConfig[type]?.[status] || { color: "bg-gray-100 text-gray-700", label: status }
-    return (
-      <Badge className={`${config.color} border-0`}>
-        {config.label}
-      </Badge>
-    )
+    return <Badge className={`${config.color} border-0`}>{config.label}</Badge>
   }
 
   const getPriorityBadge = (priority: string) => {
@@ -429,13 +418,11 @@ const SalesDistribution = () => {
       low: "bg-green-100 text-green-700",
     }
     return (
-      <Badge className={`${colors[priority as keyof typeof colors]} border-0`}>
-        {priority.charAt(0).toUpperCase() + priority.slice(1)}
-      </Badge>
+      <Badge className={`${colors[priority as keyof typeof colors]} border-0`}>{t(`sales.priority.${priority}`)}</Badge>
     )
   }
 
-  const formatCurrency = (amount: number, currency: string = "USD") => {
+  const formatCurrency = (amount: number, currency = "USD") => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: currency,
@@ -455,21 +442,19 @@ const SalesDistribution = () => {
       {/* Header */}
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-foreground">Sales & Distribution</h1>
-          <p className="text-muted-foreground">
-            Manage the complete sales lifecycle from inquiry to delivery and returns
-          </p>
+          <h1 className="text-3xl font-bold text-foreground">{t("sales.title")}</h1>
+          <p className="text-muted-foreground">{t("sales.description")}</p>
         </div>
         <div className="flex gap-2">
           <Button variant="outline">
             <Download className="w-4 h-4 mr-2" />
-            Export
+            {t("common.export")}
           </Button>
           <Dialog>
             <DialogTrigger asChild>
               <Button>
                 <Plus className="w-4 h-4 mr-2" />
-                New Order
+                {t("sales.newOrder")}
               </Button>
             </DialogTrigger>
             <SalesOrderEntryForm />
@@ -479,14 +464,14 @@ const SalesDistribution = () => {
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
         <TabsList className="grid w-full grid-cols-8">
-          <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
-          <TabsTrigger value="pipeline">Pipeline</TabsTrigger>
-          <TabsTrigger value="inquiries">Inquiries</TabsTrigger>
-          <TabsTrigger value="quotations">Quotations</TabsTrigger>
-          <TabsTrigger value="orders">Orders</TabsTrigger>
-          <TabsTrigger value="deliveries">Deliveries</TabsTrigger>
-          <TabsTrigger value="invoices">Invoices</TabsTrigger>
-          <TabsTrigger value="returns">Returns</TabsTrigger>
+          <TabsTrigger value="dashboard">{t("sales.tabs.dashboard")}</TabsTrigger>
+          <TabsTrigger value="pipeline">{t("sales.tabs.pipeline")}</TabsTrigger>
+          <TabsTrigger value="inquiries">{t("sales.tabs.inquiries")}</TabsTrigger>
+          <TabsTrigger value="quotations">{t("sales.tabs.quotations")}</TabsTrigger>
+          <TabsTrigger value="orders">{t("sales.tabs.orders")}</TabsTrigger>
+          <TabsTrigger value="deliveries">{t("sales.tabs.deliveries")}</TabsTrigger>
+          <TabsTrigger value="invoices">{t("sales.tabs.invoices")}</TabsTrigger>
+          <TabsTrigger value="returns">{t("sales.tabs.returns")}</TabsTrigger>
         </TabsList>
 
         {/* Dashboard Tab */}
@@ -495,58 +480,58 @@ const SalesDistribution = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
+                <CardTitle className="text-sm font-medium">{t("sales.metrics.totalRevenue")}</CardTitle>
                 <DollarSign className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{formatCurrency(dashboardMetrics.totalRevenue)}</div>
                 <p className="text-xs text-muted-foreground">
-                  <span className="text-green-600">+{dashboardMetrics.monthlyGrowth}%</span> from last month
+                  <span className="text-green-600">+{dashboardMetrics.monthlyGrowth}%</span> {t("sales.fromLastMonth")}
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Active Orders</CardTitle>
+                <CardTitle className="text-sm font-medium">{t("sales.metrics.activeOrders")}</CardTitle>
                 <ShoppingCart className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{dashboardMetrics.activeOrders}</div>
-                <p className="text-xs text-muted-foreground">Orders in progress</p>
+                <p className="text-xs text-muted-foreground">{t("sales.ordersInProgress")}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Pending Quotations</CardTitle>
+                <CardTitle className="text-sm font-medium">{t("sales.metrics.pendingQuotations")}</CardTitle>
                 <FileText className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{dashboardMetrics.pendingQuotations}</div>
-                <p className="text-xs text-muted-foreground">Awaiting customer response</p>
+                <p className="text-xs text-muted-foreground">{t("sales.awaitingCustomerResponse")}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Deliveries in Transit</CardTitle>
+                <CardTitle className="text-sm font-medium">{t("sales.metrics.deliveriesInTransit")}</CardTitle>
                 <Truck className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{dashboardMetrics.deliveriesInTransit}</div>
-                <p className="text-xs text-muted-foreground">Currently shipping</p>
+                <p className="text-xs text-muted-foreground">{t("sales.currentlyShipping")}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Overdue Invoices</CardTitle>
+                <CardTitle className="text-sm font-medium">{t("sales.metrics.overdueInvoices")}</CardTitle>
                 <AlertCircle className="h-4 w-4 text-red-500" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold text-red-600">{dashboardMetrics.overdueInvoices}</div>
-                <p className="text-xs text-muted-foreground">Require immediate attention</p>
+                <p className="text-xs text-muted-foreground">{t("sales.requireImmediateAttention")}</p>
               </CardContent>
             </Card>
 
@@ -622,12 +607,12 @@ const SalesDistribution = () => {
         <TabsContent value="inquiries" className="space-y-6">
           <div className="flex justify-between items-center">
             <div>
-              <h2 className="text-2xl font-bold">Sales Inquiries</h2>
-              <p className="text-muted-foreground">Manage customer inquiries and convert to quotations</p>
+              <h2 className="text-2xl font-bold">{t("sales.inquiries.title")}</h2>
+              <p className="text-muted-foreground">{t("sales.inquiries.description")}</p>
             </div>
             <Button>
               <Plus className="w-4 h-4 mr-2" />
-              New Inquiry
+              {t("sales.inquiries.newInquiry")}
             </Button>
           </div>
 
@@ -636,7 +621,7 @@ const SalesDistribution = () => {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input
-                placeholder="Search inquiries..."
+                placeholder={t("sales.searchInquiries")}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -644,14 +629,14 @@ const SalesDistribution = () => {
             </div>
             <Select value={selectedFilter} onValueChange={setSelectedFilter}>
               <SelectTrigger className="w-48">
-                <SelectValue placeholder="Filter by status" />
+                <SelectValue placeholder={t("sales.filterByStatus")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Status</SelectItem>
-                <SelectItem value="open">Open</SelectItem>
-                <SelectItem value="quoted">Quoted</SelectItem>
-                <SelectItem value="lost">Lost</SelectItem>
-                <SelectItem value="converted">Converted</SelectItem>
+                <SelectItem value="all">{t("sales.allStatus")}</SelectItem>
+                <SelectItem value="open">{t("sales.status.open")}</SelectItem>
+                <SelectItem value="quoted">{t("sales.status.quoted")}</SelectItem>
+                <SelectItem value="lost">{t("sales.status.lost")}</SelectItem>
+                <SelectItem value="converted">{t("sales.status.converted")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -906,8 +891,8 @@ const SalesDistribution = () => {
                             order.paymentStatus === "paid"
                               ? "bg-green-100 text-green-700"
                               : order.paymentStatus === "partial"
-                              ? "bg-yellow-100 text-yellow-700"
-                              : "bg-red-100 text-red-700"
+                                ? "bg-yellow-100 text-yellow-700"
+                                : "bg-red-100 text-red-700"
                           }
                         >
                           {order.paymentStatus}
@@ -919,8 +904,8 @@ const SalesDistribution = () => {
                             order.availabilityStatus === "available"
                               ? "bg-green-100 text-green-700"
                               : order.availabilityStatus === "partial"
-                              ? "bg-yellow-100 text-yellow-700"
-                              : "bg-red-100 text-red-700"
+                                ? "bg-yellow-100 text-yellow-700"
+                                : "bg-red-100 text-red-700"
                           }
                         >
                           {order.availabilityStatus}
@@ -932,8 +917,8 @@ const SalesDistribution = () => {
                             order.creditStatus === "approved"
                               ? "bg-green-100 text-green-700"
                               : order.creditStatus === "pending"
-                              ? "bg-yellow-100 text-yellow-700"
-                              : "bg-red-100 text-red-700"
+                                ? "bg-yellow-100 text-yellow-700"
+                                : "bg-red-100 text-red-700"
                           }
                         >
                           {order.creditStatus}
@@ -1151,11 +1136,7 @@ const SalesDistribution = () => {
                       <TableCell>{formatCurrency(invoice.paidAmount)}</TableCell>
                       <TableCell>
                         <span
-                          className={
-                            invoice.totalAmount - invoice.paidAmount === 0
-                              ? "text-green-600"
-                              : "text-red-600"
-                          }
+                          className={invoice.totalAmount - invoice.paidAmount === 0 ? "text-green-600" : "text-red-600"}
                         >
                           {formatCurrency(invoice.totalAmount - invoice.paidAmount)}
                         </span>

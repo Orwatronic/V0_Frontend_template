@@ -1,13 +1,15 @@
-import ProcurementWorkflow from "@/components/procurement-workflow";
+import ProcurementWorkflow from "@/components/procurement-workflow"
+import { useI18n } from "@/contexts/i18n-context"
 
-// Assuming the rest of the code is here
 const MaterialsManagement = () => {
-return (
-<div>
-  <h1>Materials Management</h1>
-  <ProcurementWorkflow />
-</div>
-);
-};
+  const { t } = useI18n()
 
-export default MaterialsManagement;
+  return (
+    <div>
+      <h1>{t("materials.title")}</h1>
+      <ProcurementWorkflow />
+    </div>
+  )
+}
+
+export default MaterialsManagement
