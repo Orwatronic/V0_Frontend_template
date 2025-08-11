@@ -6,10 +6,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { CalendarIcon, Download } from 'lucide-react'
+import { CalendarIcon, Download } from "lucide-react"
 import { Calendar } from "@/components/ui/calendar"
-import { format } from "date-fns"
-import { DateRange } from "react-day-picker"
+import type { DateRange } from "react-day-picker"
 import { cn } from "@/lib/utils"
 
 const useTranslation = () => ({
@@ -44,7 +43,7 @@ const useTranslation = () => ({
       "bs.equity": "Equity",
       "bs.totalAssets": "Total Assets",
       "bs.totalLiabilitiesEquity": "Total Liabilities & Equity",
-    }[key] || key),
+    })[key] || key,
 })
 
 // Mock Data
@@ -92,6 +91,14 @@ const mockBsData = {
   totalLiabilitiesEquity: 1000000,
 }
 
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  })
+}
+
 export const FinancialReporting = () => {
   const { t } = useTranslation()
   const [date, setDate] = useState<DateRange | undefined>({
@@ -99,7 +106,8 @@ export const FinancialReporting = () => {
     to: new Date(2024, 6, 31),
   })
 
-  const formatCurrency = (amount: number) => new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(amount)
+  const formatCurrency = (amount: number) =>
+    new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(amount)
 
   // In a real app, you would fetch data based on the date range.
   // useEffect(() => {
@@ -127,10 +135,10 @@ export const FinancialReporting = () => {
                   {date?.from ? (
                     date.to ? (
                       <>
-                        {format(date.from, "LLL dd, y")} - {format(date.to, "LLL dd, y")}
+                        {formatDate(date.from)} - {formatDate(date.to)}
                       </>
                     ) : (
-                      format(date.from, "LLL dd, y")
+                      formatDate(date.from)
                     )
                   ) : (
                     <span>{t("reporting.dateRange")}</span>
@@ -249,7 +257,7 @@ export const FinancialReporting = () => {
                     <TableCell>{t("bs.totalAssets")}</TableCell>
                     <TableCell className="text-right">{formatCurrency(mockBsData.assets.total)}</TableCell>
                   </TableRow>
-                  
+
                   <TableRow className="font-bold bg-muted/50">
                     <TableCell>{t("bs.liabilities")}</TableCell>
                     <TableCell></TableCell>
@@ -264,7 +272,9 @@ export const FinancialReporting = () => {
                   </TableRow>
                   <TableRow className="font-semibold">
                     <TableCell className="pl-4">{t("bs.longTermLiabilities")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.liabilities.longTerm.total)}</TableCell>
+                    <TableCell className="text-right">
+                      {formatCurrency(mockBsData.liabilities.longTerm.total)}
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="pl-8">{t("bs.debt")}</TableCell>
