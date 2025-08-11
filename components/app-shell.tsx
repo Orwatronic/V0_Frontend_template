@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useEffect, useMemo, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -20,13 +22,36 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuPortal,
 } from "@/components/ui/dropdown-menu"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { Bell, Building, ChevronsUpDown, Search, Database, DollarSign, Home, LogOut, Menu, Package, Settings, ShoppingCart, User, Users, BarChart3, Sun, Moon, Laptop, FileBarChart, UserCircle2, Building2, Handshake, Factory, ShieldCheck, Wrench, ClipboardList, TypeIcon as type, LucideIcon } from 'lucide-react'
+  Bell,
+  Building,
+  ChevronsUpDown,
+  Search,
+  Database,
+  DollarSign,
+  Home,
+  LogOut,
+  Menu,
+  Package,
+  Settings,
+  ShoppingCart,
+  User,
+  Users,
+  BarChart3,
+  Sun,
+  Moon,
+  Laptop,
+  FileBarChart,
+  UserCircle2,
+  Building2,
+  Handshake,
+  Factory,
+  ShieldCheck,
+  Wrench,
+  ClipboardList,
+  type LucideIcon,
+} from "lucide-react"
 import { useAuth } from "@/contexts/auth-context"
 import { usePermissions } from "@/hooks/use-permissions"
 import Breadcrumbs from "./breadcrumbs"
@@ -35,6 +60,7 @@ import { Badge } from "./ui/badge"
 import { GlobalSearch } from "./global-search"
 import { Sidebar, type SidebarItem } from "./sidebar"
 import { useUIStore } from "@/hooks/use-ui-store"
+import { useI18n } from "@/contexts/i18n-context"
 
 function cn(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ")
@@ -59,13 +85,25 @@ const baseNavItems: NavItem[] = [
 
   // Newly added modules (now visible in sidebar)
   { id: "reports", href: "/reports", icon: FileBarChart, label: "Reports", permission: "view:reports" },
-  { id: "customer-portal", href: "/customer-portal", icon: UserCircle2, label: "Customer Portal", permission: "view:customer-portal" },
+  {
+    id: "customer-portal",
+    href: "/customer-portal",
+    icon: UserCircle2,
+    label: "Customer Portal",
+    permission: "view:customer-portal",
+  },
   { id: "org-management", href: "/org-management", icon: Building2, label: "Org Mgmt", permission: "view:org-mgmt" },
   { id: "crm", href: "/crm", icon: Handshake, label: "CRM", permission: "view:crm" },
   { id: "production", href: "/production", icon: Factory, label: "Production", permission: "view:production" },
   { id: "quality", href: "/quality", icon: ShieldCheck, label: "Quality", permission: "view:quality" },
   { id: "plant", href: "/plant-maintenance", icon: Wrench, label: "Plant Maintenance", permission: "view:plant" },
-  { id: "project-system", href: "/project-system", icon: ClipboardList, label: "Project System", permission: "view:project-system" },
+  {
+    id: "project-system",
+    href: "/project-system",
+    icon: ClipboardList,
+    label: "Project System",
+    permission: "view:project-system",
+  },
 ]
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -73,6 +111,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const { setTheme } = useTheme()
   const { user, company, setCompany, logout } = useAuth()
   const { hasPermission } = usePermissions()
+  const { t } = useI18n() // Added useI18n hook
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [notificationsOpen, setNotificationsOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
@@ -80,7 +119,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   const accessibleNavItems = useMemo(
     () => baseNavItems.filter((item) => hasPermission(item.permission)),
-    [hasPermission],
+    [hasPermission, t], // Added t to dependency array
   )
 
   useEffect(() => {
@@ -129,7 +168,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="shrink-0 md:hidden">
+                <Button variant="outline" size="icon" className="shrink-0 md:hidden bg-transparent">
                   <Menu className="h-5 w-5" />
                   <span className="sr-only">Toggle navigation menu</span>
                 </Button>
@@ -168,7 +207,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <div className="flex items-center gap-2">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="flex items-center gap-2">
+                  <Button variant="outline" className="flex items-center gap-2 bg-transparent">
                     <Building className="h-4 w-4" />
                     <span className="hidden md:inline">{currentCompany.name}</span>
                     <ChevronsUpDown className="h-4 w-4 opacity-50" />
@@ -188,7 +227,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               </DropdownMenu>
               <Button
                 variant="outline"
-                className="p-2 md:w-40 lg:w-64 justify-start text-sm text-muted-foreground"
+                className="p-2 md:w-40 lg:w-64 justify-start text-sm text-muted-foreground bg-transparent"
                 onClick={() => setSearchOpen(true)}
               >
                 <Search className="h-4 w-4 mr-2" />
@@ -214,7 +253,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     aria-label="Open notifications"
                   >
                     <Bell className="h-4 w-4" />
-                    <Badge className="absolute -top-1 -right-1 h-4 w-4 p-0 flex items-center justify-center text-xs">2</Badge>
+                    <Badge className="absolute -top-1 -right-1 h-4 w-4 p-0 flex items-center justify-center text-xs">
+                      2
+                    </Badge>
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>Notifications</TooltipContent>

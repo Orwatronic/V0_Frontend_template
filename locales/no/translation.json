@@ -79,17 +79,32 @@
       "projectAI": {
         "title": "Prosjektintelligens",
         "description": "Prosjektstyring med AI-optimalisering og smarte prognoser",
-        "features": { "f1": "AI-ressursplan", "f2": "Prediktive milepæler", "f3": "Risikobilde", "f4": "Smart tildeling" }
+        "features": {
+          "f1": "AI-ressursplan",
+          "f2": "Prediktive milepæler",
+          "f3": "Risikobilde",
+          "f4": "Smart tildeling"
+        }
       },
       "qualityAI": {
         "title": "Kvalitetskontroll med AI",
         "description": "Maskinlæring for defektoppdagelse og automatisert samsvar",
-        "features": { "f1": "ML-kvalitetskontroll", "f2": "Defektprediksjon", "f3": "Automatisk samsvar", "f4": "Mønstergjenkjenning" }
+        "features": {
+          "f1": "ML-kvalitetskontroll",
+          "f2": "Defektprediksjon",
+          "f3": "Automatisk samsvar",
+          "f4": "Mønstergjenkjenning"
+        }
       },
       "maintenanceAI": {
         "title": "Prediktivt vedlikehold med AI",
         "description": "IoT-integrert vedlikehold med avvikdeteksjon og smarte arbeidsordrer",
-        "features": { "f1": "IoT-integrasjon", "f2": "Prediktive varsler", "f3": "Smarte arbeidsordrer", "f4": "Feilprediksjon" }
+        "features": {
+          "f1": "IoT-integrasjon",
+          "f2": "Prediktive varsler",
+          "f3": "Smarte arbeidsordrer",
+          "f4": "Feilprediksjon"
+        }
       },
       "crmAI": {
         "title": "Kundeintelligensplattform",
@@ -232,8 +247,14 @@
     "company": "Selskap",
     "login": "Logg inn",
     "getStarted": "Kom i gang",
-    "solutionsSection": { "implemented": "Fullt implementert", "recent": "Nylig fullført", "ai": "AI-drevne løsninger" },
+    "solutionsSection": {
+      "implemented": "Fullt implementert",
+      "recent": "Nylig fullført",
+      "ai": "AI-drevne løsninger"
+    },
     "solutionsItems": {
+      "dashboard": "Dashbord",
+      "analytics": "Analyse",
       "financial": "Finansstyring",
       "hcm": "Human Capital Management",
       "materials": "Materialhåndtering",
@@ -245,6 +266,8 @@
       "quality": "Kvalitetsstyring",
       "maintenance": "Vedlikehold",
       "crm": "Kundeoppfølging (CRM)",
+      "reports": "Rapporter",
+      "customerPortal": "Kundeportal",
       "aiTeaser": "Opplev fremtiden for ERP med AI-drevne moduler"
     },
     "featureItems": {
@@ -263,7 +286,13 @@
       "support": "Brukerstøtte",
       "webinars": "Webinarer"
     },
-    "companyItems": { "about": "Om oss", "careers": "Karriere", "partners": "Partnere", "news": "Nyheter", "contact": "Kontakt" }
+    "companyItems": {
+      "about": "Om oss",
+      "careers": "Karriere",
+      "partners": "Partnere",
+      "news": "Nyheter",
+      "contact": "Kontakt"
+    }
   },
   "common": {
     "secure": "SOC 2-sertifisert",

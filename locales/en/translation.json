@@ -278,6 +278,8 @@
       "ai": "AI-Powered Solutions"
     },
     "solutionsItems": {
+      "dashboard": "Dashboard",
+      "analytics": "Analytics",
       "financial": "Financial Management",
       "hcm": "Human Capital Management",
       "materials": "Materials Management",
@@ -289,6 +291,8 @@
       "quality": "Quality Management",
       "maintenance": "Plant Maintenance",
       "crm": "Customer Relationship Management",
+      "reports": "Reports",
+      "customerPortal": "Customer Portal",
       "aiTeaser": "Experience the future of ERP with AI-powered modules"
     },
     "featureItems": {
