@@ -1,130 +1,75 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { AlertTriangle, RefreshCw, Home } from "lucide-react"
+import { useEffect } from "react"
 
-interface GlobalErrorProps {
+// Standalone translation function for global errors (no context dependency)
+function getGlobalErrorTranslation(key: string, locale?: string) {
+  const translations = {
+    en: {
+      "globalError.title": "Application Error",
+      "globalError.description": "A critical error occurred. Please refresh the page or contact support.",
+      "globalError.refresh": "Refresh Page",
+    },
+    ar: {
+      "globalError.title": "خطأ في التطبيق",
+      "globalError.description": "حدث خطأ حرج. يرجى تحديث الصفحة أو الاتصال بالدعم.",
+      "globalError.refresh": "تحديث الصفحة",
+    },
+    no: {
+      "globalError.title": "Applikasjonsfeil",
+      "globalError.description": "En kritisk feil oppstod. Vennligst oppdater siden eller kontakt support.",
+      "globalError.refresh": "Oppdater side",
+    },
+  }
+
+  const currentLocale = locale || "en"
+  return translations[currentLocale as keyof typeof translations]?.[key] || translations.en[key] || key
+}
+
+export default function GlobalError({
+  error,
+  reset,
+}: {
   error: Error & { digest?: string }
   reset: () => void
-}
-
-// Fallback translations for global errors
-const fallbackTranslations = {
-  en: {
-    title: "Application Error",
-    description: "A critical error occurred. Please refresh the page or contact support.",
-    tryAgain: "Try Again",
-    goHome: "Go Home",
-    debugInfo: "Debug Information",
-    errorId: "Error ID",
-  },
-  ar: {
-    title: "خطأ في التطبيق",
-    description: "حدث خطأ حرج. يرجى تحديث الصفحة أو الاتصال بالدعم.",
-    tryAgain: "حاول مرة أخرى",
-    goHome: "الذهاب للرئيسية",
-    debugInfo: "معلومات التصحيح",
-    errorId: "معرف الخطأ",
-  },
-  no: {
-    title: "Applikasjonsfeil",
-    description: "En kritisk feil oppstod. Vennligst oppdater siden eller kontakt support.",
-    tryAgain: "Prøv igjen",
-    goHome: "Gå hjem",
-    debugInfo: "Feilsøkingsinformasjon",
-    errorId: "Feil-ID",
-  },
-}
-
-function getBrowserLocale(): "en" | "ar" | "no" {
-  if (typeof window === "undefined") return "en"
-
-  const browserLang = navigator.language.toLowerCase()
-  if (browserLang.startsWith("ar")) return "ar"
-  if (browserLang.startsWith("no") || browserLang.startsWith("nb") || browserLang.startsWith("nn")) return "no"
-  return "en"
-}
-
-function getStoredLocale(): "en" | "ar" | "no" {
-  if (typeof window === "undefined") return "en"
-
-  try {
-    const stored = localStorage.getItem("feebee_locale") as "en" | "ar" | "no" | null
-    return stored && ["en", "ar", "no"].includes(stored) ? stored : getBrowserLocale()
-  } catch {
-    return getBrowserLocale()
-  }
-}
-
-export default function GlobalError({ error, reset }: GlobalErrorProps) {
-  const [locale, setLocale] = useState<"en" | "ar" | "no">("en")
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-    setLocale(getStoredLocale())
-  }, [])
-
+}) {
   useEffect(() => {
     console.error("Global application error:", error)
   }, [error])
 
-  const t = (key: keyof typeof fallbackTranslations.en): string => {
-    if (!mounted) return key
-
-    const translations = fallbackTranslations[locale] || fallbackTranslations.en
-    return translations[key] || key
-  }
+  // Get locale from localStorage or default to 'en'
+  const locale = typeof window !== "undefined" ? localStorage.getItem("feebee_locale") || "en" : "en"
 
   const isRTL = locale === "ar"
 
   return (
     <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
-      <body className={`min-h-screen bg-gray-50 flex items-center justify-center p-6 ${isRTL ? "rtl" : "ltr"}`}>
-        <div className="w-full max-w-md">
-          <Card className="shadow-lg">
-            <CardHeader className="text-center pb-6">
-              <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
-                  <AlertTriangle className="h-8 w-8 text-red-600" aria-hidden="true" />
-                </div>
-              </div>
-              <CardTitle className="text-2xl font-bold text-gray-900">{t("title")}</CardTitle>
-              <p className="text-gray-600 mt-2">{t("description")}</p>
-            </CardHeader>
-
-            <CardContent className="space-y-4">
-              {process.env.NODE_ENV === "development" && (
-                <div className="bg-red-50 border border-red-200 rounded-md p-3">
-                  <div className="text-sm font-medium text-red-800 mb-1">{t("debugInfo")}</div>
-                  <div className="text-xs text-red-600 font-mono break-all">{error.message}</div>
-                  {error.digest && (
-                    <div className="text-xs text-red-500 mt-1">
-                      {t("errorId")}: {error.digest}
-                    </div>
-                  )}
-                </div>
-              )}
-
-              <div className="space-y-3 pt-4">
-                <Button onClick={reset} className="w-full flex items-center justify-center gap-2">
-                  <RefreshCw className="h-4 w-4" />
-                  {t("tryAgain")}
-                </Button>
-
-                <Button
-                  variant="outline"
-                  onClick={() => (window.location.href = "/")}
-                  className="w-full flex items-center justify-center gap-2"
-                >
-                  <Home className="h-4 w-4" />
-                  {t("goHome")}
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+      <body>
+        <div className="min-h-screen flex items-center justify-center bg-red-50 px-4">
+          <div className="text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100">
+              <svg className="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                />
+              </svg>
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              {getGlobalErrorTranslation("globalError.title", locale)}
+            </h1>
+            <p className="text-gray-600 mb-6 max-w-md">
+              {getGlobalErrorTranslation("globalError.description", locale)}
+            </p>
+            <button
+              onClick={reset}
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+            >
+              {getGlobalErrorTranslation("globalError.refresh", locale)}
+            </button>
+          </div>
         </div>
       </body>
     </html>

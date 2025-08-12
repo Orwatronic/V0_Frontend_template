@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react"
 import {
   DEFAULT_LOCALE,
@@ -35,39 +34,52 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE)
   const [isPseudoLocale, setIsPseudoLocale] = useState(false)
   const [isReady, setIsReady] = useState(false)
-  const [isMounted, setIsMounted] = useState(false)
 
+  // Initialize from localStorage or browser preference - only run once
   useEffect(() => {
-    setIsMounted(true)
-  }, [])
+    let mounted = true
 
-  // initialize from localStorage or browser preference
-  useEffect(() => {
-    if (!isMounted) return
+    const initializeLocale = () => {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEY) as Locale | null
 
-    try {
-      const stored = (localStorage.getItem(STORAGE_KEY) as Locale | null) || null
+        if (process.env.NODE_ENV !== "production") {
+          const urlParams = new URLSearchParams(window.location.search)
+          if (urlParams.get("pseudo") === "true" || stored === PSEUDO_LOCALE) {
+            if (mounted) {
+              setIsPseudoLocale(true)
+              setLocaleState("en") // Use English as base for pseudo-locale
+              setIsReady(true)
+            }
+            return
+          }
+        }
 
-      if (process.env.NODE_ENV !== "production") {
-        const urlParams = new URLSearchParams(window.location.search)
-        if (urlParams.get("pseudo") === "true" || stored === PSEUDO_LOCALE) {
-          setIsPseudoLocale(true)
-          setLocaleState("en") // Use English as base for pseudo-locale
+        const finalLocale = stored && LOCALES.includes(stored) ? stored : getBrowserLocale()
+        if (mounted) {
+          setLocaleState(finalLocale)
+          setIsPseudoLocale(false)
           setIsReady(true)
-          return
+        }
+      } catch {
+        if (mounted) {
+          setLocaleState(getBrowserLocale())
+          setIsPseudoLocale(false)
+          setIsReady(true)
         }
       }
-
-      setLocaleState(stored && LOCALES.includes(stored) ? stored : getBrowserLocale())
-    } catch {
-      setLocaleState(getBrowserLocale())
     }
-    setIsReady(true)
-  }, [isMounted])
 
-  // reflect lang/dir on <html>
+    initializeLocale()
+
+    return () => {
+      mounted = false
+    }
+  }, []) // Empty dependency array - only run once
+
+  // Update HTML attributes when locale changes
   useEffect(() => {
-    if (typeof document !== "undefined" && isReady) {
+    if (isReady && typeof document !== "undefined") {
       document.documentElement.lang = isPseudoLocale ? PSEUDO_LOCALE : locale
       document.documentElement.dir = getDir(locale)
     }
@@ -96,7 +108,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   const t: TranslateFn = useCallback(
     (key: string, vars?: Record<string, string | number>, count?: number) => {
-      if (!isReady || !isMounted) return key
+      if (!isReady) return key
 
       // Try to get translation with fallback
       const value = getTranslationWithFallback(key, locale)
@@ -113,7 +125,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       // Return pseudo-locale version of key if enabled
       return isPseudoLocale ? toPseudoLocale(key) : key
     },
-    [locale, isPseudoLocale, isReady, isMounted],
+    [locale, isPseudoLocale, isReady],
   )
 
   const formatters = useFormatters(locale)
@@ -126,9 +138,9 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       dir: getDir(locale),
       formatters,
       isPseudoLocale,
-      isReady: isReady && isMounted,
+      isReady,
     }),
-    [locale, setLocale, t, formatters, isPseudoLocale, isReady, isMounted],
+    [locale, setLocale, t, formatters, isPseudoLocale, isReady],
   )
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>
