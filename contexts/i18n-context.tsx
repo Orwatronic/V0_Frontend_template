@@ -25,6 +25,7 @@ type I18nContextValue = {
   dir: "ltr" | "rtl"
   formatters: ReturnType<typeof useFormatters>
   isPseudoLocale: boolean
+  isReady: boolean
 }
 
 const I18nContext = createContext<I18nContextValue | undefined>(undefined)
@@ -33,6 +34,7 @@ const STORAGE_KEY = "feebee_locale"
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE)
   const [isPseudoLocale, setIsPseudoLocale] = useState(false)
+  const [isReady, setIsReady] = useState(false)
 
   // initialize from localStorage or browser preference
   useEffect(() => {
@@ -44,6 +46,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
         if (urlParams.get("pseudo") === "true" || stored === PSEUDO_LOCALE) {
           setIsPseudoLocale(true)
           setLocaleState("en") // Use English as base for pseudo-locale
+          setIsReady(true)
           return
         }
       }
@@ -52,6 +55,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     } catch {
       setLocaleState(getBrowserLocale())
     }
+    setIsReady(true)
   }, [])
 
   // reflect lang/dir on <html>
@@ -85,6 +89,8 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   const t: TranslateFn = useCallback(
     (key: string, vars?: Record<string, string | number>, count?: number) => {
+      if (!isReady) return key
+
       // Try to get translation with fallback
       const value = getTranslationWithFallback(key, locale)
 
@@ -100,7 +106,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       // Return pseudo-locale version of key if enabled
       return isPseudoLocale ? toPseudoLocale(key) : key
     },
-    [locale, isPseudoLocale],
+    [locale, isPseudoLocale, isReady],
   )
 
   const formatters = useFormatters(locale)
@@ -113,8 +119,9 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       dir: getDir(locale),
       formatters,
       isPseudoLocale,
+      isReady,
     }),
-    [locale, setLocale, t, formatters, isPseudoLocale],
+    [locale, setLocale, t, formatters, isPseudoLocale, isReady],
   )
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>
