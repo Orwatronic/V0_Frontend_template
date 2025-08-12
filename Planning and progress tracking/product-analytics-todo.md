@@ -83,7 +83,7 @@ export interface CTAEvent extends AnalyticsEventBase {
 
 ## Data Flow
 
-```mermaid title="Analytics Data Flow" type="diagram"
+\`\`\`mermaid title="Analytics Data Flow" type="diagram"
 graph LR;
 A["UI Interaction"]B["Client Analytics SDK"];
 BC["Batch Queue #43; Retry"];

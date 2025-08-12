@@ -19,7 +19,19 @@
       "financial": {
         "title": "Finansstyring",
         "description": "Komplett regnskap med hovedbok, kontoplan, flervaluta og periodehåndtering",
-        "features": { "f1": "Hovedbok", "f2": "Flervaluta", "f3": "Bilagsføring", "f4": "Periodehåndtering" }
+        "features": { "f1": "Hovedbok", "f2": "Flervaluta", "f3": "Bilagsføring", "f4": "Periodehåndtering" },
+        "tabs": {
+          "coa": "Kontoplan",
+          "ap": "Leverandørgjeld",
+          "ar": "Kundefordringer",
+          "collections": "Innkreving",
+          "reconciliation": "Avstemming",
+          "assets": "Anleggsmidler",
+          "reporting": "Rapportering",
+          "aging": "Aldersanalyse",
+          "bankRec": "Bankavstemming",
+          "je": "Bilagsføring"
+        }
       },
       "hcm": {
         "title": "Human Capital Management",
@@ -79,17 +91,32 @@
       "projectAI": {
         "title": "Prosjektintelligens",
         "description": "Prosjektstyring med AI-optimalisering og smarte prognoser",
-        "features": { "f1": "AI-ressursplan", "f2": "Prediktive milepæler", "f3": "Risikobilde", "f4": "Smart tildeling" }
+        "features": {
+          "f1": "AI-ressursplan",
+          "f2": "Prediktive milepæler",
+          "f3": "Risikobilde",
+          "f4": "Smart tildeling"
+        }
       },
       "qualityAI": {
         "title": "Kvalitetskontroll med AI",
         "description": "Maskinlæring for defektoppdagelse og automatisert samsvar",
-        "features": { "f1": "ML-kvalitetskontroll", "f2": "Defektprediksjon", "f3": "Automatisk samsvar", "f4": "Mønstergjenkjenning" }
+        "features": {
+          "f1": "ML-kvalitetskontroll",
+          "f2": "Defektprediksjon",
+          "f3": "Automatisk samsvar",
+          "f4": "Mønstergjenkjenning"
+        }
       },
       "maintenanceAI": {
         "title": "Prediktivt vedlikehold med AI",
         "description": "IoT-integrert vedlikehold med avvikdeteksjon og smarte arbeidsordrer",
-        "features": { "f1": "IoT-integrasjon", "f2": "Prediktive varsler", "f3": "Smarte arbeidsordrer", "f4": "Feilprediksjon" }
+        "features": {
+          "f1": "IoT-integrasjon",
+          "f2": "Prediktive varsler",
+          "f3": "Smarte arbeidsordrer",
+          "f4": "Feilprediksjon"
+        }
       },
       "crmAI": {
         "title": "Kundeintelligensplattform",
@@ -149,79 +176,79 @@
       "title": "Finansstyring",
       "subtitle": "Fra kontoplan til periodelukk—og alt imellom.",
       "features": { "f1": "Hovedbok & bilag", "f2": "Flervaluta & skatt", "f3": "Periodeavslutning" },
-      "imageAlt": "Finansoversikt"
+      "imageAlt": "Oversikt over finansstyring"
     },
     "sales": {
       "title": "Salg og distribusjon",
       "subtitle": "Tilbud-til-kontant med prising, leveranser og returer.",
       "features": { "f1": "Tilbud & ordre", "f2": "Fleksibel prising", "f3": "Returer & RMA" },
-      "imageAlt": "Salgsoversikt"
+      "imageAlt": "Oversikt over salg og distribusjon"
     },
     "materials": {
       "title": "Materialhåndtering",
       "subtitle": "Lager, varehus og innkjøp.",
       "features": { "f1": "Lagerkontroll", "f2": "Varehusstyring", "f3": "Innkjøp" },
-      "imageAlt": "Materialoversikt"
+      "imageAlt": "Oversikt over materialhåndtering"
     },
     "hcm": {
       "title": "Human Capital Management",
       "subtitle": "Ansatte, tid, lønn og organisasjon.",
       "features": { "f1": "Ansattregister", "f2": "Tid & lønn", "f3": "Organisasjon" },
-      "imageAlt": "HCM-oversikt"
+      "imageAlt": "Oversikt over Human Capital Management"
     },
     "master-data": {
       "title": "Masterdatastyring",
       "subtitle": "Rene, sentraliserte referansedata.",
       "features": { "f1": "Kunde-/leverandørdata", "f2": "Materialgrupper", "f3": "Hierarkier" },
-      "imageAlt": "MDM-oversikt"
+      "imageAlt": "Oversikt over Masterdatastyring"
     },
     "organization": {
       "title": "Organisasjonsstyring",
       "subtitle": "Selskapsstruktur, kostnads-/resultatsentre og roller.",
       "features": { "f1": "Selskapsstruktur", "f2": "Kostnad/Resultat", "f3": "Autorisasjoner" },
-      "imageAlt": "Organisasjonsoversikt"
+      "imageAlt": "Oversikt over Organisasjonsstyring"
     },
     "production": {
       "title": "Produksjonsplanlegging",
       "subtitle": "BOM, ruter, planlegging og utførelse.",
       "features": { "f1": "BOM-styring", "f2": "Smart planlegging", "f3": "Utførelse" },
-      "imageAlt": "Produksjonsoversikt"
+      "imageAlt": "Oversikt over Produksjonsplanlegging"
     },
     "projects": {
       "title": "Prosjektsystem",
       "subtitle": "Ressursplanlegging, milepæler og budsjett.",
       "features": { "f1": "Ressursplan", "f2": "Milepæler", "f3": "Budsjett" },
-      "imageAlt": "Prosjektoversikt"
+      "imageAlt": "Oversikt over Prosjektsystem"
     },
     "quality": {
       "title": "Kvalitetsstyring",
       "subtitle": "Kvalitetsprosesser, revisjoner, sertifisering og samsvar.",
       "features": { "f1": "Kvalitetskontroll", "f2": "Revisjonsspor", "f3": "Samsvar" },
-      "imageAlt": "Kvalitetsoversikt"
+      "imageAlt": "Oversikt over Kvalitetsstyring"
     },
     "maintenance": {
       "title": "Vedlikehold",
       "subtitle": "Eiendeler, forebyggende vedlikehold og arbeidsordrer.",
       "features": { "f1": "Eiendelsstyring", "f2": "Forebyggende planer", "f3": "Arbeidsordrer" },
-      "imageAlt": "Vedlikeholdsoversikt"
+      "imageAlt": "Oversikt over Vedlikehold"
     },
     "crm": {
       "title": "Kundeoppfølging (CRM)",
       "subtitle": "Leads, service, pipeline og analyse.",
       "features": { "f1": "Leads & kontakter", "f2": "Kundeservice", "f3": "Pipeline & analyse" },
-      "imageAlt": "CRM-oversikt"
+      "imageAlt": "Oversikt over Kundeoppfølging (CRM)"
     },
     "reports": {
-      "title": "Rapporter & analyse",
-      "subtitle": "KPI-er, dashboards og ad-hoc analyse.",
-      "features": { "f1": "KPI-dashboards", "f2": "Ad-hoc rapporter", "f3": "Eksport & deling" },
-      "imageAlt": "Rapportoversikt"
+      "title": "Rapporter og analyse",
+      "subtitle": "KPI-er, dashbord og tilpasset analyse.",
+      "features": { "f1": "KPI-dashbord", "f2": "Tilpassede rapporter", "f3": "Eksporter og del" },
+      "imageAlt": "Oversikt over rapporter og analyse"
     },
     "customer-portal": {
       "title": "Kundeportal",
-      "subtitle": "Sikker selvbetjening med bedriftsprofil.",
+      "subtitle": "Sikre, merkevarebaserte selvbetjeningsopplevelser.",
       "features": { "f1": "Ordresporing", "f2": "Fakturaer", "f3": "Supporthenvendelser" },
-      "imageAlt": "Kundeportal-oversikt"
+      "imageAlt": "Oversikt over Kundeportal"
     }
   },
   "nav": {
@@ -232,8 +259,14 @@
     "company": "Selskap",
     "login": "Logg inn",
     "getStarted": "Kom i gang",
-    "solutionsSection": { "implemented": "Fullt implementert", "recent": "Nylig fullført", "ai": "AI-drevne løsninger" },
+    "solutionsSection": {
+      "implemented": "Fullt implementert",
+      "recent": "Nylig fullført",
+      "ai": "AI-drevne løsninger"
+    },
     "solutionsItems": {
+      "dashboard": "Dashbord",
+      "analytics": "Analyse",
       "financial": "Finansstyring",
       "hcm": "Human Capital Management",
       "materials": "Materialhåndtering",
@@ -245,6 +278,8 @@
       "quality": "Kvalitetsstyring",
       "maintenance": "Vedlikehold",
       "crm": "Kundeoppfølging (CRM)",
+      "reports": "Rapporter",
+      "customerPortal": "Kundeportal",
       "aiTeaser": "Opplev fremtiden for ERP med AI-drevne moduler"
     },
     "featureItems": {
@@ -263,7 +298,13 @@
       "support": "Brukerstøtte",
       "webinars": "Webinarer"
     },
-    "companyItems": { "about": "Om oss", "careers": "Karriere", "partners": "Partnere", "news": "Nyheter", "contact": "Kontakt" }
+    "companyItems": {
+      "about": "Om oss",
+      "careers": "Karriere",
+      "partners": "Partnere",
+      "news": "Nyheter",
+      "contact": "Kontakt"
+    }
   },
   "common": {
     "secure": "SOC 2-sertifisert",
@@ -271,7 +312,18 @@
     "learnMore": "Lær mer",
     "getStarted": "Kom i gang",
     "new": "Ny",
-    "comingSoon": "Kommer snart"
+    "comingSoon": "Kommer snart",
+    "export": "Eksporter",
+    "status": "Status",
+    "filter": "Filter",
+    "search": "Søk",
+    "add": "Legg til",
+    "edit": "Rediger",
+    "delete": "Slett",
+    "save": "Lagre",
+    "cancel": "Avbryt",
+    "loading": "Laster...",
+    "actions": "Handlinger"
   },
   "auth": {
     "login": {
@@ -428,6 +480,24 @@
           "invoice": "Faktura betalt av {{customer}}"
         }
       }
+    },
+    "customer360": {
+      "tabs": {
+        "overview": "Oversikt",
+        "contacts": "Kontakter",
+        "opportunities": "Muligheter",
+        "activities": "Aktiviteter",
+        "invoices": "Fakturaer",
+        "files": "Filer"
+      }
+    },
+    "customerMaster": {
+      "tabs": {
+        "general": "Generelt",
+        "contacts": "Kontakter",
+        "financial": "Finansiell",
+        "history": "Historie"
+      }
     }
   },
   "customer360": {
@@ -493,5 +563,452 @@
       "placeholder": "Dokumenter og filer vises her."
     },
     "loading": "Laster..."
+  },
+  "financial": {
+    "chartOfAccounts": {
+      "title": "Kontoplan",
+      "description": "Administrer selskapets finansielle kontoer",
+      "searchPlaceholder": "Søk i kontoer...",
+      "addAccount": "Legg til konto",
+      "columns": {
+        "accountName": "Kontonavn",
+        "accountNumber": "Kontonummer",
+        "type": "Type",
+        "balance": "Saldo"
+      },
+      "accountTypes": {
+        "Header": "Overskrift",
+        "Asset": "Eiendel",
+        "Liability": "Gjeld",
+        "Equity": "Egenkapital",
+        "Revenue": "Inntekt",
+        "Expense": "Kostnad"
+      },
+      "aria": {
+        "searchLabel": "Søk i kontoer etter navn eller nummer",
+        "expandButton": "Utvid konto {{name}}",
+        "collapseButton": "Skjul konto {{name}}",
+        "accountTree": "Kontoplan trestruktur"
+      }
+    },
+    "accountsPayable": {
+      "title": "Leverandørgjeld",
+      "description": "Administrer og spor leverandørfakturaer og betalinger",
+      "searchPlaceholder": "Søk i fakturaer...",
+      "addInvoice": "Ny faktura",
+      "createPaymentRun": "Opprett betalingskjøring",
+      "invoicesLabel": "Fakturaer",
+      "metrics": {
+        "total": "Total leverandørgjeld",
+        "overdue": "Forfalte fakturaer",
+        "upcoming": "Kommende betalinger (30d)"
+      },
+      "columns": {
+        "invoiceNumber": "Fakturanr.",
+        "vendor": "Leverandør",
+        "issueDate": "Utstedelsesdato",
+        "dueDate": "Forfallsdato",
+        "amount": "Beløp"
+      }
+    },
+    "accountsReceivable": {
+      "title": "Kundefordringer",
+      "description": "Administrer kundefakturaer og spor innkommende betalinger",
+      "searchPlaceholder": "Søk i fakturaer...",
+      "addInvoice": "Ny faktura",
+      "daysLabel": "Dager",
+      "metrics": {
+        "outstanding": "Utestående kundefordringer",
+        "overdue": "Forfalte kundefordringer",
+        "avgCollection": "Gjennomsnittlig innkrevingsperiode"
+      },
+      "columns": {
+        "invoiceNumber": "Fakturanr.",
+        "customer": "Kunde",
+        "issueDate": "Utstedelsesdato",
+        "dueDate": "Forfallsdato",
+        "amount": "Beløp"
+      }
+    },
+    "journalEntries": {
+      "title": "Bilagsføring",
+      "description": "Registrer og gjennomgå alle finansielle transaksjoner",
+      "searchPlaceholder": "Søk i bilag...",
+      "addEntry": "Nytt bilag",
+      "columns": {
+        "entryNumber": "Bilagsnr.",
+        "date": "Dato",
+        "description": "Beskrivelse",
+        "debit": "Debet",
+        "credit": "Kredit"
+      }
+    },
+    "reporting": {
+      "title": "Finansrapportering",
+      "description": "Generer og analyser viktige finansielle rapporter",
+      "dateRange": "Datoperiode",
+      "export": "Eksporter til PDF",
+      "accountColumn": "Konto",
+      "amountColumn": "Beløp",
+      "tabs": {
+        "pnl": "Resultatregnskap",
+        "balanceSheet": "Balanse"
+      },
+      "pnl": {
+        "revenue": "Totale inntekter",
+        "cogs": "Varekostnad",
+        "grossProfit": "Bruttofortjeneste",
+        "operatingExpenses": "Driftskostnader",
+        "marketing": "Markedsføring",
+        "sales": "Salg",
+        "admin": "Administrasjon",
+        "netIncome": "Nettoresultat"
+      },
+      "balanceSheet": {
+        "assets": "Eiendeler",
+        "currentAssets": "Omløpsmidler",
+        "cash": "Kontanter og kontantekvivalenter",
+        "accountsReceivable": "Kundefordringer",
+        "inventory": "Varelager",
+        "fixedAssets": "Anleggsmidler",
+        "ppe": "Varige driftsmidler",
+        "liabilities": "Gjeld",
+        "currentLiabilities": "Kortsiktig gjeld",
+        "accountsPayable": "Leverandørgjeld",
+        "longTermLiabilities": "Langsiktig gjeld",
+        "longTermDebt": "Langsiktig gjeld",
+        "equity": "Egenkapital",
+        "totalAssets": "Sum eiendeler",
+        "totalLiabilitiesEquity": "Sum gjeld og egenkapital"
+      }
+    },
+    "status": {
+      "paid": "Betalt",
+      "open": "Åpen",
+      "overdue": "Forfalt",
+      "sent": "Sendt",
+      "draft": "Utkast",
+      "posted": "Bokført",
+      "reversed": "Reversert"
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "Siden ikke funnet",
+      "description": "Siden du leter etter eksisterer ikke eller har blitt flyttet.",
+      "subtitle": "Denne siden kunne ikke finnes",
+      "help": "Trenger hjelp? Kontakt vårt supportteam.",
+      "actions": {
+        "goHome": "Gå til dashbord",
+        "goBack": "Gå tilbake",
+        "search": "Søk"
+      }
+    },
+    "general": {
+      "title": "Noe gikk galt",
+      "description": "En uventet feil oppstod. Vennligst prøv igjen.",
+      "debugInfo": "Feilsøkingsinformasjon:",
+      "errorId": "Feil-ID",
+      "persistentIssue": "Hvis dette problemet vedvarer, vennligst rapporter det.",
+      "actions": {
+        "tryAgain": "Prøv igjen",
+        "goHome": "Gå til dashbord",
+        "reload": "Last inn siden på nytt",
+        "reportIssue": "Rapporter problem"
+      }
+    },
+    "network": {
+      "title": "Tilkoblingsfeil",
+      "description": "Kan ikke koble til serveren. Vennligst sjekk internettforbindelsen.",
+      "actions": {
+        "retry": "Prøv igjen",
+        "offline": "Arbeid offline"
+      }
+    },
+    "unauthorized": {
+      "title": "Tilgang nektet",
+      "description": "Du har ikke tillatelse til å få tilgang til denne ressursen.",
+      "actions": {
+        "login": "Logg inn",
+        "contact": "Kontakt administrator"
+      }
+    }
+  },
+  "sidebar": {
+    "dashboard": "Dashbord",
+    "analytics": "Analyse",
+    "financials": "Finansstyring",
+    "sales": "Salg og distribusjon",
+    "materials": "Materialhåndtering",
+    "hcm": "Human Capital Management",
+    "masterData": "Masterdatastyring",
+    "reports": "Rapporter",
+    "customerPortal": "Kundeportal",
+    "orgMgmt": "Organisasjonsstyring",
+    "crm": "Kundeforhold",
+    "production": "Produksjonsplanlegging",
+    "quality": "Kvalitetsstyring",
+    "plantMaintenance": "Anleggsvedlikehold",
+    "projectSystem": "Prosjektsystem"
+  },
+  "modules": {
+    "financial": {
+      "title": "Finansstyring",
+      "description": "Komplett regnskap med hovedbok, kontoplan, flervaluta og periodehåndtering"
+    },
+    "hcm": {
+      "title": "Human Capital Management",
+      "description": "Ansattlivssyklus, lønn, tidsføring, permisjoner og organisasjonsstruktur"
+    },
+    "materials": {
+      "title": "Materialhåndtering",
+      "description": "Materialmaster, lagerkontroll, lagerstyring og innkjøp"
+    },
+    "sales": {
+      "title": "Salg og distribusjon",
+      "description": "Tilbud, ordre, prising, levering og returer"
+    },
+    "mdm": {
+      "title": "Masterdatastyring",
+      "description": "Sentraliserte referansedata for kunder, leverandører, materialer og organisasjonshierarkier"
+    },
+    "organizational": {
+      "title": "Organisasjonsstyring",
+      "description": "Selskapsstrukturer, kostsentre, resultatsentre og autorisasjonsstyring"
+    }
+  },
+  "sales": {
+    "tabs": {
+      "dashboard": "Dashbord",
+      "pipeline": "Pipeline",
+      "inquiries": "Forespørsler",
+      "quotations": "Tilbud",
+      "orders": "Ordre",
+      "deliveries": "Leveranser",
+      "invoices": "Fakturaer",
+      "returns": "Returer"
+    },
+    "title": "Salg og distribusjon",
+    "description": "Komplett salgssyklusadministrasjon fra forespørsel til levering og returer"
+  },
+  "hcm": {
+    "tabs": {
+      "dashboard": "Dashbord",
+      "employees": "Ansatte",
+      "orgChart": "Organisasjonskart",
+      "recruitment": "Rekruttering",
+      "onboarding": "Onboarding",
+      "performance": "Ytelse",
+      "goals": "Mål",
+      "compensation": "Kompensasjon",
+      "analytics": "Analyse"
+    }
+  },
+  "materials": {
+    "title": "Materialhåndtering",
+    "description": "Omfattende material- og lagerstyringssystem",
+    "metrics": {
+      "totalMaterials": "Totalt antall materialer",
+      "activeMaterials": "Aktive materialer",
+      "inventoryValue": "Lagerverdi",
+      "totalValue": "Total verdi",
+      "pendingOrders": "Ventende bestillinger",
+      "awaitingDelivery": "Venter på levering",
+      "warehouseUtilization": "Lagerutnyttelse",
+      "storageCapacity": "Lagringskapasitet"
+    },
+    "tabs": {
+      "overview": "Oversikt",
+      "masterData": "Masterdata",
+      "warehouse": "Varehus",
+      "procurement": "Innkjøp"
+    },
+    "activity": {
+      "materialReceived": "Materiale mottatt",
+      "stockAdjustment": "Lagerjustering",
+      "newMaterial": "Nytt materiale lagt til",
+      "timeAgo": "{{time}} siden"
+    },
+    "masterData": {
+      "title": "Materialmasterdata",
+      "description": "Administrer kjernematerialdata og spesifikasjoner",
+      "categories": "Kategorier",
+      "searchPlaceholder": "Søk i materialer...",
+      "import": "Importer",
+      "addMaterial": "Legg til materiale"
+    },
+    "columns": {
+      "materialId": "Material-ID",
+      "name": "Navn",
+      "type": "Type",
+      "baseUom": "Grunnleggende måleenhet",
+      "status": "Status",
+      "onHand": "På lager"
+    },
+    "types": {
+      "raw": "Råmateriale",
+      "component": "Komponent",
+      "finished": "Ferdigvare"
+    },
+    "status": {
+      "active": "Aktiv",
+      "inactive": "Inaktiv"
+    },
+    "overview": {
+      "lowStockAlerts": "Lavlager-varsler",
+      "lowStockDescription": "Varer som krever umiddelbar oppmerksomhet",
+      "recentActivity": "Nylig aktivitet",
+      "recentActivityDescription": "Siste materialtransaksjoner og oppdateringer",
+      "minStock": "Minimum lager"
+    }
+  },
+  "compensation": {
+    "tabs": {
+      "dashboard": "Dashbord",
+      "reviews": "Vurderinger",
+      "budget": "Budsjett",
+      "approvals": "Godkjenninger",
+      "analytics": "Analyse",
+      "history": "Historie"
+    }
+  },
+  "goals": {
+    "tabs": {
+      "individual": "Individuell",
+      "team": "Team",
+      "company": "Selskap",
+      "analytics": "Analyse"
+    }
+  },
+  "reports": {
+    "tabs": {
+      "builder": "Rapportbygger",
+      "preview": "Forhåndsvisning",
+      "saved": "Lagret"
+    },
+    "configuration": {
+      "title": "Rapportkonfigurasjon",
+      "reportName": "Rapportnavn",
+      "reportNamePlaceholder": "Skriv inn rapportnavn",
+      "description": "Beskrivelse",
+      "descriptionPlaceholder": "Skriv inn rapportbeskrivelse",
+      "dataSource": "Datakilde",
+      "selectDataSource": "Velg datakilde",
+      "table": "Tabell",
+      "selectTable": "Velg tabell",
+      "chartType": "Diagramtype"
+    }
+  },
+  "analytics": {
+    "title": "Avansert analyse",
+    "description": "Analyser virksomhetens prestationer og opplevelser",
+    "kpis": {
+      "totalRevenue": "Total inntekt",
+      "activeUsers": "Aktive brukere",
+      "conversionRate": "Konverteringsrate",
+      "customerSatisfaction": "Kundetilfredshet"
+    },
+    "charts": {
+      "revenueOverTime": "Inntekt over tid",
+      "userGrowth": "Brukervekst",
+      "salesFunnel": "Salgsfunnel"
+    }
+  },
+  "customReportBuilder": {
+    "title": "Tilpasset rapportbygger",
+    "description": "Opprett og tilpass rapporter etter dine behov",
+    "dataSource": "Datakilde",
+    "selectColumns": "Velg kolonner",
+    "filters": "Filtre",
+    "preview": "Forhåndsvisning",
+    "generate": "Generer rapport"
+  },
+  "pricing": {
+    "title": "Priser",
+    "subtitle": "Velg den beste løsningen for din virksomhet",
+    "monthly": "Månedlig",
+    "annually": "Årlig",
+    "save": "Spar",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "price": "199",
+        "description": "Basert løsning for små og mediumsise bedrifter",
+        "features": ["Sanntidsdata", "Flervalutastøtte", "Avansert analyse"]
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "499",
+        "description": "Avansert løsning for større bedrifter",
+        "features": ["Alt inkludert i Starter", "Ekstra moduler", "24/7 support"]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "999",
+        "description": "Korporativ løsning med avanserte funksjoner",
+        "features": ["Alt inkludert i Professional", "Spesialisert integrasjon", "Egen løsning"]
+      }
+    },
+    "cta": "Start gratis prøveperiode",
+    "contact": "Kontakt oss for mer informasjon"
+  },
+  "testimonials": {
+    "title": "Referanser",
+    "subtitle": "Hvordan andre bedrifter bruker Feebee Technologies ERP",
+    "items": [
+      {
+        "quote": "Feebee Technologies ERP har gjort vår bedrift mer effektiv.",
+        "author": "John Doe",
+        "company": "ABC Company",
+        "role": "CEO"
+      }
+    ]
+  },
+  "requestDemo": {
+    "title": "Be om demo",
+    "subtitle": "Få en gratis demo av Feebee Technologies ERP",
+    "form": {
+      "firstName": "Fornavn",
+      "lastName": "Etternavn",
+      "email": "E-postadresse",
+      "company": "Selskap",
+      "phone": "Telefonnummer",
+      "message": "Melding",
+      "submit": "Send forespørsel"
+    },
+    "success": "Din forespørsel om demo er sendt!",
+    "loading": "Sender forespørsel..."
+  },
+  "aging": {
+    "ap": {
+      "title": "Aldersanalyse for Leverandørgjeld"
+    },
+    "ar": {
+      "title": "Aldersanalyse for Kundefordringer"
+    },
+    "description": "Analyser aldersfordelingen for fakturaer",
+    "bucket": {
+      "current": "Nåværende",
+      "30": "30 dager",
+      "60": "60 dager",
+      "90": "90 dager",
+      "90+": "90+ dager"
+    }
+  },
+  "production": {
+    "title": "Produksjonsstyring",
+    "description": "Omfattende produksjonsplanlegging og utførelsessystem"
+  },
+  "demo": {
+    "title": "Be om demo",
+    "description": "Se hvordan Feebee ERP kan transformere din bedriftsdrift",
+    "form": {
+      "fullName": "Fullt navn",
+      "workEmail": "Arbeids-e-post",
+      "company": "Selskapsnavn",
+      "submitting": "Sender...",
+      "submit": "Be om demo"
+    },
+    "success": "Demoforespørsel sendt!"
   }
 }

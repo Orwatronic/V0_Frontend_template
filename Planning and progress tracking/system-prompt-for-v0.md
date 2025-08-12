@@ -111,13 +111,13 @@ Given the current state: Phase A (Provider, locale persistence, html lang/dir up
 
 - Example:
 
-```plaintext
+\`\`\`plaintext
 async function fetchSalesOrders() {
   // CURSOR: API call to GET /api/v1/sales/orders?status=active
   // const res = await api.get('/sales/orders?status=active');
   return mockSalesOrders;
 }
-```
+\`\`\`
 
 
 
