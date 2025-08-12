@@ -1037,5 +1037,85 @@
       "warehouse": "المستودع",
       "procurement": "المشتريات"
     }
+  },
+  "analytics": {
+    "title": "تحليلات",
+    "description": "تحليلات متقدمة لتقديم معلومات قيمة حول أداء المؤسسة.",
+    "kpis": {
+      "totalRevenue": "إجمالي الإيرادات",
+      "activeUsers": "المستخدمين النشطين",
+      "conversionRate": "معدل التحويل",
+      "customerSatisfaction": "رضا العملاء"
+    },
+    "charts": {
+      "revenueOverTime": "الإيرادات عبر الوقت",
+      "userGrowth": "نمو المستخدمين",
+      "salesFunnel": "قمع المبيعات"
+    }
+  },
+  "customReportBuilder": {
+    "title": "منشئ التقارير المخصص",
+    "description": "إنشاء تقارير مخصصة بناءً على البيانات الخاصة بك.",
+    "dataSource": "مصدر البيانات",
+    "selectColumns": "اختيار الأعمدة",
+    "filters": "الفلاتر",
+    "preview": "معاينة",
+    "generate": "إنشاء التقرير"
+  },
+  "pricing": {
+    "title": "أسعار النظام",
+    "subtitle": "اختر خطة تناسب احتياجات مؤسستك.",
+    "monthly": "شهري",
+    "annually": "سنوي",
+    "save": "وفر",
+    "plans": {
+      "starter": {
+        "name": "البداية",
+        "price": "0",
+        "description": "خطة مبدأية لشركات صغيرة.",
+        "features": ["ميزات أساسية", "دعم فني محدود", "تحديثات شهرية"]
+      },
+      "professional": {
+        "name": "المهني",
+        "price": "100",
+        "description": "خطة مهنية لشركات متوسطة الحجم.",
+        "features": ["جميع ميزات البداية", "دعم فني مكثف", "تحديثات أسبوعية"]
+      },
+      "enterprise": {
+        "name": "الشركات الكبيرة",
+        "price": "500",
+        "description": "خطة الشركات الكبيرة لشركات كبيرة.",
+        "features": ["جميع ميزات المهنية", "دعم فني مخصص", "تحديثات يومية"]
+      }
+    },
+    "cta": "ابدأ الآن",
+    "contact": "اتصل بنا للحصول على عرض أسعار مخصص"
+  },
+  "testimonials": {
+    "title": "آراء العملاء",
+    "subtitle": "ما يقوله عملاؤنا عن Feebee ERP.",
+    "items": [
+      {
+        "quote": "Feebee ERP ساعدتنا في تحسين إدارة عملياتنا.",
+        "author": "محمد أحمد",
+        "company": "شركة XYZ",
+        "role": "مدير مبيعات"
+      }
+    ]
+  },
+  "requestDemo": {
+    "title": "طلب عرض توضيحي",
+    "subtitle": "احصل على عرض توضيحي مجاني ل Feebee ERP.",
+    "form": {
+      "firstName": "الاسم الأول",
+      "lastName": "الاسم الأخير",
+      "email": "البريد الإلكتروني",
+      "company": "الشركة",
+      "phone": "الهاتف",
+      "message": "الرسالة",
+      "submit": "إرسال"
+    },
+    "success": "شكراً لطلبك! سنتواصل معك قريباً.",
+    "loading": "جاري معالجة طلبك..."
   }
 }

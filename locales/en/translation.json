@@ -24,6 +24,24 @@
       "goals": "Goals",
       "compensation": "Compensation",
       "analytics": "Analytics"
+    },
+    "title": "Human Capital Management",
+    "description": "Complete employee lifecycle management",
+    "metrics": {
+      "totalEmployees": "Total Employees",
+      "newHires": "New Hires",
+      "turnoverRate": "Turnover Rate",
+      "avgSalary": "Average Salary"
+    },
+    "employees": {
+      "title": "Employee Management",
+      "addEmployee": "Add Employee",
+      "searchPlaceholder": "Search employees..."
+    },
+    "performance": {
+      "title": "Performance Management",
+      "reviews": "Performance Reviews",
+      "goals": "Goals & Objectives"
     }
   },
   // Adding CRM module tab translation keys
@@ -73,5 +91,117 @@
       "preview": "Preview",
       "saved": "Saved"
     }
+  },
+  // Adding analytics section
+  "analytics": {
+    "title": "Analytics Dashboard",
+    "description": "Comprehensive business intelligence and reporting",
+    "kpis": {
+      "totalRevenue": "Total Revenue",
+      "activeUsers": "Active Users",
+      "conversionRate": "Conversion Rate",
+      "customerSatisfaction": "Customer Satisfaction"
+    },
+    "charts": {
+      "revenueOverTime": "Revenue Over Time",
+      "userGrowth": "User Growth",
+      "salesFunnel": "Sales Funnel"
+    }
+  },
+  // Adding customReportBuilder section
+  "customReportBuilder": {
+    "title": "Custom Report Builder",
+    "description": "Build and customize reports",
+    "dataSource": "Data Source",
+    "selectColumns": "Select Columns",
+    "filters": "Filters",
+    "preview": "Preview",
+    "generate": "Generate Report"
+  },
+  // Adding materials section
+  "materials": {
+    "materialMaster": {
+      "title": "Material Master Data",
+      "description": "Manage core material data and specifications",
+      "searchPlaceholder": "Search materials...",
+      "addMaterial": "Add New Material",
+      "columns": {
+        "materialCode": "Material Code",
+        "description": "Description",
+        "category": "Category",
+        "unit": "Unit",
+        "status": "Status"
+      },
+      "categories": {
+        "rawMaterials": "Raw Materials",
+        "finishedGoods": "Finished Goods",
+        "components": "Components",
+        "consumables": "Consumables"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "discontinued": "Discontinued"
+      }
+    }
+  },
+  // Adding pricing section
+  "pricing": {
+    "title": "Choose Your Plan",
+    "subtitle": "Select the perfect plan for your business needs",
+    "monthly": "Monthly",
+    "annually": "Annually",
+    "save": "Save 20%",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "price": "$99",
+        "description": "Perfect for small businesses",
+        "features": ["Up to 10 users", "Basic modules", "Email support"]
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "$299",
+        "description": "For growing companies",
+        "features": ["Up to 50 users", "All modules", "Priority support"]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "description": "For large organizations",
+        "features": ["Unlimited users", "Custom integrations", "Dedicated support"]
+      }
+    },
+    "cta": "Get Started",
+    "contact": "Contact Sales"
+  },
+  // Adding testimonials section
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Trusted by businesses worldwide",
+    "items": [
+      {
+        "quote": "Feebee ERP transformed our operations completely.",
+        "author": "John Smith",
+        "company": "Tech Corp",
+        "role": "CEO"
+      }
+    ]
+  },
+  // Adding requestDemo section
+  "requestDemo": {
+    "title": "Request a Demo",
+    "subtitle": "See how Feebee ERP can transform your business",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Request Demo"
+    },
+    "success": "Demo request submitted successfully!",
+    "loading": "Submitting request..."
   }
 }

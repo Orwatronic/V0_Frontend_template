@@ -834,5 +834,85 @@
       "preview": "Forhåndsvisning",
       "saved": "Lagret"
     }
+  },
+  "analytics": {
+    "title": "Avansert analyse",
+    "description": "Analyser virksomhetens prestationer og opplevelser",
+    "kpis": {
+      "totalRevenue": "Total inntekt",
+      "activeUsers": "Aktive brukere",
+      "conversionRate": "Konverteringsrate",
+      "customerSatisfaction": "Kundetilfredshet"
+    },
+    "charts": {
+      "revenueOverTime": "Inntekt over tid",
+      "userGrowth": "Brukervekst",
+      "salesFunnel": "Salgsfunnel"
+    }
+  },
+  "customReportBuilder": {
+    "title": "Tilpasset rapportbygger",
+    "description": "Opprett og tilpass rapporter etter dine behov",
+    "dataSource": "Datakilde",
+    "selectColumns": "Velg kolonner",
+    "filters": "Filtre",
+    "preview": "Forhåndsvisning",
+    "generate": "Generer rapport"
+  },
+  "pricing": {
+    "title": "Priser",
+    "subtitle": "Velg den beste løsningen for din virksomhet",
+    "monthly": "Månedlig",
+    "annually": "Årlig",
+    "save": "Spar",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "price": "199",
+        "description": "Basert løsning for små og mediumsise bedrifter",
+        "features": ["Sanntidsdata", "Flervalutastøtte", "Avansert analyse"]
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "499",
+        "description": "Avansert løsning for større bedrifter",
+        "features": ["Alt inkludert i Starter", "Ekstra moduler", "24/7 support"]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "999",
+        "description": "Korporativ løsning med avanserte funksjoner",
+        "features": ["Alt inkludert i Professional", "Spesialisert integrasjon", "Egen løsning"]
+      }
+    },
+    "cta": "Start gratis prøveperiode",
+    "contact": "Kontakt oss for mer informasjon"
+  },
+  "testimonials": {
+    "title": "Referanser",
+    "subtitle": "Hvordan andre bedrifter bruker Feebee Technologies ERP",
+    "items": [
+      {
+        "quote": "Feebee Technologies ERP har gjort vår bedrift mer effektiv.",
+        "author": "John Doe",
+        "company": "ABC Company",
+        "role": "CEO"
+      }
+    ]
+  },
+  "requestDemo": {
+    "title": "Be om demo",
+    "subtitle": "Få en gratis demo av Feebee Technologies ERP",
+    "form": {
+      "firstName": "Fornavn",
+      "lastName": "Etternavn",
+      "email": "E-postadresse",
+      "company": "Selskap",
+      "phone": "Telefonnummer",
+      "message": "Melding",
+      "submit": "Send forespørsel"
+    },
+    "success": "Din forespørsel om demo er sendt!",
+    "loading": "Sender forespørsel..."
   }
 }
