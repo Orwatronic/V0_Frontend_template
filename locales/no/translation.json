@@ -1,6 +1,22 @@
 {
   "landing": {
     "hero": {
+      "badge": "MANGLER landing.hero.badge",
+      "title": "MANGLER landing.hero.title",
+      "subtitle": "MANGLER landing.hero.subtitle",
+      "cta": {
+        "primary": "MANGLER landing.hero.cta.primary",
+        "secondary": "MANGLER landing.hero.cta.secondary"
+      },
+      "image": { "alt": "MANGLER landing.hero.image.alt" },
+      "badge": { "realtime": "MANGLER landing.hero.badge.realtime", "analytics": "MANGLER landing.hero.badge.analytics" },
+      "stats": {
+        "uptime": "MANGLER landing.hero.stats.uptime",
+        "clients": "MANGLER landing.hero.stats.clients",
+        "support": "MANGLER landing.hero.stats.support"
+      }
+    },
+    "hero": {
       "badge": {
         "realtime": "Sanntidsdata",
         "analytics": "Avansert analyse"

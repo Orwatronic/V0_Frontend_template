@@ -1,6 +1,22 @@
 {
   "landing": {
     "hero": {
+      "badge": "مفقود landing.hero.badge",
+      "title": "مفقود landing.hero.title",
+      "subtitle": "مفقود landing.hero.subtitle",
+      "cta": {
+        "primary": "مفقود landing.hero.cta.primary",
+        "secondary": "مفقود landing.hero.cta.secondary"
+      },
+      "image": { "alt": "مفقود landing.hero.image.alt" },
+      "badge": { "realtime": "مفقود landing.hero.badge.realtime", "analytics": "مفقود landing.hero.badge.analytics" },
+      "stats": {
+        "uptime": "مفقود landing.hero.stats.uptime",
+        "clients": "مفقود landing.hero.stats.clients",
+        "support": "مفقود landing.hero.stats.support"
+      }
+    },
+    "hero": {
       "badge": {
         "realtime": "بيانات في الوقت الحقيقي",
         "analytics": "تحليلات متقدمة"

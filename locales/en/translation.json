@@ -1084,6 +1084,22 @@
     "": "__MISSING_TRANSLATION__ You are not a participant in this feedback cycle."
   },
   "landing": {
+    "hero": {
+      "badge": "MISSING_TRANSLATION landing.hero.badge",
+      "title": "MISSING_TRANSLATION landing.hero.title",
+      "subtitle": "MISSING_TRANSLATION landing.hero.subtitle",
+      "cta": {
+        "primary": "MISSING_TRANSLATION landing.hero.cta.primary",
+        "secondary": "MISSING_TRANSLATION landing.hero.cta.secondary"
+      },
+      "image": { "alt": "MISSING_TRANSLATION landing.hero.image.alt" },
+      "badge": { "realtime": "MISSING_TRANSLATION landing.hero.badge.realtime", "analytics": "MISSING_TRANSLATION landing.hero.badge.analytics" },
+      "stats": {
+        "uptime": "MISSING_TRANSLATION landing.hero.stats.uptime",
+        "clients": "MISSING_TRANSLATION landing.hero.stats.clients",
+        "support": "MISSING_TRANSLATION landing.hero.stats.support"
+      }
+    },
     "solutions": {
       "financial": {
         "title": "__MISSING_TRANSLATION__ landing.solutions.financial.title",

@@ -14,7 +14,13 @@ interface ErrorProps {
 }
 
 export default function Error({ error, reset }: ErrorProps) {
-  const { t } = useI18n()
+  // Safe i18n fallback: if the error boundary renders outside provider, use identity translator
+  let t: (key: string) => string = (key) => key
+  try {
+    t = useI18n().t
+  } catch {
+    // ignore – provider not available in this render path
+  }
   const router = useRouter()
 
   useEffect(() => {
