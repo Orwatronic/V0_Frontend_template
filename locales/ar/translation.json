@@ -186,19 +186,19 @@
       "title": "الإدارة المالية",
       "subtitle": "من دليل الحسابات إلى الإقفال—وكل ما بينهما.",
       "features": { "f1": "دفتر الأستاذ والقيود", "f2": "متعدد العملات والضرائب", "f3": "إدارة إقفال الفترات" },
-      "imageAlt": "نظرة عامة على المالية"
+      "imageAlt": "__مفقود__ solutions.financials.imageAlt"
     },
     "sales": {
       "title": "المبيعات والتوزيع",
       "subtitle": "من عرض السعر إلى التحصيل مع التسعير والتسليمات والمرتجعات.",
       "features": { "f1": "العروض والطلبات", "f2": "تسعير مرن", "f3": "المرتجعات" },
-      "imageAlt": "نظرة عامة على المبيعات"
+      "imageAlt": "__مفقود__ solutions.sales.imageAlt"
     },
     "materials": {
       "title": "إدارة المواد",
       "subtitle": "المخزون والمستودعات وعمليات الشراء.",
       "features": { "f1": "التحكم بالمخزون", "f2": "إدارة المستودعات", "f3": "الشراء" },
-      "imageAlt": "نظرة عامة على المواد",
+      "imageAlt": "__مفقود__ solutions.materials.imageAlt",
       "tabs": {
         "materialMaster": "سجل المواد الرئيسية",
         "inventory": "إدارة المخزون",
@@ -234,61 +234,61 @@
       "title": "إدارة رأس المال البشري",
       "subtitle": "الموظفون والوقت والرواتب والهيكل.",
       "features": { "f1": "سجلات الموظفين", "f2": "الوقت والرواتب", "f3": "الهيكل التنظيمي" },
-      "imageAlt": "نظرة عامة على الموارد البشرية"
+      "imageAlt": "__مفقود__ solutions.hcm.imageAlt"
     },
     "master-data": {
       "title": "إدارة البيانات الرئيسية",
       "subtitle": "بيانات مرجعية نظيفة ومركزية عبر الوحدات.",
       "features": { "f1": "عملاء/موردون", "f2": "مجموعات المواد", "f3": "التدرجات الهرمية" },
-      "imageAlt": "نظرة عامة على البيانات الرئيسية"
+      "imageAlt": "__مفقود__ solutions.master-data.imageAlt"
     },
     "organization": {
       "title": "الإدارة التنظيمية",
       "subtitle": "الهياكل والشركات ومراكز التكلفة/الربح والأدوار.",
       "features": { "f1": "هيكل الشركة", "f2": "مراكز التكلفة/الربح", "f3": "التفويضات" },
-      "imageAlt": "نظرة عامة على الإدارة التنظيمية"
+      "imageAlt": "__مفقود__ solutions.organization.imageAlt"
     },
     "production": {
       "title": "تخطيط الإنتاج",
       "subtitle": "قوائم المواد والمسارات والجدولة والتنفيذ.",
       "features": { "f1": "إدارة قوائم المواد", "f2": "جدولة ذكية", "f3": "التنفيذ" },
-      "imageAlt": "نظرة عامة على الإنتاج"
+      "imageAlt": "__مفقود__ solutions.production.imageAlt"
     },
     "projects": {
       "title": "نظام المشاريع",
       "subtitle": "تخطيط الموارد وتتبع المعالم والميزانيات.",
       "features": { "f1": "تخطيط الموارد", "f2": "المعالم", "f3": "الميزانيات" },
-      "imageAlt": "نظرة عامة على المشاريع"
+      "imageAlt": "__مفقود__ solutions.projects.imageAlt"
     },
     "quality": {
       "title": "إدارة الجودة",
       "subtitle": "ضبط الجودة والتدقيق والاعتمادات والالتزام.",
       "features": { "f1": "ضبط الجودة", "f2": "سجلات التدقيق", "f3": "الالتزام" },
-      "imageAlt": "نظرة عامة على الجودة"
+      "imageAlt": "__مفقود__ solutions.quality.imageAlt"
     },
     "maintenance": {
       "title": "صيانة المصانع",
       "subtitle": "الأصول والصيانة الوقائية وأوامر العمل.",
       "features": { "f1": "إدارة الأصول", "f2": "جداول وقائية", "f3": "أوامر العمل" },
-      "imageAlt": "نظرة عامة على الصيانة"
+      "imageAlt": "__مفقود__ solutions.maintenance.imageAlt"
     },
     "crm": {
       "title": "إدارة علاقات العملاء",
       "subtitle": "العملاء المحتملون والخدمة والأنبوب والتحليلات.",
       "features": { "f1": "العملاء المحتملون وجهات الاتصال", "f2": "الخدمة", "f3": "الأنبوب والتحليلات" },
-      "imageAlt": "نظرة عامة على CRM"
+      "imageAlt": "__مفقود__ solutions.crm.imageAlt"
     },
     "reports": {
       "title": "التقارير والتحليلات",
       "subtitle": "المؤشرات ولوحات التحكم والتحليل المخصص.",
       "features": { "f1": "لوحات مؤشرات", "f2": "تقاير مخصصة", "f3": "تصدير ومشاركة" },
-      "imageAlt": "نظرة عامة على التقارير"
+      "imageAlt": "__مفقود__ solutions.reports.imageAlt"
     },
     "customer-portal": {
       "title": "بوابة العملاء",
       "subtitle": "تجارب ذاتية الخدمة مؤمنة وذات علامة تجارية.",
       "features": { "f1": "تتبع الطلبات", "f2": "الفواتير", "f3": "طلبات الدعم" },
-      "imageAlt": "نظرة عامة على بوابة العملاء"
+      "imageAlt": "__مفقود__ solutions.customer-portal.imageAlt"
     }
   },
   "nav": {
@@ -1117,5 +1117,21 @@
     },
     "success": "شكراً لطلبك! سنتواصل معك قريباً.",
     "loading": "جاري معالجة طلبك..."
+  },
+  "aging": {
+    "ap": {
+      "title": "__مفقود__ aging.ap.title"
+    },
+    "ar": {
+      "title": "__مفقود__ aging.ar.title"
+    },
+    "description": "__مفقود__ aging.description",
+    "bucket": {
+      "current": "__مفقود__ aging.bucket.current",
+      "30": "__مفقود__ aging.bucket.30",
+      "60": "__مفقود__ aging.bucket.60",
+      "90": "__مفقود__ aging.bucket.90",
+      "90+": "__مفقود__ aging.bucket.90+"
+    }
   }
 }

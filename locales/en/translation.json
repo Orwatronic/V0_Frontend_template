@@ -10,7 +10,8 @@
       "deliveries": "Deliveries",
       "invoices": "Invoices",
       "returns": "Returns"
-    }
+    },
+    "imageAlt": "Sales Distribution Overview"
   },
   // Adding HCM module tab translation keys
   "hcm": {
@@ -42,7 +43,8 @@
       "title": "Performance Management",
       "reviews": "Performance Reviews",
       "goals": "Goals & Objectives"
-    }
+    },
+    "imageAlt": "Human Capital Management Overview"
   },
   // Adding CRM module tab translation keys
   "crm": {
@@ -63,7 +65,8 @@
         "financial": "Financial",
         "history": "History"
       }
-    }
+    },
+    "imageAlt": "Customer Relationship Management Overview"
   },
   // Adding compensation and goals tab translation keys
   "compensation": {
@@ -90,7 +93,8 @@
       "builder": "Builder",
       "preview": "Preview",
       "saved": "Saved"
-    }
+    },
+    "imageAlt": "Reports and Analytics Overview"
   },
   // Adding analytics section
   "analytics": {
@@ -143,7 +147,8 @@
         "inactive": "Inactive",
         "discontinued": "Discontinued"
       }
-    }
+    },
+    "imageAlt": "Materials Management Overview"
   },
   // Adding pricing section
   "pricing": {
@@ -203,5 +208,62 @@
     },
     "success": "Demo request submitted successfully!",
     "loading": "Submitting request..."
+  },
+  "aging": {
+    "ap": {
+      "title": "Accounts Payable Aging"
+    },
+    "ar": {
+      "title": "Accounts Receivable Aging"
+    },
+    "description": "Outstanding balances by aging bucket.",
+    "bucket": {
+      "current": "Current",
+      "30": "1-30 Days",
+      "60": "31-60 Days",
+      "90": "61-90 Days",
+      "90+": "90+ Days"
+    }
+  },
+  "solutions": {
+    "financials": {
+      "imageAlt": "Financial Management Overview"
+    },
+    "sales": {
+      "imageAlt": "Sales Distribution Overview"
+    },
+    "materials": {
+      "imageAlt": "Materials Management Overview"
+    },
+    "hcm": {
+      "imageAlt": "Human Capital Management Overview"
+    },
+    "master-data": {
+      "imageAlt": "Master Data Management Overview"
+    },
+    "organization": {
+      "imageAlt": "Organizational Management Overview"
+    },
+    "production": {
+      "imageAlt": "Production Planning Overview"
+    },
+    "projects": {
+      "imageAlt": "Project System Overview"
+    },
+    "quality": {
+      "imageAlt": "Quality Management Overview"
+    },
+    "maintenance": {
+      "imageAlt": "Plant Maintenance Overview"
+    },
+    "crm": {
+      "imageAlt": "Customer Relationship Management Overview"
+    },
+    "reports": {
+      "imageAlt": "Reports and Analytics Overview"
+    },
+    "customer-portal": {
+      "imageAlt": "Customer Portal Overview"
+    }
   }
 }

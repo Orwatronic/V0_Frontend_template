@@ -176,79 +176,79 @@
       "title": "Finansstyring",
       "subtitle": "Fra kontoplan til periodelukk—og alt imellom.",
       "features": { "f1": "Hovedbok & bilag", "f2": "Flervaluta & skatt", "f3": "Periodeavslutning" },
-      "imageAlt": "Finansoversikt"
+      "imageAlt": "Oversikt over finansstyring"
     },
     "sales": {
       "title": "Salg og distribusjon",
       "subtitle": "Tilbud-til-kontant med prising, leveranser og returer.",
       "features": { "f1": "Tilbud & ordre", "f2": "Fleksibel prising", "f3": "Returer & RMA" },
-      "imageAlt": "Salgsoversikt"
+      "imageAlt": "Oversikt over salg og distribusjon"
     },
     "materials": {
       "title": "Materialhåndtering",
       "subtitle": "Lager, varehus og innkjøp.",
       "features": { "f1": "Lagerkontroll", "f2": "Varehusstyring", "f3": "Innkjøp" },
-      "imageAlt": "Materialoversikt"
+      "imageAlt": "Oversikt over materialhåndtering"
     },
     "hcm": {
       "title": "Human Capital Management",
       "subtitle": "Ansatte, tid, lønn og organisasjon.",
       "features": { "f1": "Ansattregister", "f2": "Tid & lønn", "f3": "Organisasjon" },
-      "imageAlt": "HCM-oversikt"
+      "imageAlt": "Oversikt over Human Capital Management"
     },
     "master-data": {
       "title": "Masterdatastyring",
       "subtitle": "Rene, sentraliserte referansedata.",
       "features": { "f1": "Kunde-/leverandørdata", "f2": "Materialgrupper", "f3": "Hierarkier" },
-      "imageAlt": "MDM-oversikt"
+      "imageAlt": "Oversikt over Masterdatastyring"
     },
     "organization": {
       "title": "Organisasjonsstyring",
       "subtitle": "Selskapsstruktur, kostnads-/resultatsentre og roller.",
       "features": { "f1": "Selskapsstruktur", "f2": "Kostnad/Resultat", "f3": "Autorisasjoner" },
-      "imageAlt": "Organisasjonsoversikt"
+      "imageAlt": "Oversikt over Organisasjonsstyring"
     },
     "production": {
       "title": "Produksjonsplanlegging",
       "subtitle": "BOM, ruter, planlegging og utførelse.",
       "features": { "f1": "BOM-styring", "f2": "Smart planlegging", "f3": "Utførelse" },
-      "imageAlt": "Produksjonsoversikt"
+      "imageAlt": "Oversikt over Produksjonsplanlegging"
     },
     "projects": {
       "title": "Prosjektsystem",
       "subtitle": "Ressursplanlegging, milepæler og budsjett.",
       "features": { "f1": "Ressursplan", "f2": "Milepæler", "f3": "Budsjett" },
-      "imageAlt": "Prosjektoversikt"
+      "imageAlt": "Oversikt over Prosjektsystem"
     },
     "quality": {
       "title": "Kvalitetsstyring",
       "subtitle": "Kvalitetsprosesser, revisjoner, sertifisering og samsvar.",
       "features": { "f1": "Kvalitetskontroll", "f2": "Revisjonsspor", "f3": "Samsvar" },
-      "imageAlt": "Kvalitetsoversikt"
+      "imageAlt": "Oversikt over Kvalitetsstyring"
     },
     "maintenance": {
       "title": "Vedlikehold",
       "subtitle": "Eiendeler, forebyggende vedlikehold og arbeidsordrer.",
       "features": { "f1": "Eiendelsstyring", "f2": "Forebyggende planer", "f3": "Arbeidsordrer" },
-      "imageAlt": "Vedlikeholdsoversikt"
+      "imageAlt": "Oversikt over Vedlikehold"
     },
     "crm": {
       "title": "Kundeoppfølging (CRM)",
       "subtitle": "Leads, service, pipeline og analyse.",
       "features": { "f1": "Leads & kontakter", "f2": "Kundeservice", "f3": "Pipeline & analyse" },
-      "imageAlt": "CRM-oversikt"
+      "imageAlt": "Oversikt over Kundeoppfølging (CRM)"
     },
     "reports": {
       "title": "Rapporter & analyse",
       "subtitle": "KPI-er, dashboards og ad-hoc analyse.",
       "features": { "f1": "KPI-dashboards", "f2": "Ad-hoc rapporter", "f3": "Eksport & deling" },
-      "imageAlt": "Rapportoversikt"
+      "imageAlt": "Oversikt over Rapporter & analyse"
     },
     "customer-portal": {
       "title": "Kundeportal",
       "subtitle": "Sikker selvbetjening med bedriftsprofil.",
       "features": { "f1": "Ordresporing", "f2": "Fakturaer", "f3": "Supporthenvendelser" },
-      "imageAlt": "Kundeportal-oversikt"
+      "imageAlt": "Oversikt over Kundeportal"
     }
   },
   "nav": {
@@ -914,5 +914,21 @@
     },
     "success": "Din forespørsel om demo er sendt!",
     "loading": "Sender forespørsel..."
+  },
+  "aging": {
+    "ap": {
+      "title": "Aldersanalyse for Leverandørgjeld"
+    },
+    "ar": {
+      "title": "Aldersanalyse for Kundefordringer"
+    },
+    "description": "Analyser aldersfordelingen for fakturaer",
+    "bucket": {
+      "current": "Nåværende",
+      "30": "30 dager",
+      "60": "60 dager",
+      "90": "90 dager",
+      "90+": "90+ dager"
+    }
   }
 }
