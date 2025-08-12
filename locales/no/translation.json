@@ -1,15 +1,16 @@
 {
   "landing": {
     "hero": {
-      "badge": {
-        "realtime": "Sanntidsdata",
-        "analytics": "Avansert analyse"
-      },
+      "badge": "Bedriftsklar ERP-løsning",
       "title": "Transformer din bedrift med Feebee Technologies ERP",
       "subtitle": "Omfattende ressursplanleggingssystem for bedrifter designet for å administrere kjerneprosesser på tvers av alle avdelinger med integrerte moduler for fullstendig operasjonell kontroll.",
       "cta": {
         "primary": "Start gratis prøveperiode",
         "secondary": "Se demo"
+      },
+      "badge": {
+        "realtime": "Sanntidsdata",
+        "analytics": "Avansert analyse"
       },
       "image": {
         "alt": "EnterpriseERP Dashbord"
@@ -229,1569 +230,259 @@
         "description": "Full sporbarhet på tvers av lager og logistikk."
       },
       "intelligence": {
-        "title": "Tremannsavstemming",
-        "description": "Automatiser verifisering av PO, mottak og faktura for færre avvik."
+        "title": "مطابقة ثلاثية",
+        "description": "أتمتة التحقق بين أمر الشراء والاستلام والفاتورة وتقليل الاستثناءات."
       },
       "cloud": {
-        "title": "Finansiell styring",
-        "description": "Periodeavslutning, rapportering og kontroller for etterlevelse."
+        "title": "الإدارة المالية",
+        "description": "إقفال الفترات والتقارير والضوابط للمحاسبة المتوافقة."
       },
       "compliance": {
-        "title": "API-først design",
-        "description": "REST-APIer og dokumentasjon for sømløs integrasjon."
+        "title": "تصميم API أولاً",
+        "description": "واجهات REST ووثائق لتكاملات سلسة."
       }
     }
   },
   "solutions": {
     "marketing": {
-      "badge": "Moduloversikt",
+      "badge": "نظرة عامة على الوحدة",
       "cta": {
-        "login": "Logg inn for å komme i gang",
-        "demo": "Be om demo"
+        "login": "سجّل الدخول للبدء",
+        "demo": "اطلب عرضاً توضيحياً"
       },
       "notFound": {
-        "title": "Fant ikke løsning",
-        "subtitle": "Velg en løsning fra listen."
+        "title": "لم يتم العثور على الحل",
+        "subtitle": "يرجى اختيار حل من القائمة."
       }
     },
     "financials": {
-      "title": "Finansstyring",
-      "subtitle": "Fra kontoplan til periodelukk—og alt imellom.",
+      "title": "الإدارة المالية",
+      "subtitle": "من دليل الحسابات إلى الإقفال—وكل ما بينهما.",
       "features": {
-        "f1": "Hovedbok & bilag",
-        "f2": "Flervaluta & skatt",
-        "f3": "Periodeavslutning"
+        "f1": "دفتر الأستاذ والقيود",
+        "f2": "متعدد العملات والضرائب",
+        "f3": "إدارة إقفال الفترات"
       },
-      "imageAlt": "Oversikt over finansstyring"
+      "imageAlt": "__مفقود__ solutions.financials.imageAlt"
     },
     "sales": {
-      "title": "Salg og distribusjon",
-      "subtitle": "Tilbud-til-kontant med prising, leveranser og returer.",
+      "title": "المبيعات والتوزيع",
+      "subtitle": "من عرض السعر إلى التحصيل مع التسعير والتسليمات والمرتجعات.",
       "features": {
-        "f1": "Tilbud & ordre",
-        "f2": "Fleksibel prising",
-        "f3": "Returer & RMA"
+        "f1": "العروض والطلبات",
+        "f2": "تسعير مرن",
+        "f3": "المرتجعات"
       },
-      "imageAlt": "Oversikt over salg og distribusjon"
+      "imageAlt": "__مفقود__ solutions.sales.imageAlt"
     },
     "materials": {
-      "title": "Materialhåndtering",
-      "subtitle": "Lager, varehus og innkjøp.",
+      "title": "إدارة المواد",
+      "subtitle": "المخزون والمستودعات وعمليات الشراء.",
       "features": {
-        "f1": "Lagerkontroll",
-        "f2": "Varehusstyring",
-        "f3": "Innkjøp"
+        "f1": "التحكم بالمخزون",
+        "f2": "إدارة المستودعات",
+        "f3": "الشراء"
       },
-      "imageAlt": "Oversikt over materialhåndtering"
+      "imageAlt": "__مفقود__ solutions.materials.imageAlt",
+      "tabs": {
+        "materialMaster": "سجل المواد الرئيسية",
+        "inventory": "إدارة المخزون",
+        "warehouse": "إدارة المستودعات",
+        "procurement": "المشتريات"
+      },
+      "materialMaster": {
+        "title": "سجل المواد الرئيسية",
+        "description": "إدارة بيانات المواد الأساسية والمواصفات",
+        "searchPlaceholder": "البحث في المواد...",
+        "addMaterial": "إضافة مادة جديدة",
+        "columns": {
+          "materialCode": "رمز المادة",
+          "description": "الوصف",
+          "category": "الفئة",
+          "unit": "الوحدة",
+          "status": "الحالة"
+        },
+        "categories": {
+          "rawMaterials": "المواد الخام",
+          "finishedGoods": "البضائع المصنعة",
+          "components": "المكونات",
+          "consumables": "المواد الاستهلاكية"
+        },
+        "status": {
+          "active": "نشط",
+          "inactive": "غير نشط",
+          "discontinued": "متوقف"
+        }
+      },
+      "overview": {
+        "lowStockAlerts": "تنبيهات المخزون المنخفض",
+        "lowStockDescription": "العناصر التي تتطلب اهتماماً فورياً",
+        "recentActivity": "النشاط الأخير",
+        "recentActivityDescription": "أحدث معاملات وتحديثات المواد",
+        "minStock": "الحد الأدنى للمخزون"
+      }
     },
     "hcm": {
-      "title": "Human Capital Management",
-      "subtitle": "Ansatte, tid, lønn og organisasjon.",
+      "title": "إدارة رأس المال البشري",
+      "subtitle": "الموظفون والوقت والرواتب والهيكل.",
       "features": {
-        "f1": "Ansattregister",
-        "f2": "Tid & lønn",
-        "f3": "Organisasjon"
+        "f1": "سجلات الموظفين",
+        "f2": "الوقت والرواتب",
+        "f3": "الهيكل التنظيمي"
       },
-      "imageAlt": "Oversikt over Human Capital Management"
+      "imageAlt": "__مفقود__ solutions.hcm.imageAlt"
     },
     "master-data": {
-      "title": "Masterdatastyring",
-      "subtitle": "Rene, sentraliserte referansedata.",
+      "title": "إدارة البيانات الرئيسية",
+      "subtitle": "بيانات مرجعية نظيفة ومركزية عبر الوحدات.",
       "features": {
-        "f1": "Kunde-/leverandørdata",
-        "f2": "Materialgrupper",
-        "f3": "Hierarkier"
+        "f1": "عملاء/موردون",
+        "f2": "مجموعات المواد",
+        "f3": "التدرجات الهرمية"
       },
-      "imageAlt": "Oversikt over Masterdatastyring"
+      "imageAlt": "__مفقود__ solutions.master-data.imageAlt"
     },
     "organization": {
-      "title": "Organisasjonsstyring",
-      "subtitle": "Selskapsstruktur, kostnads-/resultatsentre og roller.",
+      "title": "الإدارة التنظيمية",
+      "subtitle": "الهياكل والشركات ومراكز التكلفة/الربح والأدوار.",
       "features": {
-        "f1": "Selskapsstruktur",
-        "f2": "Kostnad/Resultat",
-        "f3": "Autorisasjoner"
+        "f1": "هيكل الشركة",
+        "f2": "مراكز التكلفة/الربح",
+        "f3": "التفويضات"
       },
-      "imageAlt": "Oversikt over Organisasjonsstyring"
+      "imageAlt": "__مفقود__ solutions.organization.imageAlt"
     },
     "production": {
-      "title": "Produksjonsplanlegging",
-      "subtitle": "BOM, ruter, planlegging og utførelse.",
+      "title": "تخطيط الإنتاج",
+      "subtitle": "قوائم المواد والمسارات والجدولة والتنفيذ.",
       "features": {
-        "f1": "BOM-styring",
-        "f2": "Smart planlegging",
-        "f3": "Utførelse"
+        "f1": "إدارة قوائم المواد",
+        "f2": "جدولة ذكية",
+        "f3": "التنفيذ"
       },
-      "imageAlt": "Oversikt over Produksjonsplanlegging"
+      "imageAlt": "__مفقود__ solutions.production.imageAlt"
     },
     "projects": {
-      "title": "Prosjektsystem",
-      "subtitle": "Ressursplanlegging, milepæler og budsjett.",
+      "title": "نظام المشاريع",
+      "subtitle": "تخطيط الموارد وتتبع المعالم والميزانيات.",
       "features": {
-        "f1": "Ressursplan",
-        "f2": "Milepæler",
-        "f3": "Budsjett"
+        "f1": "تخطيط الموارد",
+        "f2": "المعالم",
+        "f3": "الميزانيات"
       },
-      "imageAlt": "Oversikt over Prosjektsystem"
+      "imageAlt": "__مفقود__ solutions.projects.imageAlt"
     },
     "quality": {
-      "title": "Kvalitetsstyring",
-      "subtitle": "Kvalitetsprosesser, revisjoner, sertifisering og samsvar.",
+      "title": "إدارة الجودة",
+      "subtitle": "ضبط الجودة والتدقيق والاعتمادات والالتزام.",
       "features": {
-        "f1": "Kvalitetskontroll",
-        "f2": "Revisjonsspor",
-        "f3": "Samsvar"
+        "f1": "ضبط الجودة",
+        "f2": "سجلات التدقيق",
+        "f3": "الالتزام"
       },
-      "imageAlt": "Oversikt over Kvalitetsstyring"
+      "imageAlt": "__مفقود__ solutions.quality.imageAlt"
     },
     "maintenance": {
-      "title": "Vedlikehold",
-      "subtitle": "Eiendeler, forebyggende vedlikehold og arbeidsordrer.",
+      "title": "صيانة المصانع",
+      "subtitle": "الأصول والصيانة الوقائية وأوامر العمل.",
       "features": {
-        "f1": "Eiendelsstyring",
-        "f2": "Forebyggende planer",
-        "f3": "Arbeidsordrer"
+        "f1": "إدارة الأصول",
+        "f2": "جداول وقائية",
+        "f3": "أوامر العمل"
       },
-      "imageAlt": "Oversikt over Vedlikehold"
+      "imageAlt": "__مفقود__ solutions.maintenance.imageAlt"
     },
     "crm": {
-      "title": "Kundeoppfølging (CRM)",
-      "subtitle": "Leads, service, pipeline og analyse.",
+      "title": "إدارة علاقات العملاء",
+      "subtitle": "العملاء المحتملون والخدمة والأنبوب والتحليلات.",
       "features": {
-        "f1": "Leads & kontakter",
-        "f2": "Kundeservice",
-        "f3": "Pipeline & analyse"
+        "f1": "العملاء المحتملون وجهات الاتصال",
+        "f2": "الخدمة",
+        "f3": "الأنبوب والتحليلات"
       },
-      "imageAlt": "Oversikt over Kundeoppfølging (CRM)"
+      "imageAlt": "__مفقود__ solutions.crm.imageAlt"
     },
     "reports": {
-      "title": "Rapporter og analyse",
-      "subtitle": "KPI-er, dashbord og tilpasset analyse.",
+      "title": "التقارير والتحليلات",
+      "subtitle": "المؤشرات ولوحات التحكم والتحليل المخصص.",
       "features": {
-        "f1": "KPI-dashbord",
-        "f2": "Tilpassede rapporter",
-        "f3": "Eksporter og del"
+        "f1": "لوحات مؤشرات",
+        "f2": "تقاير مخصصة",
+        "f3": "تصدير ومشاركة"
       },
-      "imageAlt": "Oversikt over rapporter og analyse"
+      "imageAlt": "نظرة عامة على التقارير والتحليلات"
     },
     "customer-portal": {
-      "title": "Kundeportal",
-      "subtitle": "Sikre, merkevarebaserte selvbetjeningsopplevelser.",
+      "title": "بوابة العملاء",
+      "subtitle": "تجارب ذاتية الخدمة مؤمنة وذات علامة تجارية.",
       "features": {
-        "f1": "Ordresporing",
-        "f2": "Fakturaer",
-        "f3": "Supporthenvendelser"
+        "f1": "تتبع الطلبات",
+        "f2": "الفواتير",
+        "f3": "طلبات الدعم"
       },
-      "imageAlt": "Oversikt over Kundeportal"
+      "imageAlt": "نظرة عامة على بوابة العملاء"
     }
   },
   "nav": {
-    "solutions": "Løsninger",
-    "features": "Funksjoner",
-    "pricing": "Priser",
-    "resources": "Ressurser",
-    "company": "Selskap",
-    "login": "Logg inn",
-    "getStarted": "Kom i gang",
+    "solutions": "الحلول",
+    "features": "الميزات",
+    "pricing": "الأسعار",
+    "resources": "الموارد",
+    "company": "الشركة",
+    "login": "تسجيل الدخول",
+    "getStarted": "البدء",
     "solutionsSection": {
-      "implemented": "Fullt implementert",
-      "recent": "Nylig fullført",
-      "ai": "AI-drevne løsninger"
+      "implemented": "منفذة بالكامل",
+      "recent": "أضيفت حديثاً",
+      "ai": "حلول مدعومة بالذكاء الاصطناعي"
     },
     "solutionsItems": {
-      "dashboard": "Dashbord",
-      "analytics": "Analyse",
-      "financial": "Finansstyring",
-      "hcm": "Human Capital Management",
-      "materials": "Materialhåndtering",
-      "sales": "Salg og distribusjon",
-      "mdm": "Masterdatastyring",
-      "organizational": "Organisasjonsstyring",
-      "production": "Produksjonsplanlegging",
-      "project": "Prosjektsystem",
-      "quality": "Kvalitetsstyring",
-      "maintenance": "Vedlikehold",
-      "crm": "Kundeoppfølging (CRM)",
-      "reports": "Rapporter",
-      "customerPortal": "Kundeportal",
-      "aiTeaser": "Opplev fremtiden for ERP med AI-drevne moduler"
+      "dashboard": "لوحة التحكم",
+      "analytics": "التحليلات",
+      "financial": "الإدارة المالية",
+      "hcm": "إدارة رأس المال البشري",
+      "materials": "إدارة المواد",
+      "sales": "المبيعات والتوزيع",
+      "mdm": "إدارة البيانات الرئيسية",
+      "organizational": "الإدارة التنظيمية",
+      "production": "تخطيط الإنتاج",
+      "project": "نظام المشاريع",
+      "quality": "إدارة الجودة",
+      "maintenance": "صيانة المصانع",
+      "crm": "إدارة علاقات العملاء",
+      "reports": "التقارير",
+      "customerPortal": "بوابة العملاء",
+      "aiTeaser": "اختبر مستقبل الـERP مع وحدات مدعومة بالذكاء الاصطناعي"
     },
     "featureItems": {
-      "realtime": "Sanntidsbehandling",
-      "multicurrency": "Flervalutastøtte",
-      "workflow": "Avansert arbeidsflyt",
-      "analytics": "Bedriftsanalyse",
-      "integration": "Sømløs integrasjon",
-      "security": "Sikkerhet på bedriftsnivå"
+      "realtime": "معالجة فورية",
+      "multicurrency": "دعم متعدد العملات",
+      "workflow": "محرك تدفق عمل متقدم",
+      "analytics": "تحليلات مؤسسية",
+      "integration": "تكامل سلس",
+      "security": "أمان على مستوى المؤسسات"
     },
     "resourceItems": {
-      "documentation": "Dokumentasjon",
-      "apiDocs": "API-dokumentasjon",
-      "tutorials": "Veiledninger",
-      "blog": "Blogg",
-      "support": "Brukerstøtte",
-      "webinars": "Webinarer"
+      "documentation": "الوثائق",
+      "apiDocs": "توثيق واجهات البرمجة",
+      "tutorials": "دروس",
+      "blog": "المدونة",
+      "support": "مركز الدعم",
+      "webinars": "ندوات عبر الويب"
     },
     "companyItems": {
-      "about": "Om oss",
-      "careers": "Karriere",
-      "partners": "Partnere",
-      "news": "Nyheter",
-      "contact": "Kontakt"
+      "about": "معلومات عنا",
+      "careers": "الوظائف",
+      "partners": "الشركاء",
+      "news": "الأخبار",
+      "contact": "اتصل بنا"
     }
   },
   "common": {
-    "secure": "SOC 2-sertifisert",
-    "compliant": "GDPR-kompatibel",
-    "learnMore": "Lær mer",
-    "getStarted": "Kom i gang",
-    "new": "Ny",
-    "comingSoon": "Kommer snart",
-    "export": "Eksporter",
-    "status": "Status",
-    "filter": "Filter",
-    "search": "Søk",
-    "add": "Legg til",
-    "edit": "Rediger",
-    "delete": "Slett",
-    "save": "Lagre",
-    "cancel": "Avbryt",
-    "loading": "Laster...",
-    "actions": "Handlinger",
-    "item": "__MANGLER__ common.item",
-    "quantity": "__MANGLER__ common.quantity",
-    "price": "__MANGLER__ common.price",
-    "total": "__MANGLER__ common.total",
-    "view": "__MANGLER__ common.view",
-    "invoice": "__MANGLER__ common.invoice",
-    "vendor": "__MANGLER__ common.vendor",
-    "dueDate": "__MANGLER__ common.dueDate",
-    "amount": "__MANGLER__ common.amount",
-    "back": "__MANGLER__ common.back",
-    "next": "__MANGLER__ common.next",
-    "finish": "__MANGLER__ common.finish",
-    "close": "__MANGLER__ common.close",
-    "refresh": "__MANGLER__ common.refresh",
-    "reject": "__MANGLER__ common.reject",
-    "approve": "__MANGLER__ common.approve"
-  },
-  "auth": {
-    "login": {
-      "brandShort": "F",
-      "brandName": "Feebee ERP",
-      "companyName": "Feebee Technologies",
-      "title": "Logg inn i ERP",
-      "subtitle": "Få tilgang til bedriftsdashbordet",
-      "email": "E-postadresse",
-      "emailPlaceholder": "Skriv inn e-post",
-      "password": "Passord",
-      "passwordPlaceholder": "Skriv inn passord",
-      "company": "Selskap",
-      "selectCompany": "Velg selskap",
-      "signIn": "Logg inn",
-      "forgotPassword": "Glemt passord?",
-      "loading": "Autentiserer...",
-      "copyright": "© {{year}} {{company}}",
-      "systemName": "Bedrifts-ERP-system",
-      "orgsLoading": "Laster selskaper...",
-      "orgsError": "Kunne ikke laste selskaper. Prøv igjen.",
-      "testing": {
-        "mockAuthLabel": "Testmodus: omgå backend"
-      },
-      "errors": {
-        "generic": "Kunne ikke logge inn. Kontroller legitimasjonen og prøv igjen.",
-        "emailInvalid": "Vennligst oppgi en gyldig e-postadresse.",
-        "passwordInvalid": "Feil e-post eller passord."
-      },
-      "lockout": {
-        "title": "For mange forsøk",
-        "subtitle": "Vent litt før du prøver igjen.",
-        "retryIn": "Prøv igjen om {{seconds}}s"
-      },
-      "mfa": {
-        "title": "Flerfaktorautentisering",
-        "subtitle": "Skriv inn 6-sifret kode fra autentiseringsappen.",
-        "codeLabel": "Verifiseringskode",
-        "placeholder": "123456",
-        "help": "Åpne autentiseringsappen og skriv inn 6-sifret kode.",
-        "back": "Tilbake",
-        "verify": "Valider"
-      },
-      "deviceTrust": {
-        "title": "Stol på denne enheten?",
-        "description": "Hvis aktivert, reduserer vi forespørsler på denne enheten i en begrenset periode."
-      },
-      "trustCheckboxLabel": "Stol på denne enheten",
-      "trustSubmit": "Fortsett",
-      "stepAnnounce": "Trinn {{current}} av {{total}}: {{name}}",
-      "aria": {
-        "togglePasswordShow": "Vis passord",
-        "togglePasswordHide": "Skjul passord",
-        "errorRegion": "Innloggingsfeil"
-      }
-    }
-  },
-  "footer": {
-    "brand": "Feebee ERP",
-    "companyName": "Feebee Technologies",
-    "newsletter": {
-      "title": "Hold deg oppdatert",
-      "description": "Få de siste ERP-innsiktene, produktnyheter og beste praksis rett i innboksen.",
-      "placeholder": "Skriv inn e-post",
-      "subscribe": "Abonner",
-      "privacy": "Vi respekterer personvernet ditt og deler aldri informasjonen din."
-    },
-    "company": {
-      "description": "Skybasert ERP-system for bedrifter",
-      "title": "Selskap",
-      "about": "Om oss",
-      "careers": "Karriere",
-      "partners": "Partnere",
-      "news": "Nyheter",
-      "investors": "Investorer",
-      "contact": "Kontakt",
-      "events": "Arrangementer",
-      "address": "Hessa Bint Mohamed-gate 118 – Industriområde – Leetag Abu Dhabi, De forente arabiske emirater",
-      "phoneNumber": "+971 557234892",
-      "emailAddress": "Sales@feebee-ae.com"
-    },
-    "solutions": {
-      "title": "Løsninger",
-      "financial": "Finansstyring",
-      "hcm": "Human Capital Management",
-      "materials": "Materialhåndtering",
-      "sales": "Salg og distribusjon",
-      "mdm": "Masterdatastyring",
-      "organizational": "Organisasjonsstyring"
-    },
-    "resources": {
-      "title": "Ressurser",
-      "documentation": "Dokumentasjon",
-      "apiDocs": "API-dokumentasjon",
-      "tutorials": "Veiledninger",
-      "blog": "Blogg",
-      "webinars": "Webinarer",
-      "support": "Brukerstøtte"
-    },
-    "legal": {
-      "privacy": "Personvern",
-      "terms": "Vilkår",
-      "cookies": "Informasjonskapsler",
-      "security": "Sikkerhet"
-    },
-    "copyright": "Alle rettigheter forbeholdt.",
-    "trust": {
-      "soc2": "SOC 2 Type II",
-      "iso27001": "ISO 27001",
-      "gdpr": "GDPR-kompatibel",
-      "uptime": "99,9% oppetid SLA"
-    }
-  },
-  "crm": {
-    "page": {
-      "title": "CRM‑dashboard",
-      "subtitle": "En samlet visning av leads, kunder og interaksjoner."
-    },
-    "dashboard": {
-      "kpis": {
-        "newLeads": "Nye leads",
-        "conversionRate": "Konverteringsrate",
-        "clv": "Kundens livstidsverdi",
-        "csat": "CSAT",
-        "thisMonth": "Denne måneden",
-        "csatUnit": "CSAT"
-      },
-      "funnel": {
-        "title": "Lead‑ og mulighetsfunnel",
-        "badge": "Pipeline",
-        "alt": "Funnel‑visualisering for leads og muligheter",
-        "stages": {
-          "leads": "Leads",
-          "qualified": "Kvalifisert",
-          "proposals": "Forslag",
-          "won": "Vunnet"
-        }
-      },
-      "tasks": {
-        "title": "Kommende oppgaver",
-        "callWith": "Samtale med {{company}}",
-        "meetingWith": "Møte med {{company}}",
-        "followUpWith": "Oppfølging med {{company}}"
-      },
-      "activityFeed": {
-        "title": "Aktivitetsfeed",
-        "activity": "Aktivitet",
-        "when": "Når",
-        "empty": "Ingen nylig aktivitet.",
-        "itemTypeLabel": "Aktivitetselement",
-        "items": {
-          "quotation": "Tilbud sendt til {{company}}",
-          "support": "Supporthenvendelse opprettet av {{customer}}",
-          "invoice": "Faktura betalt av {{customer}}"
-        }
-      }
-    },
-    "customer360": {
-      "tabs": {
-        "overview": "Oversikt",
-        "contacts": "Kontakter",
-        "opportunities": "Muligheter",
-        "activities": "Aktiviteter",
-        "invoices": "Fakturaer",
-        "files": "Filer"
-      },
-      "title": "__MANGLER__ crm.customer360.title",
-      "unknownCustomer": "__MANGLER__ crm.customer360.unknownCustomer",
-      "subtitle": "__MANGLER__ crm.customer360.subtitle",
-      "overview": {
-        "company": "__MANGLER__ crm.customer360.overview.company",
-        "segment": "__MANGLER__ crm.customer360.overview.segment",
-        "industry": "__MANGLER__ crm.customer360.overview.industry",
-        "primaryContact": "__MANGLER__ crm.customer360.overview.primaryContact",
-        "addresses": "__MANGLER__ crm.customer360.overview.addresses",
-        "billing": "__MANGLER__ crm.customer360.overview.billing",
-        "shipping": "__MANGLER__ crm.customer360.overview.shipping"
-      },
-      "metrics": {
-        "arr": "__MANGLER__ crm.customer360.metrics.arr",
-        "openOpps": "__MANGLER__ crm.customer360.metrics.openOpps",
-        "arAgingCurrent": "__MANGLER__ crm.customer360.metrics.arAgingCurrent",
-        "arAging90": "__MANGLER__ crm.customer360.metrics.arAging90"
-      },
-      "contacts": {
-        "title": "__MANGLER__ crm.customer360.contacts.title",
-        "name": "__MANGLER__ crm.customer360.contacts.name",
-        "role": "__MANGLER__ crm.customer360.contacts.role",
-        "email": "__MANGLER__ crm.customer360.contacts.email",
-        "phone": "__MANGLER__ crm.customer360.contacts.phone",
-        "empty": "__MANGLER__ crm.customer360.contacts.empty"
-      },
-      "loading": "__MANGLER__ crm.customer360.loading",
-      "opps": {
-        "title": "__MANGLER__ crm.customer360.opps.title",
-        "name": "__MANGLER__ crm.customer360.opps.name",
-        "stage": "__MANGLER__ crm.customer360.opps.stage",
-        "amount": "__MANGLER__ crm.customer360.opps.amount",
-        "closeDate": "__MANGLER__ crm.customer360.opps.closeDate",
-        "empty": "__MANGLER__ crm.customer360.opps.empty"
-      },
-      "activities": {
-        "title": "__MANGLER__ crm.customer360.activities.title",
-        "noSubject": "__MANGLER__ crm.customer360.activities.noSubject",
-        "empty": "__MANGLER__ crm.customer360.activities.empty"
-      },
-      "invoices": {
-        "title": "__MANGLER__ crm.customer360.invoices.title",
-        "number": "__MANGLER__ crm.customer360.invoices.number",
-        "status": "__MANGLER__ crm.customer360.invoices.status",
-        "dueDate": "__MANGLER__ crm.customer360.invoices.dueDate",
-        "total": "__MANGLER__ crm.customer360.invoices.total",
-        "empty": "__MANGLER__ crm.customer360.invoices.empty"
-      },
-      "files": {
-        "title": "__MANGLER__ crm.customer360.files.title",
-        "placeholder": "__MANGLER__ crm.customer360.files.placeholder"
-      }
-    },
-    "customerMaster": {
-      "tabs": {
-        "general": "Generelt",
-        "contacts": "Kontakter",
-        "financial": "Finansiell",
-        "history": "Historie"
-      },
-      "title": "__MANGLER__ crm.customerMaster.title",
-      "description": "__MANGLER__ crm.customerMaster.description",
-      "searchPlaceholder": "__MANGLER__ crm.customerMaster.searchPlaceholder",
-      "filterByStatus": "__MANGLER__ crm.customerMaster.filterByStatus",
-      "allStatuses": "__MANGLER__ crm.customerMaster.allStatuses",
-      "status": {
-        "active": "__MANGLER__ crm.customerMaster.status.active",
-        "pending": "__MANGLER__ crm.customerMaster.status.pending",
-        "inactive": "__MANGLER__ crm.customerMaster.status.inactive",
-        "rejected": "__MANGLER__ crm.customerMaster.status.rejected"
-      },
-      "filterByType": "__MANGLER__ crm.customerMaster.filterByType",
-      "allTypes": "__MANGLER__ crm.customerMaster.allTypes",
-      "types": {
-        "enterprise": "__MANGLER__ crm.customerMaster.types.enterprise",
-        "sme": "__MANGLER__ crm.customerMaster.types.sme",
-        "startup": "__MANGLER__ crm.customerMaster.types.startup"
-      },
-      "import": "__MANGLER__ crm.customerMaster.import",
-      "export": "__MANGLER__ crm.customerMaster.export",
-      "addCustomer": "__MANGLER__ crm.customerMaster.addCustomer",
-      "columns": {
-        "customerId": "__MANGLER__ crm.customerMaster.columns.customerId",
-        "name": "__MANGLER__ crm.customerMaster.columns.name",
-        "type": "__MANGLER__ crm.customerMaster.columns.type",
-        "status": "__MANGLER__ crm.customerMaster.columns.status",
-        "country": "__MANGLER__ crm.customerMaster.columns.country",
-        "creditLimit": "__MANGLER__ crm.customerMaster.columns.creditLimit",
-        "actions": "__MANGLER__ crm.customerMaster.columns.actions"
-      },
-      "details": {
-        "customerId": "__MANGLER__ crm.customerMaster.details.customerId",
-        "industry": "__MANGLER__ crm.customerMaster.details.industry",
-        "taxId": "__MANGLER__ crm.customerMaster.details.taxId",
-        "creditLimit": "__MANGLER__ crm.customerMaster.details.creditLimit",
-        "paymentTerms": "__MANGLER__ crm.customerMaster.details.paymentTerms"
-      },
-      "close": "__MANGLER__ crm.customerMaster.close",
-      "saveChanges": "__MANGLER__ crm.customerMaster.saveChanges"
-    }
-  },
-  "customer360": {
-    "title": "Kunde 360",
-    "subtitle": "En komplett visning av kunden på tvers av moduler.",
-    "unknownCustomer": "Ukjent kunde",
-    "customerCode": "Kundekode {{code}}",
-    "tabs": {
-      "overview": "Oversikt",
-      "contacts": "Kontakter",
-      "opportunities": "Muligheter",
-      "activities": "Aktiviteter",
-      "invoices": "Fakturaer",
-      "files": "Filer"
-    },
-    "overview": {
-      "company": "Selskap",
-      "segment": "Segment",
-      "industry": "Bransje",
-      "primaryContact": "Primær kontakt",
-      "addresses": "Adresser",
-      "billing": "Fakturering",
-      "shipping": "Forsendelse"
-    },
-    "metrics": {
-      "arr": "ARR",
-      "openOpps": "Åpne muligheter",
-      "arAgingCurrent": "Reskontro (nåværende)",
-      "arAging90": "Reskontro (90+)"
-    },
-    "contacts": {
-      "title": "Kontakter",
-      "name": "Navn",
-      "role": "Rolle",
-      "email": "E‑post",
-      "phone": "Telefon",
-      "empty": "Ingen kontakter."
-    },
-    "opps": {
-      "title": "Muligheter",
-      "name": "Navn",
-      "stage": "Fase",
-      "amount": "Beløp",
-      "closeDate": "Lukkedato",
-      "empty": "Ingen muligheter."
-    },
-    "activities": {
-      "title": "Siste aktiviteter",
-      "noSubject": "Ingen emne",
-      "byUser": "Av {{name}}",
-      "empty": "Ingen aktiviteter."
-    },
-    "invoices": {
-      "title": "Fakturaer",
-      "number": "Nummer",
-      "status": "Status",
-      "dueDate": "Forfallsdato",
-      "total": "Totalt",
-      "empty": "Ingen fakturaer."
-    },
-    "files": {
-      "title": "Filer",
-      "placeholder": "Dokumenter og filer vises her."
-    },
-    "loading": "Laster..."
-  },
-  "financial": {
-    "chartOfAccounts": {
-      "title": "Kontoplan",
-      "description": "Administrer selskapets finansielle kontoer",
-      "searchPlaceholder": "Søk i kontoer...",
-      "addAccount": "Legg til konto",
-      "columns": {
-        "accountName": "Kontonavn",
-        "accountNumber": "Kontonummer",
-        "type": "Type",
-        "balance": "Saldo"
-      },
-      "accountTypes": {
-        "Header": "Overskrift",
-        "Asset": "Eiendel",
-        "Liability": "Gjeld",
-        "Equity": "Egenkapital",
-        "Revenue": "Inntekt",
-        "Expense": "Kostnad"
-      },
-      "aria": {
-        "searchLabel": "Søk i kontoer etter navn eller nummer",
-        "expandButton": "Utvid konto {{name}}",
-        "collapseButton": "Skjul konto {{name}}",
-        "accountTree": "Kontoplan trestruktur"
-      }
-    },
-    "accountsPayable": {
-      "title": "Leverandørgjeld",
-      "description": "Administrer og spor leverandørfakturaer og betalinger",
-      "searchPlaceholder": "Søk i fakturaer...",
-      "addInvoice": "Ny faktura",
-      "createPaymentRun": "Opprett betalingskjøring",
-      "invoicesLabel": "Fakturaer",
-      "metrics": {
-        "total": "Total leverandørgjeld",
-        "overdue": "Forfalte fakturaer",
-        "upcoming": "Kommende betalinger (30d)"
-      },
-      "columns": {
-        "invoiceNumber": "Fakturanr.",
-        "vendor": "Leverandør",
-        "issueDate": "Utstedelsesdato",
-        "dueDate": "Forfallsdato",
-        "amount": "Beløp"
-      }
-    },
-    "accountsReceivable": {
-      "title": "Kundefordringer",
-      "description": "Administrer kundefakturaer og spor innkommende betalinger",
-      "searchPlaceholder": "Søk i fakturaer...",
-      "addInvoice": "Ny faktura",
-      "daysLabel": "Dager",
-      "metrics": {
-        "outstanding": "Utestående kundefordringer",
-        "overdue": "Forfalte kundefordringer",
-        "avgCollection": "Gjennomsnittlig innkrevingsperiode"
-      },
-      "columns": {
-        "invoiceNumber": "Fakturanr.",
-        "customer": "Kunde",
-        "issueDate": "Utstedelsesdato",
-        "dueDate": "Forfallsdato",
-        "amount": "Beløp"
-      }
-    },
-    "journalEntries": {
-      "title": "Bilagsføring",
-      "description": "Registrer og gjennomgå alle finansielle transaksjoner",
-      "searchPlaceholder": "Søk i bilag...",
-      "addEntry": "Nytt bilag",
-      "columns": {
-        "entryNumber": "Bilagsnr.",
-        "date": "Dato",
-        "description": "Beskrivelse",
-        "debit": "Debet",
-        "credit": "Kredit"
-      }
-    },
-    "reporting": {
-      "title": "Finansrapportering",
-      "description": "Generer og analyser viktige finansielle rapporter",
-      "dateRange": "Datoperiode",
-      "export": "Eksporter til PDF",
-      "accountColumn": "Konto",
-      "amountColumn": "Beløp",
-      "tabs": {
-        "pnl": "Resultatregnskap",
-        "balanceSheet": "Balanse"
-      },
-      "pnl": {
-        "revenue": "Totale inntekter",
-        "cogs": "Varekostnad",
-        "grossProfit": "Bruttofortjeneste",
-        "operatingExpenses": "Driftskostnader",
-        "marketing": "Markedsføring",
-        "sales": "Salg",
-        "admin": "Administrasjon",
-        "netIncome": "Nettoresultat"
-      },
-      "balanceSheet": {
-        "assets": "Eiendeler",
-        "currentAssets": "Omløpsmidler",
-        "cash": "Kontanter og kontantekvivalenter",
-        "accountsReceivable": "Kundefordringer",
-        "inventory": "Varelager",
-        "fixedAssets": "Anleggsmidler",
-        "ppe": "Varige driftsmidler",
-        "liabilities": "Gjeld",
-        "currentLiabilities": "Kortsiktig gjeld",
-        "accountsPayable": "Leverandørgjeld",
-        "longTermLiabilities": "Langsiktig gjeld",
-        "longTermDebt": "Langsiktig gjeld",
-        "equity": "Egenkapital",
-        "totalAssets": "Sum eiendeler",
-        "totalLiabilitiesEquity": "Sum gjeld og egenkapital"
-      }
-    },
-    "status": {
-      "paid": "Betalt",
-      "open": "Åpen",
-      "overdue": "Forfalt",
-      "sent": "Sendt",
-      "draft": "Utkast",
-      "posted": "Bokført",
-      "reversed": "Reversert"
-    },
-    "tabs": {
-      "coa": "__MANGLER__ financial.tabs.coa",
-      "ap": "__MANGLER__ financial.tabs.ap",
-      "ar": "__MANGLER__ financial.tabs.ar",
-      "collections": "__MANGLER__ financial.tabs.collections",
-      "reconciliation": "__MANGLER__ financial.tabs.reconciliation",
-      "assets": "__MANGLER__ financial.tabs.assets",
-      "reporting": "__MANGLER__ financial.tabs.reporting",
-      "aging": "__MANGLER__ financial.tabs.aging",
-      "bankRec": "__MANGLER__ financial.tabs.bankRec",
-      "je": "__MANGLER__ financial.tabs.je"
-    }
-  },
-  "errors": {
-    "notFound": {
-      "title": "Siden ikke funnet",
-      "description": "Siden du leter etter eksisterer ikke eller har blitt flyttet.",
-      "subtitle": "Denne siden kunne ikke finnes",
-      "help": "Trenger hjelp? Kontakt vårt supportteam.",
-      "actions": {
-        "goHome": "Gå til dashbord",
-        "goBack": "Gå tilbake",
-        "search": "Søk"
-      }
-    },
-    "general": {
-      "title": "Noe gikk galt",
-      "description": "En uventet feil oppstod. Vennligst prøv igjen.",
-      "debugInfo": "Feilsøkingsinformasjon:",
-      "errorId": "Feil-ID",
-      "persistentIssue": "Hvis dette problemet vedvarer, vennligst rapporter det.",
-      "actions": {
-        "tryAgain": "Prøv igjen",
-        "goHome": "Gå til dashbord",
-        "reload": "Last inn siden på nytt",
-        "reportIssue": "Rapporter problem"
-      }
-    },
-    "network": {
-      "title": "Tilkoblingsfeil",
-      "description": "Kan ikke koble til serveren. Vennligst sjekk internettforbindelsen.",
-      "actions": {
-        "retry": "Prøv igjen",
-        "offline": "Arbeid offline"
-      }
-    },
-    "unauthorized": {
-      "title": "Tilgang nektet",
-      "description": "Du har ikke tillatelse til å få tilgang til denne ressursen.",
-      "actions": {
-        "login": "Logg inn",
-        "contact": "Kontakt administrator"
-      }
-    }
-  },
-  "sidebar": {
-    "dashboard": "Dashbord",
-    "analytics": "Analyse",
-    "financials": "Finansstyring",
-    "sales": "Salg og distribusjon",
-    "materials": "Materialhåndtering",
-    "hcm": "Human Capital Management",
-    "masterData": "Masterdatastyring",
-    "reports": "Rapporter",
-    "customerPortal": "Kundeportal",
-    "orgMgmt": "Organisasjonsstyring",
-    "crm": "Kundeforhold",
-    "production": "Produksjonsplanlegging",
-    "quality": "Kvalitetsstyring",
-    "plantMaintenance": "Anleggsvedlikehold",
-    "projectSystem": "Prosjektsystem"
-  },
-  "modules": {
-    "financial": {
-      "title": "Finansstyring",
-      "description": "Komplett regnskap med hovedbok, kontoplan, flervaluta og periodehåndtering"
-    },
-    "hcm": {
-      "title": "Human Capital Management",
-      "description": "Ansattlivssyklus, lønn, tidsføring, permisjoner og organisasjonsstruktur"
-    },
-    "materials": {
-      "title": "Materialhåndtering",
-      "description": "Materialmaster, lagerkontroll, lagerstyring og innkjøp"
-    },
-    "sales": {
-      "title": "Salg og distribusjon",
-      "description": "Tilbud, ordre, prising, levering og returer"
-    },
-    "mdm": {
-      "title": "Masterdatastyring",
-      "description": "Sentraliserte referansedata for kunder, leverandører, materialer og organisasjonshierarkier"
-    },
-    "organizational": {
-      "title": "Organisasjonsstyring",
-      "description": "Selskapsstrukturer, kostsentre, resultatsentre og autorisasjonsstyring"
-    }
-  },
-  "sales": {
-    "tabs": {
-      "dashboard": "Dashbord",
-      "pipeline": "Pipeline",
-      "inquiries": "Forespørsler",
-      "quotations": "Tilbud",
-      "orders": "Ordre",
-      "deliveries": "Leveranser",
-      "invoices": "Fakturaer",
-      "returns": "Returer"
-    },
-    "title": "Salg og distribusjon",
-    "description": "Komplett salgssyklusadministrasjon fra forespørsel til levering og returer",
-    "newOrder": "__MANGLER__ sales.newOrder",
-    "metrics": {
-      "totalRevenue": "__MANGLER__ sales.metrics.totalRevenue",
-      "fromLastMonth": "__MANGLER__ sales.metrics.fromLastMonth",
-      "activeOrders": "__MANGLER__ sales.metrics.activeOrders",
-      "ordersInProgress": "__MANGLER__ sales.metrics.ordersInProgress",
-      "pendingQuotations": "__MANGLER__ sales.metrics.pendingQuotations",
-      "awaitingResponse": "__MANGLER__ sales.metrics.awaitingResponse",
-      "deliveriesInTransit": "__MANGLER__ sales.metrics.deliveriesInTransit",
-      "currentlyShipping": "__MANGLER__ sales.metrics.currentlyShipping",
-      "overdueInvoices": "__MANGLER__ sales.metrics.overdueInvoices",
-      "requireAttention": "__MANGLER__ sales.metrics.requireAttention"
-    },
-    "inquiries": {
-      "title": "__MANGLER__ sales.inquiries.title",
-      "description": "__MANGLER__ sales.inquiries.description",
-      "newInquiry": "__MANGLER__ sales.inquiries.newInquiry",
-      "searchPlaceholder": "__MANGLER__ sales.inquiries.searchPlaceholder"
-    },
-    "filterByStatus": "__MANGLER__ sales.filterByStatus",
-    "filters": {
-      "allStatus": "__MANGLER__ sales.filters.allStatus"
-    },
-    "status": {
-      "open": "__MANGLER__ sales.status.open",
-      "quoted": "__MANGLER__ sales.status.quoted",
-      "lost": "__MANGLER__ sales.status.lost",
-      "converted": "__MANGLER__ sales.status.converted",
-      "draft": "__MANGLER__ sales.status.draft",
-      "sent": "__MANGLER__ sales.status.sent",
-      "accepted": "__MANGLER__ sales.status.accepted",
-      "rejected": "__MANGLER__ sales.status.rejected",
-      "expired": "__MANGLER__ sales.status.expired",
-      "confirmed": "__MANGLER__ sales.status.confirmed",
-      "inProgress": "__MANGLER__ sales.status.inProgress",
-      "delivered": "__MANGLER__ sales.status.delivered",
-      "invoiced": "__MANGLER__ sales.status.invoiced",
-      "completed": "__MANGLER__ sales.status.completed",
-      "planned": "__MANGLER__ sales.status.planned",
-      "picked": "__MANGLER__ sales.status.picked",
-      "packed": "__MANGLER__ sales.status.packed",
-      "shipped": "__MANGLER__ sales.status.shipped",
-      "paid": "__MANGLER__ sales.status.paid",
-      "overdue": "__MANGLER__ sales.status.overdue",
-      "cancelled": "__MANGLER__ sales.status.cancelled",
-      "requested": "__MANGLER__ sales.status.requested",
-      "authorized": "__MANGLER__ sales.status.authorized",
-      "received": "__MANGLER__ sales.status.received",
-      "processed": "__MANGLER__ sales.status.processed",
-      "refunded": "__MANGLER__ sales.status.refunded"
-    },
-    "columns": {
-      "inquiryId": "__MANGLER__ sales.columns.inquiryId",
-      "customer": "__MANGLER__ sales.columns.customer",
-      "date": "__MANGLER__ sales.columns.date",
-      "validUntil": "__MANGLER__ sales.columns.validUntil",
-      "value": "__MANGLER__ sales.columns.value",
-      "items": "__MANGLER__ sales.columns.items",
-      "priority": "__MANGLER__ sales.columns.priority",
-      "status": "__MANGLER__ sales.columns.status",
-      "salesRep": "__MANGLER__ sales.columns.salesRep",
-      "quoteId": "__MANGLER__ sales.columns.quoteId",
-      "probability": "__MANGLER__ sales.columns.probability",
-      "orderId": "__MANGLER__ sales.columns.orderId",
-      "orderDate": "__MANGLER__ sales.columns.orderDate",
-      "deliveryDate": "__MANGLER__ sales.columns.deliveryDate",
-      "paymentStatus": "__MANGLER__ sales.columns.paymentStatus",
-      "availability": "__MANGLER__ sales.columns.availability",
-      "deliveryId": "__MANGLER__ sales.columns.deliveryId",
-      "plannedDate": "__MANGLER__ sales.columns.plannedDate",
-      "actualDate": "__MANGLER__ sales.columns.actualDate",
-      "carrier": "__MANGLER__ sales.columns.carrier",
-      "trackingNumber": "__MANGLER__ sales.columns.trackingNumber",
-      "invoiceId": "__MANGLER__ sales.columns.invoiceId",
-      "invoiceDate": "__MANGLER__ sales.columns.invoiceDate",
-      "dueDate": "__MANGLER__ sales.columns.dueDate",
-      "amount": "__MANGLER__ sales.columns.amount",
-      "paidAmount": "__MANGLER__ sales.columns.paidAmount",
-      "returnId": "__MANGLER__ sales.columns.returnId",
-      "requestDate": "__MANGLER__ sales.columns.requestDate",
-      "reason": "__MANGLER__ sales.columns.reason",
-      "returnValue": "__MANGLER__ sales.columns.returnValue",
-      "refundAmount": "__MANGLER__ sales.columns.refundAmount"
-    },
-    "createQuotation": "__MANGLER__ sales.createQuotation",
-    "quotations": {
-      "title": "__MANGLER__ sales.quotations.title",
-      "description": "__MANGLER__ sales.quotations.description",
-      "newQuotation": "__MANGLER__ sales.quotations.newQuotation",
-      "searchPlaceholder": "__MANGLER__ sales.quotations.searchPlaceholder"
-    },
-    "convertToOrder": "__MANGLER__ sales.convertToOrder",
-    "orders": {
-      "title": "__MANGLER__ sales.orders.title",
-      "description": "__MANGLER__ sales.orders.description",
-      "newOrder": "__MANGLER__ sales.orders.newOrder",
-      "searchPlaceholder": "__MANGLER__ sales.orders.searchPlaceholder"
-    },
-    "createDelivery": "__MANGLER__ sales.createDelivery",
-    "deliveries": {
-      "title": "__MANGLER__ sales.deliveries.title",
-      "description": "__MANGLER__ sales.deliveries.description",
-      "newDelivery": "__MANGLER__ sales.deliveries.newDelivery",
-      "searchPlaceholder": "__MANGLER__ sales.deliveries.searchPlaceholder"
-    },
-    "trackDelivery": "__MANGLER__ sales.trackDelivery",
-    "invoices": {
-      "title": "__MANGLER__ sales.invoices.title",
-      "description": "__MANGLER__ sales.invoices.description",
-      "newInvoice": "__MANGLER__ sales.invoices.newInvoice",
-      "searchPlaceholder": "__MANGLER__ sales.invoices.searchPlaceholder"
-    },
-    "downloadPdf": "__MANGLER__ sales.downloadPdf",
-    "returns": {
-      "title": "__MANGLER__ sales.returns.title",
-      "description": "__MANGLER__ sales.returns.description",
-      "processReturn": "__MANGLER__ sales.returns.processReturn",
-      "searchPlaceholder": "__MANGLER__ sales.returns.searchPlaceholder"
-    },
-    "approveReturn": "__MANGLER__ sales.approveReturn"
-  },
-  "hcm": {
-    "tabs": {
-      "dashboard": "Dashbord",
-      "employees": "Ansatte",
-      "orgChart": "Organisasjonskart",
-      "recruitment": "Rekruttering",
-      "onboarding": "Onboarding",
-      "performance": "Ytelse",
-      "goals": "Mål",
-      "compensation": "Kompensasjon",
-      "analytics": "Analyse"
-    },
-    "metrics": {
-      "totalEmployees": "__MANGLER__ hcm.metrics.totalEmployees",
-      "newHires": "__MANGLER__ hcm.metrics.newHires",
-      "openPositions": "__MANGLER__ hcm.metrics.openPositions",
-      "avgSalary": "__MANGLER__ hcm.metrics.avgSalary",
-      "turnoverRate": "__MANGLER__ hcm.metrics.turnoverRate",
-      "satisfaction": "__MANGLER__ hcm.metrics.satisfaction"
-    },
-    "dashboard": {
-      "departmentDistribution": "__MANGLER__ hcm.dashboard.departmentDistribution",
-      "recentActivities": "__MANGLER__ hcm.dashboard.recentActivities",
-      "quickActions": "__MANGLER__ hcm.dashboard.quickActions"
-    },
-    "actions": {
-      "addEmployee": "__MANGLER__ hcm.actions.addEmployee",
-      "scheduleReview": "__MANGLER__ hcm.actions.scheduleReview",
-      "generateReport": "__MANGLER__ hcm.actions.generateReport",
-      "sendAnnouncement": "__MANGLER__ hcm.actions.sendAnnouncement",
-      "recognition": "__MANGLER__ hcm.actions.recognition",
-      "settings": "__MANGLER__ hcm.actions.settings",
-      "notifications": "__MANGLER__ hcm.actions.notifications",
-      "analytics": "__MANGLER__ hcm.actions.analytics"
-    },
-    "employees": {
-      "searchPlaceholder": "__MANGLER__ hcm.employees.searchPlaceholder",
-      "allDepartments": "__MANGLER__ hcm.employees.allDepartments",
-      "status": "__MANGLER__ hcm.employees.status",
-      "allStatus": "__MANGLER__ hcm.employees.allStatus",
-      "active": "__MANGLER__ hcm.employees.active",
-      "inactive": "__MANGLER__ hcm.employees.inactive",
-      "columns": {
-        "employee": "__MANGLER__ hcm.employees.columns.employee",
-        "position": "__MANGLER__ hcm.employees.columns.position",
-        "department": "__MANGLER__ hcm.employees.columns.department",
-        "manager": "__MANGLER__ hcm.employees.columns.manager",
-        "location": "__MANGLER__ hcm.employees.columns.location",
-        "hireDate": "__MANGLER__ hcm.employees.columns.hireDate",
-        "performance": "__MANGLER__ hcm.employees.columns.performance",
-        "status": "__MANGLER__ hcm.employees.columns.status",
-        "actions": "__MANGLER__ hcm.employees.columns.actions"
-      }
-    },
-    "title": "__MANGLER__ hcm.title",
-    "description": "__MANGLER__ hcm.description",
-    "orgChart": {
-      "title": "__MANGLER__ hcm.orgChart.title"
-    },
-    "performance": {
-      "title": "__MANGLER__ hcm.performance.title"
-    },
-    "goals": {
-      "title": "__MANGLER__ hcm.goals.title"
-    },
-    "compensation": {
-      "title": "__MANGLER__ hcm.compensation.title"
-    },
-    "analytics": {
-      "workforceAnalytics": "__MANGLER__ hcm.analytics.workforceAnalytics",
-      "predictiveInsights": "__MANGLER__ hcm.analytics.predictiveInsights"
-    }
-  },
-  "materials": {
-    "title": "Materialhåndtering",
-    "description": "Omfattende material- og lagerstyringssystem",
-    "metrics": {
-      "totalMaterials": "Totalt antall materialer",
-      "activeMaterials": "Aktive materialer",
-      "inventoryValue": "Lagerverdi",
-      "totalValue": "Total verdi",
-      "pendingOrders": "Ventende bestillinger",
-      "awaitingDelivery": "Venter på levering",
-      "warehouseUtilization": "Lagerutnyttelse",
-      "storageCapacity": "Lagringskapasitet"
-    },
-    "tabs": {
-      "overview": "Oversikt",
-      "masterData": "Masterdata",
-      "warehouse": "Varehus",
-      "procurement": "Innkjøp"
-    },
-    "activity": {
-      "materialReceived": "Materiale mottatt",
-      "stockAdjustment": "Lagerjustering",
-      "newMaterial": "Nytt materiale lagt til",
-      "timeAgo": "{{time}} siden"
-    },
-    "masterData": {
-      "title": "Materialmasterdata",
-      "description": "Administrer kjernematerialdata og spesifikasjoner",
-      "categories": "Kategorier",
-      "searchPlaceholder": "Søk i materialer...",
-      "import": "Importer",
-      "addMaterial": "Legg til materiale"
-    },
-    "columns": {
-      "materialId": "Material-ID",
-      "name": "Navn",
-      "type": "Type",
-      "baseUom": "Grunnleggende måleenhet",
-      "status": "Status",
-      "onHand": "På lager"
-    },
-    "types": {
-      "raw": "Råmateriale",
-      "component": "Komponent",
-      "finished": "Ferdigvare"
-    },
-    "status": {
-      "active": "Aktiv",
-      "inactive": "Inaktiv"
-    },
-    "overview": {
-      "lowStockAlerts": "Lavlager-varsler",
-      "lowStockDescription": "Varer som krever umiddelbar oppmerksomhet",
-      "recentActivity": "Nylig aktivitet",
-      "recentActivityDescription": "Siste materialtransaksjoner og oppdateringer",
-      "minStock": "Minimum lager"
-    }
-  },
-  "compensation": {
-    "tabs": {
-      "dashboard": "Dashbord",
-      "reviews": "Vurderinger",
-      "budget": "Budsjett",
-      "approvals": "Godkjenninger",
-      "analytics": "Analyse",
-      "history": "Historie"
-    },
-    "metrics": {
-      "totalBudget": "__MANGLER__ compensation.metrics.totalBudget",
-      "budgetUsed": "__MANGLER__ compensation.metrics.budgetUsed",
-      "avgIncrease": "__MANGLER__ compensation.metrics.avgIncrease",
-      "pendingReviews": "__MANGLER__ compensation.metrics.pendingReviews",
-      "completedReviews": "__MANGLER__ compensation.metrics.completedReviews",
-      "approvalsPending": "__MANGLER__ compensation.metrics.approvalsPending"
-    },
-    "title": "__MANGLER__ compensation.title",
-    "description": "__MANGLER__ compensation.description"
-  },
-  "goals": {
-    "tabs": {
-      "individual": "Individuell",
-      "team": "Team",
-      "company": "Selskap",
-      "analytics": "Analyse"
-    },
-    "metrics": {
-      "totalGoals": "__MANGLER__ goals.metrics.totalGoals",
-      "onTrack": "__MANGLER__ goals.metrics.onTrack",
-      "atRisk": "__MANGLER__ goals.metrics.atRisk",
-      "completed": "__MANGLER__ goals.metrics.completed",
-      "avgProgress": "__MANGLER__ goals.metrics.avgProgress",
-      "dueThisMonth": "__MANGLER__ goals.metrics.dueThisMonth"
-    },
-    "title": "__MANGLER__ goals.title",
-    "description": "__MANGLER__ goals.description"
-  },
-  "reports": {
-    "tabs": {
-      "builder": "Rapportbygger",
-      "preview": "Forhåndsvisning",
-      "saved": "Lagret"
-    },
-    "configuration": {
-      "title": "Rapportkonfigurasjon",
-      "reportName": "Rapportnavn",
-      "reportNamePlaceholder": "Skriv inn rapportnavn",
-      "description": "Beskrivelse",
-      "descriptionPlaceholder": "Skriv inn rapportbeskrivelse",
-      "dataSource": "Datakilde",
-      "selectDataSource": "Velg datakilde",
-      "table": "Tabell",
-      "selectTable": "Velg tabell",
-      "chartType": "Diagramtype"
-    },
-    "saveSuccess": "__MANGLER__ reports.saveSuccess",
-    "title": "__MANGLER__ reports.title",
-    "description": "__MANGLER__ reports.description",
-    "exportPdf": "__MANGLER__ reports.exportPdf",
-    "exportExcel": "__MANGLER__ reports.exportExcel",
-    "saveReport": "__MANGLER__ reports.saveReport",
-    "fields": {
-      "title": "__MANGLER__ reports.fields.title"
-    },
-    "preview": {
-      "title": "__MANGLER__ reports.preview.title"
-    },
-    "saved": {
-      "title": "__MANGLER__ reports.saved.title",
-      "lastModified": "__MANGLER__ reports.saved.lastModified",
-      "load": "__MANGLER__ reports.saved.load"
-    }
-  },
-  "analytics": {
-    "title": "Avansert analyse",
-    "description": "Analyser virksomhetens prestationer og opplevelser",
-    "kpis": {
-      "totalRevenue": "Total inntekt",
-      "activeUsers": "Aktive brukere",
-      "conversionRate": "Konverteringsrate",
-      "customerSatisfaction": "Kundetilfredshet",
-      "subscriptions": "__MANGLER__ analytics.kpis.subscriptions",
-      "sales": "__MANGLER__ analytics.kpis.sales",
-      "grossProfitMargin": "__MANGLER__ analytics.kpis.grossProfitMargin"
-    },
-    "charts": {
-      "revenueOverTime": "Inntekt over tid",
-      "userGrowth": "Brukervekst",
-      "salesFunnel": "Salgsfunnel"
-    },
-    "customReports": "__MANGLER__ analytics.customReports"
-  },
-  "customReportBuilder": {
-    "title": "Tilpasset rapportbygger",
-    "description": "Opprett og tilpass rapporter etter dine behov",
-    "dataSource": "Datakilde",
-    "selectColumns": "Velg kolonner",
-    "filters": "Filtre",
-    "preview": "Forhåndsvisning",
-    "generate": "Generer rapport"
-  },
-  "pricing": {
-    "title": "Priser",
-    "subtitle": "Velg den beste løsningen for din virksomhet",
-    "monthly": "Månedlig",
-    "annually": "Årlig",
-    "save": "Spar",
-    "plans": {
-      "starter": {
-        "name": "Starter",
-        "price": "199",
-        "description": "Basert løsning for små og mediumsise bedrifter",
-        "features": [
-          "Sanntidsdata",
-          "Flervalutastøtte",
-          "Avansert analyse"
-        ]
-      },
-      "professional": {
-        "name": "Professional",
-        "price": "499",
-        "description": "Avansert løsning for større bedrifter",
-        "features": [
-          "Alt inkludert i Starter",
-          "Ekstra moduler",
-          "24/7 support"
-        ]
-      },
-      "enterprise": {
-        "name": "Enterprise",
-        "price": "999",
-        "description": "Korporativ løsning med avanserte funksjoner",
-        "features": [
-          "Alt inkludert i Professional",
-          "Spesialisert integrasjon",
-          "Egen løsning"
-        ]
-      }
-    },
-    "cta": "Start gratis prøveperiode",
-    "contact": "Kontakt oss for mer informasjon",
-    "starter": {
-      "title": "__MANGLER__ pricing.starter.title",
-      "description": "__MANGLER__ pricing.starter.description"
-    },
-    "features": {
-      "starter": {
-        "users": "__MANGLER__ pricing.features.starter.users",
-        "modules": "__MANGLER__ pricing.features.starter.modules",
-        "storage": "__MANGLER__ pricing.features.starter.storage",
-        "support": "__MANGLER__ pricing.features.starter.support",
-        "multiCurrency": "__MANGLER__ pricing.features.starter.multiCurrency",
-        "basicReporting": "__MANGLER__ pricing.features.starter.basicReporting",
-        "apiAccess": "__MANGLER__ pricing.features.starter.apiAccess"
-      },
-      "workflows": "__MANGLER__ pricing.features.workflows",
-      "multiCompany": "__MANGLER__ pricing.features.multiCompany",
-      "professional": {
-        "users": "__MANGLER__ pricing.features.professional.users",
-        "modules": "__MANGLER__ pricing.features.professional.modules",
-        "storage": "__MANGLER__ pricing.features.professional.storage",
-        "support": "__MANGLER__ pricing.features.professional.support",
-        "reporting": "__MANGLER__ pricing.features.professional.reporting",
-        "notifications": "__MANGLER__ pricing.features.professional.notifications",
-        "apiAccess": "__MANGLER__ pricing.features.professional.apiAccess"
-      },
-      "enterprise": {
-        "users": "__MANGLER__ pricing.features.enterprise.users",
-        "modules": "__MANGLER__ pricing.features.enterprise.modules",
-        "storage": "__MANGLER__ pricing.features.enterprise.storage",
-        "whiteLabel": "__MANGLER__ pricing.features.enterprise.whiteLabel",
-        "accountManager": "__MANGLER__ pricing.features.enterprise.accountManager"
-      },
-      "dedicated": "__MANGLER__ pricing.features.dedicated",
-      "custom": "__MANGLER__ pricing.features.custom",
-      "onPremise": "__MANGLER__ pricing.features.onPremise",
-      "sla": "__MANGLER__ pricing.features.sla"
-    },
-    "startTrial": "__MANGLER__ pricing.startTrial",
-    "professional": {
-      "title": "__MANGLER__ pricing.professional.title",
-      "description": "__MANGLER__ pricing.professional.description"
-    },
-    "enterprise": {
-      "title": "__MANGLER__ pricing.enterprise.title",
-      "description": "__MANGLER__ pricing.enterprise.description",
-      "contactTitle": "__MANGLER__ pricing.enterprise.contactTitle",
-      "contactDescription": "__MANGLER__ pricing.enterprise.contactDescription",
-      "security": "__MANGLER__ pricing.enterprise.security",
-      "deployment": "__MANGLER__ pricing.enterprise.deployment",
-      "integrations": "__MANGLER__ pricing.enterprise.integrations",
-      "scheduleDemo": "__MANGLER__ pricing.enterprise.scheduleDemo",
-      "viewCaseStudies": "__MANGLER__ pricing.enterprise.viewCaseStudies"
-    },
-    "contactSales": "__MANGLER__ pricing.contactSales",
-    "badge": "__MANGLER__ pricing.badge",
-    "annual": "__MANGLER__ pricing.annual",
-    "mostPopular": "__MANGLER__ pricing.mostPopular",
-    "perUser": "__MANGLER__ pricing.perUser",
-    "customPricing": "__MANGLER__ pricing.customPricing",
-    "billed": "__MANGLER__ pricing.billed",
-    "volumeDiscount": "__MANGLER__ pricing.volumeDiscount",
-    "trustIndicators": {
-      "title": "__MANGLER__ pricing.trustIndicators.title",
-      "soc2": "__MANGLER__ pricing.trustIndicators.soc2",
-      "gdpr": "__MANGLER__ pricing.trustIndicators.gdpr",
-      "uptime": "__MANGLER__ pricing.trustIndicators.uptime"
-    }
-  },
-  "testimonials": {
-    "title": "Referanser",
-    "subtitle": "Hvordan andre bedrifter bruker Feebee Technologies ERP",
-    "items": [
-      {
-        "quote": "Feebee Technologies ERP har gjort vår bedrift mer effektiv.",
-        "author": "John Doe",
-        "company": "ABC Company",
-        "role": "CEO"
-      }
-    ],
-    "quotes": {
-      "sarah": "__MANGLER__ testimonials.quotes.sarah",
-      "michael": "__MANGLER__ testimonials.quotes.michael",
-      "emma": "__MANGLER__ testimonials.quotes.emma",
-      "james": "__MANGLER__ testimonials.quotes.james",
-      "lisa": "__MANGLER__ testimonials.quotes.lisa",
-      "robert": "__MANGLER__ testimonials.quotes.robert"
-    },
-    "results": {
-      "sarah": {
-        "closing": "__MANGLER__ testimonials.results.sarah.closing",
-        "errors": "__MANGLER__ testimonials.results.sarah.errors",
-        "visibility": "__MANGLER__ testimonials.results.sarah.visibility"
-      },
-      "michael": {
-        "inventory": "__MANGLER__ testimonials.results.michael.inventory",
-        "accuracy": "__MANGLER__ testimonials.results.michael.accuracy",
-        "procurement": "__MANGLER__ testimonials.results.michael.procurement"
-      },
-      "emma": {
-        "adminTime": "__MANGLER__ testimonials.results.emma.adminTime",
-        "satisfaction": "__MANGLER__ testimonials.results.emma.satisfaction",
-        "compliance": "__MANGLER__ testimonials.results.emma.compliance"
-      },
-      "james": {
-        "margins": "__MANGLER__ testimonials.results.james.margins",
-        "forecasting": "__MANGLER__ testimonials.results.james.forecasting",
-        "quoteToCash": "__MANGLER__ testimonials.results.james.quoteToCash"
-      },
-      "lisa": {
-        "efficiency": "__MANGLER__ testimonials.results.lisa.efficiency",
-        "costTracking": "__MANGLER__ testimonials.results.lisa.costTracking",
-        "reporting": "__MANGLER__ testimonials.results.lisa.reporting"
-      },
-      "robert": {
-        "integration": "__MANGLER__ testimonials.results.robert.integration",
-        "availability": "__MANGLER__ testimonials.results.robert.availability",
-        "maintenance": "__MANGLER__ testimonials.results.robert.maintenance"
-      }
-    },
-    "stats": {
-      "companies": "__MANGLER__ testimonials.stats.companies",
-      "countries": "__MANGLER__ testimonials.stats.countries",
-      "uptime": "__MANGLER__ testimonials.stats.uptime",
-      "rating": "__MANGLER__ testimonials.stats.rating"
-    },
-    "badge": "__MANGLER__ testimonials.badge",
-    "trustedBy": "__MANGLER__ testimonials.trustedBy",
-    "awards": {
-      "g2Leader": "__MANGLER__ testimonials.awards.g2Leader",
-      "capterraBestValue": "__MANGLER__ testimonials.awards.capterraBestValue",
-      "iso27001": "__MANGLER__ testimonials.awards.iso27001"
-    }
-  },
-  "requestDemo": {
-    "title": "Be om demo",
-    "subtitle": "Få en gratis demo av Feebee Technologies ERP",
-    "form": {
-      "firstName": "Fornavn",
-      "lastName": "Etternavn",
-      "email": "E-postadresse",
-      "company": "Selskap",
-      "phone": "Telefonnummer",
-      "message": "Melding",
-      "submit": "Send forespørsel"
-    },
-    "success": "Din forespørsel om demo er sendt!",
-    "loading": "Sender forespørsel..."
-  },
-  "aging": {
-    "ap": {
-      "title": "Aldersanalyse for Leverandørgjeld"
-    },
-    "ar": {
-      "title": "Aldersanalyse for Kundefordringer"
-    },
-    "description": "Analyser aldersfordelingen for fakturaer",
-    "bucket": {
-      "30": "30 dager",
-      "60": "60 dager",
-      "90": "90 dager",
-      "current": "Nåværende",
-      "90+": "90+ dager"
-    }
-  },
-  "production": {
-    "title": "Produksjonsstyring",
-    "description": "Omfattende produksjonsplanlegging og utførelsessystem"
-  },
-  "demo": {
-    "title": "Be om demo",
-    "description": "Se hvordan Feebee ERP kan transformere din bedriftsdrift",
-    "form": {
-      "fullName": "Fullt navn",
-      "workEmail": "Arbeids-e-post",
-      "company": "Selskapsnavn",
-      "submitting": "Sender...",
-      "submit": "Be om demo"
-    },
-    "success": "Demoforespørsel sendt!"
-  },
-  "3wm": {
-    "title": "__MANGLER__ 3wm.title",
-    "description": "__MANGLER__ 3wm.description",
-    "search": {
-      "placeholder": "__MANGLER__ 3wm.search.placeholder"
-    },
-    "po": {
-      "title": "__MANGLER__ 3wm.po.title"
-    },
-    "gr": {
-      "title": "__MANGLER__ 3wm.gr.title"
-    },
-    "invoice": {
-      "title": "__MANGLER__ 3wm.invoice.title"
-    },
-    "summary": {
-      "title": "__MANGLER__ 3wm.summary.title",
-      "qtyVariance": "__MANGLER__ 3wm.summary.qtyVariance",
-      "priceVariance": "__MANGLER__ 3wm.summary.priceVariance",
-      "totalVariance": "__MANGLER__ 3wm.summary.totalVariance",
-      "status": "__MANGLER__ 3wm.summary.status",
-      "glImpact": "__MANGLER__ 3wm.summary.glImpact",
-      "debit": "__MANGLER__ 3wm.summary.debit",
-      "credit": "__MANGLER__ 3wm.summary.credit"
-    }
-  },
-  "actions": {
-    "block": "__MANGLER__ actions.block"
-  },
-  "This would open a wizard to create a new feedback cycle": {
-    "": "__MANGLER__ This would open a wizard to create a new feedback cycle."
-  },
-  "You are not a participant in this feedback cycle": {
-    "": "__MANGLER__ You are not a participant in this feedback cycle."
-  },
-  "ppw": {
-    "step1": {
-      "description": "__MANGLER__ ppw.step1.description",
-      "dueDate": "__MANGLER__ ppw.step1.dueDate",
-      "minAmount": "__MANGLER__ ppw.step1.minAmount",
-      "title": "__MANGLER__ ppw.step1.title"
-    },
-    "step2": {
-      "description": "__MANGLER__ ppw.step2.description",
-      "title": "__MANGLER__ ppw.step2.title"
-    },
-    "step3": {
-      "description": "__MANGLER__ ppw.step3.description",
-      "title": "__MANGLER__ ppw.step3.title"
-    },
-    "step4": {
-      "title": "__MANGLER__ ppw.step4.title"
-    },
-    "title": "__MANGLER__ ppw.title"
-  },
-  "summary": {
-    "totalInvoices": "__MANGLER__ summary.totalInvoices",
-    "totalAmount": "__MANGLER__ summary.totalAmount",
-    "companyInfo": "__MANGLER__ summary.companyInfo",
-    "fiscalConfig": "__MANGLER__ summary.fiscalConfig",
-    "coaMethod": "__MANGLER__ summary.coaMethod",
-    "invitedUsers": "__MANGLER__ summary.invitedUsers"
-  },
-  "execution": {
-    "success": "__MANGLER__ execution.success",
-    "file": "__MANGLER__ execution.file",
-    "id": "__MANGLER__ execution.id"
-  },
-  "form": {
-    "companyName": "__MANGLER__ form.companyName",
-    "legalName": "__MANGLER__ form.legalName",
-    "taxId": "__MANGLER__ form.taxId",
-    "country": "__MANGLER__ form.country",
-    "currency": "__MANGLER__ form.currency",
-    "address": "__MANGLER__ form.address",
-    "fiscalYearStart": "__MANGLER__ form.fiscalYearStart",
-    "accountingPeriods": "__MANGLER__ form.accountingPeriods",
-    "coaSetupMethod": "__MANGLER__ form.coaSetupMethod",
-    "coa": {
-      "template": "__MANGLER__ form.coa.template",
-      "upload": "__MANGLER__ form.coa.upload",
-      "selectTemplate": "__MANGLER__ form.coa.selectTemplate",
-      "uploadFile": "__MANGLER__ form.coa.uploadFile"
-    },
-    "invite": {
-      "email": "__MANGLER__ form.invite.email",
-      "role": "__MANGLER__ form.invite.role",
-      "add": "__MANGLER__ form.invite.add"
-    }
-  },
-  "final": {
-    "successTitle": "__MANGLER__ final.successTitle",
-    "successMessage": "__MANGLER__ final.successMessage"
-  },
-  "onboarding": {
-    "title": "__MANGLER__ onboarding.title",
-    "description": "__MANGLER__ onboarding.description"
-  },
-  "mdm": {
-    "domains": {
-      "customer": "__MANGLER__ mdm.domains.customer",
-      "material": "__MANGLER__ mdm.domains.material"
-    }
-  },
-  "dashboard": {
-    "activity": {
-      "invoiceCreated": "__MANGLER__ dashboard.activity.invoiceCreated",
-      "invoiceDescription": "__MANGLER__ dashboard.activity.invoiceDescription",
-      "employeeOnboarded": "__MANGLER__ dashboard.activity.employeeOnboarded",
-      "employeeDescription": "__MANGLER__ dashboard.activity.employeeDescription",
-      "purchaseOrderApproved": "__MANGLER__ dashboard.activity.purchaseOrderApproved",
-      "purchaseOrderDescription": "__MANGLER__ dashboard.activity.purchaseOrderDescription",
-      "salesOrderCompleted": "__MANGLER__ dashboard.activity.salesOrderCompleted",
-      "salesOrderDescription": "__MANGLER__ dashboard.activity.salesOrderDescription",
-      "materialMasterUpdated": "__MANGLER__ dashboard.activity.materialMasterUpdated",
-      "materialMasterDescription": "__MANGLER__ dashboard.activity.materialMasterDescription"
-    },
-    "metrics": {
-      "revenue": "__MANGLER__ dashboard.metrics.revenue",
-      "employees": "__MANGLER__ dashboard.metrics.employees",
-      "inventory": "__MANGLER__ dashboard.metrics.inventory",
-      "orders": "__MANGLER__ dashboard.metrics.orders",
-      "activity": "__MANGLER__ dashboard.metrics.activity",
-      "fromLastMonth": "__MANGLER__ dashboard.metrics.fromLastMonth"
-    },
-    "loading": "__MANGLER__ dashboard.loading",
-    "welcome": "__MANGLER__ dashboard.welcome",
-    "defaultUser": "__MANGLER__ dashboard.defaultUser",
-    "welcomeDescription": "__MANGLER__ dashboard.welcomeDescription",
-    "erpModules": "__MANGLER__ dashboard.erpModules",
-    "status": {
-      "active": "__MANGLER__ dashboard.status.active"
-    },
-    "lastAccessed": "__MANGLER__ dashboard.lastAccessed",
-    "recentActivity": "__MANGLER__ dashboard.recentActivity",
-    "quickActions": "__MANGLER__ dashboard.quickActions",
-    "actions": {
-      "createInvoice": "__MANGLER__ dashboard.actions.createInvoice",
-      "addEmployee": "__MANGLER__ dashboard.actions.addEmployee",
-      "updateInventory": "__MANGLER__ dashboard.actions.updateInventory",
-      "newSalesOrder": "__MANGLER__ dashboard.actions.newSalesOrder",
-      "manageMasterData": "__MANGLER__ dashboard.actions.manageMasterData"
-    }
-  },
-  "collections": {
-    "metrics": {
-      "dso": "__MANGLER__ collections.metrics.dso",
-      "overdueTotal": "__MANGLER__ collections.metrics.overdueTotal",
-      "collected": "__MANGLER__ collections.metrics.collected"
-    },
-    "title": "__MANGLER__ collections.title",
-    "description": "__MANGLER__ collections.description",
-    "customer": {
-      "title": "__MANGLER__ collections.customer.title",
-      "search": "__MANGLER__ collections.customer.search",
-      "name": "__MANGLER__ collections.customer.name",
-      "overdueAmount": "__MANGLER__ collections.customer.overdueAmount",
-      "lastContact": "__MANGLER__ collections.customer.lastContact",
-      "nextAction": "__MANGLER__ collections.customer.nextAction",
-      "status": "__MANGLER__ collections.customer.status"
-    },
-    "log": {
-      "title": "__MANGLER__ collections.log.title",
-      "new": "__MANGLER__ collections.log.new",
-      "type": "__MANGLER__ collections.log.type",
-      "notes": "__MANGLER__ collections.log.notes",
-      "promiseDate": "__MANGLER__ collections.log.promiseDate",
-      "promiseAmount": "__MANGLER__ collections.log.promiseAmount",
-      "save": "__MANGLER__ collections.log.save"
-    }
-  },
-  "activity": {
-    "Call": "__MANGLER__ activity.Call",
-    "Email": "__MANGLER__ activity.Email",
-    "Promise": "__MANGLER__ activity.Promise",
-    "Note": "__MANGLER__ activity.Note"
-  }
-}
+    "secure": "معتمد SOC 2",
+    "compliant": "متوافق مع GDPR",
+    "learnMore": "اعرف المزيد",
+    "getStarted": "ابدأ الآن",
+    "new": "جديد",
+    "comingSoon": "قريباً",
+    "

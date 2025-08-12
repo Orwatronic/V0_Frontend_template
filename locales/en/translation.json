@@ -13,126 +13,126 @@
     "imageAlt": "Sales Distribution Overview",
     "title": "Sales & Distribution",
     "description": "Complete sales cycle management from inquiry to delivery and returns",
-    "newOrder": "__MISSING_TRANSLATION__ sales.newOrder",
+    "newOrder": "MISSING_TRANSLATION sales.newOrder",
     "metrics": {
-      "totalRevenue": "__MISSING_TRANSLATION__ sales.metrics.totalRevenue",
-      "fromLastMonth": "__MISSING_TRANSLATION__ sales.metrics.fromLastMonth",
-      "activeOrders": "__MISSING_TRANSLATION__ sales.metrics.activeOrders",
-      "ordersInProgress": "__MISSING_TRANSLATION__ sales.metrics.ordersInProgress",
-      "pendingQuotations": "__MISSING_TRANSLATION__ sales.metrics.pendingQuotations",
-      "awaitingResponse": "__MISSING_TRANSLATION__ sales.metrics.awaitingResponse",
-      "deliveriesInTransit": "__MISSING_TRANSLATION__ sales.metrics.deliveriesInTransit",
-      "currentlyShipping": "__MISSING_TRANSLATION__ sales.metrics.currentlyShipping",
-      "overdueInvoices": "__MISSING_TRANSLATION__ sales.metrics.overdueInvoices",
-      "requireAttention": "__MISSING_TRANSLATION__ sales.metrics.requireAttention"
+      "totalRevenue": "MISSING_TRANSLATION sales.metrics.totalRevenue",
+      "fromLastMonth": "MISSING_TRANSLATION sales.metrics.fromLastMonth",
+      "activeOrders": "MISSING_TRANSLATION sales.metrics.activeOrders",
+      "ordersInProgress": "MISSING_TRANSLATION sales.metrics.ordersInProgress",
+      "pendingQuotations": "MISSING_TRANSLATION sales.metrics.pendingQuotations",
+      "awaitingResponse": "MISSING_TRANSLATION sales.metrics.awaitingResponse",
+      "deliveriesInTransit": "MISSING_TRANSLATION sales.metrics.deliveriesInTransit",
+      "currentlyShipping": "MISSING_TRANSLATION sales.metrics.currentlyShipping",
+      "overdueInvoices": "MISSING_TRANSLATION sales.metrics.overdueInvoices",
+      "requireAttention": "MISSING_TRANSLATION sales.metrics.requireAttention"
     },
     "inquiries": {
-      "title": "__MISSING_TRANSLATION__ sales.inquiries.title",
-      "description": "__MISSING_TRANSLATION__ sales.inquiries.description",
-      "newInquiry": "__MISSING_TRANSLATION__ sales.inquiries.newInquiry",
-      "searchPlaceholder": "__MISSING_TRANSLATION__ sales.inquiries.searchPlaceholder"
+      "title": "MISSING_TRANSLATION sales.inquiries.title",
+      "description": "MISSING_TRANSLATION sales.inquiries.description",
+      "newInquiry": "MISSING_TRANSLATION sales.inquiries.newInquiry",
+      "searchPlaceholder": "MISSING_TRANSLATION sales.inquiries.searchPlaceholder"
     },
-    "filterByStatus": "__MISSING_TRANSLATION__ sales.filterByStatus",
+    "filterByStatus": "MISSING_TRANSLATION sales.filterByStatus",
     "filters": {
-      "allStatus": "__MISSING_TRANSLATION__ sales.filters.allStatus"
+      "allStatus": "MISSING_TRANSLATION sales.filters.allStatus"
     },
     "status": {
-      "open": "__MISSING_TRANSLATION__ sales.status.open",
-      "quoted": "__MISSING_TRANSLATION__ sales.status.quoted",
-      "lost": "__MISSING_TRANSLATION__ sales.status.lost",
-      "converted": "__MISSING_TRANSLATION__ sales.status.converted",
-      "draft": "__MISSING_TRANSLATION__ sales.status.draft",
-      "sent": "__MISSING_TRANSLATION__ sales.status.sent",
-      "accepted": "__MISSING_TRANSLATION__ sales.status.accepted",
-      "rejected": "__MISSING_TRANSLATION__ sales.status.rejected",
-      "expired": "__MISSING_TRANSLATION__ sales.status.expired",
-      "confirmed": "__MISSING_TRANSLATION__ sales.status.confirmed",
-      "inProgress": "__MISSING_TRANSLATION__ sales.status.inProgress",
-      "delivered": "__MISSING_TRANSLATION__ sales.status.delivered",
-      "invoiced": "__MISSING_TRANSLATION__ sales.status.invoiced",
-      "completed": "__MISSING_TRANSLATION__ sales.status.completed",
-      "planned": "__MISSING_TRANSLATION__ sales.status.planned",
-      "picked": "__MISSING_TRANSLATION__ sales.status.picked",
-      "packed": "__MISSING_TRANSLATION__ sales.status.packed",
-      "shipped": "__MISSING_TRANSLATION__ sales.status.shipped",
-      "paid": "__MISSING_TRANSLATION__ sales.status.paid",
-      "overdue": "__MISSING_TRANSLATION__ sales.status.overdue",
-      "cancelled": "__MISSING_TRANSLATION__ sales.status.cancelled",
-      "requested": "__MISSING_TRANSLATION__ sales.status.requested",
-      "authorized": "__MISSING_TRANSLATION__ sales.status.authorized",
-      "received": "__MISSING_TRANSLATION__ sales.status.received",
-      "processed": "__MISSING_TRANSLATION__ sales.status.processed",
-      "refunded": "__MISSING_TRANSLATION__ sales.status.refunded"
+      "open": "MISSING_TRANSLATION sales.status.open",
+      "quoted": "MISSING_TRANSLATION sales.status.quoted",
+      "lost": "MISSING_TRANSLATION sales.status.lost",
+      "converted": "MISSING_TRANSLATION sales.status.converted",
+      "draft": "MISSING_TRANSLATION sales.status.draft",
+      "sent": "MISSING_TRANSLATION sales.status.sent",
+      "accepted": "MISSING_TRANSLATION sales.status.accepted",
+      "rejected": "MISSING_TRANSLATION sales.status.rejected",
+      "expired": "MISSING_TRANSLATION sales.status.expired",
+      "confirmed": "MISSING_TRANSLATION sales.status.confirmed",
+      "inProgress": "MISSING_TRANSLATION sales.status.inProgress",
+      "delivered": "MISSING_TRANSLATION sales.status.delivered",
+      "invoiced": "MISSING_TRANSLATION sales.status.invoiced",
+      "completed": "MISSING_TRANSLATION sales.status.completed",
+      "planned": "MISSING_TRANSLATION sales.status.planned",
+      "picked": "MISSING_TRANSLATION sales.status.picked",
+      "packed": "MISSING_TRANSLATION sales.status.packed",
+      "shipped": "MISSING_TRANSLATION sales.status.shipped",
+      "paid": "MISSING_TRANSLATION sales.status.paid",
+      "overdue": "MISSING_TRANSLATION sales.status.overdue",
+      "cancelled": "MISSING_TRANSLATION sales.status.cancelled",
+      "requested": "MISSING_TRANSLATION sales.status.requested",
+      "authorized": "MISSING_TRANSLATION sales.status.authorized",
+      "received": "MISSING_TRANSLATION sales.status.received",
+      "processed": "MISSING_TRANSLATION sales.status.processed",
+      "refunded": "MISSING_TRANSLATION sales.status.refunded"
     },
     "columns": {
-      "inquiryId": "__MISSING_TRANSLATION__ sales.columns.inquiryId",
-      "customer": "__MISSING_TRANSLATION__ sales.columns.customer",
-      "date": "__MISSING_TRANSLATION__ sales.columns.date",
-      "validUntil": "__MISSING_TRANSLATION__ sales.columns.validUntil",
-      "value": "__MISSING_TRANSLATION__ sales.columns.value",
-      "items": "__MISSING_TRANSLATION__ sales.columns.items",
-      "priority": "__MISSING_TRANSLATION__ sales.columns.priority",
-      "status": "__MISSING_TRANSLATION__ sales.columns.status",
-      "salesRep": "__MISSING_TRANSLATION__ sales.columns.salesRep",
-      "quoteId": "__MISSING_TRANSLATION__ sales.columns.quoteId",
-      "probability": "__MISSING_TRANSLATION__ sales.columns.probability",
-      "orderId": "__MISSING_TRANSLATION__ sales.columns.orderId",
-      "orderDate": "__MISSING_TRANSLATION__ sales.columns.orderDate",
-      "deliveryDate": "__MISSING_TRANSLATION__ sales.columns.deliveryDate",
-      "paymentStatus": "__MISSING_TRANSLATION__ sales.columns.paymentStatus",
-      "availability": "__MISSING_TRANSLATION__ sales.columns.availability",
-      "deliveryId": "__MISSING_TRANSLATION__ sales.columns.deliveryId",
-      "plannedDate": "__MISSING_TRANSLATION__ sales.columns.plannedDate",
-      "actualDate": "__MISSING_TRANSLATION__ sales.columns.actualDate",
-      "carrier": "__MISSING_TRANSLATION__ sales.columns.carrier",
-      "trackingNumber": "__MISSING_TRANSLATION__ sales.columns.trackingNumber",
-      "invoiceId": "__MISSING_TRANSLATION__ sales.columns.invoiceId",
-      "invoiceDate": "__MISSING_TRANSLATION__ sales.columns.invoiceDate",
-      "dueDate": "__MISSING_TRANSLATION__ sales.columns.dueDate",
-      "amount": "__MISSING_TRANSLATION__ sales.columns.amount",
-      "paidAmount": "__MISSING_TRANSLATION__ sales.columns.paidAmount",
-      "returnId": "__MISSING_TRANSLATION__ sales.columns.returnId",
-      "requestDate": "__MISSING_TRANSLATION__ sales.columns.requestDate",
-      "reason": "__MISSING_TRANSLATION__ sales.columns.reason",
-      "returnValue": "__MISSING_TRANSLATION__ sales.columns.returnValue",
-      "refundAmount": "__MISSING_TRANSLATION__ sales.columns.refundAmount"
+      "inquiryId": "MISSING_TRANSLATION sales.columns.inquiryId",
+      "customer": "MISSING_TRANSLATION sales.columns.customer",
+      "date": "MISSING_TRANSLATION sales.columns.date",
+      "validUntil": "MISSING_TRANSLATION sales.columns.validUntil",
+      "value": "MISSING_TRANSLATION sales.columns.value",
+      "items": "MISSING_TRANSLATION sales.columns.items",
+      "priority": "MISSING_TRANSLATION sales.columns.priority",
+      "status": "MISSING_TRANSLATION sales.columns.status",
+      "salesRep": "MISSING_TRANSLATION sales.columns.salesRep",
+      "quoteId": "MISSING_TRANSLATION sales.columns.quoteId",
+      "probability": "MISSING_TRANSLATION sales.columns.probability",
+      "orderId": "MISSING_TRANSLATION sales.columns.orderId",
+      "orderDate": "MISSING_TRANSLATION sales.columns.orderDate",
+      "deliveryDate": "MISSING_TRANSLATION sales.columns.deliveryDate",
+      "paymentStatus": "MISSING_TRANSLATION sales.columns.paymentStatus",
+      "availability": "MISSING_TRANSLATION sales.columns.availability",
+      "deliveryId": "MISSING_TRANSLATION sales.columns.deliveryId",
+      "plannedDate": "MISSING_TRANSLATION sales.columns.plannedDate",
+      "actualDate": "MISSING_TRANSLATION sales.columns.actualDate",
+      "carrier": "MISSING_TRANSLATION sales.columns.carrier",
+      "trackingNumber": "MISSING_TRANSLATION sales.columns.trackingNumber",
+      "invoiceId": "MISSING_TRANSLATION sales.columns.invoiceId",
+      "invoiceDate": "MISSING_TRANSLATION sales.columns.invoiceDate",
+      "dueDate": "MISSING_TRANSLATION sales.columns.dueDate",
+      "amount": "MISSING_TRANSLATION sales.columns.amount",
+      "paidAmount": "MISSING_TRANSLATION sales.columns.paidAmount",
+      "returnId": "MISSING_TRANSLATION sales.columns.returnId",
+      "requestDate": "MISSING_TRANSLATION sales.columns.requestDate",
+      "reason": "MISSING_TRANSLATION sales.columns.reason",
+      "returnValue": "MISSING_TRANSLATION sales.columns.returnValue",
+      "refundAmount": "MISSING_TRANSLATION sales.columns.refundAmount"
     },
-    "createQuotation": "__MISSING_TRANSLATION__ sales.createQuotation",
+    "createQuotation": "MISSING_TRANSLATION sales.createQuotation",
     "quotations": {
-      "title": "__MISSING_TRANSLATION__ sales.quotations.title",
-      "description": "__MISSING_TRANSLATION__ sales.quotations.description",
-      "newQuotation": "__MISSING_TRANSLATION__ sales.quotations.newQuotation",
-      "searchPlaceholder": "__MISSING_TRANSLATION__ sales.quotations.searchPlaceholder"
+      "title": "MISSING_TRANSLATION sales.quotations.title",
+      "description": "MISSING_TRANSLATION sales.quotations.description",
+      "newQuotation": "MISSING_TRANSLATION sales.quotations.newQuotation",
+      "searchPlaceholder": "MISSING_TRANSLATION sales.quotations.searchPlaceholder"
     },
-    "convertToOrder": "__MISSING_TRANSLATION__ sales.convertToOrder",
+    "convertToOrder": "MISSING_TRANSLATION sales.convertToOrder",
     "orders": {
-      "title": "__MISSING_TRANSLATION__ sales.orders.title",
-      "description": "__MISSING_TRANSLATION__ sales.orders.description",
-      "newOrder": "__MISSING_TRANSLATION__ sales.orders.newOrder",
-      "searchPlaceholder": "__MISSING_TRANSLATION__ sales.orders.searchPlaceholder"
+      "title": "MISSING_TRANSLATION sales.orders.title",
+      "description": "MISSING_TRANSLATION sales.orders.description",
+      "newOrder": "MISSING_TRANSLATION sales.orders.newOrder",
+      "searchPlaceholder": "MISSING_TRANSLATION sales.orders.searchPlaceholder"
     },
-    "createDelivery": "__MISSING_TRANSLATION__ sales.createDelivery",
+    "createDelivery": "MISSING_TRANSLATION sales.createDelivery",
     "deliveries": {
-      "title": "__MISSING_TRANSLATION__ sales.deliveries.title",
-      "description": "__MISSING_TRANSLATION__ sales.deliveries.description",
-      "newDelivery": "__MISSING_TRANSLATION__ sales.deliveries.newDelivery",
-      "searchPlaceholder": "__MISSING_TRANSLATION__ sales.deliveries.searchPlaceholder"
+      "title": "MISSING_TRANSLATION sales.deliveries.title",
+      "description": "MISSING_TRANSLATION sales.deliveries.description",
+      "newDelivery": "MISSING_TRANSLATION sales.deliveries.newDelivery",
+      "searchPlaceholder": "MISSING_TRANSLATION sales.deliveries.searchPlaceholder"
     },
-    "trackDelivery": "__MISSING_TRANSLATION__ sales.trackDelivery",
+    "trackDelivery": "MISSING_TRANSLATION sales.trackDelivery",
     "invoices": {
-      "title": "__MISSING_TRANSLATION__ sales.invoices.title",
-      "description": "__MISSING_TRANSLATION__ sales.invoices.description",
-      "newInvoice": "__MISSING_TRANSLATION__ sales.invoices.newInvoice",
-      "searchPlaceholder": "__MISSING_TRANSLATION__ sales.invoices.searchPlaceholder"
+      "title": "MISSING_TRANSLATION sales.invoices.title",
+      "description": "MISSING_TRANSLATION sales.invoices.description",
+      "newInvoice": "MISSING_TRANSLATION sales.invoices.newInvoice",
+      "searchPlaceholder": "MISSING_TRANSLATION sales.invoices.searchPlaceholder"
     },
-    "downloadPdf": "__MISSING_TRANSLATION__ sales.downloadPdf",
+    "downloadPdf": "MISSING_TRANSLATION sales.downloadPdf",
     "returns": {
-      "title": "__MISSING_TRANSLATION__ sales.returns.title",
-      "description": "__MISSING_TRANSLATION__ sales.returns.description",
-      "processReturn": "__MISSING_TRANSLATION__ sales.returns.processReturn",
-      "searchPlaceholder": "__MISSING_TRANSLATION__ sales.returns.searchPlaceholder"
+      "title": "MISSING_TRANSLATION sales.returns.title",
+      "description": "MISSING_TRANSLATION sales.returns.description",
+      "processReturn": "MISSING_TRANSLATION sales.returns.processReturn",
+      "searchPlaceholder": "MISSING_TRANSLATION sales.returns.searchPlaceholder"
     },
-    "approveReturn": "__MISSING_TRANSLATION__ sales.approveReturn"
+    "approveReturn": "MISSING_TRANSLATION sales.approveReturn"
   },
   "hcm": {
     "tabs": {
@@ -153,28 +153,28 @@
       "newHires": "New Hires",
       "turnoverRate": "Turnover Rate",
       "avgSalary": "Average Salary",
-      "openPositions": "__MISSING_TRANSLATION__ hcm.metrics.openPositions",
-      "satisfaction": "__MISSING_TRANSLATION__ hcm.metrics.satisfaction"
+      "openPositions": "MISSING_TRANSLATION hcm.metrics.openPositions",
+      "satisfaction": "MISSING_TRANSLATION hcm.metrics.satisfaction"
     },
     "employees": {
       "title": "Employee Management",
       "addEmployee": "Add Employee",
       "searchPlaceholder": "Search employees...",
-      "allDepartments": "__MISSING_TRANSLATION__ hcm.employees.allDepartments",
-      "status": "__MISSING_TRANSLATION__ hcm.employees.status",
-      "allStatus": "__MISSING_TRANSLATION__ hcm.employees.allStatus",
-      "active": "__MISSING_TRANSLATION__ hcm.employees.active",
-      "inactive": "__MISSING_TRANSLATION__ hcm.employees.inactive",
+      "allDepartments": "MISSING_TRANSLATION hcm.employees.allDepartments",
+      "status": "MISSING_TRANSLATION hcm.employees.status",
+      "allStatus": "MISSING_TRANSLATION hcm.employees.allStatus",
+      "active": "MISSING_TRANSLATION hcm.employees.active",
+      "inactive": "MISSING_TRANSLATION hcm.employees.inactive",
       "columns": {
-        "employee": "__MISSING_TRANSLATION__ hcm.employees.columns.employee",
-        "position": "__MISSING_TRANSLATION__ hcm.employees.columns.position",
-        "department": "__MISSING_TRANSLATION__ hcm.employees.columns.department",
-        "manager": "__MISSING_TRANSLATION__ hcm.employees.columns.manager",
-        "location": "__MISSING_TRANSLATION__ hcm.employees.columns.location",
-        "hireDate": "__MISSING_TRANSLATION__ hcm.employees.columns.hireDate",
-        "performance": "__MISSING_TRANSLATION__ hcm.employees.columns.performance",
-        "status": "__MISSING_TRANSLATION__ hcm.employees.columns.status",
-        "actions": "__MISSING_TRANSLATION__ hcm.employees.columns.actions"
+        "employee": "MISSING_TRANSLATION hcm.employees.columns.employee",
+        "position": "MISSING_TRANSLATION hcm.employees.columns.position",
+        "department": "MISSING_TRANSLATION hcm.employees.columns.department",
+        "manager": "MISSING_TRANSLATION hcm.employees.columns.manager",
+        "location": "MISSING_TRANSLATION hcm.employees.columns.location",
+        "hireDate": "MISSING_TRANSLATION hcm.employees.columns.hireDate",
+        "performance": "MISSING_TRANSLATION hcm.employees.columns.performance",
+        "status": "MISSING_TRANSLATION hcm.employees.columns.status",
+        "actions": "MISSING_TRANSLATION hcm.employees.columns.actions"
       }
     },
     "performance": {
@@ -184,32 +184,32 @@
     },
     "imageAlt": "Human Capital Management Overview",
     "dashboard": {
-      "departmentDistribution": "__MISSING_TRANSLATION__ hcm.dashboard.departmentDistribution",
-      "recentActivities": "__MISSING_TRANSLATION__ hcm.dashboard.recentActivities",
-      "quickActions": "__MISSING_TRANSLATION__ hcm.dashboard.quickActions"
+      "departmentDistribution": "MISSING_TRANSLATION hcm.dashboard.departmentDistribution",
+      "recentActivities": "MISSING_TRANSLATION hcm.dashboard.recentActivities",
+      "quickActions": "MISSING_TRANSLATION hcm.dashboard.quickActions"
     },
     "actions": {
-      "addEmployee": "__MISSING_TRANSLATION__ hcm.actions.addEmployee",
-      "scheduleReview": "__MISSING_TRANSLATION__ hcm.actions.scheduleReview",
-      "generateReport": "__MISSING_TRANSLATION__ hcm.actions.generateReport",
-      "sendAnnouncement": "__MISSING_TRANSLATION__ hcm.actions.sendAnnouncement",
-      "recognition": "__MISSING_TRANSLATION__ hcm.actions.recognition",
-      "settings": "__MISSING_TRANSLATION__ hcm.actions.settings",
-      "notifications": "__MISSING_TRANSLATION__ hcm.actions.notifications",
-      "analytics": "__MISSING_TRANSLATION__ hcm.actions.analytics"
+      "addEmployee": "MISSING_TRANSLATION hcm.actions.addEmployee",
+      "scheduleReview": "MISSING_TRANSLATION hcm.actions.scheduleReview",
+      "generateReport": "MISSING_TRANSLATION hcm.actions.generateReport",
+      "sendAnnouncement": "MISSING_TRANSLATION hcm.actions.sendAnnouncement",
+      "recognition": "MISSING_TRANSLATION hcm.actions.recognition",
+      "settings": "MISSING_TRANSLATION hcm.actions.settings",
+      "notifications": "MISSING_TRANSLATION hcm.actions.notifications",
+      "analytics": "MISSING_TRANSLATION hcm.actions.analytics"
     },
     "orgChart": {
-      "title": "__MISSING_TRANSLATION__ hcm.orgChart.title"
+      "title": "MISSING_TRANSLATION hcm.orgChart.title"
     },
     "goals": {
-      "title": "__MISSING_TRANSLATION__ hcm.goals.title"
+      "title": "MISSING_TRANSLATION hcm.goals.title"
     },
     "compensation": {
-      "title": "__MISSING_TRANSLATION__ hcm.compensation.title"
+      "title": "MISSING_TRANSLATION hcm.compensation.title"
     },
     "analytics": {
-      "workforceAnalytics": "__MISSING_TRANSLATION__ hcm.analytics.workforceAnalytics",
-      "predictiveInsights": "__MISSING_TRANSLATION__ hcm.analytics.predictiveInsights"
+      "workforceAnalytics": "MISSING_TRANSLATION hcm.analytics.workforceAnalytics",
+      "predictiveInsights": "MISSING_TRANSLATION hcm.analytics.predictiveInsights"
     }
   },
   "crm": {
@@ -222,57 +222,57 @@
         "invoices": "Invoices",
         "files": "Files"
       },
-      "title": "__MISSING_TRANSLATION__ crm.customer360.title",
-      "unknownCustomer": "__MISSING_TRANSLATION__ crm.customer360.unknownCustomer",
-      "subtitle": "__MISSING_TRANSLATION__ crm.customer360.subtitle",
+      "title": "MISSING_TRANSLATION crm.customer360.title",
+      "unknownCustomer": "MISSING_TRANSLATION crm.customer360.unknownCustomer",
+      "subtitle": "MISSING_TRANSLATION crm.customer360.subtitle",
       "overview": {
-        "company": "__MISSING_TRANSLATION__ crm.customer360.overview.company",
-        "segment": "__MISSING_TRANSLATION__ crm.customer360.overview.segment",
-        "industry": "__MISSING_TRANSLATION__ crm.customer360.overview.industry",
-        "primaryContact": "__MISSING_TRANSLATION__ crm.customer360.overview.primaryContact",
-        "addresses": "__MISSING_TRANSLATION__ crm.customer360.overview.addresses",
-        "billing": "__MISSING_TRANSLATION__ crm.customer360.overview.billing",
-        "shipping": "__MISSING_TRANSLATION__ crm.customer360.overview.shipping"
+        "company": "MISSING_TRANSLATION crm.customer360.overview.company",
+        "segment": "MISSING_TRANSLATION crm.customer360.overview.segment",
+        "industry": "MISSING_TRANSLATION crm.customer360.overview.industry",
+        "primaryContact": "MISSING_TRANSLATION crm.customer360.overview.primaryContact",
+        "addresses": "MISSING_TRANSLATION crm.customer360.overview.addresses",
+        "billing": "MISSING_TRANSLATION crm.customer360.overview.billing",
+        "shipping": "MISSING_TRANSLATION crm.customer360.overview.shipping"
       },
       "metrics": {
-        "arr": "__MISSING_TRANSLATION__ crm.customer360.metrics.arr",
-        "openOpps": "__MISSING_TRANSLATION__ crm.customer360.metrics.openOpps",
-        "arAgingCurrent": "__MISSING_TRANSLATION__ crm.customer360.metrics.arAgingCurrent",
-        "arAging90": "__MISSING_TRANSLATION__ crm.customer360.metrics.arAging90"
+        "arr": "MISSING_TRANSLATION crm.customer360.metrics.arr",
+        "openOpps": "MISSING_TRANSLATION crm.customer360.metrics.openOpps",
+        "arAgingCurrent": "MISSING_TRANSLATION crm.customer360.metrics.arAgingCurrent",
+        "arAging90": "MISSING_TRANSLATION crm.customer360.metrics.arAging90"
       },
       "contacts": {
-        "title": "__MISSING_TRANSLATION__ crm.customer360.contacts.title",
-        "name": "__MISSING_TRANSLATION__ crm.customer360.contacts.name",
-        "role": "__MISSING_TRANSLATION__ crm.customer360.contacts.role",
-        "email": "__MISSING_TRANSLATION__ crm.customer360.contacts.email",
-        "phone": "__MISSING_TRANSLATION__ crm.customer360.contacts.phone",
-        "empty": "__MISSING_TRANSLATION__ crm.customer360.contacts.empty"
+        "title": "MISSING_TRANSLATION crm.customer360.contacts.title",
+        "name": "MISSING_TRANSLATION crm.customer360.contacts.name",
+        "role": "MISSING_TRANSLATION crm.customer360.contacts.role",
+        "email": "MISSING_TRANSLATION crm.customer360.contacts.email",
+        "phone": "MISSING_TRANSLATION crm.customer360.contacts.phone",
+        "empty": "MISSING_TRANSLATION crm.customer360.contacts.empty"
       },
-      "loading": "__MISSING_TRANSLATION__ crm.customer360.loading",
+      "loading": "MISSING_TRANSLATION crm.customer360.loading",
       "opps": {
-        "title": "__MISSING_TRANSLATION__ crm.customer360.opps.title",
-        "name": "__MISSING_TRANSLATION__ crm.customer360.opps.name",
-        "stage": "__MISSING_TRANSLATION__ crm.customer360.opps.stage",
-        "amount": "__MISSING_TRANSLATION__ crm.customer360.opps.amount",
-        "closeDate": "__MISSING_TRANSLATION__ crm.customer360.opps.closeDate",
-        "empty": "__MISSING_TRANSLATION__ crm.customer360.opps.empty"
+        "title": "MISSING_TRANSLATION crm.customer360.opps.title",
+        "name": "MISSING_TRANSLATION crm.customer360.opps.name",
+        "stage": "MISSING_TRANSLATION crm.customer360.opps.stage",
+        "amount": "MISSING_TRANSLATION crm.customer360.opps.amount",
+        "closeDate": "MISSING_TRANSLATION crm.customer360.opps.closeDate",
+        "empty": "MISSING_TRANSLATION crm.customer360.opps.empty"
       },
       "activities": {
-        "title": "__MISSING_TRANSLATION__ crm.customer360.activities.title",
-        "noSubject": "__MISSING_TRANSLATION__ crm.customer360.activities.noSubject",
-        "empty": "__MISSING_TRANSLATION__ crm.customer360.activities.empty"
+        "title": "MISSING_TRANSLATION crm.customer360.activities.title",
+        "noSubject": "MISSING_TRANSLATION crm.customer360.activities.noSubject",
+        "empty": "MISSING_TRANSLATION crm.customer360.activities.empty"
       },
       "invoices": {
-        "title": "__MISSING_TRANSLATION__ crm.customer360.invoices.title",
-        "number": "__MISSING_TRANSLATION__ crm.customer360.invoices.number",
-        "status": "__MISSING_TRANSLATION__ crm.customer360.invoices.status",
-        "dueDate": "__MISSING_TRANSLATION__ crm.customer360.invoices.dueDate",
-        "total": "__MISSING_TRANSLATION__ crm.customer360.invoices.total",
-        "empty": "__MISSING_TRANSLATION__ crm.customer360.invoices.empty"
+        "title": "MISSING_TRANSLATION crm.customer360.invoices.title",
+        "number": "MISSING_TRANSLATION crm.customer360.invoices.number",
+        "status": "MISSING_TRANSLATION crm.customer360.invoices.status",
+        "dueDate": "MISSING_TRANSLATION crm.customer360.invoices.dueDate",
+        "total": "MISSING_TRANSLATION crm.customer360.invoices.total",
+        "empty": "MISSING_TRANSLATION crm.customer360.invoices.empty"
       },
       "files": {
-        "title": "__MISSING_TRANSLATION__ crm.customer360.files.title",
-        "placeholder": "__MISSING_TRANSLATION__ crm.customer360.files.placeholder"
+        "title": "MISSING_TRANSLATION crm.customer360.files.title",
+        "placeholder": "MISSING_TRANSLATION crm.customer360.files.placeholder"
       }
     },
     "customerMaster": {
@@ -282,253 +282,531 @@
         "financial": "Financial",
         "history": "History"
       },
-      "title": "__MISSING_TRANSLATION__ crm.customerMaster.title",
-      "description": "__MISSING_TRANSLATION__ crm.customerMaster.description",
-      "searchPlaceholder": "__MISSING_TRANSLATION__ crm.customerMaster.searchPlaceholder",
-      "filterByStatus": "__MISSING_TRANSLATION__ crm.customerMaster.filterByStatus",
-      "allStatuses": "__MISSING_TRANSLATION__ crm.customerMaster.allStatuses",
+      "title": "MISSING_TRANSLATION crm.customerMaster.title",
+      "description": "MISSING_TRANSLATION crm.customerMaster.description",
+      "searchPlaceholder": "MISSING_TRANSLATION crm.customerMaster.searchPlaceholder",
+      "filterByStatus": "MISSING_TRANSLATION crm.customerMaster.filterByStatus",
+      "allStatuses": "MISSING_TRANSLATION crm.customerMaster.allStatuses",
       "status": {
-        "active": "__MISSING_TRANSLATION__ crm.customerMaster.status.active",
-        "pending": "__MISSING_TRANSLATION__ crm.customerMaster.status.pending",
-        "inactive": "__MISSING_TRANSLATION__ crm.customerMaster.status.inactive",
-        "rejected": "__MISSING_TRANSLATION__ crm.customerMaster.status.rejected"
+        "active": "MISSING_TRANSLATION crm.customerMaster.status.active",
+        "pending": "MISSING_TRANSLATION crm.customerMaster.status.pending",
+        "inactive": "MISSING_TRANSLATION crm.customerMaster.status.inactive",
+        "rejected": "MISSING_TRANSLATION crm.customerMaster.status.rejected"
       },
-      "filterByType": "__MISSING_TRANSLATION__ crm.customerMaster.filterByType",
-      "allTypes": "__MISSING_TRANSLATION__ crm.customerMaster.allTypes",
+      "filterByType": "MISSING_TRANSLATION crm.customerMaster.filterByType",
+      "allTypes": "MISSING_TRANSLATION crm.customerMaster.allTypes",
       "types": {
-        "enterprise": "__MISSING_TRANSLATION__ crm.customerMaster.types.enterprise",
-        "sme": "__MISSING_TRANSLATION__ crm.customerMaster.types.sme",
-        "startup": "__MISSING_TRANSLATION__ crm.customerMaster.types.startup"
+        "enterprise": "MISSING_TRANSLATION crm.customerMaster.types.enterprise",
+        "sme": "MISSING_TRANSLATION crm.customerMaster.types.sme",
+        "startup": "MISSING_TRANSLATION crm.customerMaster.types.startup"
       },
-      "import": "__MISSING_TRANSLATION__ crm.customerMaster.import",
-      "export": "__MISSING_TRANSLATION__ crm.customerMaster.export",
-      "addCustomer": "__MISSING_TRANSLATION__ crm.customerMaster.addCustomer",
+      "import": "MISSING_TRANSLATION crm.customerMaster.import",
+      "export": "MISSING_TRANSLATION crm.customerMaster.export",
+      "addCustomer": "MISSING_TRANSLATION crm.customerMaster.addCustomer",
       "columns": {
-        "customerId": "__MISSING_TRANSLATION__ crm.customerMaster.columns.customerId",
-        "name": "__MISSING_TRANSLATION__ crm.customerMaster.columns.name",
-        "type": "__MISSING_TRANSLATION__ crm.customerMaster.columns.type",
-        "status": "__MISSING_TRANSLATION__ crm.customerMaster.columns.status",
-        "country": "__MISSING_TRANSLATION__ crm.customerMaster.columns.country",
-        "creditLimit": "__MISSING_TRANSLATION__ crm.customerMaster.columns.creditLimit",
-        "actions": "__MISSING_TRANSLATION__ crm.customerMaster.columns.actions"
+        "customerId": "MISSING_TRANSLATION crm.customerMaster.columns.customerId",
+        "name": "MISSING_TRANSLATION crm.customerMaster.columns.name",
+        "type": "MISSING_TRANSLATION crm.customerMaster.columns.type",
+        "status": "MISSING_TRANSLATION crm.customerMaster.columns.status",
+        "country": "MISSING_TRANSLATION crm.customerMaster.columns.country",
+        "creditLimit": "MISSING_TRANSLATION crm.customerMaster.columns.creditLimit",
+        "actions": "MISSING_TRANSLATION crm.customerMaster.columns.actions"
       },
       "details": {
-        "customerId": "__MISSING_TRANSLATION__ crm.customerMaster.details.customerId",
-        "industry": "__MISSING_TRANSLATION__ crm.customerMaster.details.industry",
-        "taxId": "__MISSING_TRANSLATION__ crm.customerMaster.details.taxId",
-        "creditLimit": "__MISSING_TRANSLATION__ crm.customerMaster.details.creditLimit",
-        "paymentTerms": "__MISSING_TRANSLATION__ crm.customerMaster.details.paymentTerms"
+        "customerId": "MISSING_TRANSLATION crm.customerMaster.details.customerId",
+        "industry": "MISSING_TRANSLATION crm.customerMaster.details.industry",
+        "taxId": "MISSING_TRANSLATION crm.customerMaster.details.taxId",
+        "creditLimit": "MISSING_TRANSLATION crm.customerMaster.details.creditLimit",
+        "paymentTerms": "MISSING_TRANSLATION crm.customerMaster.details.paymentTerms"
       },
-      "close": "__MISSING_TRANSLATION__ crm.customerMaster.close",
-      "saveChanges": "__MISSING_TRANSLATION__ crm.customerMaster.saveChanges"
+      "close": "MISSING_TRANSLATION crm.customerMaster.close",
+      "saveChanges": "MISSING_TRANSLATION crm.customerMaster.saveChanges"
+    }
+  },
+  "financial": {
+    "chartOfAccounts": {
+      "title": "Chart of Accounts",
+      "description": "Manage the company's financial accounts",
+      "searchPlaceholder": "Search accounts...",
+      "addAccount": "Add Account",
+      "columns": {
+        "accountName": "Account Name",
+        "accountNumber": "Account Number",
+        "type": "Type",
+        "balance": "Balance"
+      },
+      "accountTypes": {
+        "Header": "Header",
+        "Asset": "Asset",
+        "Liability": "Liability",
+        "Equity": "Equity",
+        "Revenue": "Revenue",
+        "Expense": "Expense"
+      },
+      "aria": {
+        "searchLabel": "Search accounts by name or number",
+        "expandButton": "Expand account {{name}}",
+        "collapseButton": "Collapse account {{name}}",
+        "accountTree": "Account tree structure"
+      }
     },
-    "imageAlt": "Customer Relationship Management Overview",
-    "page": {
-      "title": "__MISSING_TRANSLATION__ crm.page.title",
-      "subtitle": "__MISSING_TRANSLATION__ crm.page.subtitle"
+    "accountsPayable": {
+      "title": "Accounts Payable",
+      "description": "Manage and track vendor invoices and payments",
+      "searchPlaceholder": "Search invoices...",
+      "addInvoice": "New Invoice",
+      "createPaymentRun": "Create Payment Run",
+      "invoicesLabel": "Invoices",
+      "metrics": {
+        "total": "Total Accounts Payable",
+        "overdue": "Overdue Invoices",
+        "upcoming": "Upcoming Payments (30d)"
+      },
+      "columns": {
+        "invoiceNumber": "Invoice Number",
+        "vendor": "Vendor",
+        "issueDate": "Issue Date",
+        "dueDate": "Due Date",
+        "amount": "Amount"
+      }
     },
-    "dashboard": {
-      "funnel": {
-        "title": "__MISSING_TRANSLATION__ crm.dashboard.funnel.title",
-        "badge": "__MISSING_TRANSLATION__ crm.dashboard.funnel.badge",
-        "alt": "__MISSING_TRANSLATION__ crm.dashboard.funnel.alt"
+    "accountsReceivable": {
+      "title": "Accounts Receivable",
+      "description": "Manage customer invoices and track incoming payments",
+      "searchPlaceholder": "Search invoices...",
+      "addInvoice": "New Invoice",
+      "daysLabel": "Days",
+      "metrics": {
+        "outstanding": "Outstanding Accounts Receivable",
+        "overdue": "Overdue Accounts Receivable",
+        "avgCollection": "Avg. Collection Period"
       },
-      "tasks": {
-        "title": "__MISSING_TRANSLATION__ crm.dashboard.tasks.title"
+      "columns": {
+        "invoiceNumber": "Invoice Number",
+        "customer": "Customer",
+        "issueDate": "Issue Date",
+        "dueDate": "Due Date",
+        "amount": "Amount"
+      }
+    },
+    "journalEntries": {
+      "title": "Journal Entries",
+      "description": "Record and review all financial transactions",
+      "searchPlaceholder": "Search entries...",
+      "addEntry": "New Entry",
+      "columns": {
+        "entryNumber": "Entry Number",
+        "date": "Date",
+        "description": "Description",
+        "debit": "Debit",
+        "credit": "Credit"
+      }
+    },
+    "reporting": {
+      "title": "Financial Reporting",
+      "description": "Produce and analyze key financial data",
+      "dateRange": "Date Range",
+      "export": "Export to PDF",
+      "accountColumn": "Account",
+      "amountColumn": "Amount",
+      "tabs": {
+        "pnl": "Profit & Loss",
+        "balanceSheet": "Balance Sheet"
       },
-      "activityFeed": {
-        "title": "__MISSING_TRANSLATION__ crm.dashboard.activityFeed.title",
-        "activity": "__MISSING_TRANSLATION__ crm.dashboard.activityFeed.activity",
-        "when": "__MISSING_TRANSLATION__ crm.dashboard.activityFeed.when",
-        "itemTypeLabel": "__MISSING_TRANSLATION__ crm.dashboard.activityFeed.itemTypeLabel",
-        "empty": "__MISSING_TRANSLATION__ crm.dashboard.activityFeed.empty"
+      "pnl": {
+        "revenue": "Total Revenue",
+        "cogs": "Cost of Goods Sold",
+        "grossProfit": "Gross Profit",
+        "operatingExpenses": "Operating Expenses",
+        "marketing": "Marketing",
+        "sales": "Sales",
+        "admin": "General & Admin",
+        "netIncome": "Net Income"
+      },
+      "balanceSheet": {
+        "assets": "Assets",
+        "currentAssets": "Current Assets",
+        "cash": "Cash & Equivalents",
+        "accountsReceivable": "Accounts Receivable",
+        "inventory": "Inventory",
+        "fixedAssets": "Fixed Assets",
+        "ppe": "Property, Plant & Equipment",
+        "liabilities": "Liabilities",
+        "currentLiabilities": "Current Liabilities",
+        "accountsPayable": "Accounts Payable",
+        "longTermLiabilities": "Long-Term Liabilities",
+        "longTermDebt": "Long-Term Debt",
+        "equity": "Equity",
+        "totalAssets": "Total Assets",
+        "totalLiabilitiesEquity": "Total Liabilities & Equity"
+      }
+    },
+    "status": {
+      "paid": "Paid",
+      "open": "Open",
+      "overdue": "Overdue",
+      "sent": "Sent",
+      "draft": "Draft",
+      "posted": "Posted",
+      "reversed": "Reversed"
+    },
+    "tabs": {
+      "coa": "Chart of Accounts",
+      "ap": "Accounts Payable",
+      "ar": "Accounts Receivable",
+      "collections": "Collections",
+      "reconciliation": "Reconciliation",
+      "assets": "Asset Accounting",
+      "reporting": "Financial Reporting",
+      "aging": "Aging Analysis",
+      "bankRec": "Bank Reconciliation",
+      "je": "Journal Entries"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "defaultUser": "User",
+    "welcomeDescription": "Here's what's happening in your business today.",
+    "loading": "Loading dashboard...",
+    "erpModules": "ERP Modules",
+    "recentActivity": "Recent Activity",
+    "quickActions": "Quick Actions",
+    "lastAccessed": "Last Accessed",
+    "timeAgo": "{{time}} ago",
+    "status": {
+      "active": "Active"
+    },
+    "metrics": {
+      "revenue": "Total Revenue",
+      "employees": "Active Employees",
+      "inventory": "Inventory Value",
+      "orders": "Sales Orders",
+      "activity": "System Activity",
+      "fromLastMonth": "From Last Month"
+    },
+    "activity": {
+      "invoiceCreated": "New Invoice Created",
+      "invoiceDescription": "Invoice #INV-2024-001 for $15,230",
+      "employeeOnboarded": "New Employee Onboarded",
+      "employeeDescription": "Sarah Johnson joined the Marketing team",
+      "purchaseOrderApproved": "Purchase Order Approved",
+      "purchaseOrderDescription": "Purchase Order #PO-2024-045 for Raw Materials",
+      "salesOrderCompleted": "Sales Order Completed",
+      "salesOrderDescription": "Order #SO-2024-089 shipped to customer",
+      "materialMasterUpdated": "Material Master Updated",
+      "materialMasterDescription": "Material ABC-123 specifications modified",
+      "timeAgo": "{{time}}"
+    },
+    "actions": {
+      "createInvoice": "Create Invoice",
+      "addEmployee": "Add Employee",
+      "updateInventory": "Update Inventory",
+      "newSalesOrder": "New Sales Order",
+      "manageMasterData": "Manage Master Data"
+    }
+  },
+  "sales": {
+    "title": "Sales & Distribution",
+    "description": "Complete sales cycle management from inquiry to delivery and returns",
+    "newOrder": "New Order",
+    "tabs": {
+      "dashboard": "Dashboard",
+      "pipeline": "Pipeline",
+      "inquiries": "Inquiries",
+      "quotations": "Quotations",
+      "orders": "Orders",
+      "deliveries": "Deliveries",
+      "invoices": "Invoices",
+      "returns": "Returns"
+    },
+    "metrics": {
+      "totalRevenue": "Total Revenue",
+      "activeOrders": "Active Orders",
+      "pendingQuotations": "Pending Quotations",
+      "deliveriesInTransit": "Deliveries In Transit",
+      "overdueInvoices": "Overdue Invoices",
+      "fromLastMonth": "From Last Month",
+      "ordersInProgress": "Orders In Progress",
+      "awaitingResponse": "Awaiting Response",
+      "currentlyShipping": "Currently Shipping",
+      "requireAttention": "Require Attention"
+    },
+    "filterByStatus": "Filter by Status",
+    "filters": {
+      "allStatus": "All Status"
+    },
+    "status": {
+      "open": "Open",
+      "quoted": "Quoted",
+      "lost": "Lost",
+      "converted": "Converted",
+      "draft": "Draft",
+      "sent": "Sent",
+      "accepted": "Accepted",
+      "rejected": "Rejected",
+      "expired": "Expired",
+      "confirmed": "Confirmed",
+      "inProgress": "In Progress",
+      "delivered": "Delivered",
+      "invoiced": "Invoiced",
+      "completed": "Completed",
+      "planned": "Planned",
+      "picked": "Picked",
+      "packed": "Packed",
+      "shipped": "Shipped",
+      "paid": "Paid",
+      "overdue": "Overdue",
+      "cancelled": "Cancelled",
+      "requested": "Requested",
+      "authorized": "Authorized",
+      "received": "Received",
+      "processed": "Processed",
+      "refunded": "Refunded",
+      "unknown": "Unknown"
+    },
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "columns": {
+      "inquiryId": "Inquiry ID",
+      "customer": "Customer",
+      "date": "Date",
+      "validUntil": "Valid Until",
+      "value": "Value",
+      "items": "Items",
+      "priority": "Priority",
+      "status": "Status",
+      "salesRep": "Sales Rep",
+      "quoteId": "Quote ID",
+      "probability": "Probability",
+      "orderId": "Order ID",
+      "orderDate": "Order Date",
+      "deliveryDate": "Delivery Date",
+      "paymentStatus": "Payment Status",
+      "availability": "Availability",
+      "deliveryId": "Delivery ID",
+      "plannedDate": "Planned Date",
+      "actualDate": "Actual Date",
+      "carrier": "Carrier",
+      "trackingNumber": "Tracking Number",
+      "invoiceId": "Invoice ID",
+      "invoiceDate": "Invoice Date",
+      "dueDate": "Due Date",
+      "amount": "Amount",
+      "paidAmount": "Paid Amount",
+      "returnId": "Return ID",
+      "requestDate": "Request Date",
+      "reason": "Reason",
+      "returnValue": "Return Value",
+      "refundAmount": "Refund Amount"
+    },
+    "inquiries": {
+      "title": "Sales Inquiries",
+      "description": "Manage customer inquiries and convert them into quotations",
+      "newInquiry": "New Inquiry",
+      "searchPlaceholder": "Search inquiries..."
+    },
+    "quotations": {
+      "title": "Quotations",
+      "description": "Create and manage quotations for customers",
+      "newQuotation": "New Quotation",
+      "searchPlaceholder": "Search quotations..."
+    },
+    "orders": {
+      "title": "Sales Orders",
+      "description": "Manage sales orders from creation to delivery",
+      "newOrder": "New Order",
+      "searchPlaceholder": "Search orders..."
+    },
+    "deliveries": {
+      "title": "Manage Deliveries",
+      "description": "Track and manage order deliveries",
+      "newDelivery": "New Delivery",
+      "searchPlaceholder": "Search deliveries..."
+    },
+    "invoices": {
+      "title": "Manage Invoices",
+      "description": "Create and track sales invoices",
+      "newInvoice": "New Invoice",
+      "searchPlaceholder": "Search invoices..."
+    },
+    "returns": {
+      "title": "Manage Returns",
+      "description": "Process customer returns and refunds",
+      "processReturn": "Process Return",
+      "searchPlaceholder": "Search returns..."
+    },
+    "createQuotation": "Create Quotation",
+    "convertToOrder": "Convert to Order",
+    "createDelivery": "Create Delivery",
+    "trackDelivery": "Track Delivery",
+    "downloadPdf": "Download PDF",
+    "approveReturn": "Approve Return"
+  },
+  "production": {
+    "title": "Production Management",
+    "description": "Plan and monitor production orders and throughput."
+  },
+  "errors": {
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "The page you are looking for does not exist or has been moved.",
+      "subtitle": "This page could not be found",
+      "help": "Need help? Contact our support team.",
+      "actions": {
+        "goHome": "Go to Dashboard",
+        "goBack": "Go Back",
+        "search": "Search"
+      }
+    },
+    "general": {
+      "title": "Something went wrong",
+      "description": "An unexpected error occurred. Please try again.",
+      "debugInfo": "Debug Information:",
+      "errorId": "Error ID",
+      "persistentIssue": "If this issue persists, please report it to our support team.",
+      "actions": {
+        "tryAgain": "Try Again",
+        "goHome": "Go to Dashboard",
+        "reload": "Reload Page",
+        "reportIssue": "Report Issue"
+      }
+    },
+    "network": {
+      "title": "Connection Error",
+      "description": "Could not connect to the server. Please check your internet connection.",
+      "actions": {
+        "retry": "Retry",
+        "offline": "Work Offline"
+      }
+    },
+    "unauthorized": {
+      "title": "Access Denied",
+      "description": "You do not have permission to access this resource.",
+      "actions": {
+        "login": "Log In",
+        "contact": "Contact Administrator"
       }
     }
   },
-  "compensation": {
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "analytics": "Analytics",
+    "financials": "Financials",
+    "sales": "Sales & Distribution",
+    "materials": "Materials Management",
+    "hcm": "Human Capital Management",
+    "masterData": "Master Data",
+    "reports": "Reports",
+    "customerPortal": "Customer Portal",
+    "orgMgmt": "Org Management",
+    "crm": "CRM",
+    "production": "Production",
+    "quality": "Quality",
+    "plantMaintenance": "Plant Maintenance",
+    "projectSystem": "Project System"
+  },
+  "modules": {
+    "financial": {
+      "title": "Financial Management",
+      "description": "Integrated accounting with general ledger, chart of accounts, multi-currency, and period management"
+    },
+    "hcm": {
+      "title": "Human Capital Management",
+      "description": "Employee lifecycle, payroll, time tracking, leave management, and organizational structure"
+    },
+    "materials": {
+      "title": "Materials Management",
+      "description": "Material master, inventory control, warehouse management, and procurement"
+    },
+    "sales": {
+      "title": "Sales & Distribution",
+      "description": "Quotations, order management, pricing, delivery tracking, and returns processing"
+    },
+    "mdm": {
+      "title": "Master Data Management",
+      "description": "Centralized reference data for customers, vendors, materials, and organizational hierarchies"
+    },
+    "organizational": {
+      "title": "Organizational Management",
+      "description": "Company structures, cost centers, profit centers, and authorization management"
+    }
+  },
+  "hcm": {
     "tabs": {
       "dashboard": "Dashboard",
-      "reviews": "Reviews",
-      "budget": "Budget",
-      "approvals": "Approvals",
-      "analytics": "Analytics",
-      "history": "History"
-    },
-    "metrics": {
-      "totalBudget": "__MISSING_TRANSLATION__ compensation.metrics.totalBudget",
-      "budgetUsed": "__MISSING_TRANSLATION__ compensation.metrics.budgetUsed",
-      "avgIncrease": "__MISSING_TRANSLATION__ compensation.metrics.avgIncrease",
-      "pendingReviews": "__MISSING_TRANSLATION__ compensation.metrics.pendingReviews",
-      "completedReviews": "__MISSING_TRANSLATION__ compensation.metrics.completedReviews",
-      "approvalsPending": "__MISSING_TRANSLATION__ compensation.metrics.approvalsPending"
-    },
-    "title": "__MISSING_TRANSLATION__ compensation.title",
-    "description": "__MISSING_TRANSLATION__ compensation.description"
-  },
-  "goals": {
-    "tabs": {
-      "individual": "Individual",
-      "team": "Team",
-      "company": "Company",
+      "employees": "Employees",
+      "orgChart": "Org Chart",
+      "recruitment": "Recruitment",
+      "onboarding": "Onboarding",
+      "performance": "Performance",
+      "goals": "Goals",
+      "compensation": "Compensation",
       "analytics": "Analytics"
     },
     "metrics": {
-      "totalGoals": "__MISSING_TRANSLATION__ goals.metrics.totalGoals",
-      "onTrack": "__MISSING_TRANSLATION__ goals.metrics.onTrack",
-      "atRisk": "__MISSING_TRANSLATION__ goals.metrics.atRisk",
-      "completed": "__MISSING_TRANSLATION__ goals.metrics.completed",
-      "avgProgress": "__MISSING_TRANSLATION__ goals.metrics.avgProgress",
-      "dueThisMonth": "__MISSING_TRANSLATION__ goals.metrics.dueThisMonth"
+      "totalEmployees": "Total Employees",
+      "newHires": "New Hires",
+      "turnoverRate": "Turnover Rate",
+      "avgSalary": "Average Salary",
+      "openPositions": "Open Positions",
+      "satisfaction": "Satisfaction"
     },
-    "title": "__MISSING_TRANSLATION__ goals.title",
-    "description": "__MISSING_TRANSLATION__ goals.description"
-  },
-  "reports": {
-    "tabs": {
-      "builder": "Builder",
-      "preview": "Preview",
-      "saved": "Saved"
-    },
-    "imageAlt": "Reports and Analytics Overview",
-    "configuration": {
-      "title": "Report Configuration",
-      "reportName": "Report Name",
-      "reportNamePlaceholder": "Enter report name",
-      "description": "Description",
-      "descriptionPlaceholder": "Enter report description",
-      "dataSource": "Data Source",
-      "selectDataSource": "Select Data Source",
-      "table": "Table",
-      "selectTable": "Select Table",
-      "chartType": "Chart Type"
-    },
-    "saveSuccess": "__MISSING_TRANSLATION__ reports.saveSuccess",
-    "title": "__MISSING_TRANSLATION__ reports.title",
-    "description": "__MISSING_TRANSLATION__ reports.description",
-    "exportPdf": "__MISSING_TRANSLATION__ reports.exportPdf",
-    "exportExcel": "__MISSING_TRANSLATION__ reports.exportExcel",
-    "saveReport": "__MISSING_TRANSLATION__ reports.saveReport",
-    "fields": {
-      "title": "__MISSING_TRANSLATION__ reports.fields.title"
-    },
-    "preview": {
-      "title": "__MISSING_TRANSLATION__ reports.preview.title"
-    },
-    "saved": {
-      "title": "__MISSING_TRANSLATION__ reports.saved.title",
-      "lastModified": "__MISSING_TRANSLATION__ reports.saved.lastModified",
-      "load": "__MISSING_TRANSLATION__ reports.saved.load"
-    }
-  },
-  "analytics": {
-    "title": "Analytics Dashboard",
-    "description": "Comprehensive business intelligence and reporting",
-    "kpis": {
-      "totalRevenue": "Total Revenue",
-      "activeUsers": "Active Users",
-      "conversionRate": "Conversion Rate",
-      "customerSatisfaction": "Customer Satisfaction",
-      "subscriptions": "__MISSING_TRANSLATION__ analytics.kpis.subscriptions",
-      "sales": "__MISSING_TRANSLATION__ analytics.kpis.sales",
-      "grossProfitMargin": "__MISSING_TRANSLATION__ analytics.kpis.grossProfitMargin"
-    },
-    "charts": {
-      "revenueOverTime": "Revenue Over Time",
-      "userGrowth": "User Growth",
-      "salesFunnel": "Sales Funnel"
-    },
-    "customReports": "__MISSING_TRANSLATION__ analytics.customReports"
-  },
-  "customReportBuilder": {
-    "title": "Custom Report Builder",
-    "description": "Build and customize reports",
-    "dataSource": "Data Source",
-    "selectColumns": "Select Columns",
-    "filters": "Filters",
-    "preview": "Preview",
-    "generate": "Generate Report"
-  },
-  "materials": {
-    "title": "Materials Management",
-    "description": "Comprehensive materials and inventory management system",
-    "metrics": {
-      "totalMaterials": "Total Materials",
-      "activeMaterials": "Active Materials",
-      "inventoryValue": "Inventory Value",
-      "totalValue": "Total Value",
-      "pendingOrders": "Pending Orders",
-      "awaitingDelivery": "Awaiting Delivery",
-      "warehouseUtilization": "Warehouse Utilization",
-      "storageCapacity": "Storage Capacity"
-    },
-    "tabs": {
-      "overview": "Overview",
-      "masterData": "Master Data",
-      "warehouse": "Warehouse",
-      "procurement": "Procurement"
-    },
-    "activity": {
-      "materialReceived": "Material Received",
-      "stockAdjustment": "Stock Adjustment",
-      "newMaterial": "New Material Added",
-      "timeAgo": "{{time}} ago"
-    },
-    "masterData": {
-      "title": "Material Master Data",
-      "description": "Manage core material data and specifications",
-      "categories": "Categories",
-      "searchPlaceholder": "Search materials...",
-      "import": "Import",
-      "addMaterial": "Add Material"
-    },
-    "columns": {
-      "materialId": "Material ID",
-      "name": "Name",
-      "type": "Type",
-      "baseUom": "Base UoM",
+    "employees": {
+      "title": "Employee Management",
+      "addEmployee": "Add Employee",
+      "searchPlaceholder": "Search employees...",
+      "allDepartments": "All Departments",
       "status": "Status",
-      "onHand": "On Hand"
-    },
-    "types": {
-      "raw": "Raw Material",
-      "component": "Component",
-      "finished": "Finished Good"
-    },
-    "status": {
+      "allStatus": "All Status",
       "active": "Active",
-      "inactive": "Inactive"
-    },
-    "materialMaster": {
-      "title": "Material Master Data",
-      "description": "Manage core material data and specifications",
-      "searchPlaceholder": "Search materials...",
-      "addMaterial": "Add New Material",
+      "inactive": "Inactive",
       "columns": {
-        "materialCode": "Material Code",
-        "description": "Description",
-        "category": "Category",
-        "unit": "Unit",
-        "status": "Status"
-      },
-      "categories": {
-        "rawMaterials": "Raw Materials",
-        "finishedGoods": "Finished Goods",
-        "components": "Components",
-        "consumables": "Consumables"
-      },
-      "status": {
-        "active": "Active",
-        "inactive": "Inactive",
-        "discontinued": "Discontinued"
+        "employee": "Employee",
+        "position": "Position",
+        "department": "Department",
+        "manager": "Manager",
+        "location": "Location",
+        "hireDate": "Hire Date",
+        "performance": "Performance",
+        "status": "Status",
+        "actions": "Actions"
       }
     },
-    "imageAlt": "Materials Management Overview",
-    "overview": {
-      "lowStockAlerts": "Low Stock Alerts",
-      "lowStockDescription": "Items requiring immediate attention",
-      "recentActivity": "Recent Activity",
-      "recentActivityDescription": "Latest material transactions and updates",
-      "minStock": "Min Stock"
+    "performance": {
+      "title": "Performance Management",
+      "reviews": "Performance Reviews",
+      "goals": "Goals & Objectives"
+    },
+    "dashboard": {
+      "departmentDistribution": "Department Distribution",
+      "recentActivities": "Recent Activities",
+      "quickActions": "Quick Actions"
+    },
+    "actions": {
+      "addEmployee": "Add Employee",
+      "scheduleReview": "Schedule Review",
+      "generateReport": "Generate Report",
+      "sendAnnouncement": "Send Announcement",
+      "recognition": "Give Recognition",
+      "settings": "Settings",
+      "notifications": "Notifications",
+      "analytics": "Analytics"
+    },
+    "orgChart": {
+      "title": "Organizational Chart"
+    },
+    "goals": {
+      "title": "Goals"
+    },
+    "compensation": {
+      "title": "Compensation"
+    },
+    "analytics": {
+      "workforceAnalytics": "Workforce Analytics",
+      "predictiveInsights": "Predictive Insights"
     }
   },
   "pricing": {
@@ -542,101 +820,89 @@
         "name": "Starter",
         "price": "$99",
         "description": "Perfect for small businesses",
-        "features": [
-          "Up to 10 users",
-          "Basic modules",
-          "Email support"
-        ]
+        "features": ["Up to 10 users", "Basic modules", "Email support"]
       },
       "professional": {
         "name": "Professional",
         "price": "$299",
         "description": "For growing companies",
-        "features": [
-          "Up to 50 users",
-          "All modules",
-          "Priority support"
-        ]
+        "features": ["Up to 50 users", "All modules", "Priority support"]
       },
       "enterprise": {
         "name": "Enterprise",
         "price": "Custom",
         "description": "For large organizations",
-        "features": [
-          "Unlimited users",
-          "Custom integrations",
-          "Dedicated support"
-        ]
+        "features": ["Unlimited users", "Custom integrations", "Dedicated support"]
       }
     },
     "cta": "Get Started",
     "contact": "Contact Sales",
     "starter": {
-      "title": "__MISSING_TRANSLATION__ pricing.starter.title",
-      "description": "__MISSING_TRANSLATION__ pricing.starter.description"
+      "title": "Starter",
+      "description": "Perfect for small businesses"
     },
     "features": {
       "starter": {
-        "users": "__MISSING_TRANSLATION__ pricing.features.starter.users",
-        "modules": "__MISSING_TRANSLATION__ pricing.features.starter.modules",
-        "storage": "__MISSING_TRANSLATION__ pricing.features.starter.storage",
-        "support": "__MISSING_TRANSLATION__ pricing.features.starter.support",
-        "multiCurrency": "__MISSING_TRANSLATION__ pricing.features.starter.multiCurrency",
-        "basicReporting": "__MISSING_TRANSLATION__ pricing.features.starter.basicReporting",
-        "apiAccess": "__MISSING_TRANSLATION__ pricing.features.starter.apiAccess"
+        "users": "Up to 10 users",
+        "modules": "Basic modules",
+        "storage": "50 GB storage",
+        "support": "Email support",
+        "multiCurrency": "Multi-currency support",
+        "basicReporting": "Basic reporting",
+        "apiAccess": "API access"
       },
-      "workflows": "__MISSING_TRANSLATION__ pricing.features.workflows",
-      "multiCompany": "__MISSING_TRANSLATION__ pricing.features.multiCompany",
+      "workflows": "Automated workflows",
+      "multiCompany": "Multi-company support",
       "professional": {
-        "users": "__MISSING_TRANSLATION__ pricing.features.professional.users",
-        "modules": "__MISSING_TRANSLATION__ pricing.features.professional.modules",
-        "storage": "__MISSING_TRANSLATION__ pricing.features.professional.storage",
-        "support": "__MISSING_TRANSLATION__ pricing.features.professional.support",
-        "reporting": "__MISSING_TRANSLATION__ pricing.features.professional.reporting",
-        "notifications": "__MISSING_TRANSLATION__ pricing.features.professional.notifications",
-        "apiAccess": "__MISSING_TRANSLATION__ pricing.features.professional.apiAccess"
+        "users": "Up to 50 users",
+        "modules": "All modules",
+        "storage": "200 GB storage",
+        "support": "Priority support",
+        "reporting": "Advanced reporting",
+        "notifications": "Real-time notifications",
+        "apiAccess": "API access"
       },
       "enterprise": {
-        "users": "__MISSING_TRANSLATION__ pricing.features.enterprise.users",
-        "modules": "__MISSING_TRANSLATION__ pricing.features.enterprise.modules",
-        "storage": "__MISSING_TRANSLATION__ pricing.features.enterprise.storage",
-        "whiteLabel": "__MISSING_TRANSLATION__ pricing.features.enterprise.whiteLabel",
-        "accountManager": "__MISSING_TRANSLATION__ pricing.features.enterprise.accountManager"
+        "users": "Unlimited users",
+        "modules": "All modules",
+        "storage": "1 TB storage",
+        "whiteLabel": "White-label branding",
+        "accountManager": "Dedicated account manager"
       },
-      "dedicated": "__MISSING_TRANSLATION__ pricing.features.dedicated",
-      "custom": "__MISSING_TRANSLATION__ pricing.features.custom",
-      "onPremise": "__MISSING_TRANSLATION__ pricing.features.onPremise",
-      "sla": "__MISSING_TRANSLATION__ pricing.features.sla"
+      "dedicated": "Dedicated infrastructure",
+      "custom": "Custom integrations",
+      "onPremise": "On-premise deployment",
+      "sla": "Enterprise SLA"
     },
-    "startTrial": "__MISSING_TRANSLATION__ pricing.startTrial",
+    "startTrial": "Start Free Trial",
     "professional": {
-      "title": "__MISSING_TRANSLATION__ pricing.professional.title",
-      "description": "__MISSING_TRANSLATION__ pricing.professional.description"
+      "title": "Professional",
+      "description": "For growing companies"
     },
     "enterprise": {
-      "title": "__MISSING_TRANSLATION__ pricing.enterprise.title",
-      "description": "__MISSING_TRANSLATION__ pricing.enterprise.description",
-      "contactTitle": "__MISSING_TRANSLATION__ pricing.enterprise.contactTitle",
-      "contactDescription": "__MISSING_TRANSLATION__ pricing.enterprise.contactDescription",
-      "security": "__MISSING_TRANSLATION__ pricing.enterprise.security",
-      "deployment": "__MISSING_TRANSLATION__ pricing.enterprise.deployment",
-      "integrations": "__MISSING_TRANSLATION__ pricing.enterprise.integrations",
-      "scheduleDemo": "__MISSING_TRANSLATION__ pricing.enterprise.scheduleDemo",
-      "viewCaseStudies": "__MISSING_TRANSLATION__ pricing.enterprise.viewCaseStudies"
+      "title": "Enterprise",
+      "description": "For large organizations",
+      "contactTitle": "Contact Sales",
+      "contactDescription": "Get a custom quote for your organization",
+      "security": "Enterprise-grade security",
+      "deployment": "Flexible deployment options",
+      "integrations": "Custom integrations",
+      "scheduleDemo": "Schedule a Demo",
+      "viewCaseStudies": "View Case Studies"
     },
-    "contactSales": "__MISSING_TRANSLATION__ pricing.contactSales",
-    "badge": "__MISSING_TRANSLATION__ pricing.badge",
-    "annual": "__MISSING_TRANSLATION__ pricing.annual",
-    "mostPopular": "__MISSING_TRANSLATION__ pricing.mostPopular",
-    "perUser": "__MISSING_TRANSLATION__ pricing.perUser",
-    "customPricing": "__MISSING_TRANSLATION__ pricing.customPricing",
-    "billed": "__MISSING_TRANSLATION__ pricing.billed",
-    "volumeDiscount": "__MISSING_TRANSLATION__ pricing.volumeDiscount",
+    "contactSales": "Contact Sales",
+    "badge": "Most Popular",
+    "annual": "Annual",
+    "mostPopular": "Most Popular",
+    "perUser": "per user",
+    "customPricing": "Custom Pricing",
+    "billed": "Billed",
+    "volumeDiscount": "Volume Discount",
     "trustIndicators": {
-      "title": "__MISSING_TRANSLATION__ pricing.trustIndicators.title",
-      "soc2": "__MISSING_TRANSLATION__ pricing.trustIndicators.soc2",
-      "gdpr": "__MISSING_TRANSLATION__ pricing.trustIndicators.gdpr",
-      "uptime": "__MISSING_TRANSLATION__ pricing.trustIndicators.uptime"
+      "title": "Trusted by businesses worldwide",
+      "soc2": "SOC 2 Type II",
+      "gdpr": "GDPR Compliant",
+      "uptime": "99.9% Uptime SLA"
     }
   },
   "testimonials": {
@@ -651,57 +917,57 @@
       }
     ],
     "quotes": {
-      "sarah": "__MISSING_TRANSLATION__ testimonials.quotes.sarah",
-      "michael": "__MISSING_TRANSLATION__ testimonials.quotes.michael",
-      "emma": "__MISSING_TRANSLATION__ testimonials.quotes.emma",
-      "james": "__MISSING_TRANSLATION__ testimonials.quotes.james",
-      "lisa": "__MISSING_TRANSLATION__ testimonials.quotes.lisa",
-      "robert": "__MISSING_TRANSLATION__ testimonials.quotes.robert"
+      "sarah": "Feebee ERP has streamlined our financial processes and improved reporting accuracy.",
+      "michael": "With Feebee ERP, we've gained real-time visibility into our inventory and procurement operations.",
+      "emma": "Feebee ERP has reduced our administrative time and improved employee satisfaction.",
+      "james": "Feebee ERP has helped us improve our sales forecasting and increase our profit margins.",
+      "lisa": "Feebee ERP has improved our project management efficiency and cost tracking.",
+      "robert": "Feebee ERP has seamlessly integrated with our existing systems and improved our maintenance operations."
     },
     "results": {
       "sarah": {
-        "closing": "__MISSING_TRANSLATION__ testimonials.results.sarah.closing",
-        "errors": "__MISSING_TRANSLATION__ testimonials.results.sarah.errors",
-        "visibility": "__MISSING_TRANSLATION__ testimonials.results.sarah.visibility"
+        "closing": "Closing books 50% faster",
+        "errors": "Reducing financial errors by 30%",
+        "visibility": "Improving financial visibility by 40%"
       },
       "michael": {
-        "inventory": "__MISSING_TRANSLATION__ testimonials.results.michael.inventory",
-        "accuracy": "__MISSING_TRANSLATION__ testimonials.results.michael.accuracy",
-        "procurement": "__MISSING_TRANSLATION__ testimonials.results.michael.procurement"
+        "inventory": "Reducing inventory costs by 20%",
+        "accuracy": "Improving inventory accuracy by 25%",
+        "procurement": "Streamlining procurement processes by 30%"
       },
       "emma": {
-        "adminTime": "__MISSING_TRANSLATION__ testimonials.results.emma.adminTime",
-        "satisfaction": "__MISSING_TRANSLATION__ testimonials.results.emma.satisfaction",
-        "compliance": "__MISSING_TRANSLATION__ testimonials.results.emma.compliance"
+        "adminTime": "Reducing administrative time by 40%",
+        "satisfaction": "Improving employee satisfaction by 15%",
+        "compliance": "Ensuring 100% compliance with regulations"
       },
       "james": {
-        "margins": "__MISSING_TRANSLATION__ testimonials.results.james.margins",
-        "forecasting": "__MISSING_TRANSLATION__ testimonials.results.james.forecasting",
-        "quoteToCash": "__MISSING_TRANSLATION__ testimonials.results.james.quoteToCash"
+        "margins": "Increasing profit margins by 10%",
+        "forecasting": "Improving sales forecasting accuracy by 20%",
+        "quoteToCash": "Shortening quote-to-cash cycle by 25%"
       },
       "lisa": {
-        "efficiency": "__MISSING_TRANSLATION__ testimonials.results.lisa.efficiency",
-        "costTracking": "__MISSING_TRANSLATION__ testimonials.results.lisa.costTracking",
-        "reporting": "__MISSING_TRANSLATION__ testimonials.results.lisa.reporting"
+        "efficiency": "Improving project efficiency by 30%",
+        "costTracking": "Enhancing cost tracking by 20%",
+        "reporting": "Streamlining project reporting by 40%"
       },
       "robert": {
-        "integration": "__MISSING_TRANSLATION__ testimonials.results.robert.integration",
-        "availability": "__MISSING_TRANSLATION__ testimonials.results.robert.availability",
-        "maintenance": "__MISSING_TRANSLATION__ testimonials.results.robert.maintenance"
+        "integration": "Seamlessly integrating with existing systems",
+        "availability": "Ensuring 99.9% system availability",
+        "maintenance": "Reducing maintenance costs by 15%"
       }
     },
     "stats": {
-      "companies": "__MISSING_TRANSLATION__ testimonials.stats.companies",
-      "countries": "__MISSING_TRANSLATION__ testimonials.stats.countries",
-      "uptime": "__MISSING_TRANSLATION__ testimonials.stats.uptime",
-      "rating": "__MISSING_TRANSLATION__ testimonials.stats.rating"
+      "companies": "10,000+ companies",
+      "countries": "150+ countries",
+      "uptime": "99.9% uptime",
+      "rating": "4.8/5 rating"
     },
-    "badge": "__MISSING_TRANSLATION__ testimonials.badge",
-    "trustedBy": "__MISSING_TRANSLATION__ testimonials.trustedBy",
+    "badge": "Trusted by businesses worldwide",
+    "trustedBy": "Trusted by",
     "awards": {
-      "g2Leader": "__MISSING_TRANSLATION__ testimonials.awards.g2Leader",
-      "capterraBestValue": "__MISSING_TRANSLATION__ testimonials.awards.capterraBestValue",
-      "iso27001": "__MISSING_TRANSLATION__ testimonials.awards.iso27001"
+      "g2Leader": "G2 Leader",
+      "capterraBestValue": "Capterra Best Value",
+      "iso27001": "ISO 27001 Certified"
     }
   },
   "requestDemo": {
@@ -906,682 +1172,6 @@
       "aging": "Aging Analysis",
       "bankRec": "Bank Reconciliation",
       "je": "Journal Entries"
-    },
-    "journalEntries": {
-      "title": "__MISSING_TRANSLATION__ financial.journalEntries.title",
-      "description": "__MISSING_TRANSLATION__ financial.journalEntries.description",
-      "searchPlaceholder": "__MISSING_TRANSLATION__ financial.journalEntries.searchPlaceholder",
-      "addEntry": "__MISSING_TRANSLATION__ financial.journalEntries.addEntry",
-      "columns": {
-        "entryNumber": "__MISSING_TRANSLATION__ financial.journalEntries.columns.entryNumber",
-        "date": "__MISSING_TRANSLATION__ financial.journalEntries.columns.date",
-        "description": "__MISSING_TRANSLATION__ financial.journalEntries.columns.description",
-        "debit": "__MISSING_TRANSLATION__ financial.journalEntries.columns.debit",
-        "credit": "__MISSING_TRANSLATION__ financial.journalEntries.columns.credit"
-      }
-    },
-    "reporting": {
-      "title": "__MISSING_TRANSLATION__ financial.reporting.title",
-      "description": "__MISSING_TRANSLATION__ financial.reporting.description",
-      "dateRange": "__MISSING_TRANSLATION__ financial.reporting.dateRange",
-      "export": "__MISSING_TRANSLATION__ financial.reporting.export",
-      "tabs": {
-        "pnl": "__MISSING_TRANSLATION__ financial.reporting.tabs.pnl",
-        "balanceSheet": "__MISSING_TRANSLATION__ financial.reporting.tabs.balanceSheet"
-      },
-      "accountColumn": "__MISSING_TRANSLATION__ financial.reporting.accountColumn",
-      "amountColumn": "__MISSING_TRANSLATION__ financial.reporting.amountColumn",
-      "pnl": {
-        "revenue": "__MISSING_TRANSLATION__ financial.reporting.pnl.revenue",
-        "cogs": "__MISSING_TRANSLATION__ financial.reporting.pnl.cogs",
-        "grossProfit": "__MISSING_TRANSLATION__ financial.reporting.pnl.grossProfit",
-        "operatingExpenses": "__MISSING_TRANSLATION__ financial.reporting.pnl.operatingExpenses",
-        "marketing": "__MISSING_TRANSLATION__ financial.reporting.pnl.marketing",
-        "sales": "__MISSING_TRANSLATION__ financial.reporting.pnl.sales",
-        "admin": "__MISSING_TRANSLATION__ financial.reporting.pnl.admin",
-        "netIncome": "__MISSING_TRANSLATION__ financial.reporting.pnl.netIncome"
-      },
-      "balanceSheet": {
-        "assets": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.assets",
-        "currentAssets": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.currentAssets",
-        "cash": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.cash",
-        "accountsReceivable": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.accountsReceivable",
-        "inventory": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.inventory",
-        "fixedAssets": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.fixedAssets",
-        "ppe": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.ppe",
-        "totalAssets": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.totalAssets",
-        "liabilities": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.liabilities",
-        "currentLiabilities": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.currentLiabilities",
-        "accountsPayable": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.accountsPayable",
-        "longTermLiabilities": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.longTermLiabilities",
-        "longTermDebt": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.longTermDebt",
-        "equity": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.equity",
-        "totalLiabilitiesEquity": "__MISSING_TRANSLATION__ financial.reporting.balanceSheet.totalLiabilitiesEquity"
-      }
-    },
-    "chartOfAccounts": {
-      "title": "__MISSING_TRANSLATION__ financial.chartOfAccounts.title",
-      "description": "__MISSING_TRANSLATION__ financial.chartOfAccounts.description",
-      "searchPlaceholder": "__MISSING_TRANSLATION__ financial.chartOfAccounts.searchPlaceholder",
-      "aria": {
-        "searchLabel": "__MISSING_TRANSLATION__ financial.chartOfAccounts.aria.searchLabel",
-        "accountTree": "__MISSING_TRANSLATION__ financial.chartOfAccounts.aria.accountTree"
-      },
-      "addAccount": "__MISSING_TRANSLATION__ financial.chartOfAccounts.addAccount",
-      "columns": {
-        "accountName": "__MISSING_TRANSLATION__ financial.chartOfAccounts.columns.accountName",
-        "accountNumber": "__MISSING_TRANSLATION__ financial.chartOfAccounts.columns.accountNumber",
-        "type": "__MISSING_TRANSLATION__ financial.chartOfAccounts.columns.type",
-        "balance": "__MISSING_TRANSLATION__ financial.chartOfAccounts.columns.balance"
-      }
-    },
-    "accountsReceivable": {
-      "metrics": {
-        "outstanding": "__MISSING_TRANSLATION__ financial.accountsReceivable.metrics.outstanding",
-        "overdue": "__MISSING_TRANSLATION__ financial.accountsReceivable.metrics.overdue",
-        "avgCollection": "__MISSING_TRANSLATION__ financial.accountsReceivable.metrics.avgCollection"
-      },
-      "daysLabel": "__MISSING_TRANSLATION__ financial.accountsReceivable.daysLabel",
-      "title": "__MISSING_TRANSLATION__ financial.accountsReceivable.title",
-      "description": "__MISSING_TRANSLATION__ financial.accountsReceivable.description",
-      "searchPlaceholder": "__MISSING_TRANSLATION__ financial.accountsReceivable.searchPlaceholder",
-      "addInvoice": "__MISSING_TRANSLATION__ financial.accountsReceivable.addInvoice",
-      "columns": {
-        "invoiceNumber": "__MISSING_TRANSLATION__ financial.accountsReceivable.columns.invoiceNumber",
-        "customer": "__MISSING_TRANSLATION__ financial.accountsReceivable.columns.customer",
-        "issueDate": "__MISSING_TRANSLATION__ financial.accountsReceivable.columns.issueDate",
-        "dueDate": "__MISSING_TRANSLATION__ financial.accountsReceivable.columns.dueDate",
-        "amount": "__MISSING_TRANSLATION__ financial.accountsReceivable.columns.amount"
-      }
-    },
-    "accountsPayable": {
-      "metrics": {
-        "total": "__MISSING_TRANSLATION__ financial.accountsPayable.metrics.total",
-        "overdue": "__MISSING_TRANSLATION__ financial.accountsPayable.metrics.overdue",
-        "upcoming": "__MISSING_TRANSLATION__ financial.accountsPayable.metrics.upcoming"
-      },
-      "invoicesLabel": "__MISSING_TRANSLATION__ financial.accountsPayable.invoicesLabel",
-      "title": "__MISSING_TRANSLATION__ financial.accountsPayable.title",
-      "description": "__MISSING_TRANSLATION__ financial.accountsPayable.description",
-      "searchPlaceholder": "__MISSING_TRANSLATION__ financial.accountsPayable.searchPlaceholder",
-      "addInvoice": "__MISSING_TRANSLATION__ financial.accountsPayable.addInvoice",
-      "createPaymentRun": "__MISSING_TRANSLATION__ financial.accountsPayable.createPaymentRun",
-      "columns": {
-        "invoiceNumber": "__MISSING_TRANSLATION__ financial.accountsPayable.columns.invoiceNumber",
-        "vendor": "__MISSING_TRANSLATION__ financial.accountsPayable.columns.vendor",
-        "issueDate": "__MISSING_TRANSLATION__ financial.accountsPayable.columns.issueDate",
-        "dueDate": "__MISSING_TRANSLATION__ financial.accountsPayable.columns.dueDate",
-        "amount": "__MISSING_TRANSLATION__ financial.accountsPayable.columns.amount"
-      }
-    }
-  },
-  "common": {
-    "item": "__MISSING_TRANSLATION__ common.item",
-    "quantity": "__MISSING_TRANSLATION__ common.quantity",
-    "price": "__MISSING_TRANSLATION__ common.price",
-    "total": "__MISSING_TRANSLATION__ common.total",
-    "learnMore": "__MISSING_TRANSLATION__ common.learnMore",
-    "comingSoon": "__MISSING_TRANSLATION__ common.comingSoon",
-    "export": "__MISSING_TRANSLATION__ common.export",
-    "actions": "__MISSING_TRANSLATION__ common.actions",
-    "view": "__MISSING_TRANSLATION__ common.view",
-    "edit": "__MISSING_TRANSLATION__ common.edit",
-    "invoice": "__MISSING_TRANSLATION__ common.invoice",
-    "vendor": "__MISSING_TRANSLATION__ common.vendor",
-    "dueDate": "__MISSING_TRANSLATION__ common.dueDate",
-    "amount": "__MISSING_TRANSLATION__ common.amount",
-    "loading": "__MISSING_TRANSLATION__ common.loading",
-    "back": "__MISSING_TRANSLATION__ common.back",
-    "next": "__MISSING_TRANSLATION__ common.next",
-    "finish": "__MISSING_TRANSLATION__ common.finish",
-    "close": "__MISSING_TRANSLATION__ common.close",
-    "cancel": "__MISSING_TRANSLATION__ common.cancel",
-    "new": "__MISSING_TRANSLATION__ common.new",
-    "filter": "__MISSING_TRANSLATION__ common.filter",
-    "status": "__MISSING_TRANSLATION__ common.status",
-    "secure": "__MISSING_TRANSLATION__ common.secure",
-    "compliant": "__MISSING_TRANSLATION__ common.compliant",
-    "refresh": "__MISSING_TRANSLATION__ common.refresh",
-    "add": "__MISSING_TRANSLATION__ common.add",
-    "search": "__MISSING_TRANSLATION__ common.search",
-    "reject": "__MISSING_TRANSLATION__ common.reject",
-    "approve": "__MISSING_TRANSLATION__ common.approve",
-    "getStarted": "__MISSING_TRANSLATION__ common.getStarted"
-  },
-  "3wm": {
-    "title": "__MISSING_TRANSLATION__ 3wm.title",
-    "description": "__MISSING_TRANSLATION__ 3wm.description",
-    "search": {
-      "placeholder": "__MISSING_TRANSLATION__ 3wm.search.placeholder"
-    },
-    "po": {
-      "title": "__MISSING_TRANSLATION__ 3wm.po.title"
-    },
-    "gr": {
-      "title": "__MISSING_TRANSLATION__ 3wm.gr.title"
-    },
-    "invoice": {
-      "title": "__MISSING_TRANSLATION__ 3wm.invoice.title"
-    },
-    "summary": {
-      "title": "__MISSING_TRANSLATION__ 3wm.summary.title",
-      "qtyVariance": "__MISSING_TRANSLATION__ 3wm.summary.qtyVariance",
-      "priceVariance": "__MISSING_TRANSLATION__ 3wm.summary.priceVariance",
-      "totalVariance": "__MISSING_TRANSLATION__ 3wm.summary.totalVariance",
-      "status": "__MISSING_TRANSLATION__ 3wm.summary.status",
-      "glImpact": "__MISSING_TRANSLATION__ 3wm.summary.glImpact",
-      "debit": "__MISSING_TRANSLATION__ 3wm.summary.debit",
-      "credit": "__MISSING_TRANSLATION__ 3wm.summary.credit"
-    }
-  },
-  "actions": {
-    "block": "__MISSING_TRANSLATION__ actions.block"
-  },
-  "This would open a wizard to create a new feedback cycle": {
-    "": "__MISSING_TRANSLATION__ This would open a wizard to create a new feedback cycle."
-  },
-  "You are not a participant in this feedback cycle": {
-    "": "__MISSING_TRANSLATION__ You are not a participant in this feedback cycle."
-  },
-  "landing": {
-    "solutions": {
-      "financial": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.financial.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.financial.description"
-      },
-      "hcm": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.hcm.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.hcm.description"
-      },
-      "materials": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.materials.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.materials.description"
-      },
-      "sales": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.sales.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.sales.description"
-      },
-      "mdm": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.mdm.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.mdm.description"
-      },
-      "organizational": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.organizational.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.organizational.description"
-      },
-      "production": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.production.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.production.description"
-      },
-      "project": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.project.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.project.description"
-      },
-      "quality": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.quality.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.quality.description"
-      },
-      "maintenance": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.maintenance.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.maintenance.description"
-      },
-      "crm": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.crm.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.crm.description"
-      },
-      "productionAI": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.productionAI.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.productionAI.description"
-      },
-      "projectAI": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.projectAI.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.projectAI.description"
-      },
-      "qualityAI": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.qualityAI.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.qualityAI.description"
-      },
-      "maintenanceAI": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.maintenanceAI.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.maintenanceAI.description"
-      },
-      "crmAI": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.crmAI.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.crmAI.description"
-      },
-      "sectionBadge": "__MISSING_TRANSLATION__ landing.solutions.sectionBadge",
-      "title": "__MISSING_TRANSLATION__ landing.solutions.title",
-      "subtitle": "__MISSING_TRANSLATION__ landing.solutions.subtitle",
-      "implemented": "__MISSING_TRANSLATION__ landing.solutions.implemented",
-      "recentlyCompleted": "__MISSING_TRANSLATION__ landing.solutions.recentlyCompleted",
-      "aiPowered": "__MISSING_TRANSLATION__ landing.solutions.aiPowered"
-    },
-    "hero": {
-      "badge": "__MISSING_TRANSLATION__ landing.hero.badge",
-      "title": "__MISSING_TRANSLATION__ landing.hero.title",
-      "subtitle": "__MISSING_TRANSLATION__ landing.hero.subtitle",
-      "cta": {
-        "primary": "__MISSING_TRANSLATION__ landing.hero.cta.primary",
-        "secondary": "__MISSING_TRANSLATION__ landing.hero.cta.secondary"
-      },
-      "image": {
-        "alt": "__MISSING_TRANSLATION__ landing.hero.image.alt"
-      },
-      "stats": {
-        "uptime": "__MISSING_TRANSLATION__ landing.hero.stats.uptime",
-        "clients": "__MISSING_TRANSLATION__ landing.hero.stats.clients",
-        "support": "__MISSING_TRANSLATION__ landing.hero.stats.support"
-      }
-    },
-    "features": {
-      "global": {
-        "title": "__MISSING_TRANSLATION__ landing.features.global.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.global.description"
-      },
-      "performance": {
-        "title": "__MISSING_TRANSLATION__ landing.features.performance.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.performance.description"
-      },
-      "security": {
-        "title": "__MISSING_TRANSLATION__ landing.features.security.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.security.description"
-      },
-      "data": {
-        "title": "__MISSING_TRANSLATION__ landing.features.data.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.data.description"
-      },
-      "collaboration": {
-        "title": "__MISSING_TRANSLATION__ landing.features.collaboration.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.collaboration.description"
-      },
-      "analytics": {
-        "title": "__MISSING_TRANSLATION__ landing.features.analytics.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.analytics.description"
-      },
-      "intelligence": {
-        "title": "__MISSING_TRANSLATION__ landing.features.intelligence.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.intelligence.description"
-      },
-      "cloud": {
-        "title": "__MISSING_TRANSLATION__ landing.features.cloud.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.cloud.description"
-      },
-      "compliance": {
-        "title": "__MISSING_TRANSLATION__ landing.features.compliance.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.compliance.description"
-      },
-      "sectionBadge": "__MISSING_TRANSLATION__ landing.features.sectionBadge",
-      "title": "__MISSING_TRANSLATION__ landing.features.title",
-      "subtitle": "__MISSING_TRANSLATION__ landing.features.subtitle"
-    }
-  },
-  "ppw": {
-    "step1": {
-      "description": "__MISSING_TRANSLATION__ ppw.step1.description",
-      "dueDate": "__MISSING_TRANSLATION__ ppw.step1.dueDate",
-      "minAmount": "__MISSING_TRANSLATION__ ppw.step1.minAmount",
-      "title": "__MISSING_TRANSLATION__ ppw.step1.title"
-    },
-    "step2": {
-      "description": "__MISSING_TRANSLATION__ ppw.step2.description",
-      "title": "__MISSING_TRANSLATION__ ppw.step2.title"
-    },
-    "step3": {
-      "description": "__MISSING_TRANSLATION__ ppw.step3.description",
-      "title": "__MISSING_TRANSLATION__ ppw.step3.title"
-    },
-    "step4": {
-      "title": "__MISSING_TRANSLATION__ ppw.step4.title"
-    },
-    "title": "__MISSING_TRANSLATION__ ppw.title"
-  },
-  "summary": {
-    "totalInvoices": "__MISSING_TRANSLATION__ summary.totalInvoices",
-    "totalAmount": "__MISSING_TRANSLATION__ summary.totalAmount",
-    "companyInfo": "__MISSING_TRANSLATION__ summary.companyInfo",
-    "fiscalConfig": "__MISSING_TRANSLATION__ summary.fiscalConfig",
-    "coaMethod": "__MISSING_TRANSLATION__ summary.coaMethod",
-    "invitedUsers": "__MISSING_TRANSLATION__ summary.invitedUsers"
-  },
-  "execution": {
-    "success": "__MISSING_TRANSLATION__ execution.success",
-    "file": "__MISSING_TRANSLATION__ execution.file",
-    "id": "__MISSING_TRANSLATION__ execution.id"
-  },
-  "form": {
-    "companyName": "__MISSING_TRANSLATION__ form.companyName",
-    "legalName": "__MISSING_TRANSLATION__ form.legalName",
-    "taxId": "__MISSING_TRANSLATION__ form.taxId",
-    "country": "__MISSING_TRANSLATION__ form.country",
-    "currency": "__MISSING_TRANSLATION__ form.currency",
-    "address": "__MISSING_TRANSLATION__ form.address",
-    "fiscalYearStart": "__MISSING_TRANSLATION__ form.fiscalYearStart",
-    "accountingPeriods": "__MISSING_TRANSLATION__ form.accountingPeriods",
-    "coaSetupMethod": "__MISSING_TRANSLATION__ form.coaSetupMethod",
-    "coa": {
-      "template": "__MISSING_TRANSLATION__ form.coa.template",
-      "upload": "__MISSING_TRANSLATION__ form.coa.upload",
-      "selectTemplate": "__MISSING_TRANSLATION__ form.coa.selectTemplate",
-      "uploadFile": "__MISSING_TRANSLATION__ form.coa.uploadFile"
-    },
-    "invite": {
-      "email": "__MISSING_TRANSLATION__ form.invite.email",
-      "role": "__MISSING_TRANSLATION__ form.invite.role",
-      "add": "__MISSING_TRANSLATION__ form.invite.add"
-    }
-  },
-  "final": {
-    "successTitle": "__MISSING_TRANSLATION__ final.successTitle",
-    "successMessage": "__MISSING_TRANSLATION__ final.successMessage"
-  },
-  "onboarding": {
-    "title": "__MISSING_TRANSLATION__ onboarding.title",
-    "description": "__MISSING_TRANSLATION__ onboarding.description"
-  },
-  "nav": {
-    "solutionsItems": {
-      "financial": "__MISSING_TRANSLATION__ nav.solutionsItems.financial",
-      "hcm": "__MISSING_TRANSLATION__ nav.solutionsItems.hcm",
-      "materials": "__MISSING_TRANSLATION__ nav.solutionsItems.materials",
-      "sales": "__MISSING_TRANSLATION__ nav.solutionsItems.sales",
-      "mdm": "__MISSING_TRANSLATION__ nav.solutionsItems.mdm",
-      "organizational": "__MISSING_TRANSLATION__ nav.solutionsItems.organizational",
-      "production": "__MISSING_TRANSLATION__ nav.solutionsItems.production",
-      "project": "__MISSING_TRANSLATION__ nav.solutionsItems.project",
-      "quality": "__MISSING_TRANSLATION__ nav.solutionsItems.quality",
-      "maintenance": "__MISSING_TRANSLATION__ nav.solutionsItems.maintenance",
-      "crm": "__MISSING_TRANSLATION__ nav.solutionsItems.crm",
-      "aiTeaser": "__MISSING_TRANSLATION__ nav.solutionsItems.aiTeaser"
-    },
-    "featureItems": {
-      "realtime": "__MISSING_TRANSLATION__ nav.featureItems.realtime",
-      "multicurrency": "__MISSING_TRANSLATION__ nav.featureItems.multicurrency",
-      "workflow": "__MISSING_TRANSLATION__ nav.featureItems.workflow",
-      "analytics": "__MISSING_TRANSLATION__ nav.featureItems.analytics",
-      "integration": "__MISSING_TRANSLATION__ nav.featureItems.integration",
-      "security": "__MISSING_TRANSLATION__ nav.featureItems.security"
-    },
-    "resourceItems": {
-      "documentation": "__MISSING_TRANSLATION__ nav.resourceItems.documentation",
-      "apiDocs": "__MISSING_TRANSLATION__ nav.resourceItems.apiDocs",
-      "tutorials": "__MISSING_TRANSLATION__ nav.resourceItems.tutorials",
-      "blog": "__MISSING_TRANSLATION__ nav.resourceItems.blog",
-      "webinars": "__MISSING_TRANSLATION__ nav.resourceItems.webinars",
-      "support": "__MISSING_TRANSLATION__ nav.resourceItems.support"
-    },
-    "companyItems": {
-      "about": "__MISSING_TRANSLATION__ nav.companyItems.about",
-      "careers": "__MISSING_TRANSLATION__ nav.companyItems.careers",
-      "partners": "__MISSING_TRANSLATION__ nav.companyItems.partners",
-      "news": "__MISSING_TRANSLATION__ nav.companyItems.news",
-      "contact": "__MISSING_TRANSLATION__ nav.companyItems.contact"
-    },
-    "solutions": "__MISSING_TRANSLATION__ nav.solutions",
-    "solutionsSection": {
-      "implemented": "__MISSING_TRANSLATION__ nav.solutionsSection.implemented",
-      "recent": "__MISSING_TRANSLATION__ nav.solutionsSection.recent",
-      "ai": "__MISSING_TRANSLATION__ nav.solutionsSection.ai"
-    },
-    "features": "__MISSING_TRANSLATION__ nav.features",
-    "pricing": "__MISSING_TRANSLATION__ nav.pricing",
-    "resources": "__MISSING_TRANSLATION__ nav.resources",
-    "login": "__MISSING_TRANSLATION__ nav.login",
-    "getStarted": "__MISSING_TRANSLATION__ nav.getStarted"
-  },
-  "modules": {
-    "mdm": {
-      "title": "__MISSING_TRANSLATION__ modules.mdm.title",
-      "description": "__MISSING_TRANSLATION__ modules.mdm.description"
-    },
-    "financial": {
-      "title": "__MISSING_TRANSLATION__ modules.financial.title",
-      "description": "__MISSING_TRANSLATION__ modules.financial.description"
-    },
-    "hcm": {
-      "title": "__MISSING_TRANSLATION__ modules.hcm.title",
-      "description": "__MISSING_TRANSLATION__ modules.hcm.description"
-    },
-    "materials": {
-      "title": "__MISSING_TRANSLATION__ modules.materials.title",
-      "description": "__MISSING_TRANSLATION__ modules.materials.description"
-    },
-    "sales": {
-      "title": "__MISSING_TRANSLATION__ modules.sales.title",
-      "description": "__MISSING_TRANSLATION__ modules.sales.description"
-    },
-    "organizational": {
-      "title": "__MISSING_TRANSLATION__ modules.organizational.title",
-      "description": "__MISSING_TRANSLATION__ modules.organizational.description"
-    }
-  },
-  "mdm": {
-    "domains": {
-      "customer": "__MISSING_TRANSLATION__ mdm.domains.customer",
-      "material": "__MISSING_TRANSLATION__ mdm.domains.material"
-    }
-  },
-  "auth": {
-    "login": {
-      "title": "__MISSING_TRANSLATION__ auth.login.title",
-      "mfa": {
-        "title": "__MISSING_TRANSLATION__ auth.login.mfa.title",
-        "subtitle": "__MISSING_TRANSLATION__ auth.login.mfa.subtitle",
-        "codeLabel": "__MISSING_TRANSLATION__ auth.login.mfa.codeLabel",
-        "placeholder": "__MISSING_TRANSLATION__ auth.login.mfa.placeholder",
-        "help": "__MISSING_TRANSLATION__ auth.login.mfa.help",
-        "back": "__MISSING_TRANSLATION__ auth.login.mfa.back",
-        "verify": "__MISSING_TRANSLATION__ auth.login.mfa.verify"
-      },
-      "deviceTrust": {
-        "title": "__MISSING_TRANSLATION__ auth.login.deviceTrust.title",
-        "description": "__MISSING_TRANSLATION__ auth.login.deviceTrust.description"
-      },
-      "orgsError": "__MISSING_TRANSLATION__ auth.login.orgsError",
-      "lockout": {
-        "subtitle": "__MISSING_TRANSLATION__ auth.login.lockout.subtitle",
-        "title": "__MISSING_TRANSLATION__ auth.login.lockout.title"
-      },
-      "errors": {
-        "emailInvalid": "__MISSING_TRANSLATION__ auth.login.errors.emailInvalid",
-        "generic": "__MISSING_TRANSLATION__ auth.login.errors.generic"
-      },
-      "companyName": "__MISSING_TRANSLATION__ auth.login.companyName",
-      "testing": {
-        "mockAuthLabel": "__MISSING_TRANSLATION__ auth.login.testing.mockAuthLabel"
-      },
-      "brandShort": "__MISSING_TRANSLATION__ auth.login.brandShort",
-      "brandName": "__MISSING_TRANSLATION__ auth.login.brandName",
-      "subtitle": "__MISSING_TRANSLATION__ auth.login.subtitle",
-      "aria": {
-        "errorRegion": "__MISSING_TRANSLATION__ auth.login.aria.errorRegion",
-        "togglePasswordHide": "__MISSING_TRANSLATION__ auth.login.aria.togglePasswordHide",
-        "togglePasswordShow": "__MISSING_TRANSLATION__ auth.login.aria.togglePasswordShow"
-      },
-      "email": "__MISSING_TRANSLATION__ auth.login.email",
-      "emailPlaceholder": "__MISSING_TRANSLATION__ auth.login.emailPlaceholder",
-      "company": "__MISSING_TRANSLATION__ auth.login.company",
-      "orgsLoading": "__MISSING_TRANSLATION__ auth.login.orgsLoading",
-      "selectCompany": "__MISSING_TRANSLATION__ auth.login.selectCompany",
-      "password": "__MISSING_TRANSLATION__ auth.login.password",
-      "passwordPlaceholder": "__MISSING_TRANSLATION__ auth.login.passwordPlaceholder",
-      "loading": "__MISSING_TRANSLATION__ auth.login.loading",
-      "signIn": "__MISSING_TRANSLATION__ auth.login.signIn",
-      "trustCheckboxLabel": "__MISSING_TRANSLATION__ auth.login.trustCheckboxLabel",
-      "trustSubmit": "__MISSING_TRANSLATION__ auth.login.trustSubmit",
-      "forgotPassword": "__MISSING_TRANSLATION__ auth.login.forgotPassword",
-      "systemName": "__MISSING_TRANSLATION__ auth.login.systemName"
-    }
-  },
-  "footer": {
-    "newsletter": {
-      "title": "__MISSING_TRANSLATION__ footer.newsletter.title",
-      "description": "__MISSING_TRANSLATION__ footer.newsletter.description",
-      "placeholder": "__MISSING_TRANSLATION__ footer.newsletter.placeholder",
-      "subscribe": "__MISSING_TRANSLATION__ footer.newsletter.subscribe",
-      "privacy": "__MISSING_TRANSLATION__ footer.newsletter.privacy"
-    },
-    "brand": "__MISSING_TRANSLATION__ footer.brand",
-    "company": {
-      "description": "__MISSING_TRANSLATION__ footer.company.description",
-      "address": "__MISSING_TRANSLATION__ footer.company.address",
-      "phoneNumber": "__MISSING_TRANSLATION__ footer.company.phoneNumber",
-      "emailAddress": "__MISSING_TRANSLATION__ footer.company.emailAddress",
-      "title": "__MISSING_TRANSLATION__ footer.company.title",
-      "about": "__MISSING_TRANSLATION__ footer.company.about",
-      "careers": "__MISSING_TRANSLATION__ footer.company.careers",
-      "partners": "__MISSING_TRANSLATION__ footer.company.partners",
-      "news": "__MISSING_TRANSLATION__ footer.company.news",
-      "investors": "__MISSING_TRANSLATION__ footer.company.investors",
-      "contact": "__MISSING_TRANSLATION__ footer.company.contact",
-      "events": "__MISSING_TRANSLATION__ footer.company.events"
-    },
-    "solutions": {
-      "title": "__MISSING_TRANSLATION__ footer.solutions.title",
-      "financial": "__MISSING_TRANSLATION__ footer.solutions.financial",
-      "hcm": "__MISSING_TRANSLATION__ footer.solutions.hcm",
-      "materials": "__MISSING_TRANSLATION__ footer.solutions.materials",
-      "sales": "__MISSING_TRANSLATION__ footer.solutions.sales",
-      "mdm": "__MISSING_TRANSLATION__ footer.solutions.mdm",
-      "organizational": "__MISSING_TRANSLATION__ footer.solutions.organizational"
-    },
-    "resources": {
-      "title": "__MISSING_TRANSLATION__ footer.resources.title",
-      "documentation": "__MISSING_TRANSLATION__ footer.resources.documentation",
-      "apiDocs": "__MISSING_TRANSLATION__ footer.resources.apiDocs",
-      "tutorials": "__MISSING_TRANSLATION__ footer.resources.tutorials",
-      "blog": "__MISSING_TRANSLATION__ footer.resources.blog",
-      "webinars": "__MISSING_TRANSLATION__ footer.resources.webinars",
-      "support": "__MISSING_TRANSLATION__ footer.resources.support"
-    },
-    "trust": {
-      "soc2": "__MISSING_TRANSLATION__ footer.trust.soc2",
-      "iso27001": "__MISSING_TRANSLATION__ footer.trust.iso27001",
-      "gdpr": "__MISSING_TRANSLATION__ footer.trust.gdpr",
-      "uptime": "__MISSING_TRANSLATION__ footer.trust.uptime"
-    },
-    "companyName": "__MISSING_TRANSLATION__ footer.companyName",
-    "copyright": "__MISSING_TRANSLATION__ footer.copyright",
-    "legal": {
-      "privacy": "__MISSING_TRANSLATION__ footer.legal.privacy",
-      "terms": "__MISSING_TRANSLATION__ footer.legal.terms",
-      "cookies": "__MISSING_TRANSLATION__ footer.legal.cookies",
-      "security": "__MISSING_TRANSLATION__ footer.legal.security"
-    }
-  },
-  "dashboard": {
-    "activity": {
-      "invoiceCreated": "__MISSING_TRANSLATION__ dashboard.activity.invoiceCreated",
-      "invoiceDescription": "__MISSING_TRANSLATION__ dashboard.activity.invoiceDescription",
-      "employeeOnboarded": "__MISSING_TRANSLATION__ dashboard.activity.employeeOnboarded",
-      "employeeDescription": "__MISSING_TRANSLATION__ dashboard.activity.employeeDescription",
-      "purchaseOrderApproved": "__MISSING_TRANSLATION__ dashboard.activity.purchaseOrderApproved",
-      "purchaseOrderDescription": "__MISSING_TRANSLATION__ dashboard.activity.purchaseOrderDescription",
-      "salesOrderCompleted": "__MISSING_TRANSLATION__ dashboard.activity.salesOrderCompleted",
-      "salesOrderDescription": "__MISSING_TRANSLATION__ dashboard.activity.salesOrderDescription",
-      "materialMasterUpdated": "__MISSING_TRANSLATION__ dashboard.activity.materialMasterUpdated",
-      "materialMasterDescription": "__MISSING_TRANSLATION__ dashboard.activity.materialMasterDescription"
-    },
-    "metrics": {
-      "revenue": "__MISSING_TRANSLATION__ dashboard.metrics.revenue",
-      "employees": "__MISSING_TRANSLATION__ dashboard.metrics.employees",
-      "inventory": "__MISSING_TRANSLATION__ dashboard.metrics.inventory",
-      "orders": "__MISSING_TRANSLATION__ dashboard.metrics.orders",
-      "activity": "__MISSING_TRANSLATION__ dashboard.metrics.activity",
-      "fromLastMonth": "__MISSING_TRANSLATION__ dashboard.metrics.fromLastMonth"
-    },
-    "loading": "__MISSING_TRANSLATION__ dashboard.loading",
-    "welcome": "__MISSING_TRANSLATION__ dashboard.welcome",
-    "defaultUser": "__MISSING_TRANSLATION__ dashboard.defaultUser",
-    "welcomeDescription": "__MISSING_TRANSLATION__ dashboard.welcomeDescription",
-    "erpModules": "__MISSING_TRANSLATION__ dashboard.erpModules",
-    "status": {
-      "active": "__MISSING_TRANSLATION__ dashboard.status.active"
-    },
-    "lastAccessed": "__MISSING_TRANSLATION__ dashboard.lastAccessed",
-    "recentActivity": "__MISSING_TRANSLATION__ dashboard.recentActivity",
-    "quickActions": "__MISSING_TRANSLATION__ dashboard.quickActions",
-    "actions": {
-      "createInvoice": "__MISSING_TRANSLATION__ dashboard.actions.createInvoice",
-      "addEmployee": "__MISSING_TRANSLATION__ dashboard.actions.addEmployee",
-      "updateInventory": "__MISSING_TRANSLATION__ dashboard.actions.updateInventory",
-      "newSalesOrder": "__MISSING_TRANSLATION__ dashboard.actions.newSalesOrder",
-      "manageMasterData": "__MISSING_TRANSLATION__ dashboard.actions.manageMasterData"
-    }
-  },
-  "collections": {
-    "metrics": {
-      "dso": "__MISSING_TRANSLATION__ collections.metrics.dso",
-      "overdueTotal": "__MISSING_TRANSLATION__ collections.metrics.overdueTotal",
-      "collected": "__MISSING_TRANSLATION__ collections.metrics.collected"
-    },
-    "title": "__MISSING_TRANSLATION__ collections.title",
-    "description": "__MISSING_TRANSLATION__ collections.description",
-    "customer": {
-      "title": "__MISSING_TRANSLATION__ collections.customer.title",
-      "search": "__MISSING_TRANSLATION__ collections.customer.search",
-      "name": "__MISSING_TRANSLATION__ collections.customer.name",
-      "overdueAmount": "__MISSING_TRANSLATION__ collections.customer.overdueAmount",
-      "lastContact": "__MISSING_TRANSLATION__ collections.customer.lastContact",
-      "nextAction": "__MISSING_TRANSLATION__ collections.customer.nextAction",
-      "status": "__MISSING_TRANSLATION__ collections.customer.status"
-    },
-    "log": {
-      "title": "__MISSING_TRANSLATION__ collections.log.title",
-      "new": "__MISSING_TRANSLATION__ collections.log.new",
-      "type": "__MISSING_TRANSLATION__ collections.log.type",
-      "notes": "__MISSING_TRANSLATION__ collections.log.notes",
-      "promiseDate": "__MISSING_TRANSLATION__ collections.log.promiseDate",
-      "promiseAmount": "__MISSING_TRANSLATION__ collections.log.promiseAmount",
-      "save": "__MISSING_TRANSLATION__ collections.log.save"
-    }
-  },
-  "activity": {
-    "Call": "__MISSING_TRANSLATION__ activity.Call",
-    "Email": "__MISSING_TRANSLATION__ activity.Email",
-    "Promise": "__MISSING_TRANSLATION__ activity.Promise",
-    "Note": "__MISSING_TRANSLATION__ activity.Note"
-  },
-  "sidebar": {
-    "dashboard": "__MISSING_TRANSLATION__ sidebar.dashboard",
-    "analytics": "__MISSING_TRANSLATION__ sidebar.analytics",
-    "financials": "__MISSING_TRANSLATION__ sidebar.financials",
-    "sales": "__MISSING_TRANSLATION__ sidebar.sales",
-    "materials": "__MISSING_TRANSLATION__ sidebar.materials",
-    "hcm": "__MISSING_TRANSLATION__ sidebar.hcm",
-    "masterData": "__MISSING_TRANSLATION__ sidebar.masterData",
-    "reports": "__MISSING_TRANSLATION__ sidebar.reports",
-    "customerPortal": "__MISSING_TRANSLATION__ sidebar.customerPortal",
-    "orgMgmt": "__MISSING_TRANSLATION__ sidebar.orgMgmt",
-    "crm": "__MISSING_TRANSLATION__ sidebar.crm",
-    "production": "__MISSING_TRANSLATION__ sidebar.production",
-    "quality": "__MISSING_TRANSLATION__ sidebar.quality",
-    "plantMaintenance": "__MISSING_TRANSLATION__ sidebar.plantMaintenance",
-    "projectSystem": "__MISSING_TRANSLATION__ sidebar.projectSystem"
-  },
-  "errors": {
-    "notFound": {
-      "title": "__MISSING_TRANSLATION__ errors.notFound.title",
-      "description": "__MISSING_TRANSLATION__ errors.notFound.description",
-      "subtitle": "__MISSING_TRANSLATION__ errors.notFound.subtitle",
-      "actions": {
-        "goHome": "__MISSING_TRANSLATION__ errors.notFound.actions.goHome",
-        "goBack": "__MISSING_TRANSLATION__ errors.notFound.actions.goBack",
-        "search": "__MISSING_TRANSLATION__ errors.notFound.actions.search"
-      },
-      "help": "__MISSING_TRANSLATION__ errors.notFound.help"
-    },
-    "general": {
-      "title": "__MISSING_TRANSLATION__ errors.general.title",
-      "description": "__MISSING_TRANSLATION__ errors.general.description",
-      "debugInfo": "__MISSING_TRANSLATION__ errors.general.debugInfo",
-      "errorId": "__MISSING_TRANSLATION__ errors.general.errorId",
-      "actions": {
-        "tryAgain": "__MISSING_TRANSLATION__ errors.general.actions.tryAgain",
-        "goHome": "__MISSING_TRANSLATION__ errors.general.actions.goHome",
-        "reload": "__MISSING_TRANSLATION__ errors.general.actions.reload",
-        "reportIssue": "__MISSING_TRANSLATION__ errors.general.actions.reportIssue"
-      },
-      "persistentIssue": "__MISSING_TRANSLATION__ errors.general.persistentIssue"
     }
   }
 }

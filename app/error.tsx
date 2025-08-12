@@ -1,81 +1,101 @@
 "use client"
 
 import { useEffect } from "react"
+import { useRouter } from "next/navigation"
+import { useI18n } from "@/contexts/i18n-context"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { AlertTriangle, RefreshCw } from "lucide-react"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { AlertTriangle, RefreshCw, Home, Bug } from "lucide-react"
+import { LanguageSwitcher } from "@/components/language-switcher"
 
-// Standalone translation function for error boundaries (no context dependency)
-function getErrorTranslation(key: string, locale?: string) {
-  const translations = {
-    en: {
-      "error.title": "Something went wrong",
-      "error.description": "An unexpected error occurred. Please try refreshing the page.",
-      "error.tryAgain": "Try again",
-      "error.goHome": "Go to Dashboard",
-    },
-    ar: {
-      "error.title": "حدث خطأ ما",
-      "error.description": "حدث خطأ غير متوقع. يرجى محاولة تحديث الصفحة.",
-      "error.tryAgain": "حاول مرة أخرى",
-      "error.goHome": "الذهاب إلى لوحة التحكم",
-    },
-    no: {
-      "error.title": "Noe gikk galt",
-      "error.description": "En uventet feil oppstod. Vennligst prøv å oppdatere siden.",
-      "error.tryAgain": "Prøv igjen",
-      "error.goHome": "Gå til Dashboard",
-    },
-  }
-
-  const currentLocale = locale || "en"
-  return translations[currentLocale as keyof typeof translations]?.[key] || translations.en[key] || key
-}
-
-export default function Error({
-  error,
-  reset,
-}: {
+interface ErrorProps {
   error: Error & { digest?: string }
   reset: () => void
-}) {
+}
+
+export default function Error({ error, reset }: ErrorProps) {
+  const router = useRouter()
+  const { t } = useI18n()
+
   useEffect(() => {
     console.error("Application error:", error)
   }, [error])
 
-  // Get locale from localStorage or default to 'en'
-  const locale = typeof window !== "undefined" ? localStorage.getItem("feebee_locale") || "en" : "en"
-
-  const isRTL = locale === "ar"
-
   return (
-    <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
-      <body>
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-          <Card className="w-full max-w-md">
-            <CardHeader className="text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100">
-                <AlertTriangle className="h-6 w-6 text-red-600" />
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+      {/* Language switcher */}
+      <div className="absolute top-4 right-4">
+        <LanguageSwitcher />
+      </div>
+
+      <div className="w-full max-w-md">
+        <Card className="shadow-lg">
+          <CardHeader className="text-center pb-6">
+            <div className="flex justify-center mb-4">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
+                <AlertTriangle className="h-8 w-8 text-orange-600" aria-hidden="true" />
               </div>
-              <CardTitle className="text-xl font-semibold text-gray-900">
-                {getErrorTranslation("error.title", locale)}
-              </CardTitle>
-              <CardDescription className="text-gray-600">
-                {getErrorTranslation("error.description", locale)}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <Button onClick={reset} className="w-full" variant="default">
-                <RefreshCw className="mr-2 h-4 w-4" />
-                {getErrorTranslation("error.tryAgain", locale)}
+            </div>
+            <CardTitle className="text-2xl font-bold text-gray-900">{t("errors.general.title")}</CardTitle>
+            <p className="text-gray-600 mt-2">{t("errors.general.description")}</p>
+          </CardHeader>
+
+          <CardContent className="space-y-4">
+            {process.env.NODE_ENV === "development" && (
+              <div className="bg-red-50 border border-red-200 rounded-md p-3">
+                <div className="text-sm font-medium text-red-800 mb-1">{t("errors.general.debugInfo")}</div>
+                <div className="text-xs text-red-600 font-mono break-all">{error.message}</div>
+                {error.digest && (
+                  <div className="text-xs text-red-500 mt-1">
+                    {t("errors.general.errorId")}: {error.digest}
+                  </div>
+                )}
+              </div>
+            )}
+
+            <div className="space-y-3 pt-4">
+              <Button onClick={reset} className="w-full flex items-center justify-center gap-2">
+                <RefreshCw className="h-4 w-4" />
+                {t("errors.general.actions.tryAgain")}
               </Button>
-              <Button onClick={() => (window.location.href = "/dashboard")} variant="outline" className="w-full">
-                {getErrorTranslation("error.goHome", locale)}
+
+              <Button
+                variant="outline"
+                onClick={() => router.push("/dashboard")}
+                className="w-full flex items-center justify-center gap-2"
+              >
+                <Home className="h-4 w-4" />
+                {t("errors.general.actions.goHome")}
               </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </body>
-    </html>
+
+              <Button
+                variant="ghost"
+                onClick={() => window.location.reload()}
+                className="w-full flex items-center justify-center gap-2"
+              >
+                <RefreshCw className="h-4 w-4" />
+                {t("errors.general.actions.reload")}
+              </Button>
+            </div>
+
+            <div className="text-center pt-4 border-t">
+              <p className="text-xs text-gray-500 mb-2">{t("errors.general.persistentIssue")}</p>
+              <Button
+                variant="link"
+                size="sm"
+                className="text-xs h-auto p-0 flex items-center gap-1"
+                onClick={() => {
+                  // CURSOR: API call to POST /api/v1/support/error-report
+                  console.log("Report error:", error.message)
+                }}
+              >
+                <Bug className="h-3 w-3" />
+                {t("errors.general.actions.reportIssue")}
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
   )
 }

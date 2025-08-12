@@ -1,6 +1,5 @@
 "use client"
-
-import { useActionState, useEffect } from "react"
+import { useFormState, useFormStatus } from "react-dom"
 import { submitDemoRequest } from "./actions"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -10,18 +9,25 @@ import { useSearchParams } from "next/navigation"
 import { CheckCircle2 } from "lucide-react"
 import { useI18n } from "@/contexts/i18n-context"
 
+function SubmitButton({ label, pendingLabel }: { label: string; pendingLabel: string }) {
+  const { pending } = useFormStatus()
+  return (
+    <Button type="submit" disabled={pending}>
+      {pending ? pendingLabel : label}
+    </Button>
+  )
+}
+
 export default function RequestDemoPage() {
   const { t } = useI18n()
   const searchParams = useSearchParams()
   const intent = searchParams.get("intent") || ""
-  const [state, formAction, pending] = useActionState(async (_prev: any, formData: FormData) => {
+
+  const initialState: any = null
+  const [state, formAction] = useFormState(async (_prev: any, formData: FormData) => {
     const res = await submitDemoRequest(formData)
     return res
-  }, null)
-
-  useEffect(() => {
-    // Prefill intent hidden input or display on UI if needed
-  }, [intent])
+  }, initialState)
 
   return (
     <main className="min-h-screen bg-background">
@@ -46,9 +52,7 @@ export default function RequestDemoPage() {
                   <Input id="company" name="company" required />
                 </div>
                 <input type="hidden" name="intent" value={intent} />
-                <Button type="submit" disabled={pending}>
-                  {pending ? t("demo.form.submitting") : t("demo.form.submit")}
-                </Button>
+                <SubmitButton label={t("demo.form.submit")} pendingLabel={t("demo.form.submitting")} />
               </form>
 
               {state?.ok && (

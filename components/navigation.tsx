@@ -14,7 +14,37 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Badge } from "@/components/ui/badge"
-import { Menu, ChevronDown, DollarSign, Users, Package, ShoppingCart, Database, Building, Factory, Briefcase, Shield, Wrench, UserCheck, Zap, BarChart3, Globe, Workflow, Brain, Sparkles, CheckCircle, Clock, ArrowRight, FileText, BookOpen, Newspaper, Video, Headphones, Handshake, Mail } from 'lucide-react'
+import {
+  Menu,
+  ChevronDown,
+  DollarSign,
+  Users,
+  Package,
+  ShoppingCart,
+  Database,
+  Building,
+  Factory,
+  Briefcase,
+  Shield,
+  Wrench,
+  UserCheck,
+  Zap,
+  BarChart3,
+  Globe,
+  Workflow,
+  Brain,
+  Sparkles,
+  CheckCircle,
+  Clock,
+  ArrowRight,
+  FileText,
+  BookOpen,
+  Newspaper,
+  Video,
+  Headphones,
+  Handshake,
+  Mail,
+} from "lucide-react"
 import { useAuth } from "@/contexts/auth-context"
 import { resolveDestination } from "@/lib/modules"
 import { useI18n } from "@/contexts/i18n-context"
@@ -54,12 +84,27 @@ const Navigation = () => {
   ]
 
   const resources = [
-    { title: t("nav.resourceItems.documentation"), href: "/docs", icon: FileText, description: "Guides and references" },
+    {
+      title: t("nav.resourceItems.documentation"),
+      href: "/docs",
+      icon: FileText,
+      description: "Guides and references",
+    },
     { title: t("nav.resourceItems.apiDocs"), href: "/api-docs", icon: Database, description: "API docs & examples" },
-    { title: t("nav.resourceItems.tutorials"), href: "/tutorials", icon: BookOpen, description: "Step-by-step tutorials" },
+    {
+      title: t("nav.resourceItems.tutorials"),
+      href: "/tutorials",
+      icon: BookOpen,
+      description: "Step-by-step tutorials",
+    },
     { title: t("nav.resourceItems.blog"), href: "/blog", icon: Newspaper, description: "Insights & best practices" },
     { title: t("nav.resourceItems.webinars"), href: "/webinars", icon: Video, description: "Live demos & talks" },
-    { title: t("nav.resourceItems.support"), href: "/support", icon: Headphones, description: "24/7 technical support" },
+    {
+      title: t("nav.resourceItems.support"),
+      href: "/support",
+      icon: Headphones,
+      description: "24/7 technical support",
+    },
   ]
 
   const company = [
