@@ -1020,8 +1020,8 @@
     "quantity": "__MISSING_TRANSLATION__ common.quantity",
     "price": "__MISSING_TRANSLATION__ common.price",
     "total": "__MISSING_TRANSLATION__ common.total",
-    "learnMore": "__MISSING_TRANSLATION__ common.learnMore",
-    "comingSoon": "__MISSING_TRANSLATION__ common.comingSoon",
+    "learnMore": "Learn more",
+    "comingSoon": "Coming soon",
     "export": "__MISSING_TRANSLATION__ common.export",
     "actions": "__MISSING_TRANSLATION__ common.actions",
     "view": "__MISSING_TRANSLATION__ common.view",
@@ -1039,14 +1039,14 @@
     "new": "__MISSING_TRANSLATION__ common.new",
     "filter": "__MISSING_TRANSLATION__ common.filter",
     "status": "__MISSING_TRANSLATION__ common.status",
-    "secure": "__MISSING_TRANSLATION__ common.secure",
-    "compliant": "__MISSING_TRANSLATION__ common.compliant",
+    "secure": "Secure",
+    "compliant": "Compliant",
     "refresh": "__MISSING_TRANSLATION__ common.refresh",
     "add": "__MISSING_TRANSLATION__ common.add",
     "search": "__MISSING_TRANSLATION__ common.search",
     "reject": "__MISSING_TRANSLATION__ common.reject",
     "approve": "__MISSING_TRANSLATION__ common.approve",
-    "getStarted": "__MISSING_TRANSLATION__ common.getStarted"
+    "getStarted": "Get started"
   },
   "3wm": {
     "title": "__MISSING_TRANSLATION__ 3wm.title",
@@ -1085,9 +1085,9 @@
   },
   "landing": {
     "hero": {
-      "badge": "MISSING_TRANSLATION landing.hero.badge",
-      "title": "MISSING_TRANSLATION landing.hero.title",
-      "subtitle": "MISSING_TRANSLATION landing.hero.subtitle",
+      "badge": "Feebee ERP",
+      "title": "Transform Your Enterprise with Feebee Technologies ERP",
+      "subtitle": "Comprehensive enterprise resource planning system designed to manage core business processes across all departments with integrated modules for complete operational control",
       "cta": {
         "primary": "MISSING_TRANSLATION landing.hero.cta.primary",
         "secondary": "MISSING_TRANSLATION landing.hero.cta.secondary"
@@ -1102,75 +1102,91 @@
     },
     "solutions": {
       "financial": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.financial.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.financial.description"
+        "title": "Financial Management",
+        "description": "From chart of accounts to period close, get full financial control.",
+        "features": { "f1": "General ledger", "f2": "Multi‑currency", "f3": "Reporting", "f4": "AP/AR" }
       },
       "hcm": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.hcm.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.hcm.description"
+        "title": "Human Capital Management",
+        "description": "Manage employees, org structure, and performance with ease.",
+        "features": { "f1": "People & org", "f2": "Time & payroll", "f3": "Performance", "f4": "Goals" }
       },
       "materials": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.materials.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.materials.description"
+        "title": "Materials Management",
+        "description": "Inventory, warehousing, and procurement in one place.",
+        "features": { "f1": "Inventory", "f2": "Warehousing", "f3": "Procurement", "f4": "Replenishment" }
       },
       "sales": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.sales.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.sales.description"
+        "title": "Sales & Distribution",
+        "description": "Quote‑to‑cash with pricing, deliveries, and returns.",
+        "features": { "f1": "Quotes & orders", "f2": "Flexible pricing", "f3": "Deliveries", "f4": "Returns" }
       },
       "mdm": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.mdm.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.mdm.description"
+        "title": "Master Data Management",
+        "description": "Clean, centralized reference data across the enterprise.",
+        "features": { "f1": "Customer/vendor", "f2": "Materials", "f3": "Hierarchies", "f4": "Data quality" }
       },
       "organizational": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.organizational.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.organizational.description"
+        "title": "Organizational Management",
+        "description": "Company structure, cost/profit centers, and roles.",
+        "features": { "f1": "Company structure", "f2": "Cost/Profit", "f3": "Authorizations", "f4": "Audit" }
       },
       "production": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.production.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.production.description"
+        "title": "Production Planning",
+        "description": "BOMs, routings, planning, and execution.",
+        "features": { "f1": "BOMs", "f2": "Smart planning", "f3": "Execution", "f4": "Capacity" }
       },
       "project": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.project.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.project.description"
+        "title": "Project System",
+        "description": "Resource planning, milestones, and budgets.",
+        "features": { "f1": "Resources", "f2": "Milestones", "f3": "Budgets", "f4": "Billing" }
       },
       "quality": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.quality.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.quality.description"
+        "title": "Quality Management",
+        "description": "Quality processes, audits, certification, and compliance.",
+        "features": { "f1": "Quality checks", "f2": "Compliance", "f3": "Audit trail", "f4": "Certifications" }
       },
       "maintenance": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.maintenance.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.maintenance.description"
+        "title": "Maintenance",
+        "description": "Assets, preventive maintenance, and work orders.",
+        "features": { "f1": "Asset mgmt", "f2": "Preventive plans", "f3": "Work orders", "f4": "Spare parts" }
       },
       "crm": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.crm.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.crm.description"
+        "title": "Customer Relationship Management",
+        "description": "Leads, service, pipeline, and analytics.",
+        "features": { "f1": "Leads & contacts", "f2": "Service", "f3": "Pipeline", "f4": "Analytics" }
       },
       "productionAI": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.productionAI.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.productionAI.description"
+        "title": "Production Intelligence (AI)",
+        "description": "Predictive planning with smart insights.",
+        "features": { "f1": "AI production", "f2": "Predictive analytics", "f3": "Smart planning", "f4": "RAG insights" }
       },
       "projectAI": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.projectAI.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.projectAI.description"
+        "title": "Project Intelligence (AI)",
+        "description": "AI assistance for delivery and cost control.",
+        "features": { "f1": "Forecasting", "f2": "Risk signals", "f3": "Smart schedules", "f4": "Co‑pilot" }
       },
       "qualityAI": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.qualityAI.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.qualityAI.description"
+        "title": "Quality Intelligence (AI)",
+        "description": "Defect detection and compliance automation.",
+        "features": { "f1": "Vision QC", "f2": "Auto‑checks", "f3": "Anomaly alerts", "f4": "Guided fixes" }
       },
       "maintenanceAI": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.maintenanceAI.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.maintenanceAI.description"
+        "title": "Maintenance Intelligence (AI)",
+        "description": "Predict failures and optimize downtime.",
+        "features": { "f1": "Predictive", "f2": "Spare parts", "f3": "Scheduling", "f4": "Technician co‑pilot" }
       },
       "crmAI": {
-        "title": "__MISSING_TRANSLATION__ landing.solutions.crmAI.title",
-        "description": "__MISSING_TRANSLATION__ landing.solutions.crmAI.description"
+        "title": "CRM Intelligence (AI)",
+        "description": "Sentiment, scoring, and AI‑assisted selling.",
+        "features": { "f1": "Sentiment", "f2": "Lead scoring", "f3": "Insights", "f4": "Next best action" }
       },
-      "sectionBadge": "__MISSING_TRANSLATION__ landing.solutions.sectionBadge",
-      "title": "__MISSING_TRANSLATION__ landing.solutions.title",
-      "subtitle": "__MISSING_TRANSLATION__ landing.solutions.subtitle",
-      "implemented": "__MISSING_TRANSLATION__ landing.solutions.implemented",
-      "recentlyCompleted": "__MISSING_TRANSLATION__ landing.solutions.recentlyCompleted",
-      "aiPowered": "__MISSING_TRANSLATION__ landing.solutions.aiPowered"
+      "sectionBadge": "Solutions",
+      "title": "Explore our ERP modules",
+      "subtitle": "From finance to production, deploy the modules you need.",
+      "implemented": "Implemented solutions",
+      "recentlyCompleted": "Recently completed",
+      "aiPowered": "AI‑powered"
     },
     "hero": {
       "badge": "Feebee ERP",
@@ -1429,58 +1445,58 @@
   },
   "footer": {
     "newsletter": {
-      "title": "__MISSING_TRANSLATION__ footer.newsletter.title",
-      "description": "__MISSING_TRANSLATION__ footer.newsletter.description",
-      "placeholder": "__MISSING_TRANSLATION__ footer.newsletter.placeholder",
-      "subscribe": "__MISSING_TRANSLATION__ footer.newsletter.subscribe",
-      "privacy": "__MISSING_TRANSLATION__ footer.newsletter.privacy"
+      "title": "Stay in the loop",
+      "description": "Product updates, tips, and best practices—no spam.",
+      "placeholder": "Enter your work email",
+      "subscribe": "Subscribe",
+      "privacy": "We respect your privacy"
     },
-    "brand": "__MISSING_TRANSLATION__ footer.brand",
+    "brand": "Feebee Technologies",
     "company": {
-      "description": "__MISSING_TRANSLATION__ footer.company.description",
-      "address": "__MISSING_TRANSLATION__ footer.company.address",
-      "phoneNumber": "__MISSING_TRANSLATION__ footer.company.phoneNumber",
-      "emailAddress": "__MISSING_TRANSLATION__ footer.company.emailAddress",
-      "title": "__MISSING_TRANSLATION__ footer.company.title",
-      "about": "__MISSING_TRANSLATION__ footer.company.about",
-      "careers": "__MISSING_TRANSLATION__ footer.company.careers",
-      "partners": "__MISSING_TRANSLATION__ footer.company.partners",
-      "news": "__MISSING_TRANSLATION__ footer.company.news",
-      "investors": "__MISSING_TRANSLATION__ footer.company.investors",
-      "contact": "__MISSING_TRANSLATION__ footer.company.contact",
-      "events": "__MISSING_TRANSLATION__ footer.company.events"
+      "description": "Modern ERP to run your business—secure, scalable, and global.",
+      "address": "123 Innovation Drive, Oslo, Norway",
+      "phoneNumber": "+47 22 00 00 00",
+      "emailAddress": "hello@feebee.tech",
+      "title": "Company",
+      "about": "About",
+      "careers": "Careers",
+      "partners": "Partners",
+      "news": "News",
+      "investors": "Investors",
+      "contact": "Contact",
+      "events": "Events"
     },
     "solutions": {
-      "title": "__MISSING_TRANSLATION__ footer.solutions.title",
-      "financial": "__MISSING_TRANSLATION__ footer.solutions.financial",
-      "hcm": "__MISSING_TRANSLATION__ footer.solutions.hcm",
-      "materials": "__MISSING_TRANSLATION__ footer.solutions.materials",
-      "sales": "__MISSING_TRANSLATION__ footer.solutions.sales",
-      "mdm": "__MISSING_TRANSLATION__ footer.solutions.mdm",
-      "organizational": "__MISSING_TRANSLATION__ footer.solutions.organizational"
+      "title": "Solutions",
+      "financial": "Financial",
+      "hcm": "HCM",
+      "materials": "Materials",
+      "sales": "Sales",
+      "mdm": "MDM",
+      "organizational": "Organizational"
     },
     "resources": {
-      "title": "__MISSING_TRANSLATION__ footer.resources.title",
-      "documentation": "__MISSING_TRANSLATION__ footer.resources.documentation",
-      "apiDocs": "__MISSING_TRANSLATION__ footer.resources.apiDocs",
-      "tutorials": "__MISSING_TRANSLATION__ footer.resources.tutorials",
-      "blog": "__MISSING_TRANSLATION__ footer.resources.blog",
-      "webinars": "__MISSING_TRANSLATION__ footer.resources.webinars",
-      "support": "__MISSING_TRANSLATION__ footer.resources.support"
+      "title": "Resources",
+      "documentation": "Documentation",
+      "apiDocs": "API Docs",
+      "tutorials": "Tutorials",
+      "blog": "Blog",
+      "webinars": "Webinars",
+      "support": "Support"
     },
     "trust": {
-      "soc2": "__MISSING_TRANSLATION__ footer.trust.soc2",
-      "iso27001": "__MISSING_TRANSLATION__ footer.trust.iso27001",
-      "gdpr": "__MISSING_TRANSLATION__ footer.trust.gdpr",
-      "uptime": "__MISSING_TRANSLATION__ footer.trust.uptime"
+      "soc2": "SOC 2",
+      "iso27001": "ISO 27001",
+      "gdpr": "GDPR",
+      "uptime": "99.9% uptime"
     },
-    "companyName": "__MISSING_TRANSLATION__ footer.companyName",
-    "copyright": "__MISSING_TRANSLATION__ footer.copyright",
+    "companyName": "Feebee Technologies",
+    "copyright": "All rights reserved",
     "legal": {
-      "privacy": "__MISSING_TRANSLATION__ footer.legal.privacy",
-      "terms": "__MISSING_TRANSLATION__ footer.legal.terms",
-      "cookies": "__MISSING_TRANSLATION__ footer.legal.cookies",
-      "security": "__MISSING_TRANSLATION__ footer.legal.security"
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies",
+      "security": "Security"
     }
   },
   "dashboard": {
