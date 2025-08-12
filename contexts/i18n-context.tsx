@@ -131,10 +131,6 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     [locale, setLocale, t, formatters, isPseudoLocale, isReady, isMounted],
   )
 
-  if (!isMounted) {
-    return <div>Loading...</div>
-  }
-
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>
 }
 
