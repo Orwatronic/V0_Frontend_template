@@ -1173,62 +1173,61 @@
       "aiPowered": "__MISSING_TRANSLATION__ landing.solutions.aiPowered"
     },
     "hero": {
-      "badge": "__MISSING_TRANSLATION__ landing.hero.badge",
-      "title": "__MISSING_TRANSLATION__ landing.hero.title",
-      "subtitle": "__MISSING_TRANSLATION__ landing.hero.subtitle",
+      "badge": "Feebee ERP",
+      "title": "Run your enterprise on one modern platform",
+      "subtitle": "Financials, sales, materials, HCM, and more—localized and enterprise‑ready.",
       "cta": {
-        "primary": "__MISSING_TRANSLATION__ landing.hero.cta.primary",
-        "secondary": "__MISSING_TRANSLATION__ landing.hero.cta.secondary"
+        "primary": "Get started",
+        "secondary": "Watch demo"
       },
-      "image": {
-        "alt": "__MISSING_TRANSLATION__ landing.hero.image.alt"
-      },
+      "image": { "alt": "Analytics dashboard preview" },
+      "badge": { "realtime": "Realtime", "analytics": "Analytics" },
       "stats": {
-        "uptime": "__MISSING_TRANSLATION__ landing.hero.stats.uptime",
-        "clients": "__MISSING_TRANSLATION__ landing.hero.stats.clients",
-        "support": "__MISSING_TRANSLATION__ landing.hero.stats.support"
+        "uptime": "99.9% uptime",
+        "clients": "10K+ users",
+        "support": "24/7 support"
       }
     },
     "features": {
       "global": {
-        "title": "__MISSING_TRANSLATION__ landing.features.global.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.global.description"
+        "title": "Built for global teams",
+        "description": "Multi‑locale, multi‑currency, and timezone‑aware by design."
       },
       "performance": {
-        "title": "__MISSING_TRANSLATION__ landing.features.performance.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.performance.description"
+        "title": "Fast at scale",
+        "description": "Snappy UX with real‑time updates across modules."
       },
       "security": {
-        "title": "__MISSING_TRANSLATION__ landing.features.security.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.security.description"
+        "title": "Enterprise‑grade security",
+        "description": "SSO, RBAC, and audit controls baked in."
       },
       "data": {
-        "title": "__MISSING_TRANSLATION__ landing.features.data.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.data.description"
+        "title": "Trusted data",
+        "description": "Single source of truth across financials, sales, and operations."
       },
       "collaboration": {
-        "title": "__MISSING_TRANSLATION__ landing.features.collaboration.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.collaboration.description"
+        "title": "Collaborate effectively",
+        "description": "Comments, tasks, and approvals where work happens."
       },
       "analytics": {
-        "title": "__MISSING_TRANSLATION__ landing.features.analytics.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.analytics.description"
+        "title": "Actionable analytics",
+        "description": "Dashboards and KPIs to drive decisions."
       },
       "intelligence": {
-        "title": "__MISSING_TRANSLATION__ landing.features.intelligence.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.intelligence.description"
+        "title": "Intelligence built in",
+        "description": "Predictive insights to boost accuracy and speed."
       },
       "cloud": {
-        "title": "__MISSING_TRANSLATION__ landing.features.cloud.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.cloud.description"
+        "title": "Cloud native",
+        "description": "Modern, reliable, and easy to operate."
       },
       "compliance": {
-        "title": "__MISSING_TRANSLATION__ landing.features.compliance.title",
-        "description": "__MISSING_TRANSLATION__ landing.features.compliance.description"
+        "title": "Compliance ready",
+        "description": "Privacy and industry standards supported."
       },
-      "sectionBadge": "__MISSING_TRANSLATION__ landing.features.sectionBadge",
-      "title": "__MISSING_TRANSLATION__ landing.features.title",
-      "subtitle": "__MISSING_TRANSLATION__ landing.features.subtitle"
+      "sectionBadge": "Why Feebee",
+      "title": "Everything you need to run your business",
+      "subtitle": "A complete suite that grows with your team."
     }
   },
   "ppw": {
