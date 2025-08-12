@@ -3,47 +3,26 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Users, DollarSign, Package, ShoppingCart, Building, Activity, ChevronRight, ArrowUpRight, ArrowDownRight, Database } from 'lucide-react'
+import {
+  Users,
+  DollarSign,
+  Package,
+  ShoppingCart,
+  Building,
+  Activity,
+  ChevronRight,
+  ArrowUpRight,
+  ArrowDownRight,
+  Database,
+} from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState, useEffect } from "react"
 import { useAuth } from "@/contexts/auth-context"
-
-// Mock translation function
-const useTranslation = () => {
-  return {
-    t: (key: string) => {
-      const translations: Record<string, string> = {
-        "dashboard.welcome": "Welcome back",
-        "dashboard.metrics.revenue": "Total Revenue",
-        "dashboard.metrics.employees": "Active Employees",
-        "dashboard.metrics.inventory": "Inventory Value",
-        "dashboard.metrics.orders": "Sales Orders",
-        "dashboard.metrics.activity": "System Activity",
-        "dashboard.recentActivity": "Recent Activity",
-        "dashboard.quickActions": "Quick Actions",
-        "dashboard.status.active": "Active",
-        "dashboard.lastAccessed": "Last accessed",
-        "modules.financial.title": "Financial Management",
-        "modules.financial.description": "General Ledger, AP/AR, Asset Accounting",
-        "modules.hcm.title": "Human Capital Management",
-        "modules.hcm.description": "Employee lifecycle, Payroll, Time & Attendance",
-        "modules.materials.title": "Materials Management",
-        "modules.materials.description": "Material Master, Inventory, Warehouse, Procurement",
-        "modules.sales.title": "Sales & Distribution",
-        "modules.sales.description": "Quotations, Orders, Pricing, Delivery, Returns",
-        "modules.mdm.title": "Master Data Management",
-        "modules.mdm.description": "Centralized reference data management",
-        "modules.organizational.title": "Organizational Management",
-        "modules.organizational.description": "Company structure, Cost centers, Profit centers",
-      }
-      return translations[key] || key
-    },
-  }
-}
+import { useI18n } from "@/contexts/i18n-context"
 
 const DashboardOverview = () => {
   const router = useRouter()
-  const { t } = useTranslation()
+  const { t } = useI18n()
   const { user } = useAuth()
   const [metrics, setMetrics] = useState({
     revenue: { value: "$2,847,392", change: "+12.5%", trend: "up" },
@@ -54,33 +33,33 @@ const DashboardOverview = () => {
   })
   const [recentActivity, setRecentActivity] = useState([
     {
-      title: "New invoice created",
-      description: "Invoice #INV-2024-001 for $15,230",
-      time: "5 min ago",
+      title: t("dashboard.activity.invoiceCreated"),
+      description: t("dashboard.activity.invoiceDescription"),
+      time: t("dashboard.activity.timeAgo", { time: "5 min" }),
       module: "financial",
     },
     {
-      title: "Employee onboarded",
-      description: "Sarah Johnson joined Marketing team",
-      time: "1 hour ago",
+      title: t("dashboard.activity.employeeOnboarded"),
+      description: t("dashboard.activity.employeeDescription"),
+      time: t("dashboard.activity.timeAgo", { time: "1 hour" }),
       module: "hcm",
     },
     {
-      title: "Purchase order approved",
-      description: "PO #PO-2024-045 for raw materials",
-      time: "2 hours ago",
+      title: t("dashboard.activity.purchaseOrderApproved"),
+      description: t("dashboard.activity.purchaseOrderDescription"),
+      time: t("dashboard.activity.timeAgo", { time: "2 hours" }),
       module: "materials",
     },
     {
-      title: "Sales order completed",
-      description: "Order #SO-2024-089 shipped to customer",
-      time: "3 hours ago",
+      title: t("dashboard.activity.salesOrderCompleted"),
+      description: t("dashboard.activity.salesOrderDescription"),
+      time: t("dashboard.activity.timeAgo", { time: "3 hours" }),
       module: "sales",
     },
     {
-      title: "Material master updated",
-      description: "Material ABC-123 specifications modified",
-      time: "4 hours ago",
+      title: t("dashboard.activity.materialMasterUpdated"),
+      description: t("dashboard.activity.materialMasterDescription"),
+      time: t("dashboard.activity.timeAgo", { time: "4 hours" }),
       module: "mdm",
     },
   ])
@@ -150,42 +129,42 @@ const DashboardOverview = () => {
       description: t("modules.financial.description"),
       icon: DollarSign,
       route: "/financial",
-      lastAccessed: "2 hours ago",
+      lastAccessed: t("dashboard.timeAgo", { time: "2 hours" }),
     },
     {
       title: t("modules.hcm.title"),
       description: t("modules.hcm.description"),
       icon: Users,
       route: "/employees",
-      lastAccessed: "1 day ago",
+      lastAccessed: t("dashboard.timeAgo", { time: "1 day" }),
     },
     {
       title: t("modules.materials.title"),
       description: t("modules.materials.description"),
       icon: Package,
       route: "/materials",
-      lastAccessed: "3 hours ago",
+      lastAccessed: t("dashboard.timeAgo", { time: "3 hours" }),
     },
     {
       title: t("modules.sales.title"),
       description: t("modules.sales.description"),
       icon: ShoppingCart,
       route: "/sales",
-      lastAccessed: "30 min ago",
+      lastAccessed: t("dashboard.timeAgo", { time: "30 min" }),
     },
     {
       title: t("modules.mdm.title"),
       description: t("modules.mdm.description"),
       icon: Database,
       route: "/mdm",
-      lastAccessed: "1 week ago",
+      lastAccessed: t("dashboard.timeAgo", { time: "1 week" }),
     },
     {
       title: t("modules.organizational.title"),
       description: t("modules.organizational.description"),
       icon: Building,
       route: "/organizational",
-      lastAccessed: "2 days ago",
+      lastAccessed: t("dashboard.timeAgo", { time: "2 days" }),
     },
   ]
 
@@ -194,7 +173,7 @@ const DashboardOverview = () => {
       <div className="flex items-center justify-center h-full">
         <div className="text-center">
           <div className="w-8 h-8 bg-blue-200 rounded-lg animate-pulse mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading dashboard...</p>
+          <p className="text-muted-foreground">{t("dashboard.loading")}</p>
         </div>
       </div>
     )
@@ -205,9 +184,9 @@ const DashboardOverview = () => {
       {/* Welcome Section */}
       <div className="mb-8">
         <h2 className="text-3xl font-bold text-foreground mb-2">
-          {t("dashboard.welcome")}, {user?.name || "User"}!
+          {t("dashboard.welcome")}, {user?.name || t("dashboard.defaultUser")}!
         </h2>
-        <p className="text-muted-foreground">Here's what's happening with your business today.</p>
+        <p className="text-muted-foreground">{t("dashboard.welcomeDescription")}</p>
       </div>
 
       {/* Key Metrics Grid */}
@@ -231,7 +210,9 @@ const DashboardOverview = () => {
                 <div className="text-2xl font-bold">{metric.value}</div>
                 <div className={`flex items-center text-xs ${trendColor}`}>
                   <TrendIcon className="h-3 w-3 mr-1" />
-                  <span>{metric.change} from last month</span>
+                  <span>
+                    {metric.change} {t("dashboard.metrics.fromLastMonth")}
+                  </span>
                 </div>
               </CardContent>
             </Card>
@@ -241,7 +222,7 @@ const DashboardOverview = () => {
 
       {/* Module Cards Grid */}
       <div>
-        <h3 className="text-xl font-semibold mb-6">ERP Modules</h3>
+        <h3 className="text-xl font-semibold mb-6">{t("dashboard.erpModules")}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {moduleCards.map((module, index) => {
             const IconComponent = module.icon
@@ -318,7 +299,7 @@ const DashboardOverview = () => {
               onClick={() => router.push("/financial")}
             >
               <DollarSign className="h-4 w-4 mr-2" />
-              Create Invoice
+              {t("dashboard.actions.createInvoice")}
             </Button>
             <Button
               variant="outline"
@@ -326,7 +307,7 @@ const DashboardOverview = () => {
               onClick={() => router.push("/employees")}
             >
               <Users className="h-4 w-4 mr-2" />
-              Add Employee
+              {t("dashboard.actions.addEmployee")}
             </Button>
             <Button
               variant="outline"
@@ -334,7 +315,7 @@ const DashboardOverview = () => {
               onClick={() => router.push("/materials")}
             >
               <Package className="h-4 w-4 mr-2" />
-              Update Inventory
+              {t("dashboard.actions.updateInventory")}
             </Button>
             <Button
               variant="outline"
@@ -342,7 +323,7 @@ const DashboardOverview = () => {
               onClick={() => router.push("/sales")}
             >
               <ShoppingCart className="h-4 w-4 mr-2" />
-              New Sales Order
+              {t("dashboard.actions.newSalesOrder")}
             </Button>
             <Button
               variant="outline"
@@ -350,7 +331,7 @@ const DashboardOverview = () => {
               onClick={() => router.push("/mdm")}
             >
               <Database className="h-4 w-4 mr-2" />
-              Manage Master Data
+              {t("dashboard.actions.manageMasterData")}
             </Button>
           </CardContent>
         </Card>

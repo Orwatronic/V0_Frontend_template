@@ -42,7 +42,7 @@ Notes
 - Add pagination in Phase 2; add orgId wiring from session/header when available.
 \`\`\`
 
-```typescriptreact file="locales/en/translation.json"
+\`\`\`typescriptreact file="locales/en/translation.json"
 [v0-no-op-code-block-prefix]{
   "landing": {
     "hero": {
