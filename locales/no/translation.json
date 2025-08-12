@@ -479,10 +479,65 @@
     }
   },
   "common": {
-    "secure": "معتمد SOC 2",
-    "compliant": "متوافق مع GDPR",
-    "learnMore": "اعرف المزيد",
-    "getStarted": "ابدأ الآن",
-    "new": "جديد",
-    "comingSoon": "قريباً",
-    "
+    "secure": "SOC 2-sertifisert",
+    "compliant": "GDPR-kompatibel",
+    "learnMore": "Lær mer",
+    "getStarted": "Kom i gang",
+    "new": "Ny",
+    "comingSoon": "Kommer snart",
+    "export": "Eksporter",
+    "status": "Status",
+    "filter": "Filter",
+    "search": "Søk",
+    "add": "Legg til",
+    "edit": "Rediger",
+    "delete": "Slett",
+    "save": "Lagre",
+    "cancel": "Avbryt",
+    "loading": "Laster...",
+    "actions": "Handlinger",
+    "item": "MANGLER no.common.item",
+    "quantity": "MANGLER no.common.quantity",
+    "price": "MANGLER no.common.price",
+    "total": "MANGLER no.common.total",
+    "view": "MANGLER no.common.view",
+    "invoice": "MANGLER no.common.invoice",
+    "vendor": "MANGLER no.common.vendor",
+    "dueDate": "MANGLER no.common.dueDate",
+    "amount": "MANGLER no.common.amount",
+    "back": "MANGLER no.common.back",
+    "next": "MANGLER no.common.next",
+    "finish": "MANGLER no.common.finish",
+    "close": "MANGLER no.common.close",
+    "refresh": "MANGLER no.common.refresh",
+    "reject": "MANGLER no.common.reject",
+    "approve": "MANGLER no.common.approve"
+  },
+  "demo": {
+    "title": "Be om demo",
+    "description": "Se hvordan Feebee ERP kan transformere din bedriftsdrift",
+    "form": {
+      "fullName": "Fullt navn",
+      "workEmail": "Arbeids-e-post",
+      "company": "Selskapsnavn",
+      "submitting": "Sender...",
+      "submit": "Be om demo"
+    },
+    "success": "Demoforespørsel sendt!"
+  },
+  "errors": {
+    "general": {
+      "title": "Noe gikk galt",
+      "description": "En uventet feil oppstod. Vennligst prøv igjen.",
+      "debugInfo": "Feilsøkingsinformasjon:",
+      "errorId": "Feil-ID",
+      "persistentIssue": "Hvis dette problemet vedvarer, vennligst rapporter det.",
+      "actions": {
+        "tryAgain": "Prøv igjen",
+        "goHome": "Gå til dashbord",
+        "reload": "Last inn siden på nytt",
+        "reportIssue": "Rapporter problem"
+      }
+    }
+  }
+}
