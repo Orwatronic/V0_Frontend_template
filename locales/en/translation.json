@@ -227,44 +227,104 @@
     }
   },
   "solutions": {
+    "marketing": {
+      "badge": "Module Overview",
+      "cta": { "login": "Login to Get Started", "demo": "Request Demo" },
+      "notFound": { "title": "Solution Not Found", "subtitle": "Please select a solution from the list." }
+    },
     "financials": {
+      "title": "Financial Management",
+      "subtitle": "From chart of accounts to period close—and everything in between.",
+      "features": { "f1": "General Ledger & Journals", "f2": "Multi-currency & Tax", "f3": "Period Close" },
       "imageAlt": "Financial Management Overview"
     },
     "sales": {
+      "title": "Sales & Distribution",
+      "subtitle": "Quote-to-cash with pricing, deliveries, and returns.",
+      "features": { "f1": "Quotes & Orders", "f2": "Flexible Pricing", "f3": "Returns & RMA" },
       "imageAlt": "Sales Distribution Overview"
     },
     "materials": {
+      "title": "Materials Management",
+      "subtitle": "Inventory, warehouse, and procurement operations.",
+      "features": { "f1": "Inventory Control", "f2": "Warehouse Management", "f3": "Procurement" },
       "imageAlt": "Materials Management Overview"
     },
     "hcm": {
+      "title": "Human Capital Management",
+      "subtitle": "Employees, time, payroll, and organization.",
+      "features": { "f1": "Employee Records", "f2": "Time & Payroll", "f3": "Organization" },
       "imageAlt": "Human Capital Management Overview"
     },
     "master-data": {
+      "title": "Master Data Management",
+      "subtitle": "Clean, centralized reference data across modules.",
+      "features": { "f1": "Customer/Vendor Data", "f2": "Material Groups", "f3": "Hierarchies" },
       "imageAlt": "Master Data Management Overview"
     },
     "organization": {
+      "title": "Organizational Management",
+      "subtitle": "Company structures, cost/profit centers, and roles.",
+      "features": { "f1": "Company Structure", "f2": "Cost/Profit Centers", "f3": "Authorizations" },
       "imageAlt": "Organizational Management Overview"
     },
     "production": {
+      "title": "Production Planning",
+      "subtitle": "BOMs, routings, scheduling, and execution.",
+      "features": { "f1": "BOM Management", "f2": "Smart Scheduling", "f3": "Execution" },
       "imageAlt": "Production Planning Overview"
     },
     "projects": {
+      "title": "Project System",
+      "subtitle": "Resource planning, milestones, and budgets.",
+      "features": { "f1": "Resource Planning", "f2": "Milestones", "f3": "Budgets" },
       "imageAlt": "Project System Overview"
     },
     "quality": {
+      "title": "Quality Management",
+      "subtitle": "Quality control, audits, certifications, and compliance.",
+      "features": { "f1": "Quality Control", "f2": "Audit Trails", "f3": "Compliance" },
       "imageAlt": "Quality Management Overview"
     },
     "maintenance": {
+      "title": "Plant Maintenance",
+      "subtitle": "Assets, preventive maintenance, and work orders.",
+      "features": { "f1": "Asset Management", "f2": "Preventive Schedules", "f3": "Work Orders" },
       "imageAlt": "Plant Maintenance Overview"
     },
     "crm": {
+      "title": "Customer Relationship Management",
+      "subtitle": "Leads, service, pipeline, and analytics.",
+      "features": { "f1": "Lead & Contact Management", "f2": "Service", "f3": "Pipeline & Analytics" },
       "imageAlt": "Customer Relationship Management Overview"
     },
     "reports": {
+      "title": "Reports & Analytics",
+      "subtitle": "KPIs, dashboards, and custom analysis.",
+      "features": { "f1": "KPI Dashboards", "f2": "Custom Reports", "f3": "Export & Share" },
       "imageAlt": "Reports and Analytics Overview"
     },
     "customer-portal": {
+      "title": "Customer Portal",
+      "subtitle": "Secure, branded self-service experiences.",
+      "features": { "f1": "Order Tracking", "f2": "Invoices", "f3": "Support Requests" },
       "imageAlt": "Customer Portal Overview"
     }
+  },
+  "production": {
+    "title": "Production Management",
+    "description": "Comprehensive production planning and execution system"
+  },
+  "demo": {
+    "title": "Request a Demo",
+    "description": "See how Feebee ERP can transform your business operations",
+    "form": {
+      "fullName": "Full Name",
+      "workEmail": "Work Email",
+      "company": "Company Name",
+      "submitting": "Submitting...",
+      "submit": "Request Demo"
+    },
+    "success": "Demo request submitted successfully!"
   }
 }

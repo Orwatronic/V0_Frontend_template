@@ -282,13 +282,13 @@
       "title": "التقارير والتحليلات",
       "subtitle": "المؤشرات ولوحات التحكم والتحليل المخصص.",
       "features": { "f1": "لوحات مؤشرات", "f2": "تقاير مخصصة", "f3": "تصدير ومشاركة" },
-      "imageAlt": "__مفقود__ solutions.reports.imageAlt"
+      "imageAlt": "نظرة عامة على التقارير والتحليلات"
     },
     "customer-portal": {
       "title": "بوابة العملاء",
       "subtitle": "تجارب ذاتية الخدمة مؤمنة وذات علامة تجارية.",
       "features": { "f1": "تتبع الطلبات", "f2": "الفواتير", "f3": "طلبات الدعم" },
-      "imageAlt": "__مفقود__ solutions.customer-portal.imageAlt"
+      "imageAlt": "نظرة عامة على بوابة العملاء"
     }
   },
   "nav": {
@@ -1030,16 +1030,16 @@
       "saved": "محفوظ"
     },
     "configuration": {
-      "title": "__مفقود__ reports.configuration.title",
-      "reportName": "__مفقود__ reports.configuration.reportName",
-      "reportNamePlaceholder": "__مفقود__ reports.configuration.reportNamePlaceholder",
-      "description": "__مفقود__ reports.configuration.description",
-      "descriptionPlaceholder": "__مفقود__ reports.configuration.descriptionPlaceholder",
-      "dataSource": "__مفقود__ reports.configuration.dataSource",
-      "selectDataSource": "__مفقود__ reports.configuration.selectDataSource",
-      "table": "__مفقود__ reports.configuration.table",
-      "selectTable": "__مفقود__ reports.configuration.selectTable",
-      "chartType": "__مفقود__ reports.configuration.chartType"
+      "title": "إعداد التقرير",
+      "reportName": "اسم التقرير",
+      "reportNamePlaceholder": "أدخل اسم التقرير",
+      "description": "الوصف",
+      "descriptionPlaceholder": "أدخل وصف التقرير",
+      "dataSource": "مصدر البيانات",
+      "selectDataSource": "اختر مصدر البيانات",
+      "table": "الجدول",
+      "selectTable": "اختر الجدول",
+      "chartType": "نوع المخطط"
     }
   },
   "materials": {
@@ -1145,5 +1145,17 @@
       "90": "90-119 يوماً",
       "90+": "أكثر من 120 يوماً"
     }
+  },
+  "demo": {
+    "title": "طلب عرض توضيحي",
+    "description": "احصل على عرض توضيحي مجاني ل Feebee ERP.",
+    "form": {
+      "fullName": "الاسم الكامل",
+      "workEmail": "البريد الإلكتروني للعمل",
+      "company": "الشركة",
+      "submitting": "جاري الإرسال...",
+      "submit": "إرسال"
+    },
+    "success": "شكراً لطلبك! سنتواصل معك قريباً."
   }
 }

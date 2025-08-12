@@ -239,14 +239,14 @@
       "imageAlt": "Oversikt over Kundeoppfølging (CRM)"
     },
     "reports": {
-      "title": "Rapporter & analyse",
-      "subtitle": "KPI-er, dashboards og ad-hoc analyse.",
-      "features": { "f1": "KPI-dashboards", "f2": "Ad-hoc rapporter", "f3": "Eksport & deling" },
-      "imageAlt": "Oversikt over Rapporter & analyse"
+      "title": "Rapporter og analyse",
+      "subtitle": "KPI-er, dashbord og tilpasset analyse.",
+      "features": { "f1": "KPI-dashbord", "f2": "Tilpassede rapporter", "f3": "Eksporter og del" },
+      "imageAlt": "Oversikt over rapporter og analyse"
     },
     "customer-portal": {
       "title": "Kundeportal",
-      "subtitle": "Sikker selvbetjening med bedriftsprofil.",
+      "subtitle": "Sikre, merkevarebaserte selvbetjeningsopplevelser.",
       "features": { "f1": "Ordresporing", "f2": "Fakturaer", "f3": "Supporthenvendelser" },
       "imageAlt": "Oversikt over Kundeportal"
     }
@@ -836,10 +836,10 @@
     },
     "configuration": {
       "title": "Rapportkonfigurasjon",
-      "reportName": "Navn på rapport",
-      "reportNamePlaceholder": "Skriv inn navn på rapport",
+      "reportName": "Rapportnavn",
+      "reportNamePlaceholder": "Skriv inn rapportnavn",
       "description": "Beskrivelse",
-      "descriptionPlaceholder": "Skriv inn beskrivelse",
+      "descriptionPlaceholder": "Skriv inn rapportbeskrivelse",
       "dataSource": "Datakilde",
       "selectDataSource": "Velg datakilde",
       "table": "Tabell",
@@ -942,5 +942,21 @@
       "90": "90 dager",
       "90+": "90+ dager"
     }
+  },
+  "production": {
+    "title": "Produksjonsstyring",
+    "description": "Omfattende produksjonsplanlegging og utførelsessystem"
+  },
+  "demo": {
+    "title": "Be om demo",
+    "description": "Se hvordan Feebee ERP kan transformere din bedriftsdrift",
+    "form": {
+      "fullName": "Fullt navn",
+      "workEmail": "Arbeids-e-post",
+      "company": "Selskapsnavn",
+      "submitting": "Sender...",
+      "submit": "Be om demo"
+    },
+    "success": "Demoforespørsel sendt!"
   }
 }
