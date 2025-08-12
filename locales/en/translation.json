@@ -10,7 +10,9 @@
       "invoices": "Invoices",
       "returns": "Returns"
     },
-    "imageAlt": "Sales Distribution Overview"
+    "imageAlt": "Sales Distribution Overview",
+    "title": "Sales & Distribution",
+    "description": "Complete sales cycle management from inquiry to delivery and returns"
   },
   "hcm": {
     "tabs": {
@@ -152,7 +154,13 @@
         "discontinued": "Discontinued"
       }
     },
-    "imageAlt": "Materials Management Overview"
+    "imageAlt": "Materials Management Overview",
+    "overview": {
+      "lowStockAlerts": "Low Stock Alerts",
+      "lowStockDescription": "Items requiring immediate attention",
+      "recentActivity": "Recent Activity",
+      "recentActivityDescription": "Latest material transactions and updates"
+    }
   },
   "pricing": {
     "title": "Choose Your Plan",
@@ -326,5 +334,19 @@
       "submit": "Request Demo"
     },
     "success": "Demo request submitted successfully!"
+  },
+  "financial": {
+    "tabs": {
+      "coa": "Chart of Accounts",
+      "ap": "Accounts Payable",
+      "ar": "Accounts Receivable",
+      "collections": "Collections",
+      "reconciliation": "Reconciliation",
+      "assets": "Asset Accounting",
+      "reporting": "Financial Reporting",
+      "aging": "Aging Analysis",
+      "bankRec": "Bank Reconciliation",
+      "je": "Journal Entries"
+    }
   }
 }

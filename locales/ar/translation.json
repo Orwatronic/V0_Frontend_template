@@ -228,6 +228,12 @@
           "inactive": "غير نشط",
           "discontinued": "متوقف"
         }
+      },
+      "overview": {
+        "lowStockAlerts": "__مفقود__ materials.overview.lowStockAlerts",
+        "lowStockDescription": "__مفقود__ materials.overview.lowStockDescription",
+        "recentActivity": "__مفقود__ materials.overview.recentActivity",
+        "recentActivityDescription": "__مفقود__ materials.overview.recentActivityDescription"
       }
     },
     "hcm": {

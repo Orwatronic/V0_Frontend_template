@@ -787,7 +787,9 @@
       "deliveries": "Leveranser",
       "invoices": "Fakturaer",
       "returns": "Returer"
-    }
+    },
+    "title": "Salg og distribusjon",
+    "description": "Komplett salgssyklusadministrasjon fra forespørsel til levering og returer"
   },
   "hcm": {
     "tabs": {
@@ -808,6 +810,12 @@
       "masterData": "Masterdata",
       "warehouse": "Varehus",
       "procurement": "Innkjøp"
+    },
+    "overview": {
+      "lowStockAlerts": "Lavlager-varsler",
+      "lowStockDescription": "Varer som krever umiddelbar oppmerksomhet",
+      "recentActivity": "Nylig aktivitet",
+      "recentActivityDescription": "Siste materialtransaksjoner og oppdateringer"
     }
   },
   "compensation": {
