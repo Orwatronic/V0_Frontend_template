@@ -89,7 +89,19 @@
       "preview": "Preview",
       "saved": "Saved"
     },
-    "imageAlt": "Reports and Analytics Overview"
+    "imageAlt": "Reports and Analytics Overview",
+    "configuration": {
+      "title": "Report Configuration",
+      "reportName": "Report Name",
+      "reportNamePlaceholder": "Enter report name",
+      "description": "Description",
+      "descriptionPlaceholder": "Enter report description",
+      "dataSource": "Data Source",
+      "selectDataSource": "Select Data Source",
+      "table": "Table",
+      "selectTable": "Select Table",
+      "chartType": "Chart Type"
+    }
   },
   "analytics": {
     "title": "Analytics Dashboard",

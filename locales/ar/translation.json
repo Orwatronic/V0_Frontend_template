@@ -1028,6 +1028,18 @@
       "builder": "منشئ التقارير",
       "preview": "معاينة",
       "saved": "محفوظ"
+    },
+    "configuration": {
+      "title": "__مفقود__ reports.configuration.title",
+      "reportName": "__مفقود__ reports.configuration.reportName",
+      "reportNamePlaceholder": "__مفقود__ reports.configuration.reportNamePlaceholder",
+      "description": "__مفقود__ reports.configuration.description",
+      "descriptionPlaceholder": "__مفقود__ reports.configuration.descriptionPlaceholder",
+      "dataSource": "__مفقود__ reports.configuration.dataSource",
+      "selectDataSource": "__مفقود__ reports.configuration.selectDataSource",
+      "table": "__مفقود__ reports.configuration.table",
+      "selectTable": "__مفقود__ reports.configuration.selectTable",
+      "chartType": "__مفقود__ reports.configuration.chartType"
     }
   },
   "materials": {

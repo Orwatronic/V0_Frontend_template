@@ -833,6 +833,18 @@
       "builder": "Rapportbygger",
       "preview": "Forhåndsvisning",
       "saved": "Lagret"
+    },
+    "configuration": {
+      "title": "Rapportkonfigurasjon",
+      "reportName": "Navn på rapport",
+      "reportNamePlaceholder": "Skriv inn navn på rapport",
+      "description": "Beskrivelse",
+      "descriptionPlaceholder": "Skriv inn beskrivelse",
+      "dataSource": "Datakilde",
+      "selectDataSource": "Velg datakilde",
+      "table": "Tabell",
+      "selectTable": "Velg tabell",
+      "chartType": "Diagramtype"
     }
   },
   "analytics": {
