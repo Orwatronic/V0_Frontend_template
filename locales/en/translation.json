@@ -1,366 +1,9 @@
 {
-  "sales": {
-    "tabs": {
-      "dashboard": "Dashboard",
-      "pipeline": "Pipeline",
-      "inquiries": "Inquiries",
-      "quotations": "Quotations",
-      "orders": "Orders",
-      "deliveries": "Deliveries",
-      "invoices": "Invoices",
-      "returns": "Returns"
-    },
-    "imageAlt": "Sales Distribution Overview",
-    "title": "Sales & Distribution",
-    "description": "Complete sales cycle management from inquiry to delivery and returns"
-  },
-  "hcm": {
-    "tabs": {
-      "dashboard": "Dashboard",
-      "employees": "Employees",
-      "orgChart": "Org Chart",
-      "recruitment": "Recruitment",
-      "onboarding": "Onboarding",
-      "performance": "Performance",
-      "goals": "Goals",
-      "compensation": "Compensation",
-      "analytics": "Analytics"
-    },
-    "title": "Human Capital Management",
-    "description": "Complete employee lifecycle management",
-    "metrics": {
-      "totalEmployees": "Total Employees",
-      "newHires": "New Hires",
-      "turnoverRate": "Turnover Rate",
-      "avgSalary": "Average Salary"
-    },
-    "employees": {
-      "title": "Employee Management",
-      "addEmployee": "Add Employee",
-      "searchPlaceholder": "Search employees..."
-    },
-    "performance": {
-      "title": "Performance Management",
-      "reviews": "Performance Reviews",
-      "goals": "Goals & Objectives"
-    },
-    "imageAlt": "Human Capital Management Overview"
-  },
-  "crm": {
-    "customer360": {
-      "tabs": {
-        "overview": "Overview",
-        "contacts": "Contacts",
-        "opportunities": "Opportunities",
-        "activities": "Activities",
-        "invoices": "Invoices",
-        "files": "Files"
-      }
-    },
-    "customerMaster": {
-      "tabs": {
-        "general": "General",
-        "contacts": "Contacts",
-        "financial": "Financial",
-        "history": "History"
-      }
-    },
-    "imageAlt": "Customer Relationship Management Overview"
-  },
-  "compensation": {
-    "tabs": {
-      "dashboard": "Dashboard",
-      "reviews": "Reviews",
-      "budget": "Budget",
-      "approvals": "Approvals",
-      "analytics": "Analytics",
-      "history": "History"
-    }
-  },
-  "goals": {
-    "tabs": {
-      "individual": "Individual",
-      "team": "Team",
-      "company": "Company",
-      "analytics": "Analytics"
-    }
-  },
-  "reports": {
-    "tabs": {
-      "builder": "Builder",
-      "preview": "Preview",
-      "saved": "Saved"
-    },
-    "imageAlt": "Reports and Analytics Overview",
-    "configuration": {
-      "title": "Report Configuration",
-      "reportName": "Report Name",
-      "reportNamePlaceholder": "Enter report name",
-      "description": "Description",
-      "descriptionPlaceholder": "Enter report description",
-      "dataSource": "Data Source",
-      "selectDataSource": "Select Data Source",
-      "table": "Table",
-      "selectTable": "Select Table",
-      "chartType": "Chart Type"
-    }
-  },
-  "analytics": {
-    "title": "Analytics Dashboard",
-    "description": "Comprehensive business intelligence and reporting",
-    "kpis": {
-      "totalRevenue": "Total Revenue",
-      "activeUsers": "Active Users",
-      "conversionRate": "Conversion Rate",
-      "customerSatisfaction": "Customer Satisfaction"
-    },
-    "charts": {
-      "revenueOverTime": "Revenue Over Time",
-      "userGrowth": "User Growth",
-      "salesFunnel": "Sales Funnel"
-    }
-  },
-  "customReportBuilder": {
-    "title": "Custom Report Builder",
-    "description": "Build and customize reports",
-    "dataSource": "Data Source",
-    "selectColumns": "Select Columns",
-    "filters": "Filters",
-    "preview": "Preview",
-    "generate": "Generate Report"
-  },
-  "materials": {
-    "title": "Materials Management",
-    "description": "Comprehensive materials and inventory management system",
-    "metrics": {
-      "totalMaterials": "Total Materials",
-      "activeMaterials": "Active Materials",
-      "inventoryValue": "Inventory Value",
-      "totalValue": "Total Value",
-      "pendingOrders": "Pending Orders",
-      "awaitingDelivery": "Awaiting Delivery",
-      "warehouseUtilization": "Warehouse Utilization",
-      "storageCapacity": "Storage Capacity"
-    },
-    "tabs": {
-      "overview": "Overview",
-      "masterData": "Master Data",
-      "warehouse": "Warehouse",
-      "procurement": "Procurement"
-    },
-    "activity": {
-      "materialReceived": "Material Received",
-      "stockAdjustment": "Stock Adjustment",
-      "newMaterial": "New Material Added",
-      "timeAgo": "{{time}} ago"
-    },
-    "masterData": {
-      "title": "Material Master Data",
-      "description": "Manage core material data and specifications",
-      "categories": "Categories",
-      "searchPlaceholder": "Search materials...",
-      "import": "Import",
-      "addMaterial": "Add Material"
-    },
-    "columns": {
-      "materialId": "Material ID",
-      "name": "Name",
-      "type": "Type",
-      "baseUom": "Base UoM",
-      "status": "Status",
-      "onHand": "On Hand"
-    },
-    "types": {
-      "raw": "Raw Material",
-      "component": "Component",
-      "finished": "Finished Good"
-    },
-    "status": {
-      "active": "Active",
-      "inactive": "Inactive"
-    },
-    "materialMaster": {
-      "title": "Material Master Data",
-      "description": "Manage core material data and specifications",
-      "searchPlaceholder": "Search materials...",
-      "addMaterial": "Add New Material",
-      "columns": {
-        "materialCode": "Material Code",
-        "description": "Description",
-        "category": "Category",
-        "unit": "Unit",
-        "status": "Status"
-      },
-      "categories": {
-        "rawMaterials": "Raw Materials",
-        "finishedGoods": "Finished Goods",
-        "components": "Components",
-        "consumables": "Consumables"
-      },
-      "status": {
-        "active": "Active",
-        "inactive": "Inactive",
-        "discontinued": "Discontinued"
-      }
-    },
-    "imageAlt": "Materials Management Overview",
-    "overview": {
-      "lowStockAlerts": "Low Stock Alerts",
-      "lowStockDescription": "Items requiring immediate attention",
-      "recentActivity": "Recent Activity",
-      "recentActivityDescription": "Latest material transactions and updates",
-      "minStock": "Min Stock"
-    }
-  },
-  "pricing": {
-    "title": "Choose Your Plan",
-    "subtitle": "Select the perfect plan for your business needs",
-    "monthly": "Monthly",
-    "annually": "Annually",
-    "save": "Save 20%",
-    "plans": {
-      "starter": {
-        "name": "Starter",
-        "price": "$99",
-        "description": "Perfect for small businesses",
-        "features": ["Up to 10 users", "Basic modules", "Email support"]
-      },
-      "professional": {
-        "name": "Professional",
-        "price": "$299",
-        "description": "For growing companies",
-        "features": ["Up to 50 users", "All modules", "Priority support"]
-      },
-      "enterprise": {
-        "name": "Enterprise",
-        "price": "Custom",
-        "description": "For large organizations",
-        "features": ["Unlimited users", "Custom integrations", "Dedicated support"]
-      }
-    },
-    "cta": "Get Started",
-    "contact": "Contact Sales"
-  },
-  "testimonials": {
-    "title": "What Our Customers Say",
-    "subtitle": "Trusted by businesses worldwide",
-    "items": [
-      {
-        "quote": "Feebee ERP transformed our operations completely.",
-        "author": "John Smith",
-        "company": "Tech Corp",
-        "role": "CEO"
-      }
-    ]
-  },
-  "requestDemo": {
-    "title": "Request a Demo",
-    "subtitle": "See how Feebee ERP can transform your business",
-    "form": {
-      "firstName": "First Name",
-      "lastName": "Last Name",
-      "email": "Email Address",
-      "company": "Company Name",
-      "phone": "Phone Number",
-      "message": "Message",
-      "submit": "Request Demo"
-    },
-    "success": "Demo request submitted successfully!",
-    "loading": "Submitting request..."
-  },
-  "aging": {
-    "ap": {
-      "title": "Accounts Payable Aging"
-    },
-    "ar": {
-      "title": "Accounts Receivable Aging"
-    },
-    "description": "Outstanding balances by aging bucket.",
-    "bucket": {
-      "current": "Current",
-      "30": "1-30 Days",
-      "60": "31-60 Days",
-      "90": "61-90 Days",
-      "90+": "90+ Days"
-    }
-  },
   "solutions": {
     "marketing": {
       "badge": "Module Overview",
       "cta": { "login": "Login to Get Started", "demo": "Request Demo" },
       "notFound": { "title": "Solution Not Found", "subtitle": "Please select a solution from the list." }
-    },
-    "financials": {
-      "title": "Financial Management",
-      "subtitle": "From chart of accounts to period close—and everything in between.",
-      "features": { "f1": "General Ledger & Journals", "f2": "Multi-currency & Tax", "f3": "Period Close" },
-      "imageAlt": "Financial Management Overview"
-    },
-    "sales": {
-      "title": "Sales & Distribution",
-      "subtitle": "Quote-to-cash with pricing, deliveries, and returns.",
-      "features": { "f1": "Quotes & Orders", "f2": "Flexible Pricing", "f3": "Returns & RMA" },
-      "imageAlt": "Sales Distribution Overview"
-    },
-    "materials": {
-      "title": "Materials Management",
-      "subtitle": "Inventory, warehouse, and procurement operations.",
-      "features": { "f1": "Inventory Control", "f2": "Warehouse Management", "f3": "Procurement" },
-      "imageAlt": "Materials Management Overview"
-    },
-    "hcm": {
-      "title": "Human Capital Management",
-      "subtitle": "Employees, time, payroll, and organization.",
-      "features": { "f1": "Employee Records", "f2": "Time & Payroll", "f3": "Organization" },
-      "imageAlt": "Human Capital Management Overview"
-    },
-    "master-data": {
-      "title": "Master Data Management",
-      "subtitle": "Clean, centralized reference data across modules.",
-      "features": { "f1": "Customer/Vendor Data", "f2": "Material Groups", "f3": "Hierarchies" },
-      "imageAlt": "Master Data Management Overview"
-    },
-    "organization": {
-      "title": "Organizational Management",
-      "subtitle": "Company structures, cost/profit centers, and roles.",
-      "features": { "f1": "Company Structure", "f2": "Cost/Profit Centers", "f3": "Authorizations" },
-      "imageAlt": "Organizational Management Overview"
-    },
-    "production": {
-      "title": "Production Planning",
-      "subtitle": "BOMs, routings, scheduling, and execution.",
-      "features": { "f1": "BOM Management", "f2": "Smart Scheduling", "f3": "Execution" },
-      "imageAlt": "Production Planning Overview"
-    },
-    "projects": {
-      "title": "Project System",
-      "subtitle": "Resource planning, milestones, and budgets.",
-      "features": { "f1": "Resource Planning", "f2": "Milestones", "f3": "Budgets" },
-      "imageAlt": "Project System Overview"
-    },
-    "quality": {
-      "title": "Quality Management",
-      "subtitle": "Quality control, audits, certifications, and compliance.",
-      "features": { "f1": "Quality Control", "f2": "Audit Trails", "f3": "Compliance" },
-      "imageAlt": "Quality Management Overview"
-    },
-    "maintenance": {
-      "title": "Plant Maintenance",
-      "subtitle": "Assets, preventive maintenance, and work orders.",
-      "features": { "f1": "Asset Management", "f2": "Preventive Schedules", "f3": "Work Orders" },
-      "imageAlt": "Plant Maintenance Overview"
-    },
-    "crm": {
-      "title": "Customer Relationship Management",
-      "subtitle": "Leads, service, pipeline, and analytics.",
-      "features": { "f1": "Lead & Contact Management", "f2": "Service", "f3": "Pipeline & Analytics" },
-      "imageAlt": "Customer Relationship Management Overview"
-    },
-    "reports": {
-      "title": "Reports & Analytics",
-      "subtitle": "KPIs, dashboards, and custom analysis.",
-      "features": { "f1": "KPI Dashboards", "f2": "Custom Reports", "f3": "Export & Share" },
-      "imageAlt": "Reports and Analytics Overview"
     },
     "customer-portal": {
       "title": "Customer Portal",
@@ -368,22 +11,6 @@
       "features": { "f1": "Order Tracking", "f2": "Invoices", "f3": "Support Requests" },
       "imageAlt": "Customer Portal Overview"
     }
-  },
-  "production": {
-    "title": "Production Management",
-    "description": "Comprehensive production planning and execution system"
-  },
-  "demo": {
-    "title": "Request a Demo",
-    "description": "See how Feebee ERP can transform your business operations",
-    "form": {
-      "fullName": "Full Name",
-      "workEmail": "Work Email",
-      "company": "Company Name",
-      "submitting": "Submitting...",
-      "submit": "Request Demo"
-    },
-    "success": "Demo request submitted successfully!"
   },
   "financial": {
     "tabs": {
@@ -397,6 +24,136 @@
       "aging": "Aging Analysis",
       "bankRec": "Bank Reconciliation",
       "je": "Journal Entries"
+    }
+  },
+  "customerPortal": {
+    "title": "Customer Portal",
+    "welcome": "Welcome back",
+    "tabs": {
+      "dashboard": "Dashboard",
+      "orders": "Orders",
+      "invoices": "Invoices",
+      "catalog": "Catalog",
+      "support": "Support",
+      "account": "Account"
+    },
+    "dashboard": {
+      "metrics": {
+        "totalOrders": "Total Orders",
+        "totalSpent": "Total Spent",
+        "availableCredit": "Available Credit",
+        "onTimeDelivery": "On-Time Delivery",
+        "avgOrderValue": "Average Order Value",
+        "creditLimit": "Credit Limit",
+        "excellentPerformance": "Excellent performance"
+      },
+      "recentOrders": "Recent Orders",
+      "recentActivity": "Your latest order activity",
+      "accountManager": "Account Manager",
+      "supportContact": "Your dedicated support contact",
+      "contactManager": "Contact Manager"
+    },
+    "orders": {
+      "title": "Order History",
+      "description": "Track and manage your orders",
+      "filterByStatus": "Filter by status",
+      "allOrders": "All Orders",
+      "columns": {
+        "orderId": "Order ID",
+        "date": "Date",
+        "status": "Status",
+        "items": "Items",
+        "total": "Total",
+        "delivery": "Delivery"
+      },
+      "actions": {
+        "view": "View",
+        "track": "Track",
+        "reorder": "Reorder"
+      }
+    },
+    "invoices": {
+      "title": "Invoice History",
+      "description": "View and download your invoices",
+      "columns": {
+        "invoiceId": "Invoice ID",
+        "orderId": "Order ID",
+        "date": "Date",
+        "dueDate": "Due Date",
+        "amount": "Amount",
+        "status": "Status"
+      },
+      "actions": {
+        "view": "View",
+        "download": "Download"
+      }
+    },
+    "catalog": {
+      "title": "Product Catalog",
+      "description": "Browse and order products",
+      "search": "Search products...",
+      "requestQuote": "Request Quote",
+      "addToCart": "Add to Cart",
+      "columns": {
+        "product": "Product",
+        "sku": "SKU",
+        "price": "Price",
+        "availability": "Availability",
+        "leadTime": "Lead Time"
+      }
+    },
+    "support": {
+      "title": "Support Center",
+      "description": "Get help and submit tickets",
+      "newTicket": "New Ticket",
+      "ticketHistory": "Ticket History",
+      "form": {
+        "subject": "Subject",
+        "priority": "Priority",
+        "description": "Description",
+        "submit": "Submit Ticket"
+      },
+      "columns": {
+        "ticketId": "Ticket ID",
+        "subject": "Subject",
+        "status": "Status",
+        "priority": "Priority",
+        "created": "Created",
+        "lastUpdate": "Last Update",
+        "assignedTo": "Assigned To"
+      }
+    },
+    "account": {
+      "title": "Account Information",
+      "profile": "Profile",
+      "contactPerson": "Contact Person",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "paymentTerms": "Payment Terms",
+      "customerSince": "Customer Since"
+    },
+    "status": {
+      "delivered": "Delivered",
+      "inTransit": "In Transit",
+      "processing": "Processing",
+      "paid": "Paid",
+      "pending": "Pending",
+      "overdue": "Overdue",
+      "inStock": "In Stock",
+      "limited": "Limited",
+      "outOfStock": "Out of Stock",
+      "open": "Open",
+      "resolved": "Resolved"
+    },
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "exportData": "Export Data"
     }
   }
 }
