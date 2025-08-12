@@ -35,9 +35,16 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE)
   const [isPseudoLocale, setIsPseudoLocale] = useState(false)
   const [isReady, setIsReady] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   // initialize from localStorage or browser preference
   useEffect(() => {
+    if (!isMounted) return
+
     try {
       const stored = (localStorage.getItem(STORAGE_KEY) as Locale | null) || null
 
@@ -56,15 +63,15 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       setLocaleState(getBrowserLocale())
     }
     setIsReady(true)
-  }, [])
+  }, [isMounted])
 
   // reflect lang/dir on <html>
   useEffect(() => {
-    if (typeof document !== "undefined") {
+    if (typeof document !== "undefined" && isReady) {
       document.documentElement.lang = isPseudoLocale ? PSEUDO_LOCALE : locale
       document.documentElement.dir = getDir(locale)
     }
-  }, [locale, isPseudoLocale])
+  }, [locale, isPseudoLocale, isReady])
 
   const setLocale = useCallback((l: Locale) => {
     if (l === (PSEUDO_LOCALE as any)) {
@@ -89,7 +96,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   const t: TranslateFn = useCallback(
     (key: string, vars?: Record<string, string | number>, count?: number) => {
-      if (!isReady) return key
+      if (!isReady || !isMounted) return key
 
       // Try to get translation with fallback
       const value = getTranslationWithFallback(key, locale)
@@ -106,7 +113,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       // Return pseudo-locale version of key if enabled
       return isPseudoLocale ? toPseudoLocale(key) : key
     },
-    [locale, isPseudoLocale, isReady],
+    [locale, isPseudoLocale, isReady, isMounted],
   )
 
   const formatters = useFormatters(locale)
@@ -119,10 +126,14 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       dir: getDir(locale),
       formatters,
       isPseudoLocale,
-      isReady,
+      isReady: isReady && isMounted,
     }),
-    [locale, setLocale, t, formatters, isPseudoLocale, isReady],
+    [locale, setLocale, t, formatters, isPseudoLocale, isReady, isMounted],
   )
+
+  if (!isMounted) {
+    return <div>Loading...</div>
+  }
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>
 }
