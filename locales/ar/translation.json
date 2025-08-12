@@ -1,13 +1,24 @@
 {
   "landing": {
     "hero": {
-      "badge": "حل تخطيط موارد المؤسسات الجاهز",
+      "badge": {
+        "realtime": "بيانات في الوقت الحقيقي",
+        "analytics": "تحليلات متقدمة"
+      },
       "title": "حوّل مؤسستك مع نظام تخطيط موارد المؤسسات من فيبي تكنولوجيز",
       "subtitle": "نظام شامل لتخطيط موارد المؤسسات مصمم لإدارة العمليات الأساسية عبر جميع الأقسام مع وحدات متكاملة للتحكم التشغيلي الكامل.",
-      "cta": { "primary": "ابدأ النسخة التجريبية المجانية", "secondary": "شاهد العرض التوضيحي" },
-      "badge": { "realtime": "بيانات في الوقت الحقيقي", "analytics": "تحليلات متقدمة" },
-      "image": { "alt": "لوحة تحكم نظام تخطيط موارد المؤسسات" },
-      "stats": { "uptime": "اتفاقية مستوى الخدمة للتشغيل", "clients": "عملاء المؤسسات", "support": "دعم الخبراء" }
+      "cta": {
+        "primary": "ابدأ النسخة التجريبية المجانية",
+        "secondary": "شاهد العرض التوضيحي"
+      },
+      "image": {
+        "alt": "لوحة تحكم نظام تخطيط موارد المؤسسات"
+      },
+      "stats": {
+        "uptime": "اتفاقية مستوى الخدمة للتشغيل",
+        "clients": "عملاء المؤسسات",
+        "support": "دعم الخبراء"
+      }
     },
     "solutions": {
       "sectionBadge": "حلول مؤسسية",
@@ -41,13 +52,22 @@
       "hcm": {
         "title": "إدارة رأس المال البشري",
         "description": "دورة حياة الموظف، الرواتب، تتبع الوقت، إدارة الإجازات، والهيكل التنظيمي",
-        "features": { "f1": "إدارة الموظفين", "f2": "الرواتب", "f3": "تتبع الوقت", "f4": "إدارة الإجازات" }
+        "features": {
+          "f1": "إدارة الموظفين",
+          "f2": "الرواتب",
+          "f3": "تتبع الوقت",
+          "f4": "إدارة الإجازات"
+        }
       },
       "materials": {
         "title": "إدارة المواد",
         "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب إدارة المواد والمخزون مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "المخزون والمستودعات وعمليات الشراء.",
-        "features": { "f1": "التحكم بالمخزون", "f2": "إدارة المستودعات", "f3": "الشراء" },
+        "features": {
+          "f1": "التحكم بالمخزون",
+          "f2": "إدارة المستودعات",
+          "f3": "الشراء"
+        },
         "implemented": "منفذة بالكامل",
         "recentlyCompleted": "أضيفت حديثاً",
         "aiPowered": "حلول مدعومة بالذكاء الاصطناعي"
@@ -56,7 +76,11 @@
         "title": "المبيعات والتوزيع",
         "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب عمليات المبيعات والتوزيع مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "من عرض السعر إلى التحصيل مع التسعير والتسليمات والمرتجعات.",
-        "features": { "f1": "العروض والطلبات", "f2": "تسعير مرن", "f3": "المرتجعات" },
+        "features": {
+          "f1": "العروض والطلبات",
+          "f2": "تسعير مرن",
+          "f3": "المرتجعات"
+        },
         "implemented": "منفذة بالكامل",
         "recentlyCompleted": "أضيفت حديثاً",
         "aiPowered": "حلول مدعومة بالذكاء الاصطناعي"
@@ -65,7 +89,12 @@
         "title": "إدارة البيانات الرئيسية",
         "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب إدارة البيانات الرئيسية مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "بيانات مرجعية مركزية للعملاء والمورّدين والمواد والهياكل التنظيمية",
-        "features": { "f1": "سجل العملاء", "f2": "سجل المورّدين", "f3": "مجموعات المواد", "f4": "التدرجات" },
+        "features": {
+          "f1": "سجل العملاء",
+          "f2": "سجل المورّدين",
+          "f3": "مجموعات المواد",
+          "f4": "التدرجات"
+        },
         "implemented": "منفذة بالكامل",
         "recentlyCompleted": "أضيفت حديثاً",
         "aiPowered": "حلول مدعومة بالذكاء الاصطناعي"
@@ -74,7 +103,12 @@
         "title": "الإدارة التنظيمية",
         "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب إدارة الهياكل التنظيمية مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "الهياكل المؤسسية ومراكز التكلفة ومراكز الربح وإدارة الصلاحيات",
-        "features": { "f1": "هيكل الشركة", "f2": "مراكز التكلفة", "f3": "مراكز الربح", "f4": "التفويضات" },
+        "features": {
+          "f1": "هيكل الشركة",
+          "f2": "مراكز التكلفة",
+          "f3": "مراكز الربح",
+          "f4": "التفويضات"
+        },
         "implemented": "منفذة بالكامل",
         "recentlyCompleted": "أضيفت حديثاً",
         "aiPowered": "حلول مدعومة بالذكاء الاصطناعي"
@@ -83,7 +117,12 @@
         "title": "تخطيط الإنتاج",
         "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب تخطيط الإنتاج مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "تنفيذ التصنيع، إدارة قوائم المواد، وجدولة الإنتاج مع أوامر العمل",
-        "features": { "f1": "التصنيع", "f2": "إدارة قوائم المواد", "f3": "جدولة الإنتاج", "f4": "أوامر العمل" },
+        "features": {
+          "f1": "التصنيع",
+          "f2": "إدارة قوائم المواد",
+          "f3": "جدولة الإنتاج",
+          "f4": "أوامر العمل"
+        },
         "implemented": "منفذة بالكامل",
         "recentlyCompleted": "أضيفت حديثاً",
         "aiPowered": "حلول مدعومة بالذكاء الاصطناعي"
@@ -92,7 +131,12 @@
         "title": "نظام المشاريع",
         "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب إدارة المشاريع مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "إدارة دورة حياة المشاريع وتخطيط الموارد وتتبع المعالم والميزانية",
-        "features": { "f1": "تخطيط المشاريع", "f2": "إدارة الموارد", "f3": "تتبع المعالم", "f4": "الميزانية" },
+        "features": {
+          "f1": "تخطيط المشاريع",
+          "f2": "إدارة الموارد",
+          "f3": "تتبع المعالم",
+          "f4": "الميزانية"
+        },
         "implemented": "منفذة بالكامل",
         "recentlyCompleted": "أضيفت حديثاً",
         "aiPowered": "حلول مدعومة بالذكاء الاصطناعي"
@@ -101,7 +145,12 @@
         "title": "إدارة الجودة",
         "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب إدارة الجودة مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "عمليات ضبط الجودة وإدارة الالتزام وسجلات التدقيق والشهادات",
-        "features": { "f1": "ضبط الجودة", "f2": "الامتثال", "f3": "سجلات التدقيق", "f4": "الشهادات" },
+        "features": {
+          "f1": "ضبط الجودة",
+          "f2": "الامتثال",
+          "f3": "سجلات التدقيق",
+          "f4": "الشهادات"
+        },
         "implemented": "منفذة بالكامل",
         "recentlyCompleted": "أضيفت حديثاً",
         "aiPowered": "حلول مدعومة بالذكاء الاصطناعي"
@@ -110,7 +159,12 @@
         "title": "صيانة المصانع",
         "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب صيانة المصانع مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "إدارة الأصول والصيانة الوقائية وأوامر العمل ودورة حياة المعدات",
-        "features": { "f1": "إدارة الأصول", "f2": "صيانة وقائية", "f3": "أوامر العمل", "f4": "المعدات" },
+        "features": {
+          "f1": "إدارة الأصول",
+          "f2": "صيانة وقائية",
+          "f3": "أوامر العمل",
+          "f4": "المعدات"
+        },
         "implemented": "منفذة بالكامل",
         "recentlyCompleted": "أضيفت حديثاً",
         "aiPowered": "حلول مدعومة بالذكاء الاصطناعي"
@@ -119,7 +173,12 @@
         "title": "إدارة علاقات العملاء",
         "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب إدارة علاقات العملاء مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "إدارة العملاء المحتملين وخدمة العملاء وأنبوب المبيعات والتحليلات",
-        "features": { "f1": "إدارة العملاء المحتملين", "f2": "خدمة العملاء", "f3": "قناة المبيعات", "f4": "تحليلات" },
+        "features": {
+          "f1": "إدارة العملاء المحتملين",
+          "f2": "خدمة العملاء",
+          "f3": "قناة المبيعات",
+          "f4": "تحليلات"
+        },
         "implemented": "منفذة بالكامل",
         "recentlyCompleted": "أضيفت حديثاً",
         "aiPowered": "حلول مدعومة بالذكاء الاصطناعي"
@@ -128,7 +187,12 @@
         "title": "تخطيط الإنتاج بالذكاء الاصطناعي",
         "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب تخطيط الإنتاج بالذكاء الاصطناعي مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "تنفيذ تصنيع مدعوم بالذكاء الاصطناعي مع تحليلات تنبؤية وجدولة ذكية ورؤى RAG",
-        "features": { "f1": "تصنيع بالذكاء الاصطناعي", "f2": "تحليلات تنبؤية", "f3": "جدولة ذكية", "f4": "رؤى RAG" },
+        "features": {
+          "f1": "تصنيع بالذكاء الاصطناعي",
+          "f2": "تحليلات تنبؤية",
+          "f3": "جدولة ذكية",
+          "f4": "رؤى RAG"
+        },
         "implemented": "منفذة بالكامل",
         "recentlyCompleted": "أضيفت حديثاً",
         "aiPowered": "حلول مدعومة بالذكاء الاصطناعي"
@@ -235,25 +299,43 @@
   "solutions": {
     "marketing": {
       "badge": "نظرة عامة على الوحدة",
-      "cta": { "login": "سجّل الدخول للبدء", "demo": "اطلب عرضاً توضيحياً" },
-      "notFound": { "title": "لم يتم العثور على الحل", "subtitle": "يرجى اختيار حل من القائمة." }
+      "cta": {
+        "login": "سجّل الدخول للبدء",
+        "demo": "اطلب عرضاً توضيحياً"
+      },
+      "notFound": {
+        "title": "لم يتم العثور على الحل",
+        "subtitle": "يرجى اختيار حل من القائمة."
+      }
     },
     "financials": {
       "title": "الإدارة المالية",
       "subtitle": "من دليل الحسابات إلى الإقفال—وكل ما بينهما.",
-      "features": { "f1": "دفتر الأستاذ والقيود", "f2": "متعدد العملات والضرائب", "f3": "إدارة إقفال الفترات" },
+      "features": {
+        "f1": "دفتر الأستاذ والقيود",
+        "f2": "متعدد العملات والضرائب",
+        "f3": "إدارة إقفال الفترات"
+      },
       "imageAlt": "__مفقود__ solutions.financials.imageAlt"
     },
     "sales": {
       "title": "المبيعات والتوزيع",
       "subtitle": "من عرض السعر إلى التحصيل مع التسعير والتسليمات والمرتجعات.",
-      "features": { "f1": "العروض والطلبات", "f2": "تسعير مرن", "f3": "المرتجعات" },
+      "features": {
+        "f1": "العروض والطلبات",
+        "f2": "تسعير مرن",
+        "f3": "المرتجعات"
+      },
       "imageAlt": "__مفقود__ solutions.sales.imageAlt"
     },
     "materials": {
       "title": "إدارة المواد",
       "subtitle": "المخزون والمستودعات وعمليات الشراء.",
-      "features": { "f1": "التحكم بالمخزون", "f2": "إدارة المستودعات", "f3": "الشراء" },
+      "features": {
+        "f1": "التحكم بالمخزون",
+        "f2": "إدارة المستودعات",
+        "f3": "الشراء"
+      },
       "imageAlt": "__مفقود__ solutions.materials.imageAlt",
       "tabs": {
         "materialMaster": "سجل المواد الرئيسية",
@@ -296,61 +378,101 @@
     "hcm": {
       "title": "إدارة رأس المال البشري",
       "subtitle": "الموظفون والوقت والرواتب والهيكل.",
-      "features": { "f1": "سجلات الموظفين", "f2": "الوقت والرواتب", "f3": "الهيكل التنظيمي" },
+      "features": {
+        "f1": "سجلات الموظفين",
+        "f2": "الوقت والرواتب",
+        "f3": "الهيكل التنظيمي"
+      },
       "imageAlt": "__مفقود__ solutions.hcm.imageAlt"
     },
     "master-data": {
       "title": "إدارة البيانات الرئيسية",
       "subtitle": "بيانات مرجعية نظيفة ومركزية عبر الوحدات.",
-      "features": { "f1": "عملاء/موردون", "f2": "مجموعات المواد", "f3": "التدرجات الهرمية" },
+      "features": {
+        "f1": "عملاء/موردون",
+        "f2": "مجموعات المواد",
+        "f3": "التدرجات الهرمية"
+      },
       "imageAlt": "__مفقود__ solutions.master-data.imageAlt"
     },
     "organization": {
       "title": "الإدارة التنظيمية",
       "subtitle": "الهياكل والشركات ومراكز التكلفة/الربح والأدوار.",
-      "features": { "f1": "هيكل الشركة", "f2": "مراكز التكلفة/الربح", "f3": "التفويضات" },
+      "features": {
+        "f1": "هيكل الشركة",
+        "f2": "مراكز التكلفة/الربح",
+        "f3": "التفويضات"
+      },
       "imageAlt": "__مفقود__ solutions.organization.imageAlt"
     },
     "production": {
       "title": "تخطيط الإنتاج",
       "subtitle": "قوائم المواد والمسارات والجدولة والتنفيذ.",
-      "features": { "f1": "إدارة قوائم المواد", "f2": "جدولة ذكية", "f3": "التنفيذ" },
+      "features": {
+        "f1": "إدارة قوائم المواد",
+        "f2": "جدولة ذكية",
+        "f3": "التنفيذ"
+      },
       "imageAlt": "__مفقود__ solutions.production.imageAlt"
     },
     "projects": {
       "title": "نظام المشاريع",
       "subtitle": "تخطيط الموارد وتتبع المعالم والميزانيات.",
-      "features": { "f1": "تخطيط الموارد", "f2": "المعالم", "f3": "الميزانيات" },
+      "features": {
+        "f1": "تخطيط الموارد",
+        "f2": "المعالم",
+        "f3": "الميزانيات"
+      },
       "imageAlt": "__مفقود__ solutions.projects.imageAlt"
     },
     "quality": {
       "title": "إدارة الجودة",
       "subtitle": "ضبط الجودة والتدقيق والاعتمادات والالتزام.",
-      "features": { "f1": "ضبط الجودة", "f2": "سجلات التدقيق", "f3": "الالتزام" },
+      "features": {
+        "f1": "ضبط الجودة",
+        "f2": "سجلات التدقيق",
+        "f3": "الالتزام"
+      },
       "imageAlt": "__مفقود__ solutions.quality.imageAlt"
     },
     "maintenance": {
       "title": "صيانة المصانع",
       "subtitle": "الأصول والصيانة الوقائية وأوامر العمل.",
-      "features": { "f1": "إدارة الأصول", "f2": "جداول وقائية", "f3": "أوامر العمل" },
+      "features": {
+        "f1": "إدارة الأصول",
+        "f2": "جداول وقائية",
+        "f3": "أوامر العمل"
+      },
       "imageAlt": "__مفقود__ solutions.maintenance.imageAlt"
     },
     "crm": {
       "title": "إدارة علاقات العملاء",
       "subtitle": "العملاء المحتملون والخدمة والأنبوب والتحليلات.",
-      "features": { "f1": "العملاء المحتملون وجهات الاتصال", "f2": "الخدمة", "f3": "الأنبوب والتحليلات" },
+      "features": {
+        "f1": "العملاء المحتملون وجهات الاتصال",
+        "f2": "الخدمة",
+        "f3": "الأنبوب والتحليلات"
+      },
       "imageAlt": "__مفقود__ solutions.crm.imageAlt"
     },
     "reports": {
       "title": "التقارير والتحليلات",
       "subtitle": "المؤشرات ولوحات التحكم والتحليل المخصص.",
-      "features": { "f1": "لوحات مؤشرات", "f2": "تقاير مخصصة", "f3": "تصدير ومشاركة" },
+      "features": {
+        "f1": "لوحات مؤشرات",
+        "f2": "تقاير مخصصة",
+        "f3": "تصدير ومشاركة"
+      },
       "imageAlt": "نظرة عامة على التقارير والتحليلات"
     },
     "customer-portal": {
       "title": "بوابة العملاء",
       "subtitle": "تجارب ذاتية الخدمة مؤمنة وذات علامة تجارية.",
-      "features": { "f1": "تتبع الطلبات", "f2": "الفواتير", "f3": "طلبات الدعم" },
+      "features": {
+        "f1": "تتبع الطلبات",
+        "f2": "الفواتير",
+        "f3": "طلبات الدعم"
+      },
       "imageAlt": "نظرة عامة على بوابة العملاء"
     }
   },
@@ -426,7 +548,23 @@
     "save": "حفظ",
     "cancel": "إلغاء",
     "loading": "جاري التحميل...",
-    "actions": "الإجراءات"
+    "actions": "الإجراءات",
+    "item": "__مفقود__ common.item",
+    "quantity": "__مفقود__ common.quantity",
+    "price": "__مفقود__ common.price",
+    "total": "__مفقود__ common.total",
+    "view": "__مفقود__ common.view",
+    "invoice": "__مفقود__ common.invoice",
+    "vendor": "__مفقود__ common.vendor",
+    "dueDate": "__مفقود__ common.dueDate",
+    "amount": "__مفقود__ common.amount",
+    "back": "__مفقود__ common.back",
+    "next": "__مفقود__ common.next",
+    "finish": "__مفقود__ common.finish",
+    "close": "__مفقود__ common.close",
+    "refresh": "__مفقود__ common.refresh",
+    "reject": "__مفقود__ common.reject",
+    "approve": "__مفقود__ common.approve"
   },
   "auth": {
     "login": {
@@ -654,7 +792,46 @@
         "contacts": "جهات الاتصال",
         "financial": "مالي",
         "history": "التاريخ"
-      }
+      },
+      "title": "__مفقود__ crm.customerMaster.title",
+      "description": "__مفقود__ crm.customerMaster.description",
+      "searchPlaceholder": "__مفقود__ crm.customerMaster.searchPlaceholder",
+      "filterByStatus": "__مفقود__ crm.customerMaster.filterByStatus",
+      "allStatuses": "__مفقود__ crm.customerMaster.allStatuses",
+      "status": {
+        "active": "__مفقود__ crm.customerMaster.status.active",
+        "pending": "__مفقود__ crm.customerMaster.status.pending",
+        "inactive": "__مفقود__ crm.customerMaster.status.inactive",
+        "rejected": "__مفقود__ crm.customerMaster.status.rejected"
+      },
+      "filterByType": "__مفقود__ crm.customerMaster.filterByType",
+      "allTypes": "__مفقود__ crm.customerMaster.allTypes",
+      "types": {
+        "enterprise": "__مفقود__ crm.customerMaster.types.enterprise",
+        "sme": "__مفقود__ crm.customerMaster.types.sme",
+        "startup": "__مفقود__ crm.customerMaster.types.startup"
+      },
+      "import": "__مفقود__ crm.customerMaster.import",
+      "export": "__مفقود__ crm.customerMaster.export",
+      "addCustomer": "__مفقود__ crm.customerMaster.addCustomer",
+      "columns": {
+        "customerId": "__مفقود__ crm.customerMaster.columns.customerId",
+        "name": "__مفقود__ crm.customerMaster.columns.name",
+        "type": "__مفقود__ crm.customerMaster.columns.type",
+        "status": "__مفقود__ crm.customerMaster.columns.status",
+        "country": "__مفقود__ crm.customerMaster.columns.country",
+        "creditLimit": "__مفقود__ crm.customerMaster.columns.creditLimit",
+        "actions": "__مفقود__ crm.customerMaster.columns.actions"
+      },
+      "details": {
+        "customerId": "__مفقود__ crm.customerMaster.details.customerId",
+        "industry": "__مفقود__ crm.customerMaster.details.industry",
+        "taxId": "__مفقود__ crm.customerMaster.details.taxId",
+        "creditLimit": "__مفقود__ crm.customerMaster.details.creditLimit",
+        "paymentTerms": "__مفقود__ crm.customerMaster.details.paymentTerms"
+      },
+      "close": "__مفقود__ crm.customerMaster.close",
+      "saveChanges": "__مفقود__ crm.customerMaster.saveChanges"
     }
   },
   "financial": {
@@ -783,6 +960,18 @@
       "draft": "مسودة",
       "posted": "مرحل",
       "reversed": "معكوس"
+    },
+    "tabs": {
+      "coa": "__مفقود__ financial.tabs.coa",
+      "ap": "__مفقود__ financial.tabs.ap",
+      "ar": "__مفقود__ financial.tabs.ar",
+      "collections": "__مفقود__ financial.tabs.collections",
+      "reconciliation": "__مفقود__ financial.tabs.reconciliation",
+      "assets": "__مفقود__ financial.tabs.assets",
+      "reporting": "__مفقود__ financial.tabs.reporting",
+      "aging": "__مفقود__ financial.tabs.aging",
+      "bankRec": "__مفقود__ financial.tabs.bankRec",
+      "je": "__مفقود__ financial.tabs.je"
     }
   },
   "dashboard": {
@@ -921,7 +1110,8 @@
       "requestDate": "تاريخ الطلب",
       "reason": "السبب",
       "returnValue": "قيمة المرتجع",
-      "refundAmount": "مبلغ الاسترداد"
+      "refundAmount": "مبلغ الاسترداد",
+      "status": "__مفقود__ sales.columns.status"
     },
     "inquiries": {
       "title": "استفسارات المبيعات",
@@ -1066,6 +1256,66 @@
       "goals": "الأهداف",
       "compensation": "التعويضات",
       "analytics": "التحليلات"
+    },
+    "metrics": {
+      "totalEmployees": "__مفقود__ hcm.metrics.totalEmployees",
+      "newHires": "__مفقود__ hcm.metrics.newHires",
+      "openPositions": "__مفقود__ hcm.metrics.openPositions",
+      "avgSalary": "__مفقود__ hcm.metrics.avgSalary",
+      "turnoverRate": "__مفقود__ hcm.metrics.turnoverRate",
+      "satisfaction": "__مفقود__ hcm.metrics.satisfaction"
+    },
+    "dashboard": {
+      "departmentDistribution": "__مفقود__ hcm.dashboard.departmentDistribution",
+      "recentActivities": "__مفقود__ hcm.dashboard.recentActivities",
+      "quickActions": "__مفقود__ hcm.dashboard.quickActions"
+    },
+    "actions": {
+      "addEmployee": "__مفقود__ hcm.actions.addEmployee",
+      "scheduleReview": "__مفقود__ hcm.actions.scheduleReview",
+      "generateReport": "__مفقود__ hcm.actions.generateReport",
+      "sendAnnouncement": "__مفقود__ hcm.actions.sendAnnouncement",
+      "recognition": "__مفقود__ hcm.actions.recognition",
+      "settings": "__مفقود__ hcm.actions.settings",
+      "notifications": "__مفقود__ hcm.actions.notifications",
+      "analytics": "__مفقود__ hcm.actions.analytics"
+    },
+    "employees": {
+      "searchPlaceholder": "__مفقود__ hcm.employees.searchPlaceholder",
+      "allDepartments": "__مفقود__ hcm.employees.allDepartments",
+      "status": "__مفقود__ hcm.employees.status",
+      "allStatus": "__مفقود__ hcm.employees.allStatus",
+      "active": "__مفقود__ hcm.employees.active",
+      "inactive": "__مفقود__ hcm.employees.inactive",
+      "columns": {
+        "employee": "__مفقود__ hcm.employees.columns.employee",
+        "position": "__مفقود__ hcm.employees.columns.position",
+        "department": "__مفقود__ hcm.employees.columns.department",
+        "manager": "__مفقود__ hcm.employees.columns.manager",
+        "location": "__مفقود__ hcm.employees.columns.location",
+        "hireDate": "__مفقود__ hcm.employees.columns.hireDate",
+        "performance": "__مفقود__ hcm.employees.columns.performance",
+        "status": "__مفقود__ hcm.employees.columns.status",
+        "actions": "__مفقود__ hcm.employees.columns.actions"
+      }
+    },
+    "title": "__مفقود__ hcm.title",
+    "description": "__مفقود__ hcm.description",
+    "orgChart": {
+      "title": "__مفقود__ hcm.orgChart.title"
+    },
+    "performance": {
+      "title": "__مفقود__ hcm.performance.title"
+    },
+    "goals": {
+      "title": "__مفقود__ hcm.goals.title"
+    },
+    "compensation": {
+      "title": "__مفقود__ hcm.compensation.title"
+    },
+    "analytics": {
+      "workforceAnalytics": "__مفقود__ hcm.analytics.workforceAnalytics",
+      "predictiveInsights": "__مفقود__ hcm.analytics.predictiveInsights"
     }
   },
   "compensation": {
@@ -1076,7 +1326,17 @@
       "approvals": "الموافقات",
       "analytics": "التحليلات",
       "history": "التاريخ"
-    }
+    },
+    "metrics": {
+      "totalBudget": "__مفقود__ compensation.metrics.totalBudget",
+      "budgetUsed": "__مفقود__ compensation.metrics.budgetUsed",
+      "avgIncrease": "__مفقود__ compensation.metrics.avgIncrease",
+      "pendingReviews": "__مفقود__ compensation.metrics.pendingReviews",
+      "completedReviews": "__مفقود__ compensation.metrics.completedReviews",
+      "approvalsPending": "__مفقود__ compensation.metrics.approvalsPending"
+    },
+    "title": "__مفقود__ compensation.title",
+    "description": "__مفقود__ compensation.description"
   },
   "goals": {
     "tabs": {
@@ -1084,7 +1344,17 @@
       "team": "الفريق",
       "company": "الشركة",
       "analytics": "التحليلات"
-    }
+    },
+    "metrics": {
+      "totalGoals": "__مفقود__ goals.metrics.totalGoals",
+      "onTrack": "__مفقود__ goals.metrics.onTrack",
+      "atRisk": "__مفقود__ goals.metrics.atRisk",
+      "completed": "__مفقود__ goals.metrics.completed",
+      "avgProgress": "__مفقود__ goals.metrics.avgProgress",
+      "dueThisMonth": "__مفقود__ goals.metrics.dueThisMonth"
+    },
+    "title": "__مفقود__ goals.title",
+    "description": "__مفقود__ goals.description"
   },
   "reports": {
     "tabs": {
@@ -1103,6 +1373,23 @@
       "table": "الجدول",
       "selectTable": "اختر الجدول",
       "chartType": "نوع المخطط"
+    },
+    "saveSuccess": "__مفقود__ reports.saveSuccess",
+    "title": "__مفقود__ reports.title",
+    "description": "__مفقود__ reports.description",
+    "exportPdf": "__مفقود__ reports.exportPdf",
+    "exportExcel": "__مفقود__ reports.exportExcel",
+    "saveReport": "__مفقود__ reports.saveReport",
+    "fields": {
+      "title": "__مفقود__ reports.fields.title"
+    },
+    "preview": {
+      "title": "__مفقود__ reports.preview.title"
+    },
+    "saved": {
+      "title": "__مفقود__ reports.saved.title",
+      "lastModified": "__مفقود__ reports.saved.lastModified",
+      "load": "__مفقود__ reports.saved.load"
     }
   },
   "materials": {
@@ -1185,7 +1472,9 @@
       "recentActivity": "النشاط الأخير",
       "recentActivityDescription": "أحدث معاملات وتحديثات المواد",
       "minStock": "الحد الأدنى للمخزون"
-    }
+    },
+    "title": "__مفقود__ materials.title",
+    "description": "__مفقود__ materials.description"
   },
   "analytics": {
     "title": "تحليلات",
@@ -1194,13 +1483,17 @@
       "totalRevenue": "إجمالي الإيرادات",
       "activeUsers": "المستخدمين النشطين",
       "conversionRate": "معدل التحويل",
-      "customerSatisfaction": "رضا العملاء"
+      "customerSatisfaction": "رضا العملاء",
+      "subscriptions": "__مفقود__ analytics.kpis.subscriptions",
+      "sales": "__مفقود__ analytics.kpis.sales",
+      "grossProfitMargin": "__مفقود__ analytics.kpis.grossProfitMargin"
     },
     "charts": {
       "revenueOverTime": "الإيرادات عبر الوقت",
       "userGrowth": "نمو المستخدمين",
       "salesFunnel": "قمع المبيعات"
-    }
+    },
+    "customReports": "__مفقود__ analytics.customReports"
   },
   "customReportBuilder": {
     "title": "منشئ التقارير المخصص",
@@ -1222,23 +1515,102 @@
         "name": "البداية",
         "price": "0",
         "description": "خطة مبدأية لشركات صغيرة.",
-        "features": ["ميزات أساسية", "دعم فني محدود", "تحديثات شهرية"]
+        "features": [
+          "ميزات أساسية",
+          "دعم فني محدود",
+          "تحديثات شهرية"
+        ]
       },
       "professional": {
         "name": "المهني",
         "price": "100",
         "description": "خطة مهنية لشركات متوسطة الحجم.",
-        "features": ["جميع ميزات البداية", "دعم فني مكثف", "تحديثات أسبوعية"]
+        "features": [
+          "جميع ميزات البداية",
+          "دعم فني مكثف",
+          "تحديثات أسبوعية"
+        ]
       },
       "enterprise": {
         "name": "الشركات الكبيرة",
         "price": "500",
         "description": "خطة الشركات الكبيرة لشركات كبيرة.",
-        "features": ["جميع ميزات المهنية", "دعم فني مخصص", "تحديثات يومية"]
+        "features": [
+          "جميع ميزات المهنية",
+          "دعم فني مخصص",
+          "تحديثات يومية"
+        ]
       }
     },
     "cta": "ابدأ الآن",
-    "contact": "اتصل بنا للحصول على عرض أسعار مخصص"
+    "contact": "اتصل بنا للحصول على عرض أسعار مخصص",
+    "starter": {
+      "title": "__مفقود__ pricing.starter.title",
+      "description": "__مفقود__ pricing.starter.description"
+    },
+    "features": {
+      "starter": {
+        "users": "__مفقود__ pricing.features.starter.users",
+        "modules": "__مفقود__ pricing.features.starter.modules",
+        "storage": "__مفقود__ pricing.features.starter.storage",
+        "support": "__مفقود__ pricing.features.starter.support",
+        "multiCurrency": "__مفقود__ pricing.features.starter.multiCurrency",
+        "basicReporting": "__مفقود__ pricing.features.starter.basicReporting",
+        "apiAccess": "__مفقود__ pricing.features.starter.apiAccess"
+      },
+      "workflows": "__مفقود__ pricing.features.workflows",
+      "multiCompany": "__مفقود__ pricing.features.multiCompany",
+      "professional": {
+        "users": "__مفقود__ pricing.features.professional.users",
+        "modules": "__مفقود__ pricing.features.professional.modules",
+        "storage": "__مفقود__ pricing.features.professional.storage",
+        "support": "__مفقود__ pricing.features.professional.support",
+        "reporting": "__مفقود__ pricing.features.professional.reporting",
+        "notifications": "__مفقود__ pricing.features.professional.notifications",
+        "apiAccess": "__مفقود__ pricing.features.professional.apiAccess"
+      },
+      "enterprise": {
+        "users": "__مفقود__ pricing.features.enterprise.users",
+        "modules": "__مفقود__ pricing.features.enterprise.modules",
+        "storage": "__مفقود__ pricing.features.enterprise.storage",
+        "whiteLabel": "__مفقود__ pricing.features.enterprise.whiteLabel",
+        "accountManager": "__مفقود__ pricing.features.enterprise.accountManager"
+      },
+      "dedicated": "__مفقود__ pricing.features.dedicated",
+      "custom": "__مفقود__ pricing.features.custom",
+      "onPremise": "__مفقود__ pricing.features.onPremise",
+      "sla": "__مفقود__ pricing.features.sla"
+    },
+    "startTrial": "__مفقود__ pricing.startTrial",
+    "professional": {
+      "title": "__مفقود__ pricing.professional.title",
+      "description": "__مفقود__ pricing.professional.description"
+    },
+    "enterprise": {
+      "title": "__مفقود__ pricing.enterprise.title",
+      "description": "__مفقود__ pricing.enterprise.description",
+      "contactTitle": "__مفقود__ pricing.enterprise.contactTitle",
+      "contactDescription": "__مفقود__ pricing.enterprise.contactDescription",
+      "security": "__مفقود__ pricing.enterprise.security",
+      "deployment": "__مفقود__ pricing.enterprise.deployment",
+      "integrations": "__مفقود__ pricing.enterprise.integrations",
+      "scheduleDemo": "__مفقود__ pricing.enterprise.scheduleDemo",
+      "viewCaseStudies": "__مفقود__ pricing.enterprise.viewCaseStudies"
+    },
+    "contactSales": "__مفقود__ pricing.contactSales",
+    "badge": "__مفقود__ pricing.badge",
+    "annual": "__مفقود__ pricing.annual",
+    "mostPopular": "__مفقود__ pricing.mostPopular",
+    "perUser": "__مفقود__ pricing.perUser",
+    "customPricing": "__مفقود__ pricing.customPricing",
+    "billed": "__مفقود__ pricing.billed",
+    "volumeDiscount": "__مفقود__ pricing.volumeDiscount",
+    "trustIndicators": {
+      "title": "__مفقود__ pricing.trustIndicators.title",
+      "soc2": "__مفقود__ pricing.trustIndicators.soc2",
+      "gdpr": "__مفقود__ pricing.trustIndicators.gdpr",
+      "uptime": "__مفقود__ pricing.trustIndicators.uptime"
+    }
   },
   "testimonials": {
     "title": "آراء العملاء",
@@ -1250,7 +1622,60 @@
         "company": "شركة XYZ",
         "role": "مدير مبيعات"
       }
-    ]
+    ],
+    "quotes": {
+      "sarah": "__مفقود__ testimonials.quotes.sarah",
+      "michael": "__مفقود__ testimonials.quotes.michael",
+      "emma": "__مفقود__ testimonials.quotes.emma",
+      "james": "__مفقود__ testimonials.quotes.james",
+      "lisa": "__مفقود__ testimonials.quotes.lisa",
+      "robert": "__مفقود__ testimonials.quotes.robert"
+    },
+    "results": {
+      "sarah": {
+        "closing": "__مفقود__ testimonials.results.sarah.closing",
+        "errors": "__مفقود__ testimonials.results.sarah.errors",
+        "visibility": "__مفقود__ testimonials.results.sarah.visibility"
+      },
+      "michael": {
+        "inventory": "__مفقود__ testimonials.results.michael.inventory",
+        "accuracy": "__مفقود__ testimonials.results.michael.accuracy",
+        "procurement": "__مفقود__ testimonials.results.michael.procurement"
+      },
+      "emma": {
+        "adminTime": "__مفقود__ testimonials.results.emma.adminTime",
+        "satisfaction": "__مفقود__ testimonials.results.emma.satisfaction",
+        "compliance": "__مفقود__ testimonials.results.emma.compliance"
+      },
+      "james": {
+        "margins": "__مفقود__ testimonials.results.james.margins",
+        "forecasting": "__مفقود__ testimonials.results.james.forecasting",
+        "quoteToCash": "__مفقود__ testimonials.results.james.quoteToCash"
+      },
+      "lisa": {
+        "efficiency": "__مفقود__ testimonials.results.lisa.efficiency",
+        "costTracking": "__مفقود__ testimonials.results.lisa.costTracking",
+        "reporting": "__مفقود__ testimonials.results.lisa.reporting"
+      },
+      "robert": {
+        "integration": "__مفقود__ testimonials.results.robert.integration",
+        "availability": "__مفقود__ testimonials.results.robert.availability",
+        "maintenance": "__مفقود__ testimonials.results.robert.maintenance"
+      }
+    },
+    "stats": {
+      "companies": "__مفقود__ testimonials.stats.companies",
+      "countries": "__مفقود__ testimonials.stats.countries",
+      "uptime": "__مفقود__ testimonials.stats.uptime",
+      "rating": "__مفقود__ testimonials.stats.rating"
+    },
+    "badge": "__مفقود__ testimonials.badge",
+    "trustedBy": "__مفقود__ testimonials.trustedBy",
+    "awards": {
+      "g2Leader": "__مفقود__ testimonials.awards.g2Leader",
+      "capterraBestValue": "__مفقود__ testimonials.awards.capterraBestValue",
+      "iso27001": "__مفقود__ testimonials.awards.iso27001"
+    }
   },
   "requestDemo": {
     "title": "طلب عرض توضيحي",
@@ -1276,10 +1701,10 @@
     },
     "description": "تحليل أعمار الفواتير",
     "bucket": {
-      "current": "أقل من 30 يوماً",
       "30": "30-59 يوماً",
       "60": "60-89 يوماً",
       "90": "90-119 يوماً",
+      "current": "أقل من 30 يوماً",
       "90+": "أكثر من 120 يوماً"
     }
   },
@@ -1294,5 +1719,142 @@
       "submit": "إرسال"
     },
     "success": "شكراً لطلبك! سنتواصل معك قريباً."
+  },
+  "3wm": {
+    "title": "__مفقود__ 3wm.title",
+    "description": "__مفقود__ 3wm.description",
+    "search": {
+      "placeholder": "__مفقود__ 3wm.search.placeholder"
+    },
+    "po": {
+      "title": "__مفقود__ 3wm.po.title"
+    },
+    "gr": {
+      "title": "__مفقود__ 3wm.gr.title"
+    },
+    "invoice": {
+      "title": "__مفقود__ 3wm.invoice.title"
+    },
+    "summary": {
+      "title": "__مفقود__ 3wm.summary.title",
+      "qtyVariance": "__مفقود__ 3wm.summary.qtyVariance",
+      "priceVariance": "__مفقود__ 3wm.summary.priceVariance",
+      "totalVariance": "__مفقود__ 3wm.summary.totalVariance",
+      "status": "__مفقود__ 3wm.summary.status",
+      "glImpact": "__مفقود__ 3wm.summary.glImpact",
+      "debit": "__مفقود__ 3wm.summary.debit",
+      "credit": "__مفقود__ 3wm.summary.credit"
+    }
+  },
+  "actions": {
+    "block": "__مفقود__ actions.block"
+  },
+  "This would open a wizard to create a new feedback cycle": {
+    "": "__مفقود__ This would open a wizard to create a new feedback cycle."
+  },
+  "You are not a participant in this feedback cycle": {
+    "": "__مفقود__ You are not a participant in this feedback cycle."
+  },
+  "ppw": {
+    "step1": {
+      "description": "__مفقود__ ppw.step1.description",
+      "dueDate": "__مفقود__ ppw.step1.dueDate",
+      "minAmount": "__مفقود__ ppw.step1.minAmount",
+      "title": "__مفقود__ ppw.step1.title"
+    },
+    "step2": {
+      "description": "__مفقود__ ppw.step2.description",
+      "title": "__مفقود__ ppw.step2.title"
+    },
+    "step3": {
+      "description": "__مفقود__ ppw.step3.description",
+      "title": "__مفقود__ ppw.step3.title"
+    },
+    "step4": {
+      "title": "__مفقود__ ppw.step4.title"
+    },
+    "title": "__مفقود__ ppw.title"
+  },
+  "summary": {
+    "totalInvoices": "__مفقود__ summary.totalInvoices",
+    "totalAmount": "__مفقود__ summary.totalAmount",
+    "companyInfo": "__مفقود__ summary.companyInfo",
+    "fiscalConfig": "__مفقود__ summary.fiscalConfig",
+    "coaMethod": "__مفقود__ summary.coaMethod",
+    "invitedUsers": "__مفقود__ summary.invitedUsers"
+  },
+  "execution": {
+    "success": "__مفقود__ execution.success",
+    "file": "__مفقود__ execution.file",
+    "id": "__مفقود__ execution.id"
+  },
+  "form": {
+    "companyName": "__مفقود__ form.companyName",
+    "legalName": "__مفقود__ form.legalName",
+    "taxId": "__مفقود__ form.taxId",
+    "country": "__مفقود__ form.country",
+    "currency": "__مفقود__ form.currency",
+    "address": "__مفقود__ form.address",
+    "fiscalYearStart": "__مفقود__ form.fiscalYearStart",
+    "accountingPeriods": "__مفقود__ form.accountingPeriods",
+    "coaSetupMethod": "__مفقود__ form.coaSetupMethod",
+    "coa": {
+      "template": "__مفقود__ form.coa.template",
+      "upload": "__مفقود__ form.coa.upload",
+      "selectTemplate": "__مفقود__ form.coa.selectTemplate",
+      "uploadFile": "__مفقود__ form.coa.uploadFile"
+    },
+    "invite": {
+      "email": "__مفقود__ form.invite.email",
+      "role": "__مفقود__ form.invite.role",
+      "add": "__مفقود__ form.invite.add"
+    }
+  },
+  "final": {
+    "successTitle": "__مفقود__ final.successTitle",
+    "successMessage": "__مفقود__ final.successMessage"
+  },
+  "onboarding": {
+    "title": "__مفقود__ onboarding.title",
+    "description": "__مفقود__ onboarding.description"
+  },
+  "mdm": {
+    "domains": {
+      "customer": "__مفقود__ mdm.domains.customer",
+      "material": "__مفقود__ mdm.domains.material"
+    }
+  },
+  "collections": {
+    "metrics": {
+      "dso": "__مفقود__ collections.metrics.dso",
+      "overdueTotal": "__مفقود__ collections.metrics.overdueTotal",
+      "collected": "__مفقود__ collections.metrics.collected"
+    },
+    "title": "__مفقود__ collections.title",
+    "description": "__مفقود__ collections.description",
+    "customer": {
+      "title": "__مفقود__ collections.customer.title",
+      "search": "__مفقود__ collections.customer.search",
+      "name": "__مفقود__ collections.customer.name",
+      "overdueAmount": "__مفقود__ collections.customer.overdueAmount",
+      "lastContact": "__مفقود__ collections.customer.lastContact",
+      "nextAction": "__مفقود__ collections.customer.nextAction",
+      "status": "__مفقود__ collections.customer.status"
+    },
+    "log": {
+      "title": "__مفقود__ collections.log.title",
+      "new": "__مفقود__ collections.log.new",
+      "type": "__مفقود__ collections.log.type",
+      "notes": "__مفقود__ collections.log.notes",
+      "promiseDate": "__مفقود__ collections.log.promiseDate",
+      "promiseAmount": "__مفقود__ collections.log.promiseAmount",
+      "save": "__مفقود__ collections.log.save"
+    }
+  },
+  "activity": {
+    "Call": "__مفقود__ activity.Call",
+    "Email": "__مفقود__ activity.Email",
+    "Promise": "__مفقود__ activity.Promise",
+    "Note": "__مفقود__ activity.Note"
   }
 }
