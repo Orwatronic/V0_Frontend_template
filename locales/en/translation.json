@@ -1,5 +1,4 @@
 {
-  // Adding sales module tab translation keys
   "sales": {
     "tabs": {
       "dashboard": "Dashboard",
@@ -13,7 +12,6 @@
     },
     "imageAlt": "Sales Distribution Overview"
   },
-  // Adding HCM module tab translation keys
   "hcm": {
     "tabs": {
       "dashboard": "Dashboard",
@@ -46,7 +44,6 @@
     },
     "imageAlt": "Human Capital Management Overview"
   },
-  // Adding CRM module tab translation keys
   "crm": {
     "customer360": {
       "tabs": {
@@ -68,7 +65,6 @@
     },
     "imageAlt": "Customer Relationship Management Overview"
   },
-  // Adding compensation and goals tab translation keys
   "compensation": {
     "tabs": {
       "dashboard": "Dashboard",
@@ -87,7 +83,6 @@
       "analytics": "Analytics"
     }
   },
-  // Adding reports tab translation keys
   "reports": {
     "tabs": {
       "builder": "Builder",
@@ -96,7 +91,6 @@
     },
     "imageAlt": "Reports and Analytics Overview"
   },
-  // Adding analytics section
   "analytics": {
     "title": "Analytics Dashboard",
     "description": "Comprehensive business intelligence and reporting",
@@ -112,7 +106,6 @@
       "salesFunnel": "Sales Funnel"
     }
   },
-  // Adding customReportBuilder section
   "customReportBuilder": {
     "title": "Custom Report Builder",
     "description": "Build and customize reports",
@@ -122,7 +115,6 @@
     "preview": "Preview",
     "generate": "Generate Report"
   },
-  // Adding materials section
   "materials": {
     "materialMaster": {
       "title": "Material Master Data",
@@ -150,7 +142,6 @@
     },
     "imageAlt": "Materials Management Overview"
   },
-  // Adding pricing section
   "pricing": {
     "title": "Choose Your Plan",
     "subtitle": "Select the perfect plan for your business needs",
@@ -180,7 +171,6 @@
     "cta": "Get Started",
     "contact": "Contact Sales"
   },
-  // Adding testimonials section
   "testimonials": {
     "title": "What Our Customers Say",
     "subtitle": "Trusted by businesses worldwide",
@@ -193,7 +183,6 @@
       }
     ]
   },
-  // Adding requestDemo section
   "requestDemo": {
     "title": "Request a Demo",
     "subtitle": "See how Feebee ERP can transform your business",
