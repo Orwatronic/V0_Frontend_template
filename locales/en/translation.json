@@ -130,6 +130,55 @@
     "generate": "Generate Report"
   },
   "materials": {
+    "title": "Materials Management",
+    "description": "Comprehensive materials and inventory management system",
+    "metrics": {
+      "totalMaterials": "Total Materials",
+      "activeMaterials": "Active Materials",
+      "inventoryValue": "Inventory Value",
+      "totalValue": "Total Value",
+      "pendingOrders": "Pending Orders",
+      "awaitingDelivery": "Awaiting Delivery",
+      "warehouseUtilization": "Warehouse Utilization",
+      "storageCapacity": "Storage Capacity"
+    },
+    "tabs": {
+      "overview": "Overview",
+      "masterData": "Master Data",
+      "warehouse": "Warehouse",
+      "procurement": "Procurement"
+    },
+    "activity": {
+      "materialReceived": "Material Received",
+      "stockAdjustment": "Stock Adjustment",
+      "newMaterial": "New Material Added",
+      "timeAgo": "{{time}} ago"
+    },
+    "masterData": {
+      "title": "Material Master Data",
+      "description": "Manage core material data and specifications",
+      "categories": "Categories",
+      "searchPlaceholder": "Search materials...",
+      "import": "Import",
+      "addMaterial": "Add Material"
+    },
+    "columns": {
+      "materialId": "Material ID",
+      "name": "Name",
+      "type": "Type",
+      "baseUom": "Base UoM",
+      "status": "Status",
+      "onHand": "On Hand"
+    },
+    "types": {
+      "raw": "Raw Material",
+      "component": "Component",
+      "finished": "Finished Good"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
     "materialMaster": {
       "title": "Material Master Data",
       "description": "Manage core material data and specifications",
@@ -159,7 +208,8 @@
       "lowStockAlerts": "Low Stock Alerts",
       "lowStockDescription": "Items requiring immediate attention",
       "recentActivity": "Recent Activity",
-      "recentActivityDescription": "Latest material transactions and updates"
+      "recentActivityDescription": "Latest material transactions and updates",
+      "minStock": "Min Stock"
     }
   },
   "pricing": {

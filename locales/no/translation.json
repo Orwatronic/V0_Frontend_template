@@ -805,17 +805,61 @@
     }
   },
   "materials": {
+    "title": "Materialhåndtering",
+    "description": "Omfattende material- og lagerstyringssystem",
+    "metrics": {
+      "totalMaterials": "Totalt antall materialer",
+      "activeMaterials": "Aktive materialer",
+      "inventoryValue": "Lagerverdi",
+      "totalValue": "Total verdi",
+      "pendingOrders": "Ventende bestillinger",
+      "awaitingDelivery": "Venter på levering",
+      "warehouseUtilization": "Lagerutnyttelse",
+      "storageCapacity": "Lagringskapasitet"
+    },
     "tabs": {
       "overview": "Oversikt",
       "masterData": "Masterdata",
       "warehouse": "Varehus",
       "procurement": "Innkjøp"
     },
+    "activity": {
+      "materialReceived": "Materiale mottatt",
+      "stockAdjustment": "Lagerjustering",
+      "newMaterial": "Nytt materiale lagt til",
+      "timeAgo": "{{time}} siden"
+    },
+    "masterData": {
+      "title": "Materialmasterdata",
+      "description": "Administrer kjernematerialdata og spesifikasjoner",
+      "categories": "Kategorier",
+      "searchPlaceholder": "Søk i materialer...",
+      "import": "Importer",
+      "addMaterial": "Legg til materiale"
+    },
+    "columns": {
+      "materialId": "Material-ID",
+      "name": "Navn",
+      "type": "Type",
+      "baseUom": "Grunnleggende måleenhet",
+      "status": "Status",
+      "onHand": "På lager"
+    },
+    "types": {
+      "raw": "Råmateriale",
+      "component": "Komponent",
+      "finished": "Ferdigvare"
+    },
+    "status": {
+      "active": "Aktiv",
+      "inactive": "Inaktiv"
+    },
     "overview": {
       "lowStockAlerts": "Lavlager-varsler",
       "lowStockDescription": "Varer som krever umiddelbar oppmerksomhet",
       "recentActivity": "Nylig aktivitet",
-      "recentActivityDescription": "Siste materialtransaksjoner og oppdateringer"
+      "recentActivityDescription": "Siste materialtransaksjoner og oppdateringer",
+      "minStock": "Minimum lager"
     }
   },
   "compensation": {
