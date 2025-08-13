@@ -1088,17 +1088,10 @@
       "badge": "Feebee ERP",
       "title": "Transform Your Enterprise with Feebee Technologies ERP",
       "subtitle": "Comprehensive enterprise resource planning system designed to manage core business processes across all departments with integrated modules for complete operational control",
-      "cta": {
-        "primary": "MISSING_TRANSLATION landing.hero.cta.primary",
-        "secondary": "MISSING_TRANSLATION landing.hero.cta.secondary"
-      },
-      "image": { "alt": "MISSING_TRANSLATION landing.hero.image.alt" },
-      "badge": { "realtime": "MISSING_TRANSLATION landing.hero.badge.realtime", "analytics": "MISSING_TRANSLATION landing.hero.badge.analytics" },
-      "stats": {
-        "uptime": "MISSING_TRANSLATION landing.hero.stats.uptime",
-        "clients": "MISSING_TRANSLATION landing.hero.stats.clients",
-        "support": "MISSING_TRANSLATION landing.hero.stats.support"
-      }
+      "cta": { "primary": "Get started", "secondary": "Watch demo" },
+      "image": { "alt": "Analytics dashboard preview" },
+      "badge": { "realtime": "Realtime", "analytics": "Analytics" },
+      "stats": { "uptime": "99.9% uptime", "clients": "10K+ users", "support": "24/7 support" }
     },
     "solutions": {
       "financial": {
@@ -1190,8 +1183,8 @@
     },
     "hero": {
       "badge": "Feebee ERP",
-      "title": "Run your enterprise on one modern platform",
-      "subtitle": "Financials, sales, materials, HCM, and more—localized and enterprise‑ready.",
+      "title": "Transform Your Enterprise with Feebee Technologies ERP",
+      "subtitle": "Comprehensive enterprise resource planning system designed to manage core business processes across all departments with integrated modules for complete operational control",
       "cta": {
         "primary": "Get started",
         "secondary": "Watch demo"
@@ -1311,53 +1304,53 @@
   },
   "nav": {
     "solutionsItems": {
-      "financial": "__MISSING_TRANSLATION__ nav.solutionsItems.financial",
-      "hcm": "__MISSING_TRANSLATION__ nav.solutionsItems.hcm",
-      "materials": "__MISSING_TRANSLATION__ nav.solutionsItems.materials",
-      "sales": "__MISSING_TRANSLATION__ nav.solutionsItems.sales",
-      "mdm": "__MISSING_TRANSLATION__ nav.solutionsItems.mdm",
-      "organizational": "__MISSING_TRANSLATION__ nav.solutionsItems.organizational",
-      "production": "__MISSING_TRANSLATION__ nav.solutionsItems.production",
-      "project": "__MISSING_TRANSLATION__ nav.solutionsItems.project",
-      "quality": "__MISSING_TRANSLATION__ nav.solutionsItems.quality",
-      "maintenance": "__MISSING_TRANSLATION__ nav.solutionsItems.maintenance",
-      "crm": "__MISSING_TRANSLATION__ nav.solutionsItems.crm",
-      "aiTeaser": "__MISSING_TRANSLATION__ nav.solutionsItems.aiTeaser"
+      "financial": "Financial",
+      "hcm": "HCM",
+      "materials": "Materials",
+      "sales": "Sales",
+      "mdm": "MDM",
+      "organizational": "Organizational",
+      "production": "Production",
+      "project": "Project",
+      "quality": "Quality",
+      "maintenance": "Maintenance",
+      "crm": "CRM",
+      "aiTeaser": "AI sneak peek"
     },
     "featureItems": {
-      "realtime": "__MISSING_TRANSLATION__ nav.featureItems.realtime",
-      "multicurrency": "__MISSING_TRANSLATION__ nav.featureItems.multicurrency",
-      "workflow": "__MISSING_TRANSLATION__ nav.featureItems.workflow",
-      "analytics": "__MISSING_TRANSLATION__ nav.featureItems.analytics",
-      "integration": "__MISSING_TRANSLATION__ nav.featureItems.integration",
-      "security": "__MISSING_TRANSLATION__ nav.featureItems.security"
+      "realtime": "Realtime",
+      "multicurrency": "Multi‑currency",
+      "workflow": "Workflow",
+      "analytics": "Analytics",
+      "integration": "Integration",
+      "security": "Security"
     },
     "resourceItems": {
-      "documentation": "__MISSING_TRANSLATION__ nav.resourceItems.documentation",
-      "apiDocs": "__MISSING_TRANSLATION__ nav.resourceItems.apiDocs",
-      "tutorials": "__MISSING_TRANSLATION__ nav.resourceItems.tutorials",
-      "blog": "__MISSING_TRANSLATION__ nav.resourceItems.blog",
-      "webinars": "__MISSING_TRANSLATION__ nav.resourceItems.webinars",
-      "support": "__MISSING_TRANSLATION__ nav.resourceItems.support"
+      "documentation": "Documentation",
+      "apiDocs": "API Docs",
+      "tutorials": "Tutorials",
+      "blog": "Blog",
+      "webinars": "Webinars",
+      "support": "Support"
     },
     "companyItems": {
-      "about": "__MISSING_TRANSLATION__ nav.companyItems.about",
-      "careers": "__MISSING_TRANSLATION__ nav.companyItems.careers",
-      "partners": "__MISSING_TRANSLATION__ nav.companyItems.partners",
-      "news": "__MISSING_TRANSLATION__ nav.companyItems.news",
-      "contact": "__MISSING_TRANSLATION__ nav.companyItems.contact"
+      "about": "About",
+      "careers": "Careers",
+      "partners": "Partners",
+      "news": "News",
+      "contact": "Contact"
     },
-    "solutions": "__MISSING_TRANSLATION__ nav.solutions",
+    "solutions": "Solutions",
     "solutionsSection": {
-      "implemented": "__MISSING_TRANSLATION__ nav.solutionsSection.implemented",
-      "recent": "__MISSING_TRANSLATION__ nav.solutionsSection.recent",
-      "ai": "__MISSING_TRANSLATION__ nav.solutionsSection.ai"
+      "implemented": "Implemented",
+      "recent": "Recently completed",
+      "ai": "AI"
     },
-    "features": "__MISSING_TRANSLATION__ nav.features",
-    "pricing": "__MISSING_TRANSLATION__ nav.pricing",
-    "resources": "__MISSING_TRANSLATION__ nav.resources",
-    "login": "__MISSING_TRANSLATION__ nav.login",
-    "getStarted": "__MISSING_TRANSLATION__ nav.getStarted"
+    "features": "Features",
+    "pricing": "Pricing",
+    "resources": "Resources",
+    "login": "Login",
+    "getStarted": "Get started"
   },
   "modules": {
     "mdm": {
