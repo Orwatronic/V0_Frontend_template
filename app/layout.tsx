@@ -14,16 +14,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={GeistSans.className} suppressHydrationWarning>
-      <head>
-        <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
-        `}</style>
-      </head>
+    <html lang="en" className={`${GeistSans.className} ${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
+      <head />
       <body>
         <I18nProvider>
           <AuthProvider>
