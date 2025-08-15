@@ -1,3 +1,5 @@
+"use client"
+
 import { AppShell } from "@/components/app-shell"
 import { useI18n } from "@/contexts/i18n-context"
 

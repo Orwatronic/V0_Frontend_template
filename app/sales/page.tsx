@@ -6,7 +6,7 @@ import SalesDistribution from "@/components/sales-distribution"
 
 export default function SalesPage() {
   return (
-    <ProtectedRoute>
+    <ProtectedRoute required="view:sales">
       <AppShell>
         <SalesDistribution />
       </AppShell>

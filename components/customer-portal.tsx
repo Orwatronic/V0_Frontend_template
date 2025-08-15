@@ -11,6 +11,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { Package, CreditCard, FileText, ShoppingCart, User, Phone, Mail, MapPin, Download, Search, Filter, RefreshCw, Plus, Eye, Truck, Calendar, DollarSign, AlertCircle, CheckCircle, Clock, Star, MessageSquare, Building2 } from 'lucide-react'
+import { useI18n } from "@/contexts/i18n-context"
 
 // Mock customer data
 const mockCustomerData = {
@@ -161,6 +162,7 @@ const mockSupportTickets = [
 ]
 
 const CustomerPortal = () => {
+  const { t } = useI18n()
   const [activeTab, setActiveTab] = useState("dashboard")
   const [orderFilter, setOrderFilter] = useState("all")
   const [searchTerm, setSearchTerm] = useState("")
@@ -173,17 +175,17 @@ const CustomerPortal = () => {
 
   const getStatusBadge = (status: string) => {
     const statusConfig = {
-      delivered: { variant: "default" as const, label: "Delivered", icon: CheckCircle },
-      in_transit: { variant: "secondary" as const, label: "In Transit", icon: Truck },
-      processing: { variant: "outline" as const, label: "Processing", icon: Clock },
-      paid: { variant: "default" as const, label: "Paid", icon: CheckCircle },
-      pending: { variant: "secondary" as const, label: "Pending", icon: Clock },
-      overdue: { variant: "destructive" as const, label: "Overdue", icon: AlertCircle },
-      in_stock: { variant: "default" as const, label: "In Stock", icon: CheckCircle },
-      limited: { variant: "secondary" as const, label: "Limited", icon: AlertCircle },
-      out_of_stock: { variant: "destructive" as const, label: "Out of Stock", icon: AlertCircle },
-      open: { variant: "secondary" as const, label: "Open", icon: Clock },
-      resolved: { variant: "default" as const, label: "Resolved", icon: CheckCircle }
+      delivered: { variant: "default" as const, label: t("customerPortal.status.delivered"), icon: CheckCircle },
+      in_transit: { variant: "secondary" as const, label: t("customerPortal.status.inTransit"), icon: Truck },
+      processing: { variant: "outline" as const, label: t("customerPortal.status.processing"), icon: Clock },
+      paid: { variant: "default" as const, label: t("customerPortal.status.paid"), icon: CheckCircle },
+      pending: { variant: "secondary" as const, label: t("customerPortal.status.pending"), icon: Clock },
+      overdue: { variant: "destructive" as const, label: t("customerPortal.status.overdue"), icon: AlertCircle },
+      in_stock: { variant: "default" as const, label: t("customerPortal.status.inStock"), icon: CheckCircle },
+      limited: { variant: "secondary" as const, label: t("customerPortal.status.limited"), icon: AlertCircle },
+      out_of_stock: { variant: "destructive" as const, label: t("customerPortal.status.outOfStock"), icon: AlertCircle },
+      open: { variant: "secondary" as const, label: t("customerPortal.status.open"), icon: Clock },
+      resolved: { variant: "default" as const, label: t("customerPortal.status.resolved"), icon: CheckCircle }
     }
     
     const config = statusConfig[status] || { variant: "outline" as const, label: status, icon: Clock }
@@ -227,31 +229,31 @@ const CustomerPortal = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Customer Portal</h1>
+          <h1 className="text-3xl font-bold tracking-tight">{t("customerPortal.title")}</h1>
           <p className="text-muted-foreground">
-            Welcome back, {mockCustomerData.profile.contactPerson}
+            {t("customerPortal.welcome", { name: mockCustomerData.profile.contactPerson })}
           </p>
         </div>
         <div className="flex items-center space-x-2">
           <Button variant="outline" size="sm">
             <RefreshCw className="h-4 w-4 mr-2" />
-            Refresh
+            {t("customerPortal.refresh")}
           </Button>
           <Button variant="outline" size="sm">
             <Download className="h-4 w-4 mr-2" />
-            Export Data
+            {t("customerPortal.export")}
           </Button>
         </div>
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
         <TabsList className="grid w-full grid-cols-6">
-          <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
-          <TabsTrigger value="orders">Orders</TabsTrigger>
-          <TabsTrigger value="invoices">Invoices</TabsTrigger>
-          <TabsTrigger value="catalog">Catalog</TabsTrigger>
-          <TabsTrigger value="support">Support</TabsTrigger>
-          <TabsTrigger value="account">Account</TabsTrigger>
+          <TabsTrigger value="dashboard">{t("customerPortal.tabs.dashboard")}</TabsTrigger>
+          <TabsTrigger value="orders">{t("customerPortal.tabs.orders")}</TabsTrigger>
+          <TabsTrigger value="invoices">{t("customerPortal.tabs.invoices")}</TabsTrigger>
+          <TabsTrigger value="catalog">{t("customerPortal.tabs.catalog")}</TabsTrigger>
+          <TabsTrigger value="support">{t("customerPortal.tabs.support")}</TabsTrigger>
+          <TabsTrigger value="account">{t("customerPortal.tabs.account")}</TabsTrigger>
         </TabsList>
 
         {/* Dashboard Tab */}
@@ -260,7 +262,7 @@ const CustomerPortal = () => {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Total Orders</CardTitle>
+                <CardTitle className="text-sm font-medium">{t("customerPortal.metrics.totalOrders")}</CardTitle>
                 <ShoppingCart className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
@@ -273,7 +275,7 @@ const CustomerPortal = () => {
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Total Spent</CardTitle>
+                <CardTitle className="text-sm font-medium">{t("customerPortal.metrics.totalSpent")}</CardTitle>
                 <DollarSign className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
@@ -288,7 +290,7 @@ const CustomerPortal = () => {
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Available Credit</CardTitle>
+                <CardTitle className="text-sm font-medium">{t("customerPortal.metrics.availableCredit")}</CardTitle>
                 <CreditCard className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
@@ -303,13 +305,13 @@ const CustomerPortal = () => {
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">On-Time Delivery</CardTitle>
+                <CardTitle className="text-sm font-medium">{t("customerPortal.metrics.onTimeDelivery")}</CardTitle>
                 <Truck className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{mockCustomerData.metrics.onTimeDelivery}%</div>
                 <p className="text-xs text-green-600">
-                  Excellent performance
+                  {t("customerPortal.metrics.onTimeDeliveryNote")}
                 </p>
               </CardContent>
             </Card>
@@ -319,8 +321,8 @@ const CustomerPortal = () => {
           <div className="grid gap-6 md:grid-cols-2">
             <Card>
               <CardHeader>
-                <CardTitle>Recent Orders</CardTitle>
-                <CardDescription>Your latest order activity</CardDescription>
+                <CardTitle>{t("customerPortal.recentOrders.title")}</CardTitle>
+                <CardDescription>{t("customerPortal.recentOrders.description")}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -341,8 +343,8 @@ const CustomerPortal = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle>Account Manager</CardTitle>
-                <CardDescription>Your dedicated support contact</CardDescription>
+                <CardTitle>{t("customerPortal.accountManager.title")}</CardTitle>
+                <CardDescription>{t("customerPortal.accountManager.description")}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -367,7 +369,7 @@ const CustomerPortal = () => {
                   </div>
                   <Button className="w-full" variant="outline">
                     <MessageSquare className="h-4 w-4 mr-2" />
-                    Contact Manager
+                    {t("customerPortal.accountManager.contact")}
                   </Button>
                 </div>
               </CardContent>
@@ -381,34 +383,34 @@ const CustomerPortal = () => {
             <div className="flex items-center space-x-2">
               <Select value={orderFilter} onValueChange={setOrderFilter}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Filter by status" />
+                  <SelectValue placeholder={t("customerPortal.orders.filterByStatus")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">All Orders</SelectItem>
-                  <SelectItem value="processing">Processing</SelectItem>
-                  <SelectItem value="in_transit">In Transit</SelectItem>
-                  <SelectItem value="delivered">Delivered</SelectItem>
+                  <SelectItem value="all">{t("customerPortal.orders.allOrders")}</SelectItem>
+                  <SelectItem value="processing">{t("customerPortal.status.processing")}</SelectItem>
+                  <SelectItem value="in_transit">{t("customerPortal.status.inTransit")}</SelectItem>
+                  <SelectItem value="delivered">{t("customerPortal.status.delivered")}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
           </div>
 
           <Card>
-            <CardHeader>
-              <CardTitle>Order History</CardTitle>
-              <CardDescription>Track and manage your orders</CardDescription>
+              <CardHeader>
+                <CardTitle>{t("customerPortal.orders.title")}</CardTitle>
+                <CardDescription>{t("customerPortal.orders.description")}</CardDescription>
             </CardHeader>
             <CardContent>
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Order ID</TableHead>
-                    <TableHead>Date</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead>Items</TableHead>
-                    <TableHead>Total</TableHead>
-                    <TableHead>Delivery</TableHead>
-                    <TableHead>Actions</TableHead>
+                    <TableHead>{t("customerPortal.orders.table.orderId")}</TableHead>
+                    <TableHead>{t("customerPortal.orders.table.date")}</TableHead>
+                    <TableHead>{t("customerPortal.orders.table.status")}</TableHead>
+                    <TableHead>{t("customerPortal.orders.table.items")}</TableHead>
+                    <TableHead>{t("customerPortal.orders.table.total")}</TableHead>
+                    <TableHead>{t("customerPortal.orders.table.delivery")}</TableHead>
+                    <TableHead>{t("customerPortal.orders.table.actions")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -417,10 +419,10 @@ const CustomerPortal = () => {
                       <TableCell className="font-medium">{order.id}</TableCell>
                       <TableCell>{new Date(order.date).toLocaleDateString()}</TableCell>
                       <TableCell>{getStatusBadge(order.status)}</TableCell>
-                      <TableCell>{order.items} items</TableCell>
+                      <TableCell>{order.items} {t("customerPortal.common.items")}</TableCell>
                       <TableCell>${order.total.toLocaleString()}</TableCell>
                       <TableCell>
-                        {order.deliveryDate ? new Date(order.deliveryDate).toLocaleDateString() : 'TBD'}
+                        {order.deliveryDate ? new Date(order.deliveryDate).toLocaleDateString() : t("customerPortal.common.tbd")}
                       </TableCell>
                       <TableCell>
                         <div className="flex items-center space-x-2">
@@ -432,12 +434,12 @@ const CustomerPortal = () => {
                               <Truck className="h-4 w-4" />
                             </Button>
                           )}
-                          <Button 
+                              <Button 
                             variant="outline" 
                             size="sm"
                             onClick={() => handleReorder(order.id)}
                           >
-                            Reorder
+                                {t("customerPortal.orders.actions.reorder")}
                           </Button>
                         </div>
                       </TableCell>
@@ -452,21 +454,21 @@ const CustomerPortal = () => {
         {/* Invoices Tab */}
         <TabsContent value="invoices" className="space-y-6">
           <Card>
-            <CardHeader>
-              <CardTitle>Invoice History</CardTitle>
-              <CardDescription>View and download your invoices</CardDescription>
+              <CardHeader>
+                <CardTitle>{t("customerPortal.invoices.title")}</CardTitle>
+                <CardDescription>{t("customerPortal.invoices.description")}</CardDescription>
             </CardHeader>
             <CardContent>
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Invoice ID</TableHead>
-                    <TableHead>Order ID</TableHead>
-                    <TableHead>Date</TableHead>
-                    <TableHead>Due Date</TableHead>
-                    <TableHead>Amount</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead>Actions</TableHead>
+                    <TableHead>{t("customerPortal.invoices.table.invoiceId")}</TableHead>
+                    <TableHead>{t("customerPortal.invoices.table.orderId")}</TableHead>
+                    <TableHead>{t("customerPortal.invoices.table.date")}</TableHead>
+                    <TableHead>{t("customerPortal.invoices.table.dueDate")}</TableHead>
+                    <TableHead>{t("customerPortal.invoices.table.amount")}</TableHead>
+                    <TableHead>{t("customerPortal.invoices.table.status")}</TableHead>
+                    <TableHead>{t("customerPortal.invoices.table.actions")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -498,11 +500,11 @@ const CustomerPortal = () => {
 
         {/* Catalog Tab */}
         <TabsContent value="catalog" className="space-y-6">
-          <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2">
             <div className="relative flex-1">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="Search products..."
+                placeholder={t("customerPortal.catalog.searchPlaceholder")}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-8"
@@ -510,16 +512,16 @@ const CustomerPortal = () => {
             </div>
             <Button variant="outline">
               <Filter className="h-4 w-4 mr-2" />
-              Filter
+                  {t("customerPortal.catalog.filter")}
             </Button>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filteredProducts.map((product) => (
               <Card key={product.id}>
-                <CardHeader>
-                  <CardTitle className="text-lg">{product.name}</CardTitle>
-                  <CardDescription>SKU: {product.sku}</CardDescription>
+                  <CardHeader>
+                    <CardTitle className="text-lg">{product.name}</CardTitle>
+                    <CardDescription>{t("customerPortal.catalog.sku")}: {product.sku}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
@@ -530,14 +532,14 @@ const CustomerPortal = () => {
                     </div>
                     <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                       <Clock className="h-4 w-4" />
-                      <span>Lead time: {product.leadTime}</span>
+                      <span>{t("customerPortal.catalog.leadTime")}: {product.leadTime}</span>
                     </div>
                     <div className="flex space-x-2">
                       <Button 
                         className="flex-1"
                         onClick={() => handleQuoteRequest(product.id)}
                       >
-                        Request Quote
+                        {t("customerPortal.catalog.requestQuote")}
                       </Button>
                       <Button variant="outline" size="sm">
                         <Eye className="h-4 w-4" />
@@ -555,12 +557,12 @@ const CustomerPortal = () => {
           <div className="grid gap-6 md:grid-cols-2">
             <Card>
               <CardHeader>
-                <CardTitle>Create Support Ticket</CardTitle>
-                <CardDescription>Get help from our support team</CardDescription>
+                <CardTitle>{t("customerPortal.support.create.title")}</CardTitle>
+                <CardDescription>{t("customerPortal.support.create.description")}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <Label htmlFor="subject">Subject</Label>
+                  <Label htmlFor="subject">{t("customerPortal.support.create.subject.label")}</Label>
                   <Input
                     id="subject"
                     value={supportTicketForm.subject}
@@ -568,11 +570,11 @@ const CustomerPortal = () => {
                       ...supportTicketForm,
                       subject: e.target.value
                     })}
-                    placeholder="Brief description of your issue"
+                    placeholder={t("customerPortal.support.create.subject.placeholder")}
                   />
                 </div>
                 <div>
-                  <Label htmlFor="priority">Priority</Label>
+                  <Label htmlFor="priority">{t("customerPortal.support.create.priority.label")}</Label>
                   <Select 
                     value={supportTicketForm.priority} 
                     onValueChange={(value) => setSupportTicketForm({
@@ -584,15 +586,15 @@ const CustomerPortal = () => {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="low">Low</SelectItem>
-                      <SelectItem value="medium">Medium</SelectItem>
-                      <SelectItem value="high">High</SelectItem>
-                      <SelectItem value="urgent">Urgent</SelectItem>
+                      <SelectItem value="low">{t("customerPortal.support.create.priority.low")}</SelectItem>
+                      <SelectItem value="medium">{t("customerPortal.support.create.priority.medium")}</SelectItem>
+                      <SelectItem value="high">{t("customerPortal.support.create.priority.high")}</SelectItem>
+                      <SelectItem value="urgent">{t("customerPortal.support.create.priority.urgent")}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div>
-                  <Label htmlFor="description">Description</Label>
+                  <Label htmlFor="description">{t("customerPortal.support.create.description.label")}</Label>
                   <Textarea
                     id="description"
                     value={supportTicketForm.description}
@@ -600,21 +602,21 @@ const CustomerPortal = () => {
                       ...supportTicketForm,
                       description: e.target.value
                     })}
-                    placeholder="Detailed description of your issue"
+                    placeholder={t("customerPortal.support.create.description.placeholder")}
                     rows={4}
                   />
                 </div>
                 <Button onClick={handleSupportTicketSubmit} className="w-full">
                   <Plus className="h-4 w-4 mr-2" />
-                  Create Ticket
+                  {t("customerPortal.support.create.submit")}
                 </Button>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle>Support History</CardTitle>
-                <CardDescription>Your previous support requests</CardDescription>
+                <CardTitle>{t("customerPortal.support.history.title")}</CardTitle>
+                <CardDescription>{t("customerPortal.support.history.description")}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -626,11 +628,11 @@ const CustomerPortal = () => {
                       </div>
                       <p className="text-sm font-medium mb-1">{ticket.subject}</p>
                       <div className="flex items-center justify-between text-xs text-muted-foreground">
-                        <span>Created: {new Date(ticket.created).toLocaleDateString()}</span>
-                        <span>Updated: {new Date(ticket.lastUpdate).toLocaleDateString()}</span>
+                        <span>{t("customerPortal.support.history.created")}: {new Date(ticket.created).toLocaleDateString()}</span>
+                        <span>{t("customerPortal.support.history.updated")}: {new Date(ticket.lastUpdate).toLocaleDateString()}</span>
                       </div>
                       <p className="text-xs text-muted-foreground mt-1">
-                        Assigned to: {ticket.assignedTo}
+                        {t("customerPortal.support.history.assignedTo")}: {ticket.assignedTo}
                       </p>
                     </div>
                   ))}
@@ -645,32 +647,32 @@ const CustomerPortal = () => {
           <div className="grid gap-6 md:grid-cols-2">
             <Card>
               <CardHeader>
-                <CardTitle>Company Information</CardTitle>
-                <CardDescription>Your account details</CardDescription>
+                <CardTitle>{t("customerPortal.account.companyInfo.title")}</CardTitle>
+                <CardDescription>{t("customerPortal.account.companyInfo.description")}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid gap-2">
-                  <Label>Company Name</Label>
+                  <Label>{t("customerPortal.account.companyInfo.companyName")}</Label>
                   <Input value={mockCustomerData.profile.name} readOnly />
                 </div>
                 <div className="grid gap-2">
-                  <Label>Customer ID</Label>
+                  <Label>{t("customerPortal.account.companyInfo.customerId")}</Label>
                   <Input value={mockCustomerData.profile.id} readOnly />
                 </div>
                 <div className="grid gap-2">
-                  <Label>Contact Person</Label>
+                  <Label>{t("customerPortal.account.companyInfo.contactPerson")}</Label>
                   <Input value={mockCustomerData.profile.contactPerson} readOnly />
                 </div>
                 <div className="grid gap-2">
-                  <Label>Email</Label>
+                  <Label>{t("customerPortal.account.companyInfo.email")}</Label>
                   <Input value={mockCustomerData.profile.email} readOnly />
                 </div>
                 <div className="grid gap-2">
-                  <Label>Phone</Label>
+                  <Label>{t("customerPortal.account.companyInfo.phone")}</Label>
                   <Input value={mockCustomerData.profile.phone} readOnly />
                 </div>
                 <div className="grid gap-2">
-                  <Label>Address</Label>
+                  <Label>{t("customerPortal.account.companyInfo.address")}</Label>
                   <Textarea value={mockCustomerData.profile.address} readOnly rows={3} />
                 </div>
               </CardContent>
@@ -678,28 +680,28 @@ const CustomerPortal = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle>Account Details</CardTitle>
-                <CardDescription>Credit and payment information</CardDescription>
+                <CardTitle>{t("customerPortal.account.details.title")}</CardTitle>
+                <CardDescription>{t("customerPortal.account.details.description")}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid gap-2">
-                  <Label>Credit Limit</Label>
+                  <Label>{t("customerPortal.account.details.creditLimit")}</Label>
                   <Input value={`$${mockCustomerData.profile.creditLimit.toLocaleString()}`} readOnly />
                 </div>
                 <div className="grid gap-2">
-                  <Label>Available Credit</Label>
+                  <Label>{t("customerPortal.account.details.availableCredit")}</Label>
                   <Input value={`$${mockCustomerData.profile.availableCredit.toLocaleString()}`} readOnly />
                 </div>
                 <div className="grid gap-2">
-                  <Label>Payment Terms</Label>
+                  <Label>{t("customerPortal.account.details.paymentTerms")}</Label>
                   <Input value={mockCustomerData.profile.paymentTerms} readOnly />
                 </div>
                 <div className="grid gap-2">
-                  <Label>Customer Since</Label>
+                  <Label>{t("customerPortal.account.details.customerSince")}</Label>
                   <Input value={new Date(mockCustomerData.profile.customerSince).toLocaleDateString()} readOnly />
                 </div>
                 <div className="pt-4">
-                  <h4 className="font-medium mb-2">Account Manager</h4>
+                  <h4 className="font-medium mb-2">{t("customerPortal.account.details.accountManager")}</h4>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-center space-x-2">
                       <User className="h-4 w-4 text-muted-foreground" />

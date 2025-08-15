@@ -404,18 +404,18 @@ function EmployeeManagement() {
               // Replaced hardcoded string with translation key
               placeholder={t("hcm.employees.searchPlaceholder")}
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e) => setSearchTerm(e.target.value)} 
               className="pl-10"
             />
           </div>
 
           <Select value={selectedDepartment} onValueChange={setSelectedDepartment}>
             <SelectTrigger className="w-48">
-              // Replaced hardcoded string with translation key
+              {/* Replaced hardcoded string with translation key */}
               <SelectValue placeholder={t("hcm.employees.allDepartments")} />
             </SelectTrigger>
             <SelectContent>
-              // Replaced hardcoded string with translation key
+              {/* Replaced hardcoded string with translation key */}
               <SelectItem value="all">{t("hcm.employees.allDepartments")}</SelectItem>
               {departments.map((dept) => (
                 <SelectItem key={dept} value={dept}>
@@ -427,11 +427,11 @@ function EmployeeManagement() {
 
           <Select value={selectedStatus} onValueChange={setSelectedStatus}>
             <SelectTrigger className="w-32">
-              // Replaced hardcoded string with translation key
+              {/* Replaced hardcoded string with translation key */}
               <SelectValue placeholder={t("hcm.employees.status")} />
             </SelectTrigger>
             <SelectContent>
-              // Replaced hardcoded string with translation key
+              {/* Replaced hardcoded string with translation key */}
               <SelectItem value="all">{t("hcm.employees.allStatus")}</SelectItem>
               <SelectItem value="Active">{t("hcm.employees.active")}</SelectItem>
               <SelectItem value="Inactive">{t("hcm.employees.inactive")}</SelectItem>
@@ -442,12 +442,12 @@ function EmployeeManagement() {
         <div className="flex gap-2">
           <Button variant="outline">
             <Download className="mr-2 h-4 w-4" />
-            // Replaced hardcoded string with translation key
+            {/* Replaced hardcoded string with translation key */}
             {t("common.export")}
           </Button>
           <Button>
             <UserPlus className="mr-2 h-4 w-4" />
-            // Replaced hardcoded string with translation key
+            {/* Replaced hardcoded string with translation key */}
             {t("hcm.actions.addEmployee")}
           </Button>
         </div>
@@ -460,7 +460,7 @@ function EmployeeManagement() {
             <table className="w-full">
               <thead className="border-b">
                 <tr>
-                  // Replaced hardcoded strings with translation keys
+                  {/* Replaced hardcoded strings with translation keys */}
                   <th className="text-left p-4 font-medium">{t("hcm.employees.columns.employee")}</th>
                   <th className="text-left p-4 font-medium">{t("hcm.employees.columns.position")}</th>
                   <th className="text-left p-4 font-medium">{t("hcm.employees.columns.department")}</th>

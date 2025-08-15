@@ -43,35 +43,10 @@ const mockInvoices = {
   },
 };
 
-const useTranslation = () => ({
-  t: (key: string) => ({
-    "3wm.title": "Three-Way Match",
-    "3wm.description": "Reconcile Purchase Orders, Goods Receipts, and Vendor Invoices.",
-    "3wm.search.placeholder": "Search by PO, GR, or Invoice number...",
-    "3wm.po.title": "Purchase Order Details",
-    "3wm.gr.title": "Goods Receipt Details",
-    "3wm.invoice.title": "Vendor Invoice Details",
-    "3wm.summary.title": "Reconciliation Summary",
-    "3wm.summary.status": "Matching Status",
-    "3wm.summary.qtyVariance": "Quantity Variance",
-    "3wm.summary.priceVariance": "Price Variance",
-    "3wm.summary.totalVariance": "Total Variance",
-    "3wm.summary.glImpact": "Potential GL Impact",
-    "3wm.summary.debit": "Debit (Expense/Asset)",
-    "3wm.summary.credit": "Credit (AP)",
-    "common.item": "Item",
-    "common.description": "Description",
-    "common.quantity": "Quantity",
-    "common.price": "Price",
-    "common.total": "Total",
-    "common.actions": "Actions",
-    "actions.post": "Post with Variance",
-    "actions.block": "Block for Investigation",
-  }[key] || key),
-});
+import { useI18n } from '@/contexts/i18n-context'
 
 export const ThreeWayMatch = () => {
-  const { t } = useTranslation();
+  const { t } = useI18n();
   const [selectedPO, setSelectedPO] = useState(mockPOs[0]);
 
   const reconciliationData = useMemo(() => {
@@ -156,7 +131,7 @@ export const ThreeWayMatch = () => {
           <div className="flex items-center gap-2">
             <div className="relative w-full max-w-sm">
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input placeholder={t('3wm.search.placeholder')} className="pl-8" />
+              <Input placeholder={t('3wm.search.placeholder')} className="pl-8" aria-label={t('3wm.search.placeholder')} />
             </div>
             <Button>Search</Button>
           </div>

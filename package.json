@@ -5,6 +5,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "i18n:check-keys": "tsx scripts/check-i18n-keys.ts",
     "i18n:check-strings": "tsx scripts/check-hardcoded-strings.ts",
     "i18n:validate": "npm run i18n:check-keys && npm run i18n:check-strings",
@@ -13,6 +15,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "latest",
     "@dnd-kit/core": "latest",
     "@dnd-kit/sortable": "latest",
     "@dnd-kit/utilities": "latest",
@@ -57,15 +60,18 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@testing-library/react": "^16.0.0",
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-simple-maps": "^3.0.0",
+    "happy-dom": "^14.12.3",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "tsx": "latest",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^2.0.5"
   }
 }

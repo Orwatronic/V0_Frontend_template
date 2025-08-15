@@ -21,40 +21,8 @@ import { CalendarIcon } from "lucide-react"
 import { Calendar as CalendarComponent } from "@/components/ui/calendar"
 import { cn } from "@/lib/utils"
 
-const useTranslation = () => ({
-  t: (key: string) =>
-    ({
-      "ppw.title": "Payment Run Wizard",
-      "ppw.step1.title": "Step 1: Define Parameters",
-      "ppw.step1.description": "Set the criteria for the invoices to be paid.",
-      "ppw.step1.dueDate": "Due Date Until",
-      "ppw.step1.minAmount": "Minimum Amount",
-      "ppw.step1.vendorGroup": "Vendor Group",
-      "ppw.step2.title": "Step 2: Review & Select Invoices",
-      "ppw.step2.description": "Review the proposed invoices and make adjustments.",
-      "ppw.step3.title": "Step 3: Confirm Proposal",
-      "ppw.step3.description": "Review the final payment proposal before execution.",
-      "ppw.step4.title": "Step 4: Execution",
-      "ppw.step4.description": "The payment run has been processed.",
-      "common.next": "Next",
-      "common.back": "Back",
-      "common.finish": "Execute Payment Run",
-      "common.close": "Close",
-      "common.cancel": "Cancel",
-      "common.loading": "Loading...",
-      "common.invoice": "Invoice",
-      "common.vendor": "Vendor",
-      "common.dueDate": "Due Date",
-      "common.amount": "Amount",
-      "common.discount": "Discount",
-      "common.netAmount": "Net Amount",
-      "summary.totalInvoices": "Total Invoices",
-      "summary.totalAmount": "Total Payment Amount",
-      "execution.success": "Payment Run Executed Successfully!",
-      "execution.id": "Payment Run ID",
-      "execution.file": "Payment file has been generated.",
-    })[key] || key,
-})
+import { useI18n } from "@/contexts/i18n-context"
+import { useApi } from "@/hooks/use-api"
 
 const mockPayableInvoices = [
   { id: "INV-002", vendor: "Office Solutions LLC", dueDate: "2024-08-19", amount: 750.5, discount: 15.01 },
@@ -79,7 +47,8 @@ const formatDate = (date: Date) => {
 }
 
 export const PaymentRunWizard = ({ isOpen, onClose }: PaymentRunWizardProps) => {
-  const { t } = useTranslation()
+  const { t, formatters } = useI18n()
+  const { get, post } = useApi()
   const [step, setStep] = useState(1)
   const [dueDate, setDueDate] = useState<Date | undefined>(new Date())
   const [payableInvoices, setPayableInvoices] = useState<PayableInvoice[]>([])
@@ -91,18 +60,45 @@ export const PaymentRunWizard = ({ isOpen, onClose }: PaymentRunWizardProps) => 
     if (step === 1) {
       setIsLoading(true)
       // CURSOR: API call to GET /api/v1/financials/ap/invoices/payable?dueDate={dueDate}
-      await new Promise((res) => setTimeout(res, 1000)) // Simulate API call
-      setPayableInvoices(mockPayableInvoices)
+      try {
+        let useMock = true
+        try {
+          const v = localStorage.getItem("feebee:auth:mock")
+          useMock = v ? v === "1" : true
+        } catch {}
+        if (!useMock) {
+          const iso = dueDate?.toISOString().substring(0, 10)
+          const res = await get<{ invoices: PayableInvoice[] }>(`/financials/ap/invoices/payable?dueDate=${iso}`)
+          setPayableInvoices(((res as any)?.invoices as any) || [])
+        } else {
+          await new Promise((res) => setTimeout(res, 300))
+          setPayableInvoices(mockPayableInvoices)
+        }
+      } finally {
+        setIsLoading(false)
+      }
       setSelectedInvoices(mockPayableInvoices.reduce((acc, inv) => ({ ...acc, [inv.id]: true }), {}))
-      setIsLoading(false)
     }
     if (step === 3) {
       setIsLoading(true)
       // CURSOR: API call to POST /api/v1/financials/ap/payment-run
       const finalInvoiceIds = Object.keys(selectedInvoices).filter((id) => selectedInvoices[id])
-      await new Promise((res) => setTimeout(res, 1500)) // Simulate API call
-      setExecutionResult({ success: true, id: `PR-${Date.now()}` })
-      setIsLoading(false)
+      try {
+        let useMock = true
+        try {
+          const v = localStorage.getItem("feebee:auth:mock")
+          useMock = v ? v === "1" : true
+        } catch {}
+        if (!useMock) {
+          const out = await post(`/financials/ap/payment-run`, { invoices: finalInvoiceIds })
+          setExecutionResult({ success: true, id: (out as any)?.id || `PR-${Date.now()}` })
+        } else {
+          await new Promise((res) => setTimeout(res, 300))
+          setExecutionResult({ success: true, id: `PR-${Date.now()}` })
+        }
+      } finally {
+        setIsLoading(false)
+      }
     }
     if (step < 4) setStep((s) => s + 1)
   }
@@ -122,8 +118,7 @@ export const PaymentRunWizard = ({ isOpen, onClose }: PaymentRunWizardProps) => 
   const finalSelection = payableInvoices.filter((inv) => selectedInvoices[inv.id])
   const totalAmount = finalSelection.reduce((sum, inv) => sum + (inv.amount - inv.discount), 0)
 
-  const formatCurrency = (amount: number) =>
-    new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(amount)
+  const formatCurrency = (amount: number) => formatters.formatCurrency(amount, "USD")
 
   const renderStepContent = () => {
     switch (step) {

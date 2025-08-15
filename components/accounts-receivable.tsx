@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { DollarSign, TrendingUp, Users, PlusCircle, FileDown, Search } from "lucide-react"
 import { useI18n } from "@/contexts/i18n-context"
+import { useApi } from "@/hooks/use-api"
 
 const mockInvoices = [
   {
@@ -60,17 +61,44 @@ const statusVariant: { [key: string]: "default" | "secondary" | "destructive" | 
 }
 
 export const AccountsReceivable = () => {
-  const { t } = useI18n()
+  const { t, formatters } = useI18n()
+  const { get } = useApi()
   const [invoices, setInvoices] = useState<any[]>([])
   const [searchTerm, setSearchTerm] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    // CURSOR: API call to GET /api/v1/financials/ar/invoices
-    setInvoices(mockInvoices)
+    // Decide mock vs real based on local flag (feebee:auth:mock). Defaults to true when absent.
+    let useMock = true
+    try {
+      const v = localStorage.getItem("feebee:auth:mock")
+      useMock = v ? v === "1" : true
+    } catch {}
+
+    const load = async () => {
+      setIsLoading(true)
+      setError(null)
+      try {
+        if (useMock) {
+          setInvoices(mockInvoices)
+          return
+        }
+        // CURSOR: API call to GET /api/v1/financials/ar/invoices
+        const data = await get<{ invoices: any[] }>("/financials/ar/invoices")
+        setInvoices(Array.isArray((data as any)?.invoices) ? (data as any).invoices : [])
+      } catch (e) {
+        setError(t("financial.accountsReceivable.errors.loadFailed"))
+        setInvoices(mockInvoices)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    load()
   }, [])
 
-  const formatCurrency = (amount: number, currency = "USD") =>
-    new Intl.NumberFormat("en-US", { style: "currency", currency }).format(amount)
+  const formatCurrency = (amount: number, currency = "USD") => formatters.formatCurrency(amount, currency)
 
   const filteredInvoices = invoices.filter(
     (invoice) =>
@@ -133,6 +161,7 @@ export const AccountsReceivable = () => {
                   className="pl-8"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
+                  aria-label={t("financial.accountsReceivable.aria.searchLabel")}
                 />
               </div>
               <Button variant="outline">
@@ -145,6 +174,16 @@ export const AccountsReceivable = () => {
           </div>
         </CardHeader>
         <CardContent>
+          {isLoading && (
+            <div className="text-sm text-muted-foreground mb-3" role="status" aria-live="polite">
+              {t("financial.accountsReceivable.loading")}
+            </div>
+          )}
+          {error && (
+            <div className="rounded-md border border-red-300 bg-red-50 text-red-700 p-3 mb-3" role="alert">
+              {error}
+            </div>
+          )}
           <div className="border rounded-md">
             <Table>
               <TableHeader>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
@@ -11,6 +11,7 @@ import { Calendar } from "@/components/ui/calendar"
 import type { DateRange } from "react-day-picker"
 import { cn } from "@/lib/utils"
 import { useI18n } from "@/contexts/i18n-context"
+import { useApi } from "@/hooks/use-api"
 
 // Mock Data
 const mockPnlData = {
@@ -66,20 +67,54 @@ const formatDate = (date: Date) => {
 }
 
 export const FinancialReporting = () => {
-  const { t } = useI18n()
+  const { t, formatters } = useI18n()
+  const { get } = useApi()
   const [date, setDate] = useState<DateRange | undefined>({
     from: new Date(2024, 0, 1),
     to: new Date(2024, 6, 31),
   })
+  const [pnl, setPnl] = useState<typeof mockPnlData | null>(null)
+  const [bs, setBs] = useState<typeof mockBsData | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const formatCurrency = (amount: number) =>
-    new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(amount)
+  const formatCurrency = (amount: number) => formatters.formatCurrency(amount, "USD")
 
-  // In a real app, you would fetch data based on the date range.
-  // useEffect(() => {
-  //   // CURSOR: API call to GET /api/v1/financials/reports/pnl?from={date.from}&to={date.to}
-  //   // CURSOR: API call to GET /api/v1/financials/reports/balance-sheet?date={date.to}
-  // }, [date])
+  // In a real app, fetch data based on date range
+  useEffect(() => {
+    let useMock = true
+    try {
+      const v = localStorage.getItem("feebee:auth:mock")
+      useMock = v ? v === "1" : true
+    } catch {}
+
+    const load = async () => {
+      setIsLoading(true)
+      setError(null)
+      try {
+        if (useMock) {
+          setPnl(mockPnlData)
+          setBs(mockBsData)
+          return
+        }
+        const from = date?.from?.toISOString().substring(0, 10)
+        const to = date?.to?.toISOString().substring(0, 10)
+        // CURSOR: API calls
+        const pnlRes = await get<{ data: typeof mockPnlData }>(`/financials/reports/pnl?from=${from}&to=${to}`)
+        const bsRes = await get<{ data: typeof mockBsData }>(`/financials/reports/balance-sheet?date=${to}`)
+        setPnl(((pnlRes as any)?.data as any) || mockPnlData)
+        setBs(((bsRes as any)?.data as any) || mockBsData)
+      } catch (e) {
+        setError(t("financial.reporting.errors.loadFailed"))
+        setPnl(mockPnlData)
+        setBs(mockBsData)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    load()
+  }, [date?.from, date?.to])
 
   return (
     <Card>
@@ -130,6 +165,16 @@ export const FinancialReporting = () => {
         </div>
       </CardHeader>
       <CardContent>
+        {isLoading && (
+          <div className="text-sm text-muted-foreground mb-3" role="status" aria-live="polite">
+            {t("financial.reporting.loading")}
+          </div>
+        )}
+        {error && (
+          <div className="rounded-md border border-red-300 bg-red-50 text-red-700 p-3 mb-3" role="alert">
+            {error}
+          </div>
+        )}
         <Tabs defaultValue="pnl">
           <TabsList>
             <TabsTrigger value="pnl">{t("financial.reporting.tabs.pnl")}</TabsTrigger>
@@ -147,35 +192,35 @@ export const FinancialReporting = () => {
                 <TableBody>
                   <TableRow className="font-bold">
                     <TableCell>{t("financial.reporting.pnl.revenue")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockPnlData.revenue)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((pnl || mockPnlData).revenue)}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="pl-8">{t("financial.reporting.pnl.cogs")}</TableCell>
-                    <TableCell className="text-right">({formatCurrency(mockPnlData.cogs)})</TableCell>
+                    <TableCell className="text-right">({formatCurrency((pnl || mockPnlData).cogs)})</TableCell>
                   </TableRow>
                   <TableRow className="font-bold border-t">
                     <TableCell>{t("financial.reporting.pnl.grossProfit")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockPnlData.grossProfit)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((pnl || mockPnlData).grossProfit)}</TableCell>
                   </TableRow>
                   <TableRow className="font-semibold bg-muted/50">
                     <TableCell>{t("financial.reporting.pnl.operatingExpenses")}</TableCell>
-                    <TableCell className="text-right">({formatCurrency(mockPnlData.opEx.total)})</TableCell>
+                    <TableCell className="text-right">({formatCurrency((pnl || mockPnlData).opEx.total)})</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="pl-8">{t("financial.reporting.pnl.marketing")}</TableCell>
-                    <TableCell className="text-right">({formatCurrency(mockPnlData.opEx.marketing)})</TableCell>
+                    <TableCell className="text-right">({formatCurrency((pnl || mockPnlData).opEx.marketing)})</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="pl-8">{t("financial.reporting.pnl.sales")}</TableCell>
-                    <TableCell className="text-right">({formatCurrency(mockPnlData.opEx.sales)})</TableCell>
+                    <TableCell className="text-right">({formatCurrency((pnl || mockPnlData).opEx.sales)})</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="pl-8">{t("financial.reporting.pnl.admin")}</TableCell>
-                    <TableCell className="text-right">({formatCurrency(mockPnlData.opEx.admin)})</TableCell>
+                    <TableCell className="text-right">({formatCurrency((pnl || mockPnlData).opEx.admin)})</TableCell>
                   </TableRow>
                   <TableRow className="font-bold text-lg border-t-2 border-primary">
                     <TableCell>{t("financial.reporting.pnl.netIncome")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockPnlData.netIncome)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((pnl || mockPnlData).netIncome)}</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -197,31 +242,31 @@ export const FinancialReporting = () => {
                   </TableRow>
                   <TableRow className="font-semibold">
                     <TableCell className="pl-4">{t("financial.reporting.balanceSheet.currentAssets")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.assets.current.total)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).assets.current.total)}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="pl-8">{t("financial.reporting.balanceSheet.cash")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.assets.current.cash)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).assets.current.cash)}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="pl-8">{t("financial.reporting.balanceSheet.accountsReceivable")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.assets.current.ar)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).assets.current.ar)}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="pl-8">{t("financial.reporting.balanceSheet.inventory")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.assets.current.inventory)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).assets.current.inventory)}</TableCell>
                   </TableRow>
                   <TableRow className="font-semibold">
                     <TableCell className="pl-4">{t("financial.reporting.balanceSheet.fixedAssets")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.assets.fixed.total)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).assets.fixed.total)}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="pl-8">{t("financial.reporting.balanceSheet.ppe")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.assets.fixed.ppe)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).assets.fixed.ppe)}</TableCell>
                   </TableRow>
                   <TableRow className="font-bold border-t">
                     <TableCell>{t("financial.reporting.balanceSheet.totalAssets")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.assets.total)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).assets.total)}</TableCell>
                   </TableRow>
 
                   <TableRow className="font-bold bg-muted/50">
@@ -230,31 +275,31 @@ export const FinancialReporting = () => {
                   </TableRow>
                   <TableRow className="font-semibold">
                     <TableCell className="pl-4">{t("financial.reporting.balanceSheet.currentLiabilities")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.liabilities.current.total)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).liabilities.current.total)}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="pl-8">{t("financial.reporting.balanceSheet.accountsPayable")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.liabilities.current.ap)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).liabilities.current.ap)}</TableCell>
                   </TableRow>
                   <TableRow className="font-semibold">
                     <TableCell className="pl-4">{t("financial.reporting.balanceSheet.longTermLiabilities")}</TableCell>
                     <TableCell className="text-right">
-                      {formatCurrency(mockBsData.liabilities.longTerm.total)}
+                      {formatCurrency((bs || mockBsData).liabilities.longTerm.total)}
                     </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="pl-8">{t("financial.reporting.balanceSheet.longTermDebt")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.liabilities.longTerm.debt)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).liabilities.longTerm.debt)}</TableCell>
                   </TableRow>
 
                   <TableRow className="font-bold bg-muted/50">
                     <TableCell>{t("financial.reporting.balanceSheet.equity")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.equity.total)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).equity.total)}</TableCell>
                   </TableRow>
 
                   <TableRow className="font-bold border-t">
                     <TableCell>{t("financial.reporting.balanceSheet.totalLiabilitiesEquity")}</TableCell>
-                    <TableCell className="text-right">{formatCurrency(mockBsData.totalLiabilitiesEquity)}</TableCell>
+                    <TableCell className="text-right">{formatCurrency((bs || mockBsData).totalLiabilitiesEquity)}</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

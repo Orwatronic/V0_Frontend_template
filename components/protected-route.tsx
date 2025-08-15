@@ -4,16 +4,24 @@ import type React from 'react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/auth-context';
+import { usePermissions } from '@/hooks/use-permissions';
 
-const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+type ProtectedRouteProps = { children: React.ReactNode; required?: string };
+
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, required }) => {
   const { token, isLoading, isLoggingOut } = useAuth();
+  const { hasPermission } = usePermissions();
   const router = useRouter();
 
   useEffect(() => {
     if (!isLoading && !token && !isLoggingOut) {
       router.push('/login');
+      return;
     }
-  }, [token, isLoading, isLoggingOut, router]);
+    if (!isLoading && token && required && !hasPermission(required)) {
+      router.push('/unauthorized');
+    }
+  }, [token, isLoading, isLoggingOut, required, hasPermission, router]);
 
   if (isLoading || isLoggingOut || !token) {
     return (
@@ -24,6 +32,10 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) =
         </div>
       </div>
     );
+  }
+
+  if (required && !hasPermission(required)) {
+    return null;
   }
 
   return <>{children}</>;

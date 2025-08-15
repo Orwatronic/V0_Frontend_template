@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { PlusCircle, Search, ChevronDown, ChevronRight } from "lucide-react"
 import { useI18n } from "@/contexts/i18n-context"
+import { useApi } from "@/hooks/use-api"
 
 type Account = {
   id: string
@@ -140,12 +141,42 @@ const AccountRow = ({ account, level = 0, searchTerm }: { account: Account; leve
 
 export const ChartOfAccounts = () => {
   const [accounts, setAccounts] = useState<Account[]>([])
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState("")
   const { t } = useI18n()
+  const { get } = useApi()
 
   useEffect(() => {
-    // CURSOR: GET /api/v1/financials/chart-of-accounts
-    setAccounts(mockAccounts)
+    // Decide mock vs real based on local flag (feebee:auth:mock). Defaults to true when absent.
+    let useMock = true
+    try {
+      const v = localStorage.getItem("feebee:auth:mock")
+      useMock = v ? v === "1" : true
+    } catch {}
+
+    const load = async () => {
+      setIsLoading(true)
+      setError(null)
+      try {
+        if (useMock) {
+          // Mock path for local development
+          setAccounts(mockAccounts)
+          return
+        }
+        // CURSOR: GET /api/v1/financials/chart-of-accounts
+        const data = await get<{ accounts: Account[] }>("/financials/chart-of-accounts")
+        setAccounts(Array.isArray((data as any)?.accounts) ? (data as any).accounts : [])
+      } catch (e) {
+        setError(t("financial.chartOfAccounts.errors.loadFailed"))
+        // Fallback to mock so UI remains usable during integration
+        setAccounts(mockAccounts)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    load()
   }, [])
 
   const filteredAccounts = useMemo(() => {
@@ -194,6 +225,16 @@ export const ChartOfAccounts = () => {
         </div>
       </CardHeader>
       <CardContent>
+        {isLoading && (
+          <div className="text-sm text-muted-foreground mb-3" role="status" aria-live="polite">
+            {t("financial.chartOfAccounts.loading")}
+          </div>
+        )}
+        {error && (
+          <div className="rounded-md border border-red-300 bg-red-50 text-red-700 p-3 mb-3" role="alert">
+            {error}
+          </div>
+        )}
         <div className="border rounded-md">
           <Table>
             <TableHeader>

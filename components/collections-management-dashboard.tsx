@@ -39,38 +39,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { DollarSign, TrendingDown, Phone, Mail, Calendar, PlusCircle, Search } from 'lucide-react'
 import { type } from "os"
 
-const useTranslation = () => ({
-  t: (key: string) =>
-    ({
-      "collections.title": "Collections Dashboard",
-      "collections.description": "Proactively manage overdue accounts and track collection activities.",
-      "collections.metrics.dso": "Days Sales Outstanding",
-      "collections.metrics.overdueTotal": "Total Overdue AR",
-      "collections.metrics.collected": "Collected (Last 30d)",
-      "collections.customer.title": "Overdue Customer Accounts",
-      "collections.customer.search": "Search customers...",
-      "collections.customer.name": "Customer Name",
-      "collections.customer.overdueAmount": "Overdue Amount",
-      "collections.customer.lastContact": "Last Contact",
-      "collections.customer.nextAction": "Next Action Date",
-      "collections.customer.status": "Status",
-      "collections.log.title": "Collection Log",
-      "collections.log.new": "Log New Activity",
-      "collections.log.type": "Activity Type",
-      "collections.log.notes": "Notes",
-      "collections.log.promiseDate": "Promise to Pay Date",
-      "collections.log.promiseAmount": "Promise Amount",
-      "collections.log.save": "Save Activity",
-      "status.Monitoring": "Monitoring",
-      "status.ActionRequired": "Action Required",
-      "status.PromiseToPay": "Promise to Pay",
-      "status.Disputed": "Disputed",
-      "activity.Call": "Call",
-      "activity.Email": "Email",
-      "activity.Promise": "Promise to Pay",
-      "activity.Note": "Internal Note",
-    }[key] || key),
-})
+import { useI18n } from "@/contexts/i18n-context"
+import { useApi } from "@/hooks/use-api"
 
 type CollectionCustomer = {
   id: string
@@ -117,23 +87,51 @@ const statusVariant: { [key: string]: "default" | "secondary" | "destructive" | 
 }
 
 export const CollectionsManagementDashboard = () => {
-  const { t } = useTranslation()
+  const { t, formatters } = useI18n()
+  const { get, post } = useApi()
   const [customers, setCustomers] = useState<CollectionCustomer[]>([])
   const [logs, setLogs] = useState<{ [key: string]: CommunicationLog[] }>({})
   const [selectedCustomer, setSelectedCustomer] = useState<CollectionCustomer | null>(null)
   const [searchTerm, setSearchTerm] = useState("")
   const [isLogDialogOpen, setIsLogDialogOpen] = useState(false)
   const [newLogType, setNewLogType] = useState<string>("Call")
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    // CURSOR: API call to GET /api/v1/financials/ar/collections/accounts
-    setCustomers(mockCustomers)
-    // CURSOR: API call to GET /api/v1/financials/ar/collections/logs
-    setLogs(mockLogs)
+    let useMock = true
+    try {
+      const v = localStorage.getItem("feebee:auth:mock")
+      useMock = v ? v === "1" : true
+    } catch {}
+
+    const load = async () => {
+      setIsLoading(true)
+      setError(null)
+      try {
+        if (useMock) {
+          setCustomers(mockCustomers)
+          setLogs(mockLogs)
+          return
+        }
+        // CURSOR: API calls
+        const c = await get<{ customers: CollectionCustomer[] }>("/financials/ar/collections/accounts")
+        const l = await get<{ logs: { [k: string]: CommunicationLog[] } }>("/financials/ar/collections/logs")
+        setCustomers(((c as any)?.customers as any) || [])
+        setLogs(((l as any)?.logs as any) || {})
+      } catch (e) {
+        setError(t("collections.errors.loadFailed"))
+        setCustomers(mockCustomers)
+        setLogs(mockLogs)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    load()
   }, [])
 
-  const formatCurrency = (amount: number, currency = "USD") =>
-    new Intl.NumberFormat("en-US", { style: "currency", currency }).format(amount)
+  const formatCurrency = (amount: number, currency = "USD") => formatters.formatCurrency(amount, currency)
 
   const filteredCustomers = customers.filter(
     (customer) => customer.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -143,7 +141,7 @@ export const CollectionsManagementDashboard = () => {
     setSelectedCustomer(customer)
   }
 
-  const handleSaveLog = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSaveLog = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget)
     const newLog: CommunicationLog = {
@@ -155,12 +153,24 @@ export const CollectionsManagementDashboard = () => {
         promiseDate: formData.get('promiseDate') as string || undefined,
         promiseAmount: Number(formData.get('promiseAmount')) || undefined,
     }
-    // CURSOR: API call to POST /api/v1/financials/ar/collections-log
-    console.log("Saving new log for customer:", selectedCustomer?.id, newLog)
-    setLogs(prev => ({
-        ...prev,
-        [selectedCustomer!.id]: [...(prev[selectedCustomer!.id] || []), newLog]
-    }))
+    try {
+      let useMock = true
+      try {
+        const v = localStorage.getItem("feebee:auth:mock")
+        useMock = v ? v === "1" : true
+      } catch {}
+      if (!useMock) {
+        // CURSOR: API call to POST /api/v1/financials/ar/collections-log
+        await post("/financials/ar/collections-log", { customerId: selectedCustomer!.id, log: newLog })
+      }
+      setLogs(prev => ({
+          ...prev,
+          [selectedCustomer!.id]: [...(prev[selectedCustomer!.id] || []), newLog]
+      }))
+    } catch {
+      // ignore errors and keep dialog open
+      return
+    }
     setIsLogDialogOpen(false)
   }
 
@@ -224,6 +234,16 @@ export const CollectionsManagementDashboard = () => {
             </div>
           </CardHeader>
           <CardContent>
+            {isLoading && (
+              <div className="text-sm text-muted-foreground mb-3" role="status" aria-live="polite">
+                {t("collections.loading")}
+              </div>
+            )}
+            {error && (
+              <div className="rounded-md border border-red-300 bg-red-50 text-red-700 p-3 mb-3" role="alert">
+                {error}
+              </div>
+            )}
             <div className="border rounded-md">
               <Table>
                 <TableHeader>

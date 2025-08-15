@@ -6,7 +6,7 @@ import HumanCapitalManagement from "@/components/human-capital-management"
 
 export default function EmployeesPage() {
   return (
-    <ProtectedRoute>
+    <ProtectedRoute required="view:hcm">
       <AppShell>
         <HumanCapitalManagement />
       </AppShell>

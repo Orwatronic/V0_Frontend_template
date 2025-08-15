@@ -6,7 +6,7 @@ import MaterialsManagement from "@/components/materials-management"
 
 export default function MaterialsPage() {
   return (
-    <ProtectedRoute>
+    <ProtectedRoute required="view:materials">
       <AppShell>
         <MaterialsManagement />
       </AppShell>

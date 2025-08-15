@@ -6,7 +6,7 @@ import FinancialManagementContainer from "@/components/financial-management-cont
 
 export default function FinancialPage() {
   return (
-    <ProtectedRoute>
+    <ProtectedRoute required="view:financials">
       <AppShell>
         <FinancialManagementContainer />
       </AppShell>

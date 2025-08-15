@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { PlusCircle, FileDown, Search, Filter } from "lucide-react"
 import { useI18n } from "@/contexts/i18n-context"
+import { useApi } from "@/hooks/use-api"
 
 const mockEntries = [
   {
@@ -59,17 +60,44 @@ const statusVariant: { [key: string]: "default" | "secondary" | "destructive" | 
 }
 
 export const JournalEntries = () => {
-  const { t } = useI18n()
+  const { t, formatters } = useI18n()
+  const { get } = useApi()
   const [entries, setEntries] = useState<any[]>([])
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState("")
 
   useEffect(() => {
-    // CURSOR: API call to GET /api/v1/financials/je
-    setEntries(mockEntries)
+    // Decide mock vs real based on local flag (feebee:auth:mock). Defaults to true when absent.
+    let useMock = true
+    try {
+      const v = localStorage.getItem("feebee:auth:mock")
+      useMock = v ? v === "1" : true
+    } catch {}
+
+    const load = async () => {
+      setIsLoading(true)
+      setError(null)
+      try {
+        if (useMock) {
+          setEntries(mockEntries)
+          return
+        }
+        // CURSOR: API call to GET /api/v1/financials/je
+        const data = await get<{ entries: any[] }>("/financials/je")
+        setEntries(Array.isArray((data as any)?.entries) ? (data as any).entries : [])
+      } catch (e) {
+        setError(t("financial.journalEntries.errors.loadFailed"))
+        setEntries(mockEntries)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    load()
   }, [])
 
-  const formatCurrency = (amount: number, currency = "USD") =>
-    new Intl.NumberFormat("en-US", { style: "currency", currency }).format(amount)
+  const formatCurrency = (amount: number, currency = "USD") => formatters.formatCurrency(amount, currency)
 
   const filteredEntries = entries.filter(
     (entry) =>
@@ -93,6 +121,7 @@ export const JournalEntries = () => {
                 className="pl-8"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
+                aria-label={t("financial.journalEntries.aria.searchLabel")}
               />
             </div>
             <Button variant="outline">
@@ -108,6 +137,16 @@ export const JournalEntries = () => {
         </div>
       </CardHeader>
       <CardContent>
+        {isLoading && (
+          <div className="text-sm text-muted-foreground mb-3" role="status" aria-live="polite">
+            {t("financial.journalEntries.loading")}
+          </div>
+        )}
+        {error && (
+          <div className="rounded-md border border-red-300 bg-red-50 text-red-700 p-3 mb-3" role="alert">
+            {error}
+          </div>
+        )}
         <div className="border rounded-md">
           <Table>
             <TableHeader>

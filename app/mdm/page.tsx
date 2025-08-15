@@ -6,7 +6,7 @@ import MasterDataManagement from "@/components/master-data-management"
 
 export default function MdmPage() {
   return (
-    <ProtectedRoute>
+    <ProtectedRoute required="view:mdm">
       <AppShell>
         <MasterDataManagement />
       </AppShell>

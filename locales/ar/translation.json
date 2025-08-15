@@ -1,19 +1,19 @@
 {
   "landing": {
     "hero": {
-      "badge": "مفقود landing.hero.badge",
-      "title": "مفقود landing.hero.title",
-      "subtitle": "مفقود landing.hero.subtitle",
+      "badge": "حلول",
+      "title": "حوّل مؤسستك مع نظام تخطيط موارد المؤسسات من فيبي تكنولوجيز",
+      "subtitle": "نظام شامل لتخطيط موارد المؤسسات مصمم لإدارة العمليات الأساسية عبر جميع الأقسام مع وحدات متكاملة للتحكم التشغيلي الكامل.",
       "cta": {
-        "primary": "مفقود landing.hero.cta.primary",
-        "secondary": "مفقود landing.hero.cta.secondary"
+        "primary": "ابدأ النسخة التجريبية المجانية",
+        "secondary": "شاهد العرض التوضيحي"
       },
-      "image": { "alt": "مفقود landing.hero.image.alt" },
-      "badge": { "realtime": "مفقود landing.hero.badge.realtime", "analytics": "مفقود landing.hero.badge.analytics" },
+      "image": { "alt": "لوحة تحكم نظام تخطيط موارد المؤسسات" },
+      "badge": { "realtime": "بيانات في الوقت الحقيقي", "analytics": "تحليلات متقدمة" },
       "stats": {
-        "uptime": "مفقود landing.hero.stats.uptime",
-        "clients": "مفقود landing.hero.stats.clients",
-        "support": "مفقود landing.hero.stats.support"
+        "uptime": "اتفاقية تشغيل 99.9%",
+        "clients": "+10K مستخدم",
+        "support": "دعم 24/7"
       }
     },
     "hero": {
@@ -77,7 +77,7 @@
       },
       "materials": {
         "title": "إدارة المواد",
-        "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب إدارة المواد والمخزون مع معالجة فورية وأمان على مستوى المؤسسات.",
+        "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis— تغطي جميع جوانب إدارة المواد والمخزون مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "المخزون والمستودعات وعمليات الشراء.",
         "features": {
           "f1": "التحكم بالمخزون",
@@ -90,7 +90,7 @@
       },
       "sales": {
         "title": "المبيعات والتوزيع",
-        "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis—تغطي جميع جوانب عمليات المبيعات والتوزيع مع معالجة فورية وأمان على مستوى المؤسسات.",
+        "description": "وحدات شاملة مبنية باستخدام Node.js وPostgreSQL وRedis— تغطي جميع جوانب عمليات المبيعات والتوزيع مع معالجة فورية وأمان على مستوى المؤسسات.",
         "subtitle": "من عرض السعر إلى التحصيل مع التسعير والتسليمات والمرتجعات.",
         "features": {
           "f1": "العروض والطلبات",
@@ -332,7 +332,7 @@
         "f2": "متعدد العملات والضرائب",
         "f3": "إدارة إقفال الفترات"
       },
-      "imageAlt": "__مفقود__ solutions.financials.imageAlt"
+      "imageAlt": "نظرة عامة على الإدارة المالية"
     },
     "sales": {
       "title": "المبيعات والتوزيع",
@@ -342,7 +342,7 @@
         "f2": "تسعير مرن",
         "f3": "المرتجعات"
       },
-      "imageAlt": "__مفقود__ solutions.sales.imageAlt"
+      "imageAlt": "نظرة عامة على المبيعات والتوزيع"
     },
     "materials": {
       "title": "إدارة المواد",
@@ -352,7 +352,7 @@
         "f2": "إدارة المستودعات",
         "f3": "الشراء"
       },
-      "imageAlt": "__مفقود__ solutions.materials.imageAlt",
+      "imageAlt": "نظرة عامة على إدارة المواد",
       "tabs": {
         "materialMaster": "سجل المواد الرئيسية",
         "inventory": "إدارة المخزون",
@@ -399,7 +399,7 @@
         "f2": "الوقت والرواتب",
         "f3": "الهيكل التنظيمي"
       },
-      "imageAlt": "__مفقود__ solutions.hcm.imageAlt"
+      "imageAlt": "نظرة عامة على إدارة رأس المال البشري"
     },
     "master-data": {
       "title": "إدارة البيانات الرئيسية",
@@ -409,7 +409,7 @@
         "f2": "مجموعات المواد",
         "f3": "التدرجات الهرمية"
       },
-      "imageAlt": "__مفقود__ solutions.master-data.imageAlt"
+      "imageAlt": "نظرة عامة على إدارة البيانات الرئيسية"
     },
     "organization": {
       "title": "الإدارة التنظيمية",
@@ -419,7 +419,7 @@
         "f2": "مراكز التكلفة/الربح",
         "f3": "التفويضات"
       },
-      "imageAlt": "__مفقود__ solutions.organization.imageAlt"
+      "imageAlt": "نظرة عامة على الإدارة التنظيمية"
     },
     "production": {
       "title": "تخطيط الإنتاج",
@@ -429,7 +429,7 @@
         "f2": "جدولة ذكية",
         "f3": "التنفيذ"
       },
-      "imageAlt": "__مفقود__ solutions.production.imageAlt"
+      "imageAlt": "نظرة عامة على تخطيط الإنتاج"
     },
     "projects": {
       "title": "نظام المشاريع",
@@ -439,7 +439,7 @@
         "f2": "المعالم",
         "f3": "الميزانيات"
       },
-      "imageAlt": "__مفقود__ solutions.projects.imageAlt"
+      "imageAlt": "نظرة عامة على نظام المشاريع"
     },
     "quality": {
       "title": "إدارة الجودة",
@@ -449,7 +449,7 @@
         "f2": "سجلات التدقيق",
         "f3": "الالتزام"
       },
-      "imageAlt": "__مفقود__ solutions.quality.imageAlt"
+      "imageAlt": "نظرة عامة على إدارة الجودة"
     },
     "maintenance": {
       "title": "صيانة المصانع",
@@ -459,7 +459,7 @@
         "f2": "جداول وقائية",
         "f3": "أوامر العمل"
       },
-      "imageAlt": "__مفقود__ solutions.maintenance.imageAlt"
+      "imageAlt": "نظرة عامة على صيانة المصانع"
     },
     "crm": {
       "title": "إدارة علاقات العملاء",
@@ -469,7 +469,7 @@
         "f2": "الخدمة",
         "f3": "الأنبوب والتحليلات"
       },
-      "imageAlt": "__مفقود__ solutions.crm.imageAlt"
+      "imageAlt": "نظرة عامة على إدارة علاقات العملاء"
     },
     "reports": {
       "title": "التقارير والتحليلات",
@@ -490,6 +490,135 @@
         "f3": "طلبات الدعم"
       },
       "imageAlt": "نظرة عامة على بوابة العملاء"
+    }
+  },
+  "customerPortal": {
+    "title": "بوابة العملاء",
+    "welcome": "مرحباً بعودتك، {{name}}",
+    "refresh": "تحديث",
+    "export": "تصدير البيانات",
+    "tabs": {
+      "dashboard": "لوحة التحكم",
+      "orders": "الطلبات",
+      "invoices": "الفواتير",
+      "catalog": "الكتالوج",
+      "support": "الدعم",
+      "account": "الحساب"
+    },
+    "metrics": {
+      "totalOrders": "إجمالي الطلبات",
+      "totalSpent": "إجمالي الإنفاق",
+      "availableCredit": "الرصيد المتاح",
+      "onTimeDelivery": "التسليم في الوقت المحدد",
+      "onTimeDeliveryNote": "أداء ممتاز"
+    },
+    "recentOrders": {
+      "title": "الطلبات الأخيرة",
+      "description": "أحدث نشاط لطلباتك"
+    },
+    "accountManager": {
+      "title": "مدير الحساب",
+      "description": "جهة اتصال الدعم المخصصة لك",
+      "contact": "تواصل مع المدير"
+    },
+    "orders": {
+      "filterByStatus": "تصفية حسب الحالة",
+      "allOrders": "كل الطلبات",
+      "title": "سجل الطلبات",
+      "description": "تتبع وادارة طلباتك",
+      "table": {
+        "orderId": "رقم الطلب",
+        "date": "التاريخ",
+        "status": "الحالة",
+        "items": "العناصر",
+        "total": "الإجمالي",
+        "delivery": "التسليم",
+        "actions": "إجراءات"
+      },
+      "actions": {
+        "reorder": "إعادة الطلب"
+      }
+    },
+    "invoices": {
+      "title": "سجل الفواتير",
+      "description": "عرض وتنزيل الفواتير",
+      "table": {
+        "invoiceId": "رقم الفاتورة",
+        "orderId": "رقم الطلب",
+        "date": "التاريخ",
+        "dueDate": "تاريخ الاستحقاق",
+        "amount": "المبلغ",
+        "status": "الحالة",
+        "actions": "إجراءات"
+      }
+    },
+    "catalog": {
+      "searchPlaceholder": "ابحث في المنتجات...",
+      "filter": "تصفية",
+      "sku": "SKU",
+      "leadTime": "مدة التوريد",
+      "requestQuote": "طلب عرض سعر"
+    },
+    "support": {
+      "create": {
+        "title": "إنشاء تذكرة دعم",
+        "description": "احصل على مساعدة من فريق الدعم",
+        "subject": { "label": "الموضوع", "placeholder": "وصف موجز للمشكلة" },
+        "priority": {
+          "label": "الأولوية",
+          "low": "منخفضة",
+          "medium": "متوسطة",
+          "high": "عالية",
+          "urgent": "عاجلة"
+        },
+        "description": { "label": "الوصف", "placeholder": "وصف تفصيلي للمشكلة" },
+        "submit": "إنشاء تذكرة"
+      },
+      "history": {
+        "title": "سجل الدعم",
+        "description": "طلبات الدعم السابقة",
+        "created": "تم الإنشاء",
+        "updated": "تم التحديث",
+        "assignedTo": "مُسند إلى"
+      }
+    },
+    "account": {
+      "companyInfo": {
+        "title": "معلومات الشركة",
+        "description": "تفاصيل حسابك",
+        "companyName": "اسم الشركة",
+        "customerId": "معرّف العميل",
+        "contactPerson": "الشخص المسؤول",
+        "email": "البريد الإلكتروني",
+        "phone": "الهاتف",
+        "address": "العنوان"
+      },
+      "details": {
+        "title": "تفاصيل الحساب",
+        "description": "معلومات الائتمان والدفع",
+        "creditLimit": "حد الائتمان",
+        "availableCredit": "الرصيد المتاح",
+        "paymentTerms": "شروط الدفع",
+        "customerSince": "عميل منذ",
+        "accountManager": "مدير الحساب"
+      }
+    },
+    "common": {
+      "items": "عناصر",
+      "tbd": "لاحقاً"
+    },
+    "status": {
+      "delivered": "تم التسليم",
+      "inTransit": "قيد الشحن",
+      "processing": "قيد المعالجة",
+      "paid": "مدفوع",
+      "pending": "معلّق",
+      "overdue": "متأخر",
+      "inStock": "متوفر",
+      "limited": "محدود",
+      "outOfStock": "غير متوفر",
+      "open": "مفتوح",
+      "resolved": "مغلقة"
     }
   },
   "nav": {
@@ -565,22 +694,22 @@
     "cancel": "إلغاء",
     "loading": "جاري التحميل...",
     "actions": "الإجراءات",
-    "item": "__مفقود__ common.item",
-    "quantity": "__مفقود__ common.quantity",
-    "price": "__مفقود__ common.price",
-    "total": "__مفقود__ common.total",
-    "view": "__مفقود__ common.view",
-    "invoice": "__مفقود__ common.invoice",
-    "vendor": "__مفقود__ common.vendor",
-    "dueDate": "__مفقود__ common.dueDate",
-    "amount": "__مفقود__ common.amount",
-    "back": "__مفقود__ common.back",
-    "next": "__مفقود__ common.next",
-    "finish": "__مفقود__ common.finish",
-    "close": "__مفقود__ common.close",
-    "refresh": "__مفقود__ common.refresh",
-    "reject": "__مفقود__ common.reject",
-    "approve": "__مفقود__ common.approve"
+      "item": "العنصر",
+      "quantity": "الكمية",
+      "price": "السعر",
+      "total": "الإجمالي",
+      "view": "عرض",
+      "invoice": "فاتورة",
+      "vendor": "المورد",
+      "dueDate": "تاريخ الاستحقاق",
+      "amount": "المبلغ",
+      "back": "رجوع",
+      "next": "التالي",
+      "finish": "إنهاء",
+      "close": "إغلاق",
+      "refresh": "تحديث",
+      "reject": "رفض",
+      "approve": "موافقة"
   },
   "auth": {
     "login": {
@@ -809,45 +938,45 @@
         "financial": "مالي",
         "history": "التاريخ"
       },
-      "title": "__مفقود__ crm.customerMaster.title",
-      "description": "__مفقود__ crm.customerMaster.description",
-      "searchPlaceholder": "__مفقود__ crm.customerMaster.searchPlaceholder",
-      "filterByStatus": "__مفقود__ crm.customerMaster.filterByStatus",
-      "allStatuses": "__مفقود__ crm.customerMaster.allStatuses",
+      "title": "سجل العملاء",
+      "description": "إنشاء وإدارة سجلات العملاء",
+      "searchPlaceholder": "ابحث عن العملاء...",
+      "filterByStatus": "تصفية حسب الحالة",
+      "allStatuses": "جميع الحالات",
       "status": {
-        "active": "__مفقود__ crm.customerMaster.status.active",
-        "pending": "__مفقود__ crm.customerMaster.status.pending",
-        "inactive": "__مفقود__ crm.customerMaster.status.inactive",
-        "rejected": "__مفقود__ crm.customerMaster.status.rejected"
+        "active": "نشط",
+        "pending": "معلق",
+        "inactive": "غير نشط",
+        "rejected": "مرفوض"
       },
-      "filterByType": "__مفقود__ crm.customerMaster.filterByType",
-      "allTypes": "__مفقود__ crm.customerMaster.allTypes",
+      "filterByType": "تصفية حسب النوع",
+      "allTypes": "جميع الأنواع",
       "types": {
-        "enterprise": "__مفقود__ crm.customerMaster.types.enterprise",
-        "sme": "__مفقود__ crm.customerMaster.types.sme",
-        "startup": "__مفقود__ crm.customerMaster.types.startup"
+        "enterprise": "مؤسسة",
+        "sme": "شركات صغيرة ومتوسطة",
+        "startup": "شركة ناشئة"
       },
-      "import": "__مفقود__ crm.customerMaster.import",
-      "export": "__مفقود__ crm.customerMaster.export",
-      "addCustomer": "__مفقود__ crm.customerMaster.addCustomer",
+      "import": "استيراد",
+      "export": "تصدير",
+      "addCustomer": "إضافة عميل",
       "columns": {
-        "customerId": "__مفقود__ crm.customerMaster.columns.customerId",
-        "name": "__مفقود__ crm.customerMaster.columns.name",
-        "type": "__مفقود__ crm.customerMaster.columns.type",
-        "status": "__مفقود__ crm.customerMaster.columns.status",
-        "country": "__مفقود__ crm.customerMaster.columns.country",
-        "creditLimit": "__مفقود__ crm.customerMaster.columns.creditLimit",
-        "actions": "__مفقود__ crm.customerMaster.columns.actions"
+        "customerId": "معرّف العميل",
+        "name": "الاسم",
+        "type": "النوع",
+        "status": "الحالة",
+        "country": "البلد",
+        "creditLimit": "حد الائتمان",
+        "actions": "إجراءات"
       },
       "details": {
-        "customerId": "__مفقود__ crm.customerMaster.details.customerId",
-        "industry": "__مفقود__ crm.customerMaster.details.industry",
-        "taxId": "__مفقود__ crm.customerMaster.details.taxId",
-        "creditLimit": "__مفقود__ crm.customerMaster.details.creditLimit",
-        "paymentTerms": "__مفقود__ crm.customerMaster.details.paymentTerms"
+        "customerId": "معرّف العميل",
+        "industry": "الصناعة",
+        "taxId": "الرقم الضريبي",
+        "creditLimit": "حد الائتمان",
+        "paymentTerms": "شروط الدفع"
       },
-      "close": "__مفقود__ crm.customerMaster.close",
-      "saveChanges": "__مفقود__ crm.customerMaster.saveChanges"
+      "close": "إغلاق",
+      "saveChanges": "حفظ التغييرات"
     }
   },
   "financial": {
@@ -977,17 +1106,79 @@
       "posted": "مرحل",
       "reversed": "معكوس"
     },
+    "assets": {
+      "title": "نظرة عامة على محاسبة الأصول",
+      "description": "إدارة الأصول الثابتة للشركة وجداول الإهلاك.",
+      "metrics": {
+        "totalAssetValue": "إجمالي قيمة الأصول",
+        "totalAssetValueDesc": "تكلفة الاقتناء الأصلية لجميع الأصول.",
+        "accumDepreciation": "مجمع الإهلاك",
+        "accumDepreciationDesc": "إجمالي الإهلاك المسجل حتى تاريخه.",
+        "netBookValue": "صافي القيمة الدفترية",
+        "netBookValueDesc": "القيمة الحالية للأصول في الدفاتر."
+      },
+      "register": {
+        "title": "سجل الأصول الثابتة",
+        "description": "قائمة تفصيلية بكل الأصول المرسملة."
+      },
+      "actions": {
+        "addAsset": "إضافة أصل جديد",
+        "saveAsset": "حفظ الأصل",
+        "runMonthly": "تشغيل إهلاك شهري"
+      },
+      "dialog": {
+        "addTitle": "ترسيم أصل جديد",
+        "addDesc": "أدخل تفاصيل الأصل الثابت الجديد."
+      },
+      "form": {
+        "description": "الوصف",
+        "assetClass": "فئة الأصل",
+        "acquisitionCost": "تكلفة الاقتناء"
+      },
+      "table": {
+        "assetId": "معرف الأصل",
+        "description": "الوصف",
+        "assetClass": "فئة الأصل",
+        "acquisitionCost": "تكلفة الاقتناء",
+        "netBookValue": "صافي القيمة الدفترية",
+        "acquisitionDate": "تاريخ الاقتناء"
+      },
+      "toast": {
+        "startTitle": "تم بدء تشغيل الإهلاك",
+        "startDesc": "تم بدء حساب الإهلاك الشهري.",
+        "completeTitle": "اكتمل تشغيل الإهلاك",
+        "completeDesc": "تم تحديث قيم الأصول."
+      }
+    },
     "tabs": {
-      "coa": "__مفقود__ financial.tabs.coa",
-      "ap": "__مفقود__ financial.tabs.ap",
-      "ar": "__مفقود__ financial.tabs.ar",
-      "collections": "__مفقود__ financial.tabs.collections",
-      "reconciliation": "__مفقود__ financial.tabs.reconciliation",
-      "assets": "__مفقود__ financial.tabs.assets",
-      "reporting": "__مفقود__ financial.tabs.reporting",
-      "aging": "__مفقود__ financial.tabs.aging",
-      "bankRec": "__مفقود__ financial.tabs.bankRec",
-      "je": "__مفقود__ financial.tabs.je"
+      "coa": "دليل الحسابات",
+      "ap": "الحسابات الدائنة",
+      "ar": "الحسابات المدينة",
+      "collections": "التحصيلات",
+      "reconciliation": "التسوية",
+      "assets": "محاسبة الأصول",
+      "reporting": "التقارير المالية",
+      "aging": "تحليل الأعمار",
+      "bankRec": "تسوية البنك",
+      "je": "قيود اليومية"
+    }
+    ,
+    "bankRec": {
+      "title": "تسوية كشوفات البنك",
+      "description": "مطابقة معاملات البنك مع قيود دفتر الأستاذ العام.",
+      "bankTransactions": "معاملات البنك",
+      "glEntries": "قيود دفتر الأستاذ العام (حساب النقد)",
+      "date": "التاريخ",
+      "descriptionCol": "الوصف",
+      "amount": "المبلغ",
+      "uploadStatement": "رفع كشف الحساب",
+      "matchSelected": "مطابقة المحدد",
+      "createAdjustingEntry": "إنشاء قيد تسوية",
+      "selectedBankTotal": "إجمالي البنك المحدد",
+      "selectedGlTotal": "إجمالي قيود GL المحددة",
+      "difference": "الفرق",
+      "toastTitle": "تمت مطابقة المعاملات",
+      "toastDescription": "تمت مطابقة {{bank}} معاملة بنكية مع {{gl}} قيد GL."
     }
   },
   "dashboard": {
@@ -1127,7 +1318,7 @@
       "reason": "السبب",
       "returnValue": "قيمة المرتجع",
       "refundAmount": "مبلغ الاسترداد",
-      "status": "__مفقود__ sales.columns.status"
+      "status": "الحالة"
     },
     "inquiries": {
       "title": "استفسارات المبيعات",
@@ -1274,64 +1465,64 @@
       "analytics": "التحليلات"
     },
     "metrics": {
-      "totalEmployees": "__مفقود__ hcm.metrics.totalEmployees",
-      "newHires": "__مفقود__ hcm.metrics.newHires",
-      "openPositions": "__مفقود__ hcm.metrics.openPositions",
-      "avgSalary": "__مفقود__ hcm.metrics.avgSalary",
-      "turnoverRate": "__مفقود__ hcm.metrics.turnoverRate",
-      "satisfaction": "__مفقود__ hcm.metrics.satisfaction"
+      "totalEmployees": "إجمالي الموظفين",
+      "newHires": "التعيينات الجديدة",
+      "openPositions": "الوظائف الشاغرة",
+      "avgSalary": "متوسط الراتب",
+      "turnoverRate": "معدل الدوران",
+      "satisfaction": "رضا الموظفين"
     },
     "dashboard": {
-      "departmentDistribution": "__مفقود__ hcm.dashboard.departmentDistribution",
-      "recentActivities": "__مفقود__ hcm.dashboard.recentActivities",
-      "quickActions": "__مفقود__ hcm.dashboard.quickActions"
+      "departmentDistribution": "توزيع الأقسام",
+      "recentActivities": "الأنشطة الأخيرة",
+      "quickActions": "إجراءات سريعة"
     },
     "actions": {
-      "addEmployee": "__مفقود__ hcm.actions.addEmployee",
-      "scheduleReview": "__مفقود__ hcm.actions.scheduleReview",
-      "generateReport": "__مفقود__ hcm.actions.generateReport",
-      "sendAnnouncement": "__مفقود__ hcm.actions.sendAnnouncement",
-      "recognition": "__مفقود__ hcm.actions.recognition",
-      "settings": "__مفقود__ hcm.actions.settings",
-      "notifications": "__مفقود__ hcm.actions.notifications",
-      "analytics": "__مفقود__ hcm.actions.analytics"
+      "addEmployee": "إضافة موظف",
+      "scheduleReview": "جدولة مراجعة",
+      "generateReport": "إنشاء تقرير",
+      "sendAnnouncement": "إرسال إعلان",
+      "recognition": "التقدير",
+      "settings": "الإعدادات",
+      "notifications": "الإشعارات",
+      "analytics": "التحليلات"
     },
     "employees": {
-      "searchPlaceholder": "__مفقود__ hcm.employees.searchPlaceholder",
-      "allDepartments": "__مفقود__ hcm.employees.allDepartments",
-      "status": "__مفقود__ hcm.employees.status",
-      "allStatus": "__مفقود__ hcm.employees.allStatus",
-      "active": "__مفقود__ hcm.employees.active",
-      "inactive": "__مفقود__ hcm.employees.inactive",
+      "searchPlaceholder": "ابحث عن الموظفين...",
+      "allDepartments": "جميع الأقسام",
+      "status": "الحالة",
+      "allStatus": "جميع الحالات",
+      "active": "نشط",
+      "inactive": "غير نشط",
       "columns": {
-        "employee": "__مفقود__ hcm.employees.columns.employee",
-        "position": "__مفقود__ hcm.employees.columns.position",
-        "department": "__مفقود__ hcm.employees.columns.department",
-        "manager": "__مفقود__ hcm.employees.columns.manager",
-        "location": "__مفقود__ hcm.employees.columns.location",
-        "hireDate": "__مفقود__ hcm.employees.columns.hireDate",
-        "performance": "__مفقود__ hcm.employees.columns.performance",
-        "status": "__مفقود__ hcm.employees.columns.status",
-        "actions": "__مفقود__ hcm.employees.columns.actions"
+        "employee": "الموظف",
+        "position": "المنصب",
+        "department": "القسم",
+        "manager": "المدير",
+        "location": "الموقع",
+        "hireDate": "تاريخ التعيين",
+        "performance": "الأداء",
+        "status": "الحالة",
+        "actions": "إجراءات"
       }
     },
-    "title": "__مفقود__ hcm.title",
-    "description": "__مفقود__ hcm.description",
+    "title": "إدارة رأس المال البشري",
+    "description": "إدارة متكاملة لدورة حياة الموظف",
     "orgChart": {
-      "title": "__مفقود__ hcm.orgChart.title"
+      "title": "الهيكل التنظيمي"
     },
     "performance": {
-      "title": "__مفقود__ hcm.performance.title"
+      "title": "إدارة الأداء"
     },
     "goals": {
-      "title": "__مفقود__ hcm.goals.title"
+      "title": "الأهداف"
     },
     "compensation": {
-      "title": "__مفقود__ hcm.compensation.title"
+      "title": "التعويضات"
     },
     "analytics": {
-      "workforceAnalytics": "__مفقود__ hcm.analytics.workforceAnalytics",
-      "predictiveInsights": "__مفقود__ hcm.analytics.predictiveInsights"
+      "workforceAnalytics": "تحليلات القوى العاملة",
+      "predictiveInsights": "رؤى تنبؤية"
     }
   },
   "compensation": {
@@ -1344,15 +1535,15 @@
       "history": "التاريخ"
     },
     "metrics": {
-      "totalBudget": "__مفقود__ compensation.metrics.totalBudget",
-      "budgetUsed": "__مفقود__ compensation.metrics.budgetUsed",
-      "avgIncrease": "__مفقود__ compensation.metrics.avgIncrease",
-      "pendingReviews": "__مفقود__ compensation.metrics.pendingReviews",
-      "completedReviews": "__مفقود__ compensation.metrics.completedReviews",
-      "approvalsPending": "__مفقود__ compensation.metrics.approvalsPending"
+      "totalBudget": "إجمالي الميزانية",
+      "budgetUsed": "المستخدمة من الميزانية",
+      "avgIncrease": "المتوسط الزيادة",
+      "pendingReviews": "مراجعات معلّقة",
+      "completedReviews": "مراجعات مكتملة",
+      "approvalsPending": "موافقات معلّقة"
     },
-    "title": "__مفقود__ compensation.title",
-    "description": "__مفقود__ compensation.description"
+    "title": "التعويضات",
+    "description": "إدارة دورات الاستحقاق والميزانيات والموافقات"
   },
   "goals": {
     "tabs": {
@@ -1362,15 +1553,15 @@
       "analytics": "التحليلات"
     },
     "metrics": {
-      "totalGoals": "__مفقود__ goals.metrics.totalGoals",
-      "onTrack": "__مفقود__ goals.metrics.onTrack",
-      "atRisk": "__مفقود__ goals.metrics.atRisk",
-      "completed": "__مفقود__ goals.metrics.completed",
-      "avgProgress": "__مفقود__ goals.metrics.avgProgress",
-      "dueThisMonth": "__مفقود__ goals.metrics.dueThisMonth"
+      "totalGoals": "إجمالي الأهداف",
+      "onTrack": "على المسار",
+      "atRisk": "معرّض للخطر",
+      "completed": "مكتمل",
+      "avgProgress": "متوسط التقدم",
+      "dueThisMonth": "مستحق هذا الشهر"
     },
-    "title": "__مفقود__ goals.title",
-    "description": "__مفقود__ goals.description"
+    "title": "الأهداف",
+    "description": "إعداد وتتبع الأهداف على مستوى الفرق"
   },
   "reports": {
     "tabs": {
@@ -1390,22 +1581,22 @@
       "selectTable": "اختر الجدول",
       "chartType": "نوع المخطط"
     },
-    "saveSuccess": "__مفقود__ reports.saveSuccess",
-    "title": "__مفقود__ reports.title",
-    "description": "__مفقود__ reports.description",
-    "exportPdf": "__مفقود__ reports.exportPdf",
-    "exportExcel": "__مفقود__ reports.exportExcel",
-    "saveReport": "__مفقود__ reports.saveReport",
+    "saveSuccess": "تم حفظ التقرير",
+    "title": "التقارير",
+    "description": "أنشئ واستعرض وشارك التقارير",
+    "exportPdf": "تصدير PDF",
+    "exportExcel": "تصدير Excel",
+    "saveReport": "حفظ التقرير",
     "fields": {
-      "title": "__مفقود__ reports.fields.title"
+      "title": "الحقول"
     },
     "preview": {
-      "title": "__مفقود__ reports.preview.title"
+      "title": "معاينة"
     },
     "saved": {
-      "title": "__مفقود__ reports.saved.title",
-      "lastModified": "__مفقود__ reports.saved.lastModified",
-      "load": "__مفقود__ reports.saved.load"
+      "title": "تقارير محفوظة",
+      "lastModified": "آخر تعديل",
+      "load": "تحميل"
     }
   },
   "materials": {
@@ -1489,8 +1680,8 @@
       "recentActivityDescription": "أحدث معاملات وتحديثات المواد",
       "minStock": "الحد الأدنى للمخزون"
     },
-    "title": "__مفقود__ materials.title",
-    "description": "__مفقود__ materials.description"
+    "title": "إدارة المواد",
+    "description": "نظام متكامل لإدارة المواد والمخزون"
   },
   "analytics": {
     "title": "تحليلات",
@@ -1500,16 +1691,16 @@
       "activeUsers": "المستخدمين النشطين",
       "conversionRate": "معدل التحويل",
       "customerSatisfaction": "رضا العملاء",
-      "subscriptions": "__مفقود__ analytics.kpis.subscriptions",
-      "sales": "__مفقود__ analytics.kpis.sales",
-      "grossProfitMargin": "__مفقود__ analytics.kpis.grossProfitMargin"
+      "subscriptions": "الاشتراكات",
+      "sales": "المبيعات",
+      "grossProfitMargin": "هامش الربح الإجمالي"
     },
     "charts": {
       "revenueOverTime": "الإيرادات عبر الوقت",
       "userGrowth": "نمو المستخدمين",
       "salesFunnel": "قمع المبيعات"
     },
-    "customReports": "__مفقود__ analytics.customReports"
+    "customReports": "تقارير مخصصة"
   },
   "customReportBuilder": {
     "title": "منشئ التقارير المخصص",
@@ -1560,72 +1751,69 @@
     },
     "cta": "ابدأ الآن",
     "contact": "اتصل بنا للحصول على عرض أسعار مخصص",
-    "starter": {
-      "title": "__مفقود__ pricing.starter.title",
-      "description": "__مفقود__ pricing.starter.description"
-    },
+    "starter": { "title": "البداية", "description": "الأساسيات للانطلاق" },
     "features": {
       "starter": {
-        "users": "__مفقود__ pricing.features.starter.users",
-        "modules": "__مفقود__ pricing.features.starter.modules",
-        "storage": "__مفقود__ pricing.features.starter.storage",
-        "support": "__مفقود__ pricing.features.starter.support",
-        "multiCurrency": "__مفقود__ pricing.features.starter.multiCurrency",
-        "basicReporting": "__مفقود__ pricing.features.starter.basicReporting",
-        "apiAccess": "__مفقود__ pricing.features.starter.apiAccess"
+        "users": "حتى 10 مستخدمين",
+        "modules": "وحدات أساسية",
+        "storage": "سعة 10 جيجابايت",
+        "support": "دعم عبر البريد الإلكتروني",
+        "multiCurrency": "متعدد العملات",
+        "basicReporting": "تقارير أساسية",
+        "apiAccess": "وصول API"
       },
-      "workflows": "__مفقود__ pricing.features.workflows",
-      "multiCompany": "__مفقود__ pricing.features.multiCompany",
+      "workflows": "تدفقات عمل",
+      "multiCompany": "متعدد الشركات",
       "professional": {
-        "users": "__مفقود__ pricing.features.professional.users",
-        "modules": "__مفقود__ pricing.features.professional.modules",
-        "storage": "__مفقود__ pricing.features.professional.storage",
-        "support": "__مفقود__ pricing.features.professional.support",
-        "reporting": "__مفقود__ pricing.features.professional.reporting",
-        "notifications": "__مفقود__ pricing.features.professional.notifications",
-        "apiAccess": "__مفقود__ pricing.features.professional.apiAccess"
+        "users": "حتى 50 مستخدماً",
+        "modules": "جميع الوحدات",
+        "storage": "سعة 100 جيجابايت",
+        "support": "دعم أولوية",
+        "reporting": "تقارير متقدمة",
+        "notifications": "إشعارات",
+        "apiAccess": "وصول API"
       },
       "enterprise": {
-        "users": "__مفقود__ pricing.features.enterprise.users",
-        "modules": "__مفقود__ pricing.features.enterprise.modules",
-        "storage": "__مفقود__ pricing.features.enterprise.storage",
-        "whiteLabel": "__مفقود__ pricing.features.enterprise.whiteLabel",
-        "accountManager": "__مفقود__ pricing.features.enterprise.accountManager"
+        "users": "عدد غير محدود من المستخدمين",
+        "modules": "كل الوحدات",
+        "storage": "سعة غير محدودة",
+        "whiteLabel": "واجهة بعلامتك التجارية",
+        "accountManager": "مدير حساب مخصص"
       },
-      "dedicated": "__مفقود__ pricing.features.dedicated",
-      "custom": "__مفقود__ pricing.features.custom",
-      "onPremise": "__مفقود__ pricing.features.onPremise",
-      "sla": "__مفقود__ pricing.features.sla"
+      "dedicated": "بنية تحتية مخصصة",
+      "custom": "ميزات مخصصة",
+      "onPremise": "خيار داخل المؤسسة",
+      "sla": "اتفاقية مستوى الخدمة"
     },
-    "startTrial": "__مفقود__ pricing.startTrial",
+    "startTrial": "ابدأ التجربة المجانية",
     "professional": {
-      "title": "__مفقود__ pricing.professional.title",
-      "description": "__مفقود__ pricing.professional.description"
+      "title": "المهني",
+      "description": "قدرات متقدمة للفرق المتنامية"
     },
     "enterprise": {
-      "title": "__مفقود__ pricing.enterprise.title",
-      "description": "__مفقود__ pricing.enterprise.description",
-      "contactTitle": "__مفقود__ pricing.enterprise.contactTitle",
-      "contactDescription": "__مفقود__ pricing.enterprise.contactDescription",
-      "security": "__مفقود__ pricing.enterprise.security",
-      "deployment": "__مفقود__ pricing.enterprise.deployment",
-      "integrations": "__مفقود__ pricing.enterprise.integrations",
-      "scheduleDemo": "__مفقود__ pricing.enterprise.scheduleDemo",
-      "viewCaseStudies": "__مفقود__ pricing.enterprise.viewCaseStudies"
+      "title": "الشركات الكبيرة",
+      "description": "حلول مخصصة للمؤسسات",
+      "contactTitle": "تحدث إلى المبيعات",
+      "contactDescription": "سنصمم خطة تناسب احتياجاتك",
+      "security": "أمان على مستوى المؤسسات",
+      "deployment": "مرونة في النشر",
+      "integrations": "تكاملات مخصصة",
+      "scheduleDemo": "حدد عرضاً توضيحياً",
+      "viewCaseStudies": "اطلع على قصص النجاح"
     },
-    "contactSales": "__مفقود__ pricing.contactSales",
-    "badge": "__مفقود__ pricing.badge",
-    "annual": "__مفقود__ pricing.annual",
-    "mostPopular": "__مفقود__ pricing.mostPopular",
-    "perUser": "__مفقود__ pricing.perUser",
-    "customPricing": "__مفقود__ pricing.customPricing",
-    "billed": "__مفقود__ pricing.billed",
-    "volumeDiscount": "__مفقود__ pricing.volumeDiscount",
+    "contactSales": "تواصل مع المبيعات",
+    "badge": "الأكثر شيوعاً",
+    "annual": "سنوي",
+    "mostPopular": "الأكثر شيوعاً",
+    "perUser": "لكل مستخدم",
+    "customPricing": "تسعير مخصص",
+    "billed": "فوترة",
+    "volumeDiscount": "خصم الكميات",
     "trustIndicators": {
-      "title": "__مفقود__ pricing.trustIndicators.title",
-      "soc2": "__مفقود__ pricing.trustIndicators.soc2",
-      "gdpr": "__مفقود__ pricing.trustIndicators.gdpr",
-      "uptime": "__مفقود__ pricing.trustIndicators.uptime"
+      "title": "موثوق من فرق رائدة",
+      "soc2": "متوافق مع SOC 2",
+      "gdpr": "جاهز لـ GDPR",
+      "uptime": "تشغيل 99.9%"
     }
   },
   "testimonials": {
@@ -1640,57 +1828,57 @@
       }
     ],
     "quotes": {
-      "sarah": "__مفقود__ testimonials.quotes.sarah",
-      "michael": "__مفقود__ testimonials.quotes.michael",
-      "emma": "__مفقود__ testimonials.quotes.emma",
-      "james": "__مفقود__ testimonials.quotes.james",
-      "lisa": "__مفقود__ testimonials.quotes.lisa",
-      "robert": "__مفقود__ testimonials.quotes.robert"
+      "sarah": "نغلق الصفقات أسرع مع قناة موحّدة في Feebee.",
+      "michael": "تحسّنت دقة المخزون وأصبحت المشتريات أكثر سلاسة.",
+      "emma": "زاد رضا الموظفين بعد تبسيط سير عمل الموارد البشرية.",
+      "james": "تحسّنت الهوامش مع توقعات أدق وتسريع التدفق من عرض السعر إلى التحصيل.",
+      "lisa": "أصبح تتبع تكاليف المشاريع والتقارير سهلاً.",
+      "robert": "تحسّن تخطيط الصيانة وارتفعت نسبة التوافر."
     },
     "results": {
       "sarah": {
-        "closing": "__مفقود__ testimonials.results.sarah.closing",
-        "errors": "__مفقود__ testimonials.results.sarah.errors",
-        "visibility": "__مفقود__ testimonials.results.sarah.visibility"
+        "closing": "+18% إغلاق أسرع",
+        "errors": "−22% أخطاء أقل",
+        "visibility": "+30% رؤية أفضل للأنبوب"
       },
       "michael": {
-        "inventory": "__مفقود__ testimonials.results.michael.inventory",
-        "accuracy": "__مفقود__ testimonials.results.michael.accuracy",
-        "procurement": "__مفقود__ testimonials.results.michael.procurement"
+        "inventory": "+15% دوران المخزون",
+        "accuracy": "+10% دقة المخزون",
+        "procurement": "−20% زمن دورة الشراء"
       },
       "emma": {
-        "adminTime": "__مفقود__ testimonials.results.emma.adminTime",
-        "satisfaction": "__مفقود__ testimonials.results.emma.satisfaction",
-        "compliance": "__مفقود__ testimonials.results.emma.compliance"
+        "adminTime": "−25% وقت إداري",
+        "satisfaction": "+12% رضا الموظفين",
+        "compliance": "الامتثال تم بسرعة 2×"
       },
       "james": {
-        "margins": "__مفقود__ testimonials.results.james.margins",
-        "forecasting": "__مفقود__ testimonials.results.james.forecasting",
-        "quoteToCash": "__مفقود__ testimonials.results.james.quoteToCash"
+        "margins": "+6% هامش إجمالي",
+        "forecasting": "توقعات أدق",
+        "quoteToCash": "تسريع التدفق من عرض السعر إلى التحصيل"
       },
       "lisa": {
-        "efficiency": "__مفقود__ testimonials.results.lisa.efficiency",
-        "costTracking": "__مفقود__ testimonials.results.lisa.costTracking",
-        "reporting": "__مفقود__ testimonials.results.lisa.reporting"
+        "efficiency": "+20% كفاءة التسليم",
+        "costTracking": "تتبع تكاليف فوري",
+        "reporting": "تقارير مؤتمتة"
       },
       "robert": {
-        "integration": "__مفقود__ testimonials.results.robert.integration",
-        "availability": "__مفقود__ testimonials.results.robert.availability",
-        "maintenance": "__مفقود__ testimonials.results.robert.maintenance"
+        "integration": "تكاملات سلسة",
+        "availability": "توافر أعلى للنظام",
+        "maintenance": "صيانة تنبؤية"
       }
     },
     "stats": {
-      "companies": "__مفقود__ testimonials.stats.companies",
-      "countries": "__مفقود__ testimonials.stats.countries",
-      "uptime": "__مفقود__ testimonials.stats.uptime",
-      "rating": "__مفقود__ testimonials.stats.rating"
+      "companies": "+1,000 شركات",
+      "countries": "+40 دولة",
+      "uptime": "تشغيل 99.9%",
+      "rating": "4.8/5 تقييم متوسط"
     },
-    "badge": "__مفقود__ testimonials.badge",
-    "trustedBy": "__مفقود__ testimonials.trustedBy",
+    "badge": "قصص العملاء",
+    "trustedBy": "موثوق من قادة الصناعة",
     "awards": {
-      "g2Leader": "__مفقود__ testimonials.awards.g2Leader",
-      "capterraBestValue": "__مفقود__ testimonials.awards.capterraBestValue",
-      "iso27001": "__مفقود__ testimonials.awards.iso27001"
+      "g2Leader": "G2 Leader",
+      "capterraBestValue": "Capterra Best Value",
+      "iso27001": "ISO 27001"
     }
   },
   "requestDemo": {
@@ -1737,140 +1925,148 @@
     "success": "شكراً لطلبك! سنتواصل معك قريباً."
   },
   "3wm": {
-    "title": "__مفقود__ 3wm.title",
-    "description": "__مفقود__ 3wm.description",
+    "title": "مطابقة ثلاثية",
+    "description": "مطابقة أوامر الشراء وإيصالات البضائع والفواتير لاكتشاف الفروقات",
     "search": {
-      "placeholder": "__مفقود__ 3wm.search.placeholder"
+      "placeholder": "ابحث عن أمر شراء أو إيصال أو فاتورة..."
     },
     "po": {
-      "title": "__مفقود__ 3wm.po.title"
+      "title": "أوامر الشراء"
     },
     "gr": {
-      "title": "__مفقود__ 3wm.gr.title"
+      "title": "إيصالات البضائع"
     },
     "invoice": {
-      "title": "__مفقود__ 3wm.invoice.title"
+      "title": "الفواتير"
     },
     "summary": {
-      "title": "__مفقود__ 3wm.summary.title",
-      "qtyVariance": "__مفقود__ 3wm.summary.qtyVariance",
-      "priceVariance": "__مفقود__ 3wm.summary.priceVariance",
-      "totalVariance": "__مفقود__ 3wm.summary.totalVariance",
-      "status": "__مفقود__ 3wm.summary.status",
-      "glImpact": "__مفقود__ 3wm.summary.glImpact",
-      "debit": "__مفقود__ 3wm.summary.debit",
-      "credit": "__مفقود__ 3wm.summary.credit"
+      "title": "الملخص",
+      "qtyVariance": "فرق الكمية",
+      "priceVariance": "فرق السعر",
+      "totalVariance": "الفرق الإجمالي",
+      "status": "الحالة",
+      "glImpact": "الأثر على GL",
+      "debit": "مدين",
+      "credit": "دائن"
     }
   },
   "actions": {
-    "block": "__مفقود__ actions.block"
+    "block": "حظر"
   },
   "This would open a wizard to create a new feedback cycle": {
-    "": "__مفقود__ This would open a wizard to create a new feedback cycle."
+    "": "سيفتح هذا معالجاً لإنشاء دورة تعليقات جديدة."
   },
   "You are not a participant in this feedback cycle": {
-    "": "__مفقود__ You are not a participant in this feedback cycle."
+    "": "لست مشاركاً في دورة التعليقات هذه."
   },
   "ppw": {
     "step1": {
-      "description": "__مفقود__ ppw.step1.description",
-      "dueDate": "__مفقود__ ppw.step1.dueDate",
-      "minAmount": "__مفقود__ ppw.step1.minAmount",
-      "title": "__مفقود__ ppw.step1.title"
+      "description": "حدد تاريخ الاستحقاق والمبلغ الأدنى",
+      "dueDate": "تاريخ الاستحقاق",
+      "minAmount": "الحد الأدنى للمبلغ",
+      "title": "تفاصيل الخطة"
     },
     "step2": {
-      "description": "__مفقود__ ppw.step2.description",
-      "title": "__مفقود__ ppw.step2.title"
+      "description": "اختر جدول الدفعات",
+      "title": "الجدولة"
     },
     "step3": {
-      "description": "__مفقود__ ppw.step3.description",
-      "title": "__مفقود__ ppw.step3.title"
+      "description": "راجع المبالغ والتواريخ",
+      "title": "مراجعة"
     },
     "step4": {
-      "title": "__مفقود__ ppw.step4.title"
+      "title": "تأكيد"
     },
-    "title": "__مفقود__ ppw.title"
+    "title": "معالج خطة الدفع"
   },
   "summary": {
-    "totalInvoices": "__مفقود__ summary.totalInvoices",
-    "totalAmount": "__مفقود__ summary.totalAmount",
-    "companyInfo": "__مفقود__ summary.companyInfo",
-    "fiscalConfig": "__مفقود__ summary.fiscalConfig",
-    "coaMethod": "__مفقود__ summary.coaMethod",
-    "invitedUsers": "__مفقود__ summary.invitedUsers"
+    "totalInvoices": "إجمالي الفواتير",
+    "totalAmount": "المبلغ الإجمالي",
+    "companyInfo": "معلومات الشركة",
+    "fiscalConfig": "إعدادات مالية",
+    "coaMethod": "طريقة إعداد دليل الحسابات",
+    "invitedUsers": "المستخدمون المدعوون"
   },
   "execution": {
-    "success": "__مفقود__ execution.success",
-    "file": "__مفقود__ execution.file",
-    "id": "__مفقود__ execution.id"
+    "success": "نجاح",
+    "file": "ملف",
+    "id": "المعرّف"
   },
   "form": {
-    "companyName": "__مفقود__ form.companyName",
-    "legalName": "__مفقود__ form.legalName",
-    "taxId": "__مفقود__ form.taxId",
-    "country": "__مفقود__ form.country",
-    "currency": "__مفقود__ form.currency",
-    "address": "__مفقود__ form.address",
-    "fiscalYearStart": "__مفقود__ form.fiscalYearStart",
-    "accountingPeriods": "__مفقود__ form.accountingPeriods",
-    "coaSetupMethod": "__مفقود__ form.coaSetupMethod",
+    "companyName": "اسم الشركة",
+    "legalName": "الاسم القانوني",
+    "taxId": "الرقم الضريبي",
+    "country": "البلد",
+    "currency": "العملة",
+    "address": "العنوان",
+    "fiscalYearStart": "بداية السنة المالية",
+    "accountingPeriods": "الفترات المحاسبية",
+    "coaSetupMethod": "طريقة إعداد دليل الحسابات",
     "coa": {
-      "template": "__مفقود__ form.coa.template",
-      "upload": "__مفقود__ form.coa.upload",
-      "selectTemplate": "__مفقود__ form.coa.selectTemplate",
-      "uploadFile": "__مفقود__ form.coa.uploadFile"
+      "template": "استخدام قالب",
+      "upload": "رفع ملفك",
+      "selectTemplate": "اختر قالباً",
+      "uploadFile": "رفع ملف"
     },
     "invite": {
-      "email": "__مفقود__ form.invite.email",
-      "role": "__مفقود__ form.invite.role",
-      "add": "__مفقود__ form.invite.add"
+      "email": "البريد الإلكتروني",
+      "role": "الدور",
+      "add": "إضافة"
     }
   },
   "final": {
-    "successTitle": "__مفقود__ final.successTitle",
-    "successMessage": "__مفقود__ final.successMessage"
+    "successTitle": "تم الإعداد بنجاح",
+    "successMessage": "تم تكوين شركتك بنجاح."
   },
   "onboarding": {
-    "title": "__مفقود__ onboarding.title",
-    "description": "__مفقود__ onboarding.description"
+    "title": "التهيئة",
+    "description": "اتبع الخطوات لإعداد مساحة العمل"
   },
   "mdm": {
     "domains": {
-      "customer": "__مفقود__ mdm.domains.customer",
-      "material": "__مفقود__ mdm.domains.material"
-    }
+      "customer": "عميل",
+      "material": "مادة"
+    },
+    "title": "إدارة البيانات الرئيسية",
+    "description": "مركز موحّد لجميع كيانات البيانات الأساسية في المؤسسة."
   },
   "collections": {
     "metrics": {
-      "dso": "__مفقود__ collections.metrics.dso",
-      "overdueTotal": "__مفقود__ collections.metrics.overdueTotal",
-      "collected": "__مفقود__ collections.metrics.collected"
+      "dso": "أيام التحصيل المستحقة",
+      "overdueTotal": "إجمالي المتأخر",
+      "collected": "المحصّل"
     },
-    "title": "__مفقود__ collections.title",
-    "description": "__مفقود__ collections.description",
+    "title": "التحصيلات",
+    "description": "إدارة الذمم المتأخرة والمتابعات",
     "customer": {
-      "title": "__مفقود__ collections.customer.title",
-      "search": "__مفقود__ collections.customer.search",
-      "name": "__مفقود__ collections.customer.name",
-      "overdueAmount": "__مفقود__ collections.customer.overdueAmount",
-      "lastContact": "__مفقود__ collections.customer.lastContact",
-      "nextAction": "__مفقود__ collections.customer.nextAction",
-      "status": "__مفقود__ collections.customer.status"
+      "title": "العملاء",
+      "search": "ابحث عن العملاء...",
+      "name": "الاسم",
+      "overdueAmount": "المبلغ المتأخر",
+      "lastContact": "آخر تواصل",
+      "nextAction": "الإجراء التالي",
+      "status": "الحالة"
     },
     "log": {
-      "title": "__مفقود__ collections.log.title",
-      "new": "__مفقود__ collections.log.new",
-      "type": "__مفقود__ collections.log.type",
-      "notes": "__مفقود__ collections.log.notes",
-      "promiseDate": "__مفقود__ collections.log.promiseDate",
-      "promiseAmount": "__مفقود__ collections.log.promiseAmount",
-      "save": "__مفقود__ collections.log.save"
+      "title": "سجل التحصيل",
+      "new": "إدخال جديد",
+      "type": "النوع",
+      "notes": "ملاحظات",
+      "promiseDate": "تاريخ التعهّد",
+      "promiseAmount": "مبلغ التعهّد",
+      "save": "حفظ"
     }
   },
+  "status": {
+    "Monitoring": "قيد المراقبة",
+    "Action Required": "يتطلب إجراء",
+    "PromiseToPay": "تعهد بالدفع",
+    "Disputed": "متنازع عليها"
+  },
   "activity": {
-    "Call": "__مفقود__ activity.Call",
-    "Email": "__مفقود__ activity.Email",
-    "Promise": "__مفقود__ activity.Promise",
-    "Note": "__مفقود__ activity.Note"
+    "Call": "مكالمة",
+    "Email": "بريد إلكتروني",
+    "Promise": "تعهد",
+    "Note": "ملاحظة"
   }
 }
