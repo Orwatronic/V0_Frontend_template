@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
@@ -379,7 +379,20 @@ function EmployeeManagement() {
   const [selectedDepartment, setSelectedDepartment] = useState("all")
   const [selectedStatus, setSelectedStatus] = useState("all")
 
-  const filteredEmployees = mockEmployees.filter((employee) => {
+  const [employees, setEmployees] = useState(mockEmployees)
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const data = await fetch('/api/hcm/employees', { cache: 'no-store' }).then(r => r.json())
+        const list = (data as any)?.data as typeof mockEmployees | undefined
+        if (Array.isArray(list)) setEmployees(list)
+      } catch {}
+    }
+    load()
+  }, [])
+
+  const filteredEmployees = employees.filter((employee) => {
     const matchesSearch =
       employee.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       employee.position.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -391,7 +404,7 @@ function EmployeeManagement() {
     return matchesSearch && matchesDepartment && matchesStatus
   })
 
-  const departments = Array.from(new Set(mockEmployees.map((emp) => emp.department)))
+  const departments = Array.from(new Set(employees.map((emp) => emp.department)))
 
   return (
     <div className="space-y-6">
@@ -522,8 +535,10 @@ function EmployeeManagement() {
                     </td>
                     <td className="p-4">
                       <div className="flex items-center gap-2">
-                        <Button variant="ghost" size="sm">
-                          <Eye className="h-4 w-4" />
+                        <Button asChild variant="ghost" size="sm">
+                          <a href={`/employees/${encodeURIComponent(employee.id)}`} aria-label="View Employee">
+                            <Eye className="h-4 w-4" />
+                          </a>
                         </Button>
                         <Button variant="ghost" size="sm">
                           <Edit className="h-4 w-4" />

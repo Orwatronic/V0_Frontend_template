@@ -26,7 +26,7 @@
 
 #### Configuration
 - **Tailwind**: Content scanning for `app`, `components`, `pages`, `src`
-- **Next config**: Build-time TypeScript and ESLint errors ignored (intentionally relaxed)
+- **Next config**: Security headers configured (CSP, Referrer-Policy, X-Content-Type-Options, X-Frame-Options, HSTS, Permissions-Policy). Build-time TypeScript and ESLint errors are currently ignored to keep local builds unblocked (to be tightened on CI).
 - **TypeScript paths**: `@/*` alias configured
 
 #### Analytics & Reporting
@@ -53,8 +53,8 @@
 - **A11y (Prompt 23)**: No explicit a11y test tooling; components mostly Radix/shadcn which are accessible by default.
 - **PWA/Mobile (Prompts 18–19)**: Not configured.
 - **Performance/Caching (Prompts 20–21)**: No dedicated monitoring/caching layers beyond React Query references in prompts.
-- **Notifications/Realtime (Prompt 14/16)**: Not wired to backend; components exist but no WS.
-- **Security & CSP (Prompt 25)**: No CSP headers or client-side security utilities configured.
+- **Notifications/Realtime (Prompt 14/16)**: SSE demo exists in CRM only; other modules have none.
+- **Security & CSP (Prompt 25)**: CSP and other security headers are configured in `next.config.mjs`; form/input hardening and client-side security utilities still needed.
 
 ---
 
@@ -79,18 +79,55 @@ Conclusion: Planning files overstate completion relative to current repository. 
 
 ---
 
-### Recommended Next Steps (aligned with prompts)
+### Frontend-Only Parity Plan (no backend changes)
 
-1) Establish a minimal typed API client with auth interceptors and error normalization.
-2) Replace auth mocks with real login/logout endpoints; add refresh handling and permission helpers.
-3) Introduce a small test harness (Vitest/RTL) and cover core providers and i18n helpers.
-4) Tighten `next.config.mjs` (stop ignoring TS/ESLint on CI) after fixing current warnings.
-5) Add CSP/security headers and a security checklist for forms and user inputs.
-6) Keep using the current single-app structure but map “monorepo” references in prompts conceptually.
+1) Standardize list/table UX
+   - Build shared hooks/components for pagination, sorting, filtering, saved views, columns, export/import.
+   - Apply to Financials (AP/AR/JE), HCM (Employees), Materials (Warehouse stock/movements), MDM (Customers), Org, Quality, Maintenance, Projects, Sales.
+
+2) Add local Next API proxy routes with fallbacks per domain
+   - Create `app/api/{financial,hcm,materials,mdm,org,quality,maintenance,production,projects,sales}/*` mirroring the minimal endpoints each page needs.
+   - Keep graceful fallback data to run without backend.
+   - Implemented now:
+     - Maintenance: `app/api/plant-maintenance/orders/route.ts`, `[id]/route.ts`; list and detail page wired
+     - Projects: `app/api/projects/route.ts`, `[id]/route.ts`; list and detail page wired
+     - Materials: `app/api/materials/categories/route.ts`, `materials/route.ts`; `MaterialMaster` fetches by category
+     - Materials (warehouse schema): `app/api/materials/warehouse/schema/route.ts`; admin editor at `app/materials/warehouse/admin/page.tsx`
+     - MDM: `app/api/mdm/customers/route.ts`, `customers/[id]/route.ts`; `CustomerMaster` list/detail wired
+     - Org Mgmt: `app/api/org/units/route.ts`; list uses local route, detail page added
+     - Quality: `app/api/quality/inspections/route.ts`; list uses local route, detail page added
+     - Financials: `app/api/financials/ap/invoices/route.ts`, `[id]/route.ts`; `app/api/financials/ar/invoices/route.ts`, `[id]/route.ts`; lists use local routes, detail pages added
+     - HCM Employees: `app/api/hcm/employees/route.ts`, `[id]/route.ts`; Employees tab loads list, detail page added
+     - HCM Recruitment: `app/api/hcm/recruitment/{pipeline,metrics}/route.ts`, `candidates/[id]/stage/route.ts`; pipeline loads/updates via local routes
+
+3) Implement minimal detail pages and safe mutations
+   - For each module, add one detail page with at least one client-side state change (status/assignment/update) persisted via the local route.
+
+4) i18n completion and tests
+   - Fill missing keys; run `npm run i18n:validate`.
+   - Add 2–3 tests per module (list render, mutation happy path, error state).
+
+5) Hardening
+   - Pin dependencies; add CI to run build/tests/i18n checks.
+   - Update CSP connect-src when integrating with backend later.
+
+6) Materials — Warehouse configurability (data-driven)
+   - Admin UI for warehouses/zones/racks/bins; local schema route with fallback; `WarehouseMap` consumes schema when available.
+
+### Recent Progress (frontend parity implemented)
+- Plant Maintenance: List/detail wired to local routes; status updates via PATCH echo
+- Project System: List/detail wired to local routes
+- Materials: Category/materials fetch; data-driven warehouse schema + admin editor; warehouse map uses schema
+- MDM: Customer list + details via local routes
+- Org Management: Units list via local route; detail page simulates updates
+- Quality: Inspections list via local route; detail page simulates updates
+- Financials: AP/AR lists via local routes; detail pages with editable status (local PATCH)
+- HCM: Employees list via local route; employee detail page; org chart collapse/expand; recruitment pipeline fetch + stage update via local routes
 
 ---
 
 ### Notable Inconsistencies
+- Non-CRM modules previously implied fuller completeness; they are partial/minimal. This plan explicitly targets frontend parity with CRM via local routes and fallbacks.
 
 - Prompts describe a Turborepo monorepo; this repo is single-package (acceptable per current scope).
 

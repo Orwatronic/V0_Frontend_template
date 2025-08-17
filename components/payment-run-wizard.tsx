@@ -55,8 +55,10 @@ export const PaymentRunWizard = ({ isOpen, onClose }: PaymentRunWizardProps) => 
   const [selectedInvoices, setSelectedInvoices] = useState<Record<string, boolean>>({})
   const [isLoading, setIsLoading] = useState(false)
   const [executionResult, setExecutionResult] = useState<{ success: boolean; id: string } | null>(null)
+  const [errorMsg, setErrorMsg] = useState<string | null>(null)
 
   const handleNext = async () => {
+    setErrorMsg(null)
     if (step === 1) {
       setIsLoading(true)
       // CURSOR: API call to GET /api/v1/financials/ap/invoices/payable?dueDate={dueDate}
@@ -80,9 +82,13 @@ export const PaymentRunWizard = ({ isOpen, onClose }: PaymentRunWizardProps) => 
       setSelectedInvoices(mockPayableInvoices.reduce((acc, inv) => ({ ...acc, [inv.id]: true }), {}))
     }
     if (step === 3) {
+      const finalInvoiceIds = Object.keys(selectedInvoices).filter((id) => selectedInvoices[id])
+      if (finalInvoiceIds.length === 0) {
+        setErrorMsg(t('common.validation.required'))
+        return
+      }
       setIsLoading(true)
       // CURSOR: API call to POST /api/v1/financials/ap/payment-run
-      const finalInvoiceIds = Object.keys(selectedInvoices).filter((id) => selectedInvoices[id])
       try {
         let useMock = true
         try {
@@ -199,6 +205,11 @@ export const PaymentRunWizard = ({ isOpen, onClose }: PaymentRunWizardProps) => 
         return (
           <div className="space-y-4 p-4">
             <DialogDescription>{t("ppw.step3.description")}</DialogDescription>
+            {errorMsg && (
+              <div role="alert" className="rounded-md border border-red-300 bg-red-50 text-red-700 p-3">
+                {errorMsg}
+              </div>
+            )}
             <Card>
               <CardContent className="p-6 space-y-4">
                 <div className="flex justify-between items-center">
@@ -208,6 +219,27 @@ export const PaymentRunWizard = ({ isOpen, onClose }: PaymentRunWizardProps) => 
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">{t("summary.totalAmount")}</span>
                   <span className="font-bold text-lg text-primary">{formatCurrency(totalAmount)}</span>
+                </div>
+                <div className="pt-2">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => {
+                      // Export proposal CSV
+                      const header = ['Invoice','Vendor','Due Date','Amount']
+                      const rows = finalSelection.map(i => [i.id, i.vendor, i.dueDate, String(i.amount)])
+                      const csv = [header, ...rows].map(r => r.map(v => `"${String(v).replaceAll('"','""')}"`).join(',')).join('\n')
+                      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' })
+                      const url = URL.createObjectURL(blob)
+                      const a = document.createElement('a')
+                      a.href = url
+                      a.download = `payment-proposal-${Date.now()}.csv`
+                      a.click()
+                      URL.revokeObjectURL(url)
+                    }}
+                  >
+                    Export Proposal (CSV)
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -224,6 +256,23 @@ export const PaymentRunWizard = ({ isOpen, onClose }: PaymentRunWizardProps) => 
                 <div className="p-4 bg-secondary rounded-md">
                   <span className="text-sm">{t("execution.id")}: </span>
                   <span className="font-mono font-bold">{executionResult.id}</span>
+                </div>
+                <div className="pt-4">
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      const content = `PAYMENT RUN ${executionResult?.id}`
+                      const blob = new Blob([content], { type: 'text/plain;charset=utf-8;' })
+                      const url = URL.createObjectURL(blob)
+                      const a = document.createElement('a')
+                      a.href = url
+                      a.download = `payment-run-${executionResult?.id}.txt`
+                      a.click()
+                      URL.revokeObjectURL(url)
+                    }}
+                  >
+                    Download Payment File
+                  </Button>
                 </div>
               </>
             ) : (

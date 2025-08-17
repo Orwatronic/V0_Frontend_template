@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -80,13 +81,10 @@ export const AccountsReceivable = () => {
       setIsLoading(true)
       setError(null)
       try {
-        if (useMock) {
-          setInvoices(mockInvoices)
-          return
-        }
-        // CURSOR: API call to GET /api/v1/financials/ar/invoices
-        const data = await get<{ invoices: any[] }>("/financials/ar/invoices")
-        setInvoices(Array.isArray((data as any)?.invoices) ? (data as any).invoices : [])
+        // Always use local Next route (with fallback data when API_BASE_URL is missing)
+        // CURSOR: Proxied GET /api/v1/financials/ar/invoices via /api/financials/ar/invoices
+        const data = await fetch("/api/financials/ar/invoices", { cache: "no-store" }).then(r => r.json())
+        setInvoices(((data as any)?.data as any) || mockInvoices)
       } catch (e) {
         setError(t("financial.accountsReceivable.errors.loadFailed"))
         setInvoices(mockInvoices)
@@ -199,7 +197,9 @@ export const AccountsReceivable = () => {
               <TableBody>
                 {filteredInvoices.map((invoice) => (
                   <TableRow key={invoice.id}>
-                    <TableCell className="font-medium">{invoice.id}</TableCell>
+                    <TableCell className="font-medium">
+                      <Link href={`/financial/ar/${encodeURIComponent(invoice.id)}`}>{invoice.id}</Link>
+                    </TableCell>
                     <TableCell>{invoice.customer}</TableCell>
                     <TableCell>{invoice.issueDate}</TableCell>
                     <TableCell>{invoice.dueDate}</TableCell>

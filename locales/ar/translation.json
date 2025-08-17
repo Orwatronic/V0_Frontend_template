@@ -977,6 +977,60 @@
       },
       "close": "إغلاق",
       "saveChanges": "حفظ التغييرات"
+    },
+    "leads": {
+      "title": "العملاء المحتملون",
+      "subtitle": "إدارة العملاء المحتملين الواردين والصادرين",
+      "searchPlaceholder": "ابحث في العملاء المحتملين...",
+      "searchAria": "بحث العملاء المحتملين",
+      "importCsv": "استيراد CSV",
+      "export": "تصدير",
+      "listTitle": "قائمة العملاء المحتملين",
+      "selectedRows": "{{selected}} من {{total}} محدد",
+      "empty": "لا توجد نتائج",
+      "columns": {
+        "leadId": "معرّف العميل المحتمل",
+        "company": "الشركة",
+        "owner": "المالك",
+        "status": "الحالة",
+        "created": "تاريخ الإنشاء",
+        "score": "النتيجة"
+      },
+      "columnsMenu": {
+        "title": "الأعمدة",
+        "showHide": "إظهار/إخفاء"
+      },
+      "views": {
+        "saveCurrent": "حفظ العرض الحالي",
+        "load": "تحميل عرض",
+        "delete": "حذف",
+        "promptSave": "حفظ العرض باسم:"
+      },
+      "status": {
+        "new": "جديد",
+        "contacted": "تم التواصل",
+        "qualified": "مؤهل",
+        "lost": "مفقود"
+      },
+      "detail": {
+        "title": "تفاصيل العميل المحتمل",
+        "header": "العميل المحتمل {{id}}",
+        "activities": "سجل الأنشطة",
+        "noActivity": "لا توجد أنشطة",
+        "byUser": "بواسطة {{name}}",
+        "notes": "ملاحظات",
+        "noNotes": "لا توجد ملاحظات",
+        "attachments": "مرفقات",
+        "noAttachments": "لا توجد مرفقات",
+        "audit": "سجل التدقيق",
+        "noAudit": "لا توجد تغييرات"
+      },
+      "bulk": {
+        "actions": "إجراءات جماعية",
+        "setStatus": "تعيين الحالة",
+        "qualify": "تحديد كمؤهل",
+        "markLost": "تحديد كمفقود"
+      }
     }
   },
   "financial": {

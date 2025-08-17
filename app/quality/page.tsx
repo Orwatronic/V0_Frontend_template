@@ -7,6 +7,7 @@ import { useI18n } from "@/contexts/i18n-context"
 import { useApi } from "@/hooks/use-api"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Search } from "lucide-react"
 
@@ -25,6 +26,10 @@ const mockInspections: Inspection[] = [
 
 export default function QualityPage() {
   const { t } = useI18n()
+  const tf = (k: string, fallback: string) => {
+    const v = t(k)
+    return v === k ? fallback : v
+  }
   const { get } = useApi()
   const [rows, setRows] = useState<Inspection[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -42,13 +47,10 @@ export default function QualityPage() {
       setIsLoading(true)
       setError(null)
       try {
-        if (useMock) {
-          setRows(mockInspections)
-          return
-        }
-        // CURSOR: GET /api/v1/quality/inspections
-        const data = await get<{ inspections: Inspection[] }>("/quality/inspections")
-        setRows(((data as any)?.inspections as any) || [])
+        // Always use local Next route (with fallback data when API_BASE_URL is missing)
+        // CURSOR: Proxied GET /api/v1/quality/inspections via /api/quality/inspections
+        const data = await fetch("/api/quality/inspections", { cache: "no-store" }).then(r => r.json())
+        setRows(((data as any)?.data as any) || mockInspections)
       } catch {
         setError(t("quality.errors.loadFailed"))
         setRows(mockInspections)
@@ -72,17 +74,17 @@ export default function QualityPage() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle>{t("quality.title",) || "Quality Management"}</CardTitle>
-                  <CardDescription>{t("quality.description") || "Inspections, non-conformances, and corrective actions."}</CardDescription>
+                  <CardTitle>{tf("quality.title", "Quality Management")}</CardTitle>
+                  <CardDescription>{tf("quality.description", "Inspections, non-conformances, and corrective actions.")}</CardDescription>
                 </div>
                 <div className="relative w-64">
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                   <Input
-                    placeholder={t("quality.search") || "Search inspections..."}
+                    placeholder={tf("quality.search", "Search inspections...")}
                     className="pl-8"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    aria-label={t("quality.searchAria") || "Search inspections"}
+                    aria-label={tf("quality.searchAria", "Search inspections")}
                   />
                 </div>
               </div>
@@ -111,7 +113,9 @@ export default function QualityPage() {
                   <TableBody>
                     {filtered.map((r) => (
                       <TableRow key={r.id}>
-                        <TableCell className="font-medium">{r.id}</TableCell>
+                        <TableCell className="font-medium">
+                          <Link href={`/quality/${encodeURIComponent(r.id)}`}>{r.id}</Link>
+                        </TableCell>
                         <TableCell>{r.date}</TableCell>
                         <TableCell>{r.status}</TableCell>
                         <TableCell>{r.description}</TableCell>

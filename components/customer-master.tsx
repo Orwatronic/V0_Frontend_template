@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -132,6 +132,18 @@ export const CustomerMaster = () => {
   const [selectedCustomer, setSelectedCustomer] = useState<any | null>(null)
   const [isSheetOpen, setIsSheetOpen] = useState(false)
 
+  // Load list from local API route with fallback
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const data = await fetch('/api/mdm/customers', { cache: 'no-store' }).then(r => r.json())
+        const list = (data as any)?.data as typeof mockCustomers | undefined
+        if (Array.isArray(list)) setCustomers(list)
+      } catch {}
+    }
+    load()
+  }, [])
+
   const filteredCustomers = useMemo(() => {
     return customers.filter((customer) => {
       const matchesSearch =
@@ -155,9 +167,16 @@ export const CustomerMaster = () => {
     }
   }
 
-  const openDetailsSheet = (customer: any) => {
-    // CURSOR: API call to GET /api/v1/mdm/customers/{customer.id}
-    setSelectedCustomer({ ...customer, ...mockCustomerDetails })
+  const openDetailsSheet = async (customer: any) => {
+    // CURSOR: Proxied GET /api/v1/mdm/customers/{id} via /api/mdm/customers/{id}
+    try {
+      const data = await fetch(`/api/mdm/customers/${encodeURIComponent(customer.id)}`, { cache: 'no-store' })
+        .then(r => r.json())
+      const details = (data as any)?.data
+      setSelectedCustomer({ ...customer, ...(details || mockCustomerDetails) })
+    } catch {
+      setSelectedCustomer({ ...customer, ...mockCustomerDetails })
+    }
     setIsSheetOpen(true)
   }
 

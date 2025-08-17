@@ -608,6 +608,60 @@
       "title": "CRM‑dashboard",
       "subtitle": "En samlet visning av leads, kunder og interaksjoner."
     },
+    "leads": {
+      "title": "Leads",
+      "subtitle": "Administrer innkommende og utgående leads",
+      "searchPlaceholder": "Søk i leads...",
+      "searchAria": "Søk i leads",
+      "importCsv": "Importer CSV",
+      "export": "Eksporter",
+      "listTitle": "Lead‑liste",
+      "selectedRows": "{{selected}} av {{total}} valgt",
+      "empty": "Ingen leads",
+      "columns": {
+        "leadId": "Lead‑ID",
+        "company": "Selskap",
+        "owner": "Eier",
+        "status": "Status",
+        "created": "Opprettet",
+        "score": "Score"
+      },
+      "columnsMenu": {
+        "title": "Kolonner",
+        "showHide": "Vis/Skjul"
+      },
+      "views": {
+        "saveCurrent": "Lagre nåværende visning",
+        "load": "Last visning",
+        "delete": "Slett",
+        "promptSave": "Lagre visning som:"
+      },
+      "status": {
+        "new": "Ny",
+        "contacted": "Kontaktet",
+        "qualified": "Kvalifisert",
+        "lost": "Tapt"
+      },
+      "detail": {
+        "title": "Lead-detaljer",
+        "header": "Lead {{id}}",
+        "activities": "Aktivitetslogg",
+        "noActivity": "Ingen aktivitet",
+        "byUser": "av {{name}}",
+        "notes": "Notater",
+        "noNotes": "Ingen notater",
+        "attachments": "Vedlegg",
+        "noAttachments": "Ingen vedlegg",
+        "audit": "Revisjonsspor",
+        "noAudit": "Ingen endringer"
+      },
+      "bulk": {
+        "actions": "Massehandlinger",
+        "setStatus": "Sett status",
+        "qualify": "Marker som kvalifisert",
+        "markLost": "Marker som tapt"
+      }
+    },
     "dashboard": {
       "kpis": {
         "newLeads": "Nye leads",

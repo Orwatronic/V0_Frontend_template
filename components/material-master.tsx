@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -10,8 +10,7 @@ import { Tree } from "@/components/ui/tree"
 import { Search, MoreHorizontal, FileDown, FileUp, PlusCircle, Package } from "lucide-react"
 import { useI18n } from "@/contexts/i18n-context"
 
-// Mock Data - Replace with API calls
-// CURSOR: GET /api/v1/mdm/materials/categories
+// CURSOR: GET /api/v1/materials/categories (proxied via /api/materials/categories)
 const mockCategories = [
   {
     id: "raw",
@@ -31,7 +30,7 @@ const mockCategories = [
   },
 ]
 
-// CURSOR: GET /api/v1/mdm/materials?category={categoryId}
+// CURSOR: GET /api/v1/materials?category={categoryId} (proxied via /api/materials/materials)
 const mockMaterials = [
   { id: "M001", name: "Steel Plate", category: "metals", type: "Raw", uom: "KG", status: "active", onHand: 1500 },
   { id: "M002", name: "ABS Pellets", category: "plastics", type: "Raw", uom: "KG", status: "active", onHand: 3000 },
@@ -61,6 +60,12 @@ export const MaterialMaster = () => {
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [searchTerm, setSearchTerm] = useState("")
 
+  // Load categories/materials from local routes (with fallbacks)
+  // Categories are static here; for materials, reload on category change
+  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  
+
   const filteredMaterials = useMemo(() => {
     return materials.filter((material) => {
       const matchesSearch =
@@ -70,6 +75,17 @@ export const MaterialMaster = () => {
       return matchesSearch && matchesCategory
     })
   }, [materials, searchTerm, selectedCategory])
+
+  // Load from local API when category changes
+  useEffect(() => {
+    const load = async () => {
+      const res = await fetch(`/api/materials/materials${selectedCategory && selectedCategory !== 'all' ? `?category=${encodeURIComponent(selectedCategory)}` : ''}`, { cache: 'no-store' })
+      const json = await res.json().catch(() => ({}))
+      const data = (json as any)?.data as typeof mockMaterials | undefined
+      if (Array.isArray(data)) setMaterials(data)
+    }
+    load()
+  }, [selectedCategory])
 
   return (
     <Card>

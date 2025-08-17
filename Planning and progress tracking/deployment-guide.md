@@ -40,7 +40,30 @@ Deployment strategies, CI/CD pipelines, and DevOps practices for the Feebee ERP 
 *Application monitoring and error tracking setup*
 
 ## 🔒 Security Considerations
-*Security best practices and compliance*
+
+### Content Security Policy (CSP)
+- Purpose: Mitigate XSS and injection by restricting resource origins.
+- Config location: `next.config.mjs` → `headers()` with `Content-Security-Policy`.
+- Current baseline:
+  - `default-src 'self'`
+  - `script-src 'self'`
+  - `style-src 'self' 'unsafe-inline'` (remove 'unsafe-inline' when feasible)
+  - `img-src 'self' data: blob:`
+  - `font-src 'self' data:`
+  - `connect-src 'self' http://localhost:3001` (adjust per backend domains)
+  - `frame-ancestors 'self'`, `form-action 'self'`, `object-src 'none'`, `base-uri 'self'`
+
+### Additional Security Headers
+- `Referrer-Policy: no-referrer`
+- `X-Content-Type-Options: nosniff`
+- `X-Frame-Options: SAMEORIGIN`
+- `Strict-Transport-Security: max-age=63072000; includeSubDomains; preload`
+- `Permissions-Policy: geolocation=(), microphone=(), camera=()`
+
+### Operational Notes
+- Tighten CSP as third-party assets and API domains are finalized.
+- Dev builds may need relaxed script policies; keep production strict.
+- Avoid inline scripts/eval in application code to keep CSP strict.
 
 ---
 

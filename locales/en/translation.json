@@ -363,6 +363,202 @@
           "support": "Support ticket created by {{customer}}",
           "invoice": "Invoice paid by {{customer}}"
         }
+      },
+      "activities": {
+        "stream": {
+          "quotation": "Quotation created for {{company}}",
+          "invoice": "Invoice issued to {{customer}}",
+          "support": "Support ticket opened by {{customer}}"
+        }
+      }
+    },
+    "leads": {
+      "title": "Leads",
+      "subtitle": "Manage inbound and outbound leads",
+      "searchPlaceholder": "Search leads...",
+      "searchAria": "Search leads",
+      "importCsv": "Import CSV",
+      "export": "Export",
+      "listTitle": "Lead list",
+      "selectedRows": "{{selected}} of {{total}} selected",
+      "empty": "No leads found",
+      "columns": {
+        "leadId": "Lead ID",
+        "company": "Company",
+        "owner": "Owner",
+        "status": "Status",
+        "created": "Created",
+        "score": "Score"
+      },
+      "columnsMenu": {
+        "title": "Columns",
+        "showHide": "Show/Hide"
+      },
+      "views": {
+        "saveCurrent": "Save current view",
+        "load": "Load view",
+        "delete": "Delete",
+        "promptSave": "Save view as:"
+      },
+      "status": {
+        "new": "New",
+        "contacted": "Contacted",
+        "qualified": "Qualified",
+        "lost": "Lost"
+      },
+      "detail": {
+        "title": "Lead detail",
+        "header": "Lead {{id}}",
+        "activities": "Activity timeline",
+        "noActivity": "No activity yet",
+        "byUser": "by {{name}}",
+        "notes": "Notes",
+        "noNotes": "No notes yet",
+        "attachments": "Attachments",
+        "noAttachments": "No attachments",
+        "audit": "Audit log",
+        "noAudit": "No changes tracked"
+      },
+      "bulk": {
+        "actions": "Bulk actions",
+        "setStatus": "Set status",
+        "qualify": "Mark as qualified",
+        "markLost": "Mark as lost",
+        "toastTitle": "Leads updated",
+        "toastDesc": "Updated {{count}} lead(s)"
+      }
+    }
+    ,
+    "orders": {
+      "title": "Orders",
+      "subtitle": "Manage confirmed orders and fulfillment",
+      "searchPlaceholder": "Search orders...",
+      "searchAria": "Search orders",
+      "listTitle": "Orders",
+      "empty": "No orders found",
+      "columns": {
+        "orderId": "Order ID",
+        "customer": "Customer",
+        "orderDate": "Order date",
+        "deliveryDate": "Delivery date",
+        "amount": "Amount",
+        "status": "Status"
+      },
+      "status": {
+        "confirmed": "Confirmed",
+        "inProgress": "In progress",
+        "delivered": "Delivered",
+        "invoiced": "Invoiced",
+        "completed": "Completed"
+      },
+      "detail": {
+        "title": "Order detail",
+        "header": "Order {{id}}",
+        "items": "Line items",
+        "noItems": "No items"
+      }
+    }
+    ,
+    "quotes": {
+      "title": "Quotes",
+      "subtitle": "Create and manage sales quotations",
+      "searchPlaceholder": "Search quotes...",
+      "searchAria": "Search quotes",
+      "listTitle": "Quotes",
+      "empty": "No quotes found",
+      "columns": {
+        "quoteId": "Quote ID",
+        "customer": "Customer",
+        "date": "Date",
+        "amount": "Amount",
+        "status": "Status"
+      },
+      "status": {
+        "draft": "Draft",
+        "sent": "Sent",
+        "accepted": "Accepted",
+        "rejected": "Rejected",
+        "expired": "Expired"
+      },
+      "detail": {
+        "title": "Quote detail",
+        "header": "Quote {{id}}",
+        "items": "Line items",
+        "noItems": "No items"
+      }
+    }
+    ,
+    "opps": {
+      "title": "Opportunities",
+      "subtitle": "Pipeline overview",
+      "stages": {
+        "lead": "Lead",
+        "qualified": "Qualified",
+        "proposal": "Proposal",
+        "won": "Won",
+        "lost": "Lost"
+      },
+      "metrics": {
+        "total": "Total",
+        "won": "Won",
+        "pipeline": "Pipeline",
+        "forecast": "Forecast"
+      }
+    }
+    ,
+    "contacts": {
+      "title": "Contacts",
+      "subtitle": "Manage customer contacts",
+      "searchPlaceholder": "Search contacts...",
+      "searchAria": "Search contacts",
+      "listTitle": "Contact list",
+      "empty": "No contacts found",
+      "columns": {
+        "contactId": "Contact ID",
+        "name": "Name",
+        "role": "Role",
+        "email": "Email",
+        "account": "Account"
+      },
+      "columnsMenu": { "title": "Columns", "showHide": "Show/Hide" },
+      "detail": {
+        "title": "Contact detail",
+        "header": "Contact {{id}}",
+        "info": "Information"
+      }
+    },
+    "accounts": {
+      "title": "Accounts",
+      "subtitle": "Manage customer organizations",
+      "searchPlaceholder": "Search accounts...",
+      "searchAria": "Search accounts",
+      "listTitle": "Account list",
+      "empty": "No accounts found",
+      "columns": {
+        "accountId": "Account ID",
+        "name": "Name",
+        "type": "Type",
+        "status": "Status",
+        "country": "Country"
+      },
+      "columnsMenu": { "title": "Columns", "showHide": "Show/Hide" },
+      "types": {
+        "enterprise": "Enterprise",
+        "sme": "SME",
+        "startup": "Startup"
+      },
+      "status": {
+        "active": "Active",
+        "pending": "Pending",
+        "inactive": "Inactive"
+      },
+      "detail": {
+        "title": "Account detail",
+        "header": "Account {{id}}",
+        "contacts": "Contacts",
+        "noContacts": "No contacts",
+        "recentActivity": "Recent activity",
+        "noActivity": "No recent activity"
       }
     }
   },
@@ -976,7 +1172,7 @@
           "high": "High",
           "urgent": "Urgent"
         },
-        "description": { "label": "Description", "placeholder": "Detailed description of your issue" },
+        "descriptionField": { "label": "Description", "placeholder": "Detailed description of your issue" },
         "submit": "Create Ticket"
       },
       "history": {
@@ -1276,7 +1472,9 @@
     "search": "Search",
     "reject": "Reject",
     "approve": "Approve",
-    "getStarted": "Get started"
+    "getStarted": "Get started",
+    "import": "Import",
+    "downloadTemplate": "Download template"
   },
   "3wm": {
     "title": "Three‑way match",
