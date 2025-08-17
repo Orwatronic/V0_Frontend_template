@@ -2,44 +2,32 @@
 
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend } from "recharts"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-
-const useTranslation = () => ({
-  t: (key: string) =>
-    ({
-      "aging.ap.title": "Accounts Payable Aging",
-      "aging.ar.title": "Accounts Receivable Aging",
-      "aging.description": "Outstanding balances by aging bucket.",
-      "aging.bucket.current": "Current",
-      "aging.bucket.30": "1-30 Days",
-      "aging.bucket.60": "31-60 Days",
-      "aging.bucket.90": "61-90 Days",
-      "aging.bucket.90+": "90+ Days",
-      "common.amount": "Amount",
-    }[key] || key),
-})
+import { useI18n } from "@/contexts/i18n-context"
 
 // CURSOR: Data should be fetched from GET /api/v1/financials/reports/aging/ap
-const apAgingData = [
-  { name: "Current", Amount: 115000 },
-  { name: "1-30 Days", Amount: 45000 },
-  { name: "31-60 Days", Amount: 22000 },
-  { name: "61-90 Days", Amount: 8500 },
-  { name: "90+ Days", Amount: 12000 },
+const apAgingRaw = [
+  { bucket: "current", Amount: 115000 },
+  { bucket: "30", Amount: 45000 },
+  { bucket: "60", Amount: 22000 },
+  { bucket: "90", Amount: 8500 },
+  { bucket: "90+", Amount: 12000 },
 ]
 
 // CURSOR: Data should be fetched from GET /api/v1/financials/reports/aging/ar
-const arAgingData = [
-  { name: "Current", Amount: 250000 },
-  { name: "1-30 Days", Amount: 85000 },
-  { name: "31-60 Days", Amount: 45000 },
-  { name: "61-90 Days", Amount: 15000 },
-  { name: "90+ Days", Amount: 25000 },
+const arAgingRaw = [
+  { bucket: "current", Amount: 250000 },
+  { bucket: "30", Amount: 85000 },
+  { bucket: "60", Amount: 45000 },
+  { bucket: "90", Amount: 15000 },
+  { bucket: "90+", Amount: 25000 },
 ]
 
 const formatCurrency = (value: number) => new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value)
 
 export function AgingAnalysisReports() {
-  const { t } = useTranslation()
+  const { t } = useI18n()
+  const apAgingData = apAgingRaw.map(d => ({ name: t(`aging.bucket.${d.bucket}`), Amount: d.Amount }))
+  const arAgingData = arAgingRaw.map(d => ({ name: t(`aging.bucket.${d.bucket}`), Amount: d.Amount }))
 
   return (
     <div className="grid gap-6 md:grid-cols-2">

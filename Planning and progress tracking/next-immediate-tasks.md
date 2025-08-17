@@ -1,7 +1,7 @@
 # Next Immediate Tasks: Financial Management (FI) Module Audit
 
 **Focus Area:** Financial Management (FI) Module Audit & Enhancement Planning  
-**Last Updated:** 8/7/2025
+**Last Updated:** 2025-08-14
 
 With the Human Capital Management (HCM) module confirmed as 100% complete, our full attention shifts to the Financial Management (FI) module. While its initial scope is complete, a thorough audit is required before planning Phase 2 enhancements.
 
@@ -14,16 +14,16 @@ This process will be conducted systematically, component by component.
 **Objective:** To meticulously review each of the 10 components in the Financial Management module, verifying functionality, code quality, UI/UX consistency, and backend integration points.
 
 **Component Audit Checklist:**
-1.  [ ] **Chart of Accounts (`ChartOfAccounts.tsx`)**
-2.  [ ] **Journal Entries (`JournalEntries.tsx`)**
-3.  [ ] **Accounts Payable (`AccountsPayable.tsx`)**
-4.  [ ] **Accounts Receivable (`AccountsReceivable.tsx`)**
-5.  [ ] **Payment Run Wizard (`PaymentRunWizard.tsx`)**
-6.  [ ] **Collections Management (`CollectionsManagementDashboard.tsx`)**
-7.  [ ] **Three-Way Match (`ThreeWayMatch.tsx`)**
-8.  [ ] **Financial Reporting (`FinancialReporting.tsx`)**
-9.  [ ] **Asset Accounting (`AssetAccounting.tsx`)**
-10. [ ] **Bank Reconciliation (`BankReconciliation.tsx`)**
+1.  [x] **Chart of Accounts (`ChartOfAccounts.tsx`)** — useApi wiring with mock fallback, loading/error, a11y
+2.  [x] **Journal Entries (`JournalEntries.tsx`)** — useApi wiring with mock fallback, loading/error, a11y
+3.  [x] **Accounts Payable (`AccountsPayable.tsx`)** — useApi wiring with mock fallback, loading/error, a11y, i18n currency
+4.  [x] **Accounts Receivable (`AccountsReceivable.tsx`)** — useApi wiring with mock fallback, loading/error, a11y, i18n currency
+5.  [ ] **Payment Run Wizard (`PaymentRunWizard.tsx`)** — pending validation and export flows
+6.  [x] **Collections Management (`CollectionsManagementDashboard.tsx`)** — useApi wiring with mock fallback, loading/error, i18n currency
+7.  [x] **Three-Way Match (`ThreeWayMatch.tsx`)** — useI18n integrated, a11y improvements
+8.  [x] **Financial Reporting (`FinancialReporting.tsx`)** — useApi wiring with mock fallback, loading/error, i18n currency
+9.  [x] **Asset Accounting (`AssetAccounting.tsx`)** — useApi, loading/error, i18n currency, POST depreciation
+10. [x] **Bank Reconciliation (`BankReconciliation.tsx`)** — useApi, loading/error, POST match, a11y
 
 ---
 

@@ -244,9 +244,8 @@ const getLayoutedElements = async (nodes: Node[], edges: Edge[]): Promise<{ node
   }
 }
 
-// Enhanced Employee Node Component
-const EmployeeNode = ({ data }: { data: { employee: Employee } }) => {
-  const [isExpanded, setIsExpanded] = useState(false)
+// Enhanced Employee Node Component with collapse/expand of children
+const EmployeeNode = ({ data }: { data: { employee: Employee; hasChildren: boolean; isCollapsed: boolean; onToggleCollapse: () => void } }) => {
   const employee = data.employee
 
   const getPerformanceColor = (rating: number) => {
@@ -276,14 +275,17 @@ const EmployeeNode = ({ data }: { data: { employee: Employee } }) => {
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between">
                 <h3 className="font-bold text-sm text-foreground truncate">{employee.name}</h3>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="h-6 w-6 p-0"
-                  onClick={() => setIsExpanded(!isExpanded)}
-                >
-                  {isExpanded ? <ChevronDown className="h-3 w-3" /> : <ChevronRight className="h-3 w-3" />}
-                </Button>
+                {data.hasChildren && (
+                  <Button
+                    title={data.isCollapsed ? 'Expand' : 'Collapse'}
+                    variant="ghost"
+                    size="sm"
+                    className="h-6 w-6 p-0"
+                    onClick={data.onToggleCollapse}
+                  >
+                    {data.isCollapsed ? <ChevronRight className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
+                  </Button>
+                )}
               </div>
               <p className="text-xs text-muted-foreground font-medium truncate">{employee.position}</p>
               <div className="flex items-center space-x-2 mt-1">
@@ -317,66 +319,40 @@ const EmployeeNode = ({ data }: { data: { employee: Employee } }) => {
           </div>
         </div>
 
-        {/* Expanded Details */}
-        {isExpanded && (
-          <div className="border-t bg-muted/30 p-3 space-y-2">
-            <div className="grid grid-cols-2 gap-2 text-xs">
-              <div className="flex items-center space-x-1">
-                <Mail className="h-3 w-3 text-muted-foreground" />
-                <span className="truncate">{employee.email.split('@')[0]}</span>
-              </div>
-              <div className="flex items-center space-x-1">
-                <Phone className="h-3 w-3 text-muted-foreground" />
-                <span>{employee.phone.slice(-4)}</span>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-1">
-              {employee.skills.slice(0, 3).map((skill: string, index: number) => (
-                <Badge key={index} variant="secondary" className="text-xs px-1 py-0">
-                  {skill}
-                </Badge>
-              ))}
-              {employee.skills.length > 3 && (
-                <Badge variant="secondary" className="text-xs px-1 py-0">
-                  +{employee.skills.length - 3}
-                </Badge>
-              )}
-            </div>
-            <div className="flex items-center justify-between pt-1">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button variant="outline" size="sm" className="h-6 text-xs">
-                    <Eye className="h-3 w-3 mr-1" />
-                    View Details
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-2xl">
-                  <DialogHeader>
-                    <DialogTitle className="flex items-center space-x-3">
-                      <Avatar className="w-12 h-12">
-                        <AvatarImage src={employee.imageUrl || "/placeholder.svg"} alt={employee.name} />
-                        <AvatarFallback>{employee.name.split(' ').map((n: string) => n[0]).join('')}</AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <h2 className="text-xl font-bold">{employee.name}</h2>
-                        <p className="text-muted-foreground">{employee.position}</p>
-                      </div>
-                    </DialogTitle>
-                  </DialogHeader>
-                  <EmployeeDetailView employee={employee} />
-                </DialogContent>
-              </Dialog>
-              <div className="flex space-x-1">
-                <Button variant="ghost" size="sm" className="h-6 w-6 p-0">
-                  <Edit className="h-3 w-3" />
-                </Button>
-                <Button variant="ghost" size="sm" className="h-6 w-6 p-0">
-                  <MoreHorizontal className="h-3 w-3" />
-                </Button>
-              </div>
-            </div>
+        {/* Actions */}
+        <div className="border-t bg-muted/30 p-3 flex items-center justify-between">
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant="outline" size="sm" className="h-6 text-xs">
+                <Eye className="h-3 w-3 mr-1" />
+                View Details
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-2xl">
+              <DialogHeader>
+                <DialogTitle className="flex items-center space-x-3">
+                  <Avatar className="w-12 h-12">
+                    <AvatarImage src={employee.imageUrl || "/placeholder.svg"} alt={employee.name} />
+                    <AvatarFallback>{employee.name.split(' ').map((n: string) => n[0]).join('')}</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h2 className="text-xl font-bold">{employee.name}</h2>
+                    <p className="text-muted-foreground">{employee.position}</p>
+                  </div>
+                </DialogTitle>
+              </DialogHeader>
+              <EmployeeDetailView employee={employee} />
+            </DialogContent>
+          </Dialog>
+          <div className="flex space-x-1">
+            <Button variant="ghost" size="sm" className="h-6 w-6 p-0">
+              <Edit className="h-3 w-3" />
+            </Button>
+            <Button variant="ghost" size="sm" className="h-6 w-6 p-0">
+              <MoreHorizontal className="h-3 w-3" />
+            </Button>
           </div>
-        )}
+        </div>
       </div>
       <Handle
         type="source"
@@ -580,10 +556,18 @@ const InteractiveOrgChart = () => {
       // CURSOR: API call to GET /api/v1/hcm/organizational-chart
       
       // Create nodes for filtered employees
+      const collapsedById = new Map<string, boolean>()
       const initialNodes: Node[] = filteredEmployees.map(employee => ({
         id: employee.id,
         type: 'employeeNode',
-        data: { employee },
+        data: {
+          employee,
+          hasChildren: filteredEmployees.some(e => e.managerId === employee.id),
+          isCollapsed: collapsedById.get(employee.id) ?? false,
+          onToggleCollapse: () => {
+            setNodes((prev) => prev.map(n => n.id === employee.id ? { ...n, data: { ...n.data, isCollapsed: !n.data.isCollapsed } } : n))
+          },
+        },
         position: { x: 0, y: 0 },
       }))
 
@@ -612,6 +596,31 @@ const InteractiveOrgChart = () => {
     (params: Connection) => setEdges((eds) => addEdge(params, eds)),
     [setEdges]
   )
+
+  // Compute collapsed descendants to hide nodes/edges under collapsed parents
+  const hiddenNodeIds = useMemo(() => {
+    const hidden = new Set<string>()
+    const isCollapsed = (id: string) => {
+      const n: any = nodes.find((nn: any) => nn.id === id)
+      return !!n?.data?.isCollapsed
+    }
+    const childrenOf = (id: string) => edges.filter(e => e.source === id).map(e => e.target)
+    const dfs = (id: string) => {
+      for (const child of childrenOf(id)) {
+        if (!hidden.has(child)) {
+          hidden.add(child)
+          dfs(child)
+        }
+      }
+    }
+    nodes.forEach((n: any) => {
+      if (isCollapsed(n.id)) dfs(n.id)
+    })
+    return hidden
+  }, [nodes, edges])
+
+  const displayedNodes = useMemo(() => nodes.filter((n: any) => !hiddenNodeIds.has(n.id)), [nodes, hiddenNodeIds])
+  const displayedEdges = useMemo(() => edges.filter((e: any) => !hiddenNodeIds.has(e.source) && !hiddenNodeIds.has(e.target)), [edges, hiddenNodeIds])
 
   const handleExport = () => {
     // CURSOR: API call to POST /api/v1/hcm/org-chart/export
@@ -711,8 +720,8 @@ const InteractiveOrgChart = () => {
       {/* Org Chart Visualization */}
       <div className={`border rounded-lg overflow-hidden ${isFullscreen ? 'fixed inset-0 z-50 bg-background' : 'h-[700px]'}`}>
         <ReactFlow
-          nodes={nodes}
-          edges={edges}
+          nodes={displayedNodes as any}
+          edges={displayedEdges as any}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}

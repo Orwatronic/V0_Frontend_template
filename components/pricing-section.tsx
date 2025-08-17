@@ -20,51 +20,11 @@ import {
 } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
-
-// Mock translation function
-const useTranslation = () => {
-  return {
-    t: (key: string) => {
-      const translations: Record<string, string> = {
-        "pricing.title": "Choose Your Growth Plan",
-        "pricing.subtitle":
-          "Transparent, value-based pricing for businesses of all sizes. Start your digital transformation with our cloud-native ERP system.",
-        "pricing.monthly": "Monthly",
-        "pricing.annual": "Annual",
-        "pricing.save": "Save 20%",
-        "pricing.mostPopular": "Most Popular",
-        "pricing.customPricing": "Custom Pricing",
-        "pricing.startTrial": "Start Free Trial",
-        "pricing.contactSales": "Contact Sales",
-        "pricing.perUser": "/user/month",
-        "pricing.billed": "Billed",
-        "pricing.starter.title": "Starter",
-        "pricing.starter.description": "Perfect for small teams getting started",
-        "pricing.professional.title": "Professional",
-        "pricing.professional.description": "Ideal for growing businesses",
-        "pricing.enterprise.title": "Enterprise",
-        "pricing.enterprise.description": "Complete solution for large organizations",
-        "pricing.features.users": "users",
-        "pricing.features.storage": "storage per user",
-        "pricing.features.support": "support",
-        "pricing.features.modules": "ERP modules",
-        "pricing.features.workflows": "Advanced workflows & automation",
-        "pricing.features.multiCompany": "Multi-company support",
-        "pricing.features.unlimited": "Unlimited",
-        "pricing.features.custom": "Custom integrations & API access",
-        "pricing.features.onPremise": "On-premise deployment option",
-        "pricing.features.sla": "SLA guarantee & compliance",
-        "pricing.features.dedicated": "24/7 dedicated support",
-        "pricing.volumeDiscount": "Volume discounts available",
-      }
-      return translations[key] || key
-    },
-  }
-}
+import { useI18n } from "@/contexts/i18n-context"
 
 const PricingSection = () => {
   const router = useRouter()
-  const { t } = useTranslation()
+  const { t } = useI18n()
   const [billingCycle, setBillingCycle] = useState("monthly")
 
   const handleStartTrial = (planType: string) => {
@@ -87,15 +47,15 @@ const PricingSection = () => {
       monthlyPrice: 49,
       popular: false,
       features: [
-        { text: `Up to 25 ${t("pricing.features.users")}`, included: true },
-        { text: `Core ERP modules (FIN, HCM, MM)`, included: true },
-        { text: `5GB ${t("pricing.features.storage")}`, included: true },
-        { text: `Email ${t("pricing.features.support")}`, included: true },
-        { text: `Multi-currency support`, included: true },
-        { text: `Basic reporting`, included: true },
+        { text: t("pricing.features.starter.users"), included: true },
+        { text: t("pricing.features.starter.modules"), included: true },
+        { text: t("pricing.features.starter.storage"), included: true },
+        { text: t("pricing.features.starter.support"), included: true },
+        { text: t("pricing.features.starter.multiCurrency"), included: true },
+        { text: t("pricing.features.starter.basicReporting"), included: true },
         { text: t("pricing.features.workflows"), included: false },
         { text: t("pricing.features.multiCompany"), included: false },
-        { text: `API access`, included: false },
+        { text: t("pricing.features.starter.apiAccess"), included: false },
       ],
       buttonVariant: "outline" as const,
       buttonText: t("pricing.startTrial"),
@@ -109,15 +69,15 @@ const PricingSection = () => {
       monthlyPrice: 89,
       popular: true,
       features: [
-        { text: `Up to 100 ${t("pricing.features.users")}`, included: true },
-        { text: `All ERP modules + Sales & MDM`, included: true },
-        { text: `25GB ${t("pricing.features.storage")}`, included: true },
-        { text: `Priority support + Phone`, included: true },
+        { text: t("pricing.features.professional.users"), included: true },
+        { text: t("pricing.features.professional.modules"), included: true },
+        { text: t("pricing.features.professional.storage"), included: true },
+        { text: t("pricing.features.professional.support"), included: true },
         { text: t("pricing.features.workflows"), included: true },
         { text: t("pricing.features.multiCompany"), included: true },
-        { text: `Advanced reporting & analytics`, included: true },
-        { text: `Real-time notifications`, included: true },
-        { text: `API access (limited)`, included: true },
+        { text: t("pricing.features.professional.reporting"), included: true },
+        { text: t("pricing.features.professional.notifications"), included: true },
+        { text: t("pricing.features.professional.apiAccess"), included: true },
       ],
       buttonVariant: "default" as const,
       buttonText: t("pricing.startTrial"),
@@ -131,15 +91,15 @@ const PricingSection = () => {
       monthlyPrice: null,
       popular: false,
       features: [
-        { text: `${t("pricing.features.unlimited")} ${t("pricing.features.users")}`, included: true },
-        { text: `Complete ERP suite + Custom modules`, included: true },
-        { text: `${t("pricing.features.unlimited")} storage`, included: true },
+        { text: t("pricing.features.enterprise.users"), included: true },
+        { text: t("pricing.features.enterprise.modules"), included: true },
+        { text: t("pricing.features.enterprise.storage"), included: true },
         { text: t("pricing.features.dedicated"), included: true },
         { text: t("pricing.features.custom"), included: true },
         { text: t("pricing.features.onPremise"), included: true },
         { text: t("pricing.features.sla"), included: true },
-        { text: `White-label options`, included: true },
-        { text: `Dedicated account manager`, included: true },
+        { text: t("pricing.features.enterprise.whiteLabel"), included: true },
+        { text: t("pricing.features.enterprise.accountManager"), included: true },
       ],
       buttonVariant: "outline" as const,
       buttonText: t("pricing.contactSales"),
@@ -160,7 +120,7 @@ const PricingSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge className="mb-4 px-4 py-1.5 bg-primary/10 text-primary border-primary/20">Enterprise Pricing</Badge>
+          <Badge className="mb-4 px-4 py-1.5 bg-primary/10 text-primary border-primary/20">{t("pricing.badge")}</Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {t("pricing.title").split(" ").slice(0, 2).join(" ")}{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -291,35 +251,33 @@ const PricingSection = () => {
                   <Headphones className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-xl font-bold text-foreground">Need a Custom Solution?</h3>
-                  <p className="text-muted-foreground">
-                    Our enterprise team can create a tailored ERP solution for your specific needs.
-                  </p>
+                  <h3 className="text-xl font-bold text-foreground">{t("pricing.enterprise.contactTitle")}</h3>
+                  <p className="text-muted-foreground">{t("pricing.enterprise.contactDescription")}</p>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center">
                   <Shield className="h-5 w-5 text-primary mr-2" />
-                  <span className="text-sm font-medium">Enterprise Security</span>
+                  <span className="text-sm font-medium">{t("pricing.enterprise.security")}</span>
                 </div>
                 <div className="flex items-center justify-center">
                   <Globe className="h-5 w-5 text-primary mr-2" />
-                  <span className="text-sm font-medium">Global Deployment</span>
+                  <span className="text-sm font-medium">{t("pricing.enterprise.deployment")}</span>
                 </div>
                 <div className="flex items-center justify-center">
                   <Database className="h-5 w-5 text-primary mr-2" />
-                  <span className="text-sm font-medium">Custom Integrations</span>
+                  <span className="text-sm font-medium">{t("pricing.enterprise.integrations")}</span>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="default" onClick={() => router.push("/contact-sales")}>
-                  Schedule a Demo
+                  {t("pricing.enterprise.scheduleDemo")}
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
                 <Button variant="outline" onClick={() => router.push("/case-studies")}>
-                  View Case Studies
+                  {t("pricing.enterprise.viewCaseStudies")}
                 </Button>
               </div>
             </CardContent>
@@ -328,19 +286,19 @@ const PricingSection = () => {
 
         {/* Trust Indicators */}
         <div className="mt-16 text-center">
-          <p className="text-sm text-muted-foreground mb-6">Trusted by 10,000+ businesses worldwide</p>
+          <p className="text-sm text-muted-foreground mb-6">{t("pricing.trustIndicators.title")}</p>
           <div className="flex items-center justify-center space-x-8 opacity-60">
             <div className="flex items-center space-x-2">
               <Shield className="h-4 w-4" />
-              <span className="text-xs font-medium">SOC 2 Certified</span>
+              <span className="text-xs font-medium">{t("pricing.trustIndicators.soc2")}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Globe className="h-4 w-4" />
-              <span className="text-xs font-medium">GDPR Compliant</span>
+              <span className="text-xs font-medium">{t("pricing.trustIndicators.gdpr")}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Clock className="h-4 w-4" />
-              <span className="text-xs font-medium">99.9% Uptime SLA</span>
+              <span className="text-xs font-medium">{t("pricing.trustIndicators.uptime")}</span>
             </div>
           </div>
         </div>

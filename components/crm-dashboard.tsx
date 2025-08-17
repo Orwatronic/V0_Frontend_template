@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
@@ -7,6 +8,8 @@ import { Progress } from '@/components/ui/progress'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { Users, TrendingUp, DollarSign, Smile, ArrowRight } from 'lucide-react'
 import { useI18n } from '@/contexts/i18n-context'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
 type KpiApiItem = {
   id: string
@@ -131,9 +134,47 @@ export default function CrmDashboard() {
       if (fRes.status === 'rejected') console.error('CRM dashboard funnel error:', fRes.reason)
       if (tRes.status === 'rejected') console.error('CRM dashboard tasks error:', tRes.reason)
     })()
-    return () => {
-      mounted = false
+    // Live updates via SSE
+    try {
+      const es = new EventSource('/api/crm/events')
+      es.onmessage = async (ev) => {
+        try {
+          const data = JSON.parse(ev.data)
+          if (data?.type === 'activity') {
+            const payload = data.payload as any
+            const nowIso = new Date().toISOString()
+            if (payload?.kind === 'quotation' && payload.company) {
+              const item: ActivityItem = { id: payload.id ?? `a-${Date.now()}`, type: 'quotation', company: payload.company, at: payload.at ?? nowIso }
+              setActivities((prev) => [item, ...((prev ?? []) as ActivityItem[])].slice(0, 50))
+            }
+            if (payload?.kind === 'invoice' && payload.customer) {
+              const item: ActivityItem = { id: payload.id ?? `a-${Date.now()}`, type: 'invoice', customer: payload.customer, at: payload.at ?? nowIso }
+              setActivities((prev) => [item, ...((prev ?? []) as ActivityItem[])].slice(0, 50))
+            }
+            if (payload?.kind === 'support' && payload.customer) {
+              const item: ActivityItem = { id: payload.id ?? `a-${Date.now()}`, type: 'support', customer: payload.customer, at: payload.at ?? nowIso }
+              setActivities((prev) => [item, ...((prev ?? []) as ActivityItem[])].slice(0, 50))
+            }
+          }
+          if (data?.type === 'opportunityUpdated') {
+            // Refresh funnel metrics when pipeline changes
+            try {
+              const updated = await fetchFunnel()
+              setFunnel(updated)
+            } catch (e) {
+              console.error('Refresh funnel failed', e)
+            }
+          }
+        } catch {}
+      }
+      return () => {
+        es.close()
+        mounted = false
+      }
+    } catch {
+      // If SSE is not supported or fails silently, proceed without realtime
     }
+    return () => { mounted = false }
   }, [])
 
   const dateFormatter = useMemo(() => {
@@ -146,9 +187,31 @@ export default function CrmDashboard() {
 
   return (
     <section aria-label={t('crm.page.title')} className="space-y-6">
-      <div className="flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold tracking-tight">{t('crm.page.title')}</h1>
-        <p className="text-muted-foreground">{t('crm.page.subtitle')}</p>
+      <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-2">
+          <h1 className="text-2xl font-semibold tracking-tight">{t('crm.page.title')}</h1>
+          <p className="text-muted-foreground">{t('crm.page.subtitle')}</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Link href="/crm/leads">
+            <Button variant="outline" size="sm">{t('crm.leads.title')}</Button>
+          </Link>
+          <Link href="/crm/accounts">
+            <Button variant="outline" size="sm">{t('crm.accounts.title')}</Button>
+          </Link>
+          <Link href="/crm/contacts">
+            <Button variant="outline" size="sm">{t('crm.contacts.title')}</Button>
+          </Link>
+          <Link href="/crm/opportunities">
+            <Button variant="outline" size="sm">{t('crm.opps.title')}</Button>
+          </Link>
+          <Link href="/crm/quotes">
+            <Button variant="outline" size="sm">{t('crm.quotes.title')}</Button>
+          </Link>
+          <Link href="/crm/orders">
+            <Button variant="outline" size="sm">{t('crm.orders.title')}</Button>
+          </Link>
+        </div>
       </div>
 
       {/* KPIs */}

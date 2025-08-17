@@ -1,11 +1,13 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
+import { Label } from '@/components/ui/label'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Package, Search, SlidersHorizontal, Maximize, Minimize } from 'lucide-react'
+import { Package, Search, SlidersHorizontal, Maximize, Minimize, Warehouse } from 'lucide-react'
 
 const mockWarehouseLayout = {
   name: "Warehouse A - Main",
@@ -49,13 +51,29 @@ const getUtilizationColor = (utilization) => {
 }
 
 export function WarehouseMap() {
-  const [selectedBin, setSelectedBin] = useState(null)
+  const [selectedBin, setSelectedBin] = useState<any>(null)
   const [isFullScreen, setIsFullScreen] = useState(false)
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false)
+  const [schema, setSchema] = useState<any | null>(null)
 
   const handleBinClick = (bin) => {
     // CURSOR: API call to GET /api/v1/materials/warehouse/bins/{bin.id}
     setSelectedBin(bin)
   }
+
+  // Load schema from local API if present; fallback to mock
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const data = await fetch('/api/materials/warehouse/schema', { cache: 'no-store' }).then(r => r.json())
+        const s = (data as any)?.data
+        if (s) setSchema(s)
+      } catch {}
+    }
+    load()
+  }, [])
+
+  const layout = schema || mockWarehouseLayout
 
   return (
     <TooltipProvider>
@@ -71,11 +89,11 @@ export function WarehouseMap() {
                   </Button>
                 </div>
               </div>
-              <CardDescription>{mockWarehouseLayout.name}</CardDescription>
+              <CardDescription>{layout.name}</CardDescription>
             </CardHeader>
             <CardContent className="overflow-auto">
               <div className="space-y-8">
-                {mockWarehouseLayout.zones.map(zone => (
+                {layout.zones.map((zone: any) => (
                   <div key={zone.id}>
                     <h3 className="font-semibold mb-4 text-lg">{zone.name}</h3>
                     <div className="flex gap-8 overflow-x-auto pb-4">
@@ -160,7 +178,7 @@ export function WarehouseMap() {
                       )}
                     </div>
                   </div>
-                  <Button className="w-full">View Inventory Details</Button>
+                  <Button className="w-full" onClick={() => setIsDetailsOpen(true)} disabled={!selectedBin}>View Inventory Details</Button>
                 </div>
               ) : (
                 <div className="text-center py-10">
@@ -172,6 +190,32 @@ export function WarehouseMap() {
           </Card>
         </div>
       </div>
+      <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle>Inventory Details</DialogTitle>
+            <DialogDescription>Location: {selectedBin?.id}</DialogDescription>
+          </DialogHeader>
+          {selectedBin ? (
+            <div className="space-y-3">
+              <div className="text-sm text-muted-foreground">Showing a sample of items currently in this bin.</div>
+              <div className="border rounded-md p-2 max-h-80 overflow-y-auto">
+                <ul className="space-y-1">
+                  {Array.from({ length: Math.min(selectedBin.items || 0, 20) }).map((_, i) => (
+                    <li key={i} className="text-sm flex items-center">
+                      <Package className="h-3 w-3 mr-2 text-muted-foreground" />
+                      <span>MAT-{(1000 + i).toString().padStart(4, '0')}</span>
+                    </li>
+                  ))}
+                  {(selectedBin.items || 0) > 20 && (
+                    <li className="text-xs text-center text-muted-foreground">...and {(selectedBin.items || 0) - 20} more</li>
+                  )}
+                </ul>
+              </div>
+            </div>
+          ) : null}
+        </DialogContent>
+      </Dialog>
     </TooltipProvider>
   )
 }

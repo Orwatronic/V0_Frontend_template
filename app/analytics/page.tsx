@@ -6,7 +6,7 @@ import AnalyticsDashboard from "@/components/analytics-dashboard"
 
 export default function AnalyticsPage() {
   return (
-    <ProtectedRoute>
+    <ProtectedRoute required="view:analytics">
       <AppShell>
         <AnalyticsDashboard />
       </AppShell>

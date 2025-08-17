@@ -798,13 +798,19 @@ export default function AdvancedRecruitmentPipeline() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // CURSOR: API call to GET /api/v1/hcm/recruitment/pipeline
-    // CURSOR: API call to GET /api/v1/hcm/recruitment/metrics
-    setTimeout(() => {
-      setCandidates(mockCandidates)
-      setMetrics(mockMetrics)
-      setLoading(false)
-    }, 1000)
+    const load = async () => {
+      try {
+        const [pipeRes, metRes] = await Promise.all([
+          fetch('/api/hcm/recruitment/pipeline', { cache: 'no-store' }).then(r => r.json()),
+          fetch('/api/hcm/recruitment/metrics', { cache: 'no-store' }).then(r => r.json()),
+        ])
+        setCandidates(((pipeRes as any)?.data as any[]) || mockCandidates)
+        setMetrics(((metRes as any)?.data as any) || mockMetrics)
+      } finally {
+        setLoading(false)
+      }
+    }
+    load()
   }, [])
 
   const sensors = useSensors(
@@ -884,8 +890,10 @@ export default function AdvancedRecruitmentPipeline() {
     setCandidates(prev => {
       const activeIndex = prev.findIndex(c => c.id === activeId)
       if (activeIndex !== -1) {
-        // CURSOR: API call to PUT /api/v1/hcm/recruitment/candidates/{activeId}/stage with { stage: overContainer }
-        console.log(`Moving candidate ${activeId} to stage ${overContainer}`)
+        // CURSOR: Proxied PUT /api/v1/hcm/recruitment/candidates/{activeId}/stage via /api/hcm/recruitment/candidates/{id}/stage
+        fetch(`/api/hcm/recruitment/candidates/${encodeURIComponent(String(activeId))}/stage`, {
+          method: 'PUT', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ stage: overContainer })
+        }).catch(() => {})
         const updatedCandidate = { ...prev[activeIndex], stage: overContainer! }
         const newCandidates = [...prev]
         newCandidates[activeIndex] = updatedCandidate

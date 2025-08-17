@@ -1,0 +1,42 @@
+{
+  "name": "Feebee ERP Frontend System Prompt",
+  "description": "Strict frontend-only guardrails for Feebee ERP within Cursor.",
+  "rules": [
+    "Work only on frontend files (app/, modules/, components/, /locales/).",
+    "Never modify backend or server code.",
+    "Windows compatibility: never chain commands with &&; prefer npm scripts or PowerShell-safe syntax. Assume non-interactive flags by default.",
+    "Testing: use Vitest with happy-dom and @testing-library/react for unit/integration; keep tests under tests/**.",
+    "RBAC: protect sensitive routes using components/protected-route.tsx with required permissions from hooks/use-permissions.ts.",
+    "Never delete or overwrite existing translations.",
+    "Do not run builds or execute scripts unless explicitly approved.",
+    "Make one Code Project per major task; use QuickEdit for small isolated changes.",
+    "Always commit changes to a feature branch, never main.",
+    "Branch naming: use feat/*, fix/*, docs/*; for i18n repair use i18n-repair-YYYYMMDD.",
+    "Document what you do in Planning and progress tracking/ with to-do lists and change logs.",
+    "After each significant change, update project_status.md with a concise current-state summary and notable gaps.",
+    "Always run the micro i18n health check after each task.",
+    "Preserve all backend-related placeholders, annotations, and CURSOR protocol comments.",
+    "Map prompt collection monorepo references conceptually; do not restructure this repository into a monorepo without explicit approval.",
+    "Treat server-only code under app/api/** as out of scope unless the task explicitly targets API routes.",
+    "Keep README claims (versions, frameworks) consistent with package.json and configs; update when drift is detected.",
+
+    "Before any i18n change: scan the repo and confirm locales, hooks (useI18n/t), provider mount, and translation usage.",
+    "i18n missing-keys workflow: create scripts/i18n-scan-and-merge.js only from user-provided script; do not improvise implementation.",
+    "Dry-run first: run the i18n scan in dry-run to produce i18n-report.json; do not modify locale files in dry-run.",
+    "Approval gate: show the i18n-report.json to the user and wait for explicit approval before applying any changes.",
+    "Apply step: when approved, run with --apply to append placeholders only for missing keys; never change or delete existing keys or values.",
+    "Locale scope: only operate on locales/en, locales/ar, locales/no translation.json files.",
+    "Formatting: preserve JSON structure, key order, whitespace style, and trailing commas if present.",
+    "Commit policy: commit only updated locale JSON files to a new branch named i18n-repair-YYYYMMDD; never commit to main.",
+    "PR policy: open a PR titled 'i18n: add placeholders for missing keys — auto-generated' and include a concise change log.",
+    "Provider audit: ensure all t()/useI18n calls render under <I18nProvider>; if root layout lacks provider, propose a minimal PR, do not over-refactor.",
+
+    "Anti-loop: do not rerun dry-run unless code or locale files changed; if the same issues persist after 2 apply attempts, stop and request guidance.",
+    "Anti-loop: never auto-run builds or scripts without user approval; never auto-fix beyond the agreed scope.",
+    "Anti-loop: do not replace mock useTranslation stubs without approval; note them in the Provider Scope Audit for later alignment.",
+    "Diff discipline: always show diffs before committing; request explicit approval when required by the workflow.",
+    "Documentation: update Planning and progress tracking/ with what changed, to-do updates, and micro i18n health check results after each task.",
+    "Security baseline: avoid inline scripts and eval; follow CSP-friendly patterns and sanitize user inputs at boundaries."
+  ]
+}
+  

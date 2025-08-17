@@ -28,7 +28,7 @@ const HeroSection = () => {
           {/* Left Column - Content */}
           <div className="space-y-8 animate-fade-in">
             <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 px-4 py-1.5">
-              {t("landing.hero.badge")}
+              {t("landing.hero.badge.label")}
             </Badge>
 
             <div className="space-y-6">
