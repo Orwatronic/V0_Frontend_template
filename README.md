@@ -12,48 +12,46 @@ This repository contains the frontend implementation of Feebee Technologies' Ent
 ### **Technology Stack**
 - **Frontend**: Next.js 14.2.16 + TypeScript + Tailwind CSS
 - **Components**: shadcn/ui + Lucide React icons
-- **Authentication**: JWT with multi-company support
-- **Internationalization**: Multi-language support (EN, AR, NO)
+- **Auth (current)**: Mock-first via `AuthProvider`; planned JWT + refresh tokens and server-driven permissions
+- **Internationalization**: Multi-language support (EN, AR, NO), RTL, pseudo-locale
 - **Deployment**: Vercel with automatic CI/CD
 
 ### **Backend Integration (Planned)**
-- This frontend will connect to a backend later. Until then, certain flows (e.g., auth) use mock implementations.
-- API endpoints will be configured via environment variables. Example:
+- Local Next.js API routes proxy to the backend when available, with graceful fallbacks for development.
+- Configure endpoints via environment variables. Example:
 
 ```bash
 # .env.local
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3001/api/v1
+API_BASE_URL=http://localhost:3001
 ```
 
-When the backend is ready, replace mock calls in `lib/auth.ts` and wire API calls through a typed client.
+When the backend is ready, disable mock auth and rely on the typed Axios client (`lib/api-client.ts`) + server-driven permissions.
 
 ## 📊 Current Status
 
-**Last Updated: 2025-08-14**
+**Last Updated: 2025-08-17**
 
-The UI foundation (providers, styling, i18n, and many module pages/components) is in place. Backend integration is planned and not yet wired; some features use mock data until the API is available.
+Foundation (providers, styling, i18n, security headers) is in place. Many modules are wired via local Next.js API routes with fallbacks, so the app runs without a backend and can proxy when one is available.
 
-### **Phase 1: Core Modules**
-- ✅ Application shell & providers
-- 🟡 Authentication (mocked; will be wired to backend later)
-- 🟡 Module UIs present (wiring to APIs pending)
-- 📋 Human Capital Management: Planned
-- 📋 Organizational Management: Planned
+### **Current Frontend Parity (no backend required)**
+- CRM: Dashboard (SSE), Leads/Accounts/Contacts, Opportunities Kanban, local proxy routes
+- Financials: AP/AR lists via local routes; AP/AR detail pages with editable status
+- HCM: Employees list via local route + detail page; Recruitment pipeline (drag/drop) wired to local routes; Interactive Org Chart with collapse/expand
+- Materials: Material Master fetch by category; Warehouse schema (data-driven) + admin editor; Warehouse map consumes schema
+- MDM: Customer Master list + details via local routes
+- Organizational Management: Units list via local route + detail page; KPIs/audit mocked
+- Quality: Inspections list via local route + detail page
+- Projects & Plant Maintenance: Lists + details via local routes
 
-### **Phase 2: Advanced Features**
-- 🟡 Analytics & dashboards (components available; data wiring pending)
-- 🟡 Customer portal UI present
-- 📋 Real-time notifications: Planned
-- 📋 Workflow engine: Planned
-
-### **Phase 3: AI-Powered Features** - 🔴 Planned
-- 📋 Predictive Analytics
-- 📋 Intelligent Automation
-- 📋 Natural Language Processing
+### **Planned Next**
+- Auth/RBAC v1 (real login/refresh, server-driven permissions)
+- Expand tests/a11y; unify list/table UX across modules
+- Analytics & dashboards wiring; Customer Portal backend wiring
 
 ## 🚀 Quick Start
 
-\`\`\`bash
+```bash
 # Clone the repository
 git clone https://github.com/your-repo/feebee-erp-frontend
 
@@ -65,26 +63,27 @@ npm run dev
 
 # Build for production
 npm run build
-\`\`\`
+```
 
-## 📁 Project Structure
+## 📁 Project Structure (high level)
 
-\`\`\`bash
-├── app/                    # Next.js App Router pages
-├── components/             # React components
-│   ├── ui/                # shadcn/ui base components
-│   ├── modules/           # Business module components
-│   └── shared/            # Shared components
-├── lib/                   # Utility functions
-├── locales/               # Internationalization files
-├── public/                # Static assets
-└── Planning and progress tracking/  # Project planning docs
-\`\`\`
+```bash
+app/
+  api/                    # Local Next.js route handlers (proxies with fallbacks)
+  crm/, financial/, employees/, materials/, mdm/, org-management/, plant-maintenance/, production/, project-system/, quality/, reports/
+components/
+  ui/, analytics/, ...    # shadcn/ui primitives + module components
+contexts/                 # Auth and i18n providers
+hooks/                    # use-api, use-permissions, use-toast, use-ui-store
+lib/                      # api-client, auth, i18n, utils
+locales/                  # en, ar, no translation bundles
+tests/                    # Vitest config and smoke tests
+```
 
 ## 🔧 Development
 
-### **For Backend Integration (CURSOR)**
-See detailed integration guide in `Planning and progress tracking/cursor-integration-guide.md`
+### **For Backend Integration**
+See `PROJECT_REFERENCE.md` (authoritative) and `project_status.md` for status and endpoints.
 
 ### **Component Development**
 - Follow TypeScript strict mode
@@ -94,12 +93,9 @@ See detailed integration guide in `Planning and progress tracking/cursor-integra
 
 ## 📋 Planning & Documentation
 
-Detailed planning documents are available in the `Planning and progress tracking/` folder:
-
-- **Module-specific plans**: Individual module development roadmaps
-- **Integration guides**: Backend API integration specifications
-- **Design system**: UI/UX guidelines and component standards
-- **Testing strategy**: Comprehensive testing approach
+- `PROJECT_REFERENCE.md`: Single source of truth for modules, files, and endpoints
+- `project_status.md`: Verified progress and parity plan
+- `Planning and progress tracking/`: Additional plans and prompts
 
 ## 🤝 Contributing
 
@@ -112,8 +108,8 @@ Detailed planning documents are available in the `Planning and progress tracking
 
 - **Repository**: [GitHub Repository](https://github.com/your-repo)
 - **Live Demo**: [Vercel Deployment](https://your-domain.vercel.app)
-- **Documentation**: See `Planning and progress tracking/` folder
+- **Documentation**: See `PROJECT_REFERENCE.md` and `project_status.md`
 
 ---
 
-**Version**: 1.0.0 | **Status**: Active Development | **Last Updated**: January 2024
+**Version**: 0.9.x | **Status**: Active Development | **Last Updated**: 2025-08-17
